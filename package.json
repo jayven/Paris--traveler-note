@@ -1,0 +1,13 @@
+{
+  "name": "paris-pocket",
+  "version": "1.1.1",
+  "private": true,
+  "scripts": {
+    "start": "node scripts/serve.cjs",
+    "test": "node --test tests/*.test.cjs",
+    "test:browser": "node tests/browser.cjs",
+    "test:management": "node tests/management.cjs",
+    "test:pwa": "node tests/pwa.cjs"
+  },
+  "devDependencies": { "playwright": "1.62.1" }
+}

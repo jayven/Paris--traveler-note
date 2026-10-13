@@ -29,6 +29,9 @@
       </button>
     </header>
 
+    <p id="storage-warning" class="storage-warning" role="alert" hidden></p>
+    <button id="reload-data" class="secondary-btn full" type="button" hidden>重新载入最新个人数据</button>
+    <button id="app-update" class="update-banner" type="button" hidden>新版本已准备好 · 点击更新</button>
     <main id="main-content" tabindex="-1"></main>
 
     <nav class="bottom-nav" aria-label="主要导航">
@@ -58,8 +61,35 @@
     <p class="muted">之后可从主屏幕像 App 一样打开。行程文字支持离线阅读，互动地图需要网络。后续更新同一网址即可，不必重新添加图标。</p>
     <button id="dialog-done" class="primary-btn full">知道了</button>
   </dialog>
+  <dialog class="modal activity-modal" id="activity-dialog" aria-labelledby="activity-title" aria-describedby="activity-date activity-plan-hint">
+    <form id="activity-form">
+      <div class="modal-mini">EDIT YOUR PLAN</div>
+      <h2 id="activity-title">编辑活动</h2>
+      <p id="activity-date"></p>
+      <p id="activity-plan-hint">修改的是行程计划，不会更改或确认任何门票预约。保存于本机，可导出备份。</p>
+      <p id="activity-fixed" hidden>这是航班相关安排。编辑不会更改旅行卡片中的航班资料，请以实际航班为准。</p>
+      <label class="field-title" for="activity-name">活动名称</label>
+      <input class="plain-input" id="activity-name" type="text" required maxlength="200" autocomplete="off">
+      <label class="field-title" for="activity-day">活动日期</label>
+      <select class="select-input" id="activity-day" required></select>
+      <label class="field-title" for="activity-time">开始时间 / 时段</label>
+      <input class="plain-input" id="activity-time" type="text" required maxlength="64" placeholder="例如 09:30、晚上、约19:00" aria-describedby="activity-time-hint" autocomplete="off">
+      <p id="activity-time-hint">可输入 HH:MM 或灵活时段。修改时间不会自动重排；更改日期会移至目标日末尾。</p>
+      <label class="field-title" for="activity-end">结束时间（可留空）</label>
+      <input class="plain-input" id="activity-end" type="text" maxlength="64" placeholder="例如 11:30" autocomplete="off">
+      <label class="field-title" for="activity-detail">活动描述</label>
+      <textarea class="note-input" id="activity-detail" rows="5" maxlength="5000"></textarea>
+      <p id="activity-error" role="alert"></p>
+      <div class="btn-row"><button id="activity-cancel" class="secondary-btn" type="button">取消</button><button class="primary-btn" type="submit">保存修改</button></div>
+      <button id="activity-reset" class="secondary-btn full" type="button" hidden>恢复这项活动的原始安排</button>
+      <button id="activity-delete" class="secondary-btn full" type="button" hidden>删除这项活动</button>
+    </form>
+  </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="./trip-data.js"></script>
+  <script src="./personal-data.js"></script>
+  <script src="./itinerary-data.js"></script>
+  <script src="./map-links.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>
