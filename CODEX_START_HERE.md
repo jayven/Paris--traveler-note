@@ -1,16 +1,11 @@
-# Copy into Codex as your first task
+# Paris Pocket — 从这里继续
 
-You are taking over an existing deployed mobile-first PWA called **Paris Pocket / 巴黎手帐**. Its live address is https://stirring-cheesecake-37698e.netlify.app/ . You have the complete source code in this repository.
+先读 [AGENTS.md](AGENTS.md)、[PRODUCT_BRIEF.md](PRODUCT_BRIEF.md)、[Phase 1 评审包](docs/PHASE_1_REVIEW.md)。
 
-Read `AGENTS.md` and `PRODUCT_BRIEF.md`, then inspect the existing application (`index.html`, `app.js`, `trip-data.js`, `styles.css`, `sw.js`, `manifest.webmanifest`). Don't rebuild from scratch and don't create a new Netlify site.
+当前开发分支 `feature/paris-pocket-v2-refactor` 基于 `main` 的 `05790404b87b616db7b1a786770232dc55fbfe7b`。Phase 1 已完成当前代码审计和方案，**等用户评审后再开始 Phase 2**。不要把本轮 Phase 1 理解为实施旧架构草案里的数据迁移阶段。
 
-My goal: turn this prototype into an iPhone-ready, maintainable Paris travel planner that we can keep updating before and during our December 7–14, 2026 Paris trip. Daily itineraries, accurate map pins, booking status, personal notes and offline travel info should feel like a real app. Preserve all current itinerary information and user localStorage data.
+最新方向是只读官方行程、活动本机备注、官方+本地 To-do、可信每日地图和单向官方同步。旧编辑器退出未来范围，但所有旧编辑数据必须保留。最新行程来自 v4.12，不是尚未切换的 `trip-data.js`；五家酒店已确认。
 
-Please:
-1. Audit current architecture, iPhone usability, map accuracy, PWA behavior, and user-data risks.
-2. Briefly propose prioritized improvements, then actually implement a small, valuable first slice: editing an existing itinerary activity's time and description with changes persisting across reloads and participating in backup/restore, without breaking existing bookings and notes.
-3. Add basic tests or a reproducible verification routine, run it, and report results.
-4. Improve project README with local run instructions and a safe path to GitHub -> the existing Netlify site. Do not deploy to production without asking me.
-5. Explain what you changed, how I can test on iPhone, and what should be implemented next.
+后续顺序：Phase 2 视觉与必要支撑重构 → 行程/详情/地图/To-do 四张手机截图评审 → Phase 3 数据/迁移/同步/地图集成 → 回归和真机验收 → 用户另行批准合并及生产发布。
 
-Design preference: elegant and minimal Paris travel journal, but usability above aesthetics. All app text primarily Chinese; write maintainable code and avoid unnecessary dependencies/framework rewrites.
+继续时使用 [架构](docs/ARCHITECTURE_REFACTOR_PLAN_v1.0.md)、[迁移回滚](docs/DATA_MIGRATION_AND_ROLLBACK_v1.0.md)、[测试计划](docs/TEST_PLAN_v1.0.md)。保持原仓库、原 Netlify 网站和旧存储键，不直接修改 main。

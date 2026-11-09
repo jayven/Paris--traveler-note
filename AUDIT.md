@@ -1,64 +1,70 @@
-# First development audit — 12 October 2026
+# Phase 1 — Current Code Audit
 
-## Baseline and scope
+审计日期：2026-11-08（用户时区 America/Los_Angeles）。状态：审计完成，运行代码未修改；等待 Phase 2 评审。
 
-Read `AGENTS.md`, `PRODUCT_BRIEF.md`, all six app/source files, manifest and existing setup instructions before implementation. The folder provided in chat was renamed: the actual repository is `/Users/jayven/Desktop/Project/Paris--traveler-note`, with GitHub remote `jayven/Paris--traveler-note` and baseline commit `c48dd78`. The pre-existing staged handoff documents are preserved.
+## 可复现基线与范围
 
-Read-only comparison of live `index.html`, `styles.css`, `app.js`, `trip-data.js`, `sw.js` and manifest matched the local baseline (ignoring Netlify's injected hosting comment in HTML). No deployment, Git push, Netlify settings change or new site was performed.
+- GitHub：`jayven/Paris--traveler-note`，最新 `origin/main` 为 `05790404b87b616db7b1a786770232dc55fbfe7b`（PR #1，V1.1.1）。已 fetch，不以旧草案的 V1 ZIP 推断现状。
+- 独立 checkout：`feature/paris-pocket-v2-refactor`。原本 `codex/activity-editing` 工作目录中的未提交 styles.css、sw.js 和图片保持原样；未将其混入本审计。
+- 对原生产网址只读获取 index/styles/app/personal-data/itinerary-data/map-links/trip-data/sw/manifest 九项，与 main 全部一致（HTML 仅移除 Netlify 注入注释后比较）。没有读取用户浏览器数据。
+- GitHub 上有 active Netlify webhook；本轮未改设置。主分支发布关联已存在，但未据此假定 Deploy Preview 可用。没有 Netlify 账户内的 publish-directory/预览配置证据。
+- 审阅四份附件、受控重构说明、全部当前源文件及测试；PDF 8 页均渲染核对，第 5 页鹿特丹表格是图片，纯文本提取会遗漏。
+- [旧审计](docs/history/AUDIT_V1.1_2026-10.md) 仅记录历史，不再作为产品要求。当前目标以 PRD v1.0 / v4.12 / UI v1.1 为准。
 
-This is an appropriate small static app: data is structured, activity IDs are stable, user-entered text is escaped, and Leaflet is loaded only when needed. No framework rewrite or backend is needed for this slice.
+## 当前实现与处理建议
 
-## Findings and prioritized plan
-
-| Priority | Evidence / problem | Improvement and status |
+| 领域 | 当前代码证据 | 复用/调整及风险 |
 | --- | --- | --- |
-| 1 — personal data and functional editing | Original storage reader discarded unrecognized fields; import assigned unchecked data into live state. Save errors did not stop a subsequent success message. Activities were only editable in source. | **Implemented:** additive ID-keyed overrides, validated backup/storage module, storage failure protection, editable time/end/description, cancel and single-activity reset. Next: concurrent-window protection and recovery UI for malformed data. |
-| 2 — safe offline releases | Original worker used network-first JS/CSS, cache-first icons, immediate skipWaiting/claim and unconditional controllerchange reload. This could mix releases, overwrite editor input and delete unrelated caches. | **Implemented:** complete versioned shell, waiting update with explicit button, no automatic first-install reload, no update while editor open, cleanup limited to owned cache prefix. Next: physical iOS lifecycle/background/multiple-window testing and visible offline readiness. |
-| 3 — iPhone usability and broader editing | Several map/actions controls were 30–36px high; note fields were 11–12px. No editing interface, reordering or compact day overview. | **Implemented:** native modal with labels/errors, 16px fields and >=44px action controls, preserved multiline descriptions. Next: edit location and booking info, add/delete/reorder by stable ID, collapsible details and four booking statuses. |
-| 4 — map and itinerary trust | Pending Leaflet loads could each render an obsolete day into the latest map target. CDN failure already had a list fallback, but tile failure after engine load has no separate status. Venue center/dock suggestions and opening-hour statements lack structured provenance. | **Implemented:** stale async requests ignored, original Tuileries center retained, offline list/navigation tested, unsupported “all coordinates checked” fallback claim removed. Next: tile-error notice, online retry cleanup, center/entrance/pickup metadata and source/last-checked records; verify seasonal details against official sources before travel. |
-| 5 — ongoing delivery | Remote exists, but there were no package scripts, automated tests, CI or documented GitHub-to-existing-Netlify review process. Hosting connection settings are not known. | **Implemented:** Node-only dev server, storage/data tests, Playwright UI/offline/update tests, pinned development dependency/lockfile and README. Next: CI checks and an authorized deploy-preview/production workflow using the same site. |
+| 架构 | index.html；app.js 230 行，数据/DOM/编辑/地图/备份/SW 集中；无构建步骤；package.json 1.1.1，仅 Playwright 开发依赖 | 保留原生 JS 与导航/日期切换，按责任渐进拆分，无框架迁移理由 |
+| 官方内容 | trip-data.js:3–10，旧 v1.0 · 2026.10.12；8 日、44 活动、22 地点、10 booking；酒店待定 | 与 v4.12 差异显著，不能沿用为新旅行事实。保留公共旧快照用于解释个人编辑档案 |
+| 活动编辑 | itinerary-data.js:5–21；app.js:107–166，新增/跨日/排序/删除恢复、稳定 dN-N 与 user-UUID | 未来只读行程不再提供这些功能；隔离旧解释器与数据，不能直接删字段或应用到新版活动 |
+| 详情/备注 | app.js:61–69、196–202；描述在列表，只有每日/预约/通用备注 | 复用转义、输入与失败保护；新增共用活动详情及 notesByActivityId，不能把每日笔记自动配给活动 |
+| To-do | app.js:70–71，固定 bookings 分组及勾选，无自建任务/截止日/显式归档 | 复用本机完成与文本输入模式；以新任务模型替换，旧 booking 目标必须审核后映射 |
+| 存储 | personal-data.js:4、52–98，唯一 localStorage 键 paris-pocket-personal-v1，未标版本旧格式与 schema 1/2 归一为 3；无 IndexedDB | 旧键不可重写为新 schema。保留原字符串；新存储独立，详见迁移规范 |
+| 校验/导入 | personal-data.js:57 保留顶层未知字段，但嵌套覆盖/自建活动未知字段被重建丢弃；app.js:92–105，5MB 上限与 confirm | 复用现有 legacy 解码规则，不把 normalize 当原始备份。新导入加差异预览、检查点与撤销 |
+| 保存错误 | app.js:31–40、141–142；损坏/未来 schema 阻止写入、失败保留编辑草稿 | 保留。当前损坏数据时下载备份也被禁止（91），新恢复入口应能导出原字符串 |
+| 并发 | personal-data.js:91–98 expectedRaw 比对；app.js:169–179 storage 事件 | 能挡常见旧标签页覆盖，比较后写入不等于跨标签页原子事务；新存储用事务与 revision |
+| 地图 | app.js:72、74 按 Place 去重；82–85 仅底图/图钉/Popup；无路段或 GeoJSON | 保留 Leaflet 及异步 generation 防护；改按 Stop 展示重复到访，新增经核验路段 |
+| 导航 | map-links.js:4–26 已有 Google URL、精确坐标、walking/driving、可选 Place ID | v0.1「仍是 Apple Maps」已过时。扩展明确起点及已核实地址目标；坐标有效不代表入口已核验 |
+| 地图降级 | app.js:77–87 CDN 加载超时/错误时保留列表；83 无 tileerror 状态 | 保留列表；补底图单独失败、Stop→详情、模式/路段缺失处理 |
+| PWA | manifest id/scope ./，start_url ./?source=homescreen；sw.js:2–22 完整 CORE、等待手动更新、自家缓存清理 | 保留身份与等待更新。trip-data.js 同属 cache-first shell，无法独立同步官方数据 |
+| 更新/版本 | app.js:205–223 保护编辑弹窗后 SKIP_WAITING；仅显示 trip.version | 新备注/任务草稿也需保护；新增 appVersion、tripDataVersion、真实最近同步时间 |
+| 外部资源 | Leaflet 1.9.4 动态 CDN、无 SRI；OSM 瓦片有 attribution | 不假定供应链无风险；建议后续随 shell 自托管合法 Leaflet 资源。瓦片/路由条款单独核实 |
+| 静态发布 | scripts/serve.cjs:4–15 服务仓库根非隐藏文件；无专门发布 allowlist/netlify 配置 | 根目录文档不是私密存储。后续纯复制式发布产物白名单，Netlify 设置变更另批 |
 
-## Data accuracy
+本轮未执行依赖漏洞扫描；没有读取 Netlify 控制台安全头配置，不能断言线上无 CSP/安全头。
 
-`trip-data.js` is unchanged. The 8 dates, Paris timezone, 08:00 arrival, 22:20 departure, stable IDs and place/booking references pass structural checks. Tuileries remains 48.8635, 2.3274. These are code consistency checks, not external verification of future opening hours, holiday schedules, coordinates of entrances or ticket availability. Existing factual claims remain planning data pending official-source review. No reservation or additional travel fact was invented.
+## PRD Gap Analysis
 
-Editing a flight-related activity displays a warning that trip flight metadata does not change. Editing a booked activity leaves its booking ID, checkbox and booking note intact. Times remain planning times, and changing a time does not reorder activities. Bookings still use the original binary checkbox rather than planned/reserved/confirmed/canceled statuses; the static booking date text is not rewritten when an activity time changes.
+状态仅评价 main 当前实现，不代表 Phase 1 已补齐功能。
 
-## Changed files
+| PRD | 状态 | 主要差距/后续责任 |
+| --- | --- | --- |
+| FR-IT-01…06 | 部分 | 已有日期/稳定 ID，但仍编辑式长列表、旧内容；需官方 order、最简时间线、统一详情、明确状态 |
+| FR-NOTE-01…05 | 未满足活动级要求 | 只有旧每日/预约/通用笔记；需活动备注自动保存、孤立档案、预览备份和本机隐私提示 |
+| FR-MAP-01…07、10 | 部分基础 | 图钉与底图可复用；无 Stop/Segment、真实道路轨迹/过滤/共用详情/定位来源与语义验证 |
+| FR-MAP-08…09 | 部分 | 已支持当前位置 walking/driving 和引擎失败列表；缺明确起终点单段 URL、瓦片失败状态、真机 handoff |
+| FR-TODO-01…07 | 大部缺失 | 固定 booking 勾选不能代表官方+本地任务、逾期排序、不同目标新 ID、显式归档与历史 |
+| FR-SYNC-01、06、08 | 基础符合方向 | 原仓库/站点、个人本机存储，无云写回；尚未建立新版官方数据边界 |
+| FR-SYNC-02…05、07 | 关键缺口 | 没有独立版本/全量原子同步/成功时间/离线快照；未标版本旧格式与 schema 1/2/3 已兼容，下一次迁移尚未实施 |
 
-`app.js`, `index.html`, `styles.css`, `sw.js`; new `personal-data.js`, `package.json`, `package-lock.json`, `.gitignore`, `scripts/serve.cjs`, `tests/personal-data.test.cjs`, `tests/browser.cjs`, `tests/pwa.cjs`, `tests/fixtures/legacy-sw.js`, `README.md`, and this report. Original content, coordinates, manifest, icons and existing personal storage key are retained. The old worker fixture makes the upgrade regression reproducible.
+## 重新执行的基线测试
 
-## Verification report
+在独立 checkout、隔离 Chrome profile、本地 4178 / PWA 模拟 4174 执行，无生产写入或私人资料。
 
-- Node tests: **7 passed**. Legacy data migration, storage reload, edit backup round trip, old/new backup behavior, malformed/future schemas, storage denial/quota failures, flexible/invalid times, and canonical data integrity.
-- Chromium using installed Chrome and Playwright: **passed** real editing/reload; text escaping; cancellation/validation; exported JSON/import/reset; old backup compatibility; malformed imports; quota/corrupt-storage protection; existing notes and bookings; widths 320, 375, 390, 430 and 1024; offline edit/reload; map fallback and all main tabs. No uncaught page JavaScript errors.
-- PWA upgrade regression: **passed** original worker → new waiting worker, draft preserved during update availability, explicit update after saving, localStorage preserved, unrelated cache retained, new offline shell available, and an incomplete update leaving the previous working shell usable offline.
-- Syntax checks and `git diff --check`: **passed**. Editor screenshot inspected at iPhone-sized viewport; save/cancel alignment refined.
+- `npm test`：20/20 通过（个人数据 7、活动管理 9、Maps URL 4）。
+- `TEST_URL=http://localhost:4178 PW_CHANNEL=chrome node tests/browser.cjs`：通过；编辑/转义/保存/导入导出/错误保护、320–1024px、离线与 Google 链接。
+- 同样环境 `node tests/management.cjs`：通过；schema 2、新建/跨日/顺序/删除恢复、关联笔记、备份/离线/旧窗口冲突。
+- `PW_CHANNEL=chrome node tests/pwa.cjs`：通过；等待用户更新、保留草稿与存储、无关缓存保留、完整离线 shell、缺失核心文件使安装失败时旧 shell 仍可用。
+- 浏览器套件无未捕获页面错误。使用了 bundled Playwright 的 NODE_PATH；脚本与源代码未改。
 
-Physical iPhone Safari, keyboard/VoiceOver, installation and iOS background/update behavior are **not yet verified**. Online map tiles and routing/entrance accuracy were not independently verified. No CI/Netlify account settings were inspected or changed. The README contains local and iPhone verification steps and the safe review/deployment path.
+这些是现有版本回归，**不是新版迁移/同步验收**。PWA 测试只切换旧 worker fixture，仍提供当前 HTML/JS，不是真实旧安装 bundle→新 schema 测试；Chromium iPhone 参数不等于 Safari。新增门槛见 [测试计划](docs/TEST_PLAN_v1.0.md)。
 
-## Remaining limits
+## 结论与优先级
 
-Data is local per browser/origin, without two-device sync or multi-window conflict detection. If note autosave fails, text remains visible until navigation; it is not persisted, so the error must be addressed before leaving. Invalid stored data disables writes, including imports, to protect original bytes; a user-controlled raw-data recovery tool is future work. Imported backups replace notes/bookings after confirmation; the UI advises exporting first but does not create a second automatic snapshot. Personal overrides take priority over later base itinerary updates until individually reset; future work should make those conflicts visible.
+1. 先建立旧资料可恢复边界及官方/本机模型，禁止直接覆盖 trip-data 和复用位置 ID。
+2. Phase 2 采用 UI v1.1 token，限定视觉与必要结构支撑；四屏评审后再集成功能。
+3. Phase 3 先校验/迁移/离线存储，再只读详情与 To-do、一键同步、Stop/真实路段及导航。
+4. 真实 iPhone、真实旧 bundle 升级/回滚、数据冲突核对、路径供应商/许可和预览配置是发布门槛。
 
-An installed original client may need an online refresh to receive the new update interface. Later releases must always change `CACHE_VERSION` and publish the full shell. Rolling back to the original app ignores new override fields and may discard them on its next write; keep a new-format backup before any rollback. These limitations are explicit rather than silently resetting existing data.
-
-
-## V1.1 continuation — agreed roadmap and implementation
-
-Requirements in AGENTS.md and PRODUCT_BRIEF.md now specify V1.1 editable itinerary, V1.2 Google Maps URLs with embedded map and walking/driving, V1.3 hotel/restaurant/bookings, and V2.0 two-person/multi-device synchronization. ChatGPT owns product/itinerary requirement collaboration; Codex implements and tests. Major visual redesigns remain separately requested work. Existing GitHub/Netlify and deployment approval rules remain in effect.
-
-Implemented V1.1 activity creation with stable user IDs; title/date/time/description edits; moving between agreed trip days; explicit up/down order; confirmed, recoverable deletion; original-activity reset; and full backups. Canonical itinerary, known flight facts, coordinates, booking references and personal notes remain intact. Day maps project from the edited activity lists. Added itinerary-data.js for pure operations and schema 3 management fields in personal-data.js. Original/schema-2 data migrates; older backups merge supported edits and keep V1.1 additions/moves/deletions/order. New backups fully replace personal itinerary after confirmation.
-
-Added optimistic stale-window write rejection and a storage-event warning with explicit reload; this is local conflict protection, not cross-device synchronization. Corrected service-worker installed-event/update-banner timing and stopped Leaflet map animations/removed instances before replacing a map target after rapid day-filter changes. Styling additions use the existing buttons, modal and journal layout.
-
-Verification: 16 Node tests passed; existing editing/storage/layout/offline regressions passed; new management browser tests passed add/cancel/edit/move/reorder/delete/restore, schema-2 migration, retained bookings/notes, edited-date map lists, full backup restore, offline editing/order/reload and stale-tab protection. PWA upgrade tests passed original-worker migration, explicit updates, draft preservation and failed-update fallback. No uncaught page errors in passing browser runs. Screenshots inspected at phone sizes. Physical iPhone Safari/keyboard/VoiceOver and Google Maps handoff remain unverified; Google navigation itself remains the V1.2 milestone. No production deploy or Git push.
-
-The original audit above is historical. Its missing activity management and lack of stale-tab protection are now addressed as described here. The same private-data/rollback cautions and per-origin storage limits remain. Changing global travel dates and real flight details, rich location/booking management and synchronization remain outside this V1.1 activity slice.
-
-
-## Google Maps external navigation slice
-
-Switched all external location/direction links in itinerary cards, embedded Leaflet popups and map lists to Google Maps universal HTTPS URLs. Added walking/driving options through map-links.js. Existing coordinates and embedded map remain intact; no Place IDs, addresses or entrances were invented, and no paid API/key was added. Offline map failure retains the Google links and place list. Bumped the service-worker cache and cached the new helper. Google app/browser handoff uses the documented universal URL behavior but requires physical iPhone verification.
-
-Verification: all 20 Node tests passed, including coordinate fidelity, walking/driving parameters, optional Place ID encoding and invalid-input rejection. Browser regression passed Google controls in the offline place list with no Apple map links; existing editing/backup/layout checks and original-worker/new-shell/failed-update PWA regressions also passed. No physical iPhone app handoff test or production deployment was performed.
+建议、模型与停止条件见 [架构 v1.0](docs/ARCHITECTURE_REFACTOR_PLAN_v1.0.md)、[迁移/回滚](docs/DATA_MIGRATION_AND_ROLLBACK_v1.0.md)、[评审包](docs/PHASE_1_REVIEW.md)。Phase 1 未修改 UI、运行数据、存储、Service Worker 或生产站点。
