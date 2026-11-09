@@ -1,5 +1,5 @@
 /* A complete app shell per release; activation waits for an explicit update. */
-const CACHE_VERSION='paris-pocket-v5-phase2-visual';
+const CACHE_VERSION='paris-pocket-v5-phase2-review';
 const CORE=['./','./index.html','./styles.css','./personal-data.js','./itinerary-data.js','./map-links.js','./visual-preview.js','./app.js','./trip-data.js','./manifest.webmanifest','./assets/icon-192.png','./assets/icon-512.png','./assets/apple-touch-icon.png'];
 self.addEventListener('install',event=>{
  event.waitUntil(caches.open(CACHE_VERSION).then(cache=>cache.addAll(CORE)));

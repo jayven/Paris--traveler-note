@@ -42,7 +42,7 @@ button,textarea,input,select{border-radius:var(--radius)}
 .hero:before,.hero:after,.eiffel-art,.hero-hr{display:none}
 .hero-content{position:relative}
 .hero .eyebrow{color:var(--ink);font-size:8px}
-.hero-title{font-family:var(--font-display);font-size:26px;line-height:1.12;font-weight:800;letter-spacing:-.9px;margin-top:6px}
+.hero-title{font-family:var(--font-display);font-size:26px;line-height:1.12;font-weight:800;letter-spacing:-.4px;word-spacing:.08em;margin-top:6px}
 .hero-title small{display:block;font-family:var(--font-display);font-size:17px;font-weight:700;letter-spacing:0;line-height:1.3;margin-top:4px}
 .hero-sub{font-size:10px;line-height:1.3;margin-top:6px;color:#444}
 .hero-badge{position:absolute;right:16px;bottom:15px;font-size:9px;font-weight:750;background:var(--paper);border:var(--outline);padding:8px 9px}
@@ -337,7 +337,7 @@ button:active:not(:disabled),.text-link:active{transform:translate(1px,1px)}
   .brand-light{display:block;font-size:9px;margin-top:2px}
   #design-preview-btn{max-width:59px;font-size:9px;padding:4px 5px}
   .hero{padding:14px 16px;min-height:0}
-  .hero-title{font-size:25px;letter-spacing:-.8px}
+  .hero-title{font-size:25px;letter-spacing:-.35px}
   .hero-title small{font-size:17px}
   .hero-badge{right:16px;bottom:14px;font-size:8px;padding:6px}
   .hero-sub{font-size:9px}

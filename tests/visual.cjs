@@ -22,6 +22,9 @@ const output=path.join(__dirname,'../docs/phase-2/screenshots');
   const page=await context.newPage(),errors=[],layouts=[];
   page.on('pageerror',e=>errors.push(e.message));
   await page.goto(origin);await page.locator('[data-action=view-activity]').first().waitFor();
+  assert.deepEqual(await page.locator('.bottom-nav [data-tab]').evaluateAll(nodes=>nodes.map(node=>node.dataset.tab)),['days','map','bookings','more'],'detail is not an independent app nav tab');
+  assert.doesNotMatch(await page.locator('#app').innerText(),/PHASE\s*2/i,'phase/debug banners stay out of the integrated app');
+  assert.equal(await page.locator('.hero-title').evaluate(el=>el.firstChild.textContent),'Paris, at our pace');
   const before=await page.evaluate(key=>localStorage.getItem(key),key);
   await fs.mkdir(output,{recursive:true});
   await page.screenshot({path:path.join(output,'existing-itinerary-390.png')});
@@ -29,6 +32,8 @@ const output=path.join(__dirname,'../docs/phase-2/screenshots');
   assert.equal(await page.locator('#activity-detail-dialog [data-detail-action=edit]').isVisible(),true);
   await page.locator('#activity-detail-close').click();
   await page.locator('#design-preview-btn').click();
+  assert.equal(await page.locator('.preview-topbar').evaluate(el=>Boolean(el.closest('#design-preview-dialog'))),true,'preview banner is contained in the isolated preview');
+  assert.equal(await page.locator('.preview-nav [data-preview-screen=detail]').textContent(),'详情预览');
   assert.match(await page.locator('#design-preview-dialog .preview-notice').first().textContent(),/不保存或同步/);
   for(const width of [320,375,390,430]){
    await page.setViewportSize({width,height:844});

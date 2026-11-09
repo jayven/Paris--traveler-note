@@ -1,6 +1,6 @@
 # Paris Pocket — Phase 2 Visual Review
 
-2026-11-09。状态：**视觉实施与本地回归完成，等待用户视觉批准。** 分支 `feature/paris-pocket-v2-refactor`，继续使用草稿 PR #2。Phase 1 已批准；本轮不开始 Phase 3、不合并 main、不生产部署。
+2026-11-09。状态：**整体视觉已获原则认可，完成指定小幅收尾后等待最终 Phase 2 评审。** 分支 `feature/paris-pocket-v2-refactor`，继续使用草稿 PR #2。Phase 1 已批准；本轮不开始 Phase 3、不合并 main、不生产部署。
 
 ## 预览方式与四屏截图
 
@@ -25,7 +25,15 @@
 - v4.12 仅作为隔离的视觉样本，涵盖八日主题/行李转场、周三奥赛午餐、周五 Louvre 待核等。未覆盖 trip-data.js，不产生新 official snapshot 或身份映射。
 - 预览 Activity Detail 的独立备注只读，明确写「未接入保存」；To-do 的示例勾选/创建禁用且清楚标注，未完成/完成/归档筛选只切换样例，未伪装持久化。没有可冒充真实同步的按钮。
 - 地图保持真实 Leaflet/OSM 底图，展示已有景点参考坐标；酒店/未知入口仅列文字。未新增未经核验路径、假道路/预计 ETA，也未接入付费 API。
-- 新预览 JS 加入完整 shell 缓存，CACHE_VERSION 改为 paris-pocket-v5-phase2-visual；延续用户手动更新策略。Manifest 只改视觉背景/theme 色，安装 id/start_url/scope/图标保持原样。
+- 新预览 JS 加入完整 shell 缓存，CACHE_VERSION 改为 paris-pocket-v5-phase2-review；延续用户手动更新策略。Manifest 只改视觉背景/theme 色，安装 id/start_url/scope/图标保持原样。
+
+## 本轮评审收尾
+
+- 保留已获原则认可的淡色 Neo-Brutalist 视觉和无竖线每日列表；没有再次重设计或新增产品功能。
+- 实际主导航仍为行程、地图、预约、旅行卡片；不存在独立 Activity Detail tab。隔离预览的「详情预览」仅供四屏评审，不能复制为最终产品导航。最终按 PRD 从行程或地图打开详情；真实主地图的进一步集成仍属于后续阶段，不在本次追加。
+- PHASE 2 横幅只在隔离预览中，主应用没有阶段/debug 横幅。最终集成时移除阶段标识及评审入口；当前旧内容来源提示保留，避免把旧行程误认为 v4.12。
+- 英文标题保持 `Paris, at our pace`，微调字距与词间距，让逗号后的空格清楚可见；未改变字体系统或布局。
+- 本次公开推送明确包括已完成的 Phase 2 代码、390px 四屏截图、测试结果与这些评审说明，继续使用原分支及草稿 PR #2；不合并 main。
 
 ## 数据保护与范围证据
 
@@ -43,7 +51,7 @@
 | test:browser | 通过；真实详情→编辑、XSS、笔记/预约、备份往返、quota/损坏存储、离线、320–1024px；补充详情关闭/跳笔记的正确焦点和零写入 |
 | test:management | 通过；新增/编辑/跨日/排序/删除恢复、稳定 ID、预约备注保留、完整/旧备份、离线与旧窗口冲突 |
 | test:pwa | 通过；手动更新、编辑草稿保护、原 storage 保留、自家缓存清理、完整离线 shell、不完整安装保留旧 shell |
-| test:visual | 通过；4 屏×320/375/390/430px，0 横向溢出、导航在 844px 内、无竖线、预览零持久化/零 DB、待核状态、可选预览失败后编辑仍可用 |
+| test:visual | 通过；4 屏×320/375/390/430px，0 横向溢出、导航在 844px 内、无竖线、详情无独立主导航项、阶段横幅隔离、预览零持久化/零 DB、待核状态、可选预览失败后编辑仍可用 |
 | 源/文档检查 | JS syntax、diff whitespace、文档链接通过；旧数据/存储模块逐字对比无变化 |
 
 本轮新增截图与 [布局结果](screenshots/layout-checks.json) 可由下列命令重新生成。320/375/430px 附加截图写入忽略目录 `test-results/phase-2/`，主评审截图保存在本目录。

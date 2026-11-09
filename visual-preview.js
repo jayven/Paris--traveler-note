@@ -52,7 +52,8 @@ function mount({trip,loadLeaflet,mapLinks,safe}){
   {title:'旧行程草稿任务',priority:'低',meta:'归档样式示例 · 归档不等于完成',state:'archived'}
  ];
  let screen='days',dayIndex=2,selected=5,taskFilter='open',map=null,generation=0,trigger=null;
- const labels={days:'每日行程',detail:'活动详情',map:'每日地图',todo:'To-do'};
+ // Review shortcuts only. Activity Detail is never an independent final-app nav destination.
+ const labels={days:'每日行程',detail:'详情预览',map:'每日地图',todo:'To-do'};
  function cleanupMap(){generation++;if(map){map.stop();map.remove();map=null;}}
  function close(){dialog.close();}
  function itemTitle(item){return safe(item[1]);}
