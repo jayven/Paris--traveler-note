@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#13263b">
+  <meta name="theme-color" content="#fff0d8">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
   <meta name="apple-mobile-web-app-title" content="巴黎手帐">
@@ -24,11 +24,13 @@
         <span class="brand-eyebrow">OUR LITTLE PARIS JOURNAL</span>
         <strong>巴黎手帐 <span class="brand-light">/ Paris Pocket</span></strong>
       </div>
+      <button id="design-preview-btn" class="secondary-btn preview-control" type="button" aria-haspopup="dialog">v4.12 预览</button>
       <button class="icon-button header-info" id="help-btn" aria-label="添加至主屏幕说明" title="添加至主屏幕">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 16v-4m0-4h.01"/></svg>
       </button>
     </header>
 
+    <p class="legacy-content-label">原有行程与个人记录 · v4.12 在视觉预览中展示</p>
     <p id="storage-warning" class="storage-warning" role="alert" hidden></p>
     <button id="reload-data" class="secondary-btn full" type="button" hidden>重新载入最新个人数据</button>
     <button id="app-update" class="update-banner" type="button" hidden>新版本已准备好 · 点击更新</button>
@@ -85,11 +87,19 @@
       <button id="activity-delete" class="secondary-btn full" type="button" hidden>删除这项活动</button>
     </form>
   </dialog>
+  <dialog id="activity-detail-dialog" class="modal detail-modal" aria-labelledby="detail-title">
+    <div class="detail-header"><span class="detail-kicker">ACTIVITY DETAILS</span><button id="activity-detail-close" class="icon-button" type="button" aria-label="关闭活动详情">×</button></div>
+    <div id="activity-detail-content"></div>
+  </dialog>
+  <dialog id="design-preview-dialog" class="design-preview-modal" aria-label="v4.12 视觉预览，不保存或同步">
+    <div id="design-preview-content" class="preview-shell"></div>
+  </dialog>
   <div id="toast" class="toast" role="status" aria-live="polite"></div>
   <script src="./trip-data.js"></script>
   <script src="./personal-data.js"></script>
   <script src="./itinerary-data.js"></script>
   <script src="./map-links.js"></script>
+  <script src="./visual-preview.js"></script>
   <script src="./app.js"></script>
 </body>
 </html>

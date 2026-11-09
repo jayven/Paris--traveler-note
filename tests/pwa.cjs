@@ -4,6 +4,16 @@ const fs=require('node:fs/promises');
 const path=require('node:path');
 const assert=require('node:assert/strict');
 const root=path.resolve(__dirname,'..');
+async function openDetail(page,id){
+ await page.locator(`[data-action="view-activity"][data-id="${id}"]`).click();
+ assert.equal(await page.locator('#activity-detail-dialog').evaluate(el=>el.open),true);
+}
+async function openEditor(page,id){
+ await openDetail(page,id);
+ await page.locator('#activity-detail-dialog [data-detail-action="edit"]').click();
+ assert.equal(await page.locator('#activity-detail-dialog').evaluate(el=>el.open),false);
+ assert.equal(await page.locator('#activity-dialog').evaluate(el=>el.open),true);
+}
 let release='legacy';
 const server=http.createServer(async(req,res)=>{
  const file=new URL(req.url,'http://localhost').pathname.slice(1)||'index.html';
@@ -24,7 +34,7 @@ const server=http.createServer(async(req,res)=>{
  page.on('pageerror',error=>errors.push(error.message));
  await page.goto('http://localhost:4174');
  await page.evaluate(()=>navigator.serviceWorker.ready);await page.reload();
- await page.locator('[data-action=edit-activity][data-id=d1-2]').click();
+ await openEditor(page,'d1-2');
  await page.locator('#activity-time').fill('12:35');
  await page.locator('#activity-detail').fill('正在编辑的描述');
  await page.evaluate(()=>localStorage.setItem('update-test-marker','before-update'));
@@ -47,7 +57,9 @@ const server=http.createServer(async(req,res)=>{
  console.log('PASS legacy worker upgrade waits for user, keeps editor drafts/storage and only removes owned caches');
  await context.setOffline(true);await page.reload();
  assert.match(await page.locator('[data-activity-id=d1-2] .time-col').textContent(),/12:35/);
- assert.equal(await page.locator('[data-activity-id=d1-2] .activity-description').textContent(),'正在编辑的描述');
+ await openDetail(page,'d1-2');
+ assert.equal(await page.locator('#activity-detail-dialog .activity-description').textContent(),'正在编辑的描述');
+ await page.locator('#activity-detail-close').click();
  console.log('PASS full offline shell after update including personal-data.js');
  await context.setOffline(false);release='incomplete';
  await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();await new Promise(resolve=>{const worker=r.installing;if(!worker)return resolve();worker.addEventListener('statechange',()=>{if(['redundant','installed'].includes(worker.state))resolve()})})});

@@ -4,13 +4,15 @@
 
 ## 当前开发状态
 
-2026-11-08：Controlled Refactor & Visual Redesign **Phase 1 审计/方案完成，等待评审**。分支 `feature/paris-pocket-v2-refactor` 基于最新 main `0579040`；本轮只更新文档，不改 UI、行程、存储或 Service Worker，不生产发布。
+2026-11-09：Phase 1 已批准；**Phase 2 视觉已实现，等待视觉评审**。继续在 `feature/paris-pocket-v2-refactor` / 草稿 PR #2，不合并 main、不部署生产。
 
-先读 [AGENTS](AGENTS.md)、[产品简报](PRODUCT_BRIEF.md)、[评审包](docs/PHASE_1_REVIEW.md)。完整方案：[审计](AUDIT.md)、[架构 v1.0](docs/ARCHITECTURE_REFACTOR_PLAN_v1.0.md)、[迁移/回滚](docs/DATA_MIGRATION_AND_ROLLBACK_v1.0.md)、[测试计划](docs/TEST_PLAN_v1.0.md)。
+入口：[Phase 2 结果、四屏截图与限制](docs/phase-2/README.md)。先读 [AGENTS](AGENTS.md) 与 [产品简报](PRODUCT_BRIEF.md)；[Phase 1 审计](AUDIT.md)、[架构](docs/ARCHITECTURE_REFACTOR_PLAN_v1.0.md)、[迁移/回滚方案](docs/DATA_MIGRATION_AND_ROLLBACK_v1.0.md) 保留为已批准方向。
 
-当前运行版本 V1.1.1 仍有本机活动编辑、旧每日/预约笔记、备份、Google Maps、Leaflet 图钉和离线 shell。新产品取消官方行程编辑，改为只读行程/活动备注/官方+本地 To-do/单向官方同步；旧编辑数据要完整归档。**新版功能尚未实现**，运行中的 trip-data.js 仍旧，不是最新旅行依据。
+现有页面采用 UI v1.1 淡色/1px 黑线/方卡/硬阴影/绿色操作；行程行只显示时间和名称，点击真实详情后仍能编辑/排序、打开关联预约与每日笔记。原四个主导航及备份继续工作。
 
-功能依据 [PRD v1.0](docs/references/Paris_Pocket_PRD_v1.0.md)，旅行依据用户 PDF v4.12，视觉依据 [Style Spec v1.1](docs/references/UI_STYLE_SPEC_v1.1.md)。五家酒店已确认、周五 Louvre、周三奥赛、周日鹿特丹等见 [行程核对](docs/ITINERARY_v4.12_REVIEW.md)，未决信息保持待核。旧编辑器/复杂预订/双人个人云同步路线图不再继续。
+点击页头 **「v4.12 预览」** 看八日内容样本和每日行程/活动详情/地图/To-do 四屏设计。预览是隔离的只读样本：没有保存、同步或迁移；备注 readonly、任务勾选/创建未接入。现有预约在主导航继续可用。预览地图使用已有景点坐标与真实底图，不画未经核验的路线。
+
+功能依据 [PRD v1.0](docs/references/Paris_Pocket_PRD_v1.0.md)，视觉依据 [UI v1.1](docs/references/UI_STYLE_SPEC_v1.1.md)；v4.12 来源和待核差异见 [行程核对](docs/ITINERARY_v4.12_REVIEW.md)。原 trip-data.js、personal-data.js、itinerary-data.js 的数据与存储契约未改。
 
 ## 本地开发与基线测试
 
@@ -30,9 +32,10 @@ npx playwright install chromium
 npm run test:browser
 npm run test:management
 npm run test:pwa
+npm run test:visual
 ```
 
-使用已装 Chrome 可加 `PW_CHANNEL=chrome`；自定义 server 地址用 `TEST_URL=http://localhost:4178`（browser/management）。PWA 测试自带 server 4174。当前 20 个 Node tests 和三套浏览器脚本已通过，详情/缺口见测试计划。test-results/、node_modules/ 忽略，不放私人备份。
+使用已装 Chrome 可加 `PW_CHANNEL=chrome`；自定义 server 地址用 `TEST_URL=http://localhost:4178`（browser/management）。PWA 测试自带 server 4174。当前 20 个 Node tests、三套现有浏览器脚本与新增 visual 检查已通过；截图在 docs/phase-2/screenshots，详情/缺口见本轮评审包。test-results/、node_modules/ 忽略，不放私人备份。
 
 同 Wi-Fi 的 iPhone 可输入电脑 LAN IP:端口检查现有界面；普通 LAN HTTP 不支持 SW，离线/主屏幕验收需要 HTTPS。独立预览与生产数据分属不同 origin，通过备份迁移；不可清除生产数据排查问题。
 
@@ -43,7 +46,7 @@ npm run test:pwa
 - itinerary-data.js：当前编辑/移动/排序/删除恢复投影；未来仅 legacy 恢复职责。
 - map-links.js：Google Maps 精确坐标查看、walking/driving、可选 Place ID；没有付费 API key。
 - app.js / index.html / styles.css：日期导航、渲染、笔记、编辑、备份、Leaflet 与 PWA 更新。
-- sw.js / manifest.webmanifest / assets/：完整 cache-first shell、手动更新、安装身份；尚无独立官方同步。
+- sw.js / manifest.webmanifest / assets/：完整 cache-first shell、手动更新、安装身份；尚无独立官方同步。新增 visual-preview.js 仅服务隔离设计样本。
 - scripts/serve.cjs / tests/：本地 server 与基线验证；docs/：当前受控重构评审资料。
 
 ## 数据、更新与发布边界
@@ -52,6 +55,6 @@ npm run test:pwa
 
 当前 SW 更新仍需发布完整 shell 并改变 CACHE_VERSION；在线打开原网址，保存输入后点击「新版本已准备好」。不靠删除主屏幕图标/清站点数据更新。现行 trip-data 与代码绑定，不能宣称用户已能独立一键同步。
 
-保留同一 GitHub 仓库和 Netlify site。GitHub main 已连接 Netlify webhook，合并可能立即发生产；本轮不推送/合并 main、不改 Netlify 配置、不新建站点。Phase 2、UI 评审、Phase 3 与最终生产批准是独立门槛。后续先核实 Deploy Preview，再做 HTTPS 真机与升级/回滚验收。
+保留同一 GitHub 仓库和 Netlify site。GitHub main 已连接 Netlify webhook，合并可能立即发生产；本轮仅推送现有功能分支，不推送/合并 main、不改 Netlify 配置、不新建站点。Phase 2 视觉评审、Phase 3 与最终生产批准是独立门槛。后续先核实 Deploy Preview，再做 HTTPS 真机与升级/回滚验收。
 
 仓库是公开的，当前 server 也服务根目录非隐藏文件；内部文档不等于私密目录。不要放私人订单号、管理链接、票二维码、真实用户备份或 secrets。后续发布产物白名单方案见架构文档。

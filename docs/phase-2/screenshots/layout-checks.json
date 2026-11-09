@@ -1,0 +1,136 @@
+{
+  "viewportHeight": 844,
+  "layouts": [
+    {
+      "width": 320,
+      "dialogWidth": 320,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "days"
+    },
+    {
+      "width": 320,
+      "dialogWidth": 320,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "detail"
+    },
+    {
+      "width": 320,
+      "dialogWidth": 320,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "map"
+    },
+    {
+      "width": 320,
+      "dialogWidth": 320,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "todo"
+    },
+    {
+      "width": 375,
+      "dialogWidth": 375,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "days"
+    },
+    {
+      "width": 375,
+      "dialogWidth": 375,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "detail"
+    },
+    {
+      "width": 375,
+      "dialogWidth": 375,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "map"
+    },
+    {
+      "width": 375,
+      "dialogWidth": 375,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "todo"
+    },
+    {
+      "width": 390,
+      "dialogWidth": 390,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "days"
+    },
+    {
+      "width": 390,
+      "dialogWidth": 390,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "detail"
+    },
+    {
+      "width": 390,
+      "dialogWidth": 390,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "map"
+    },
+    {
+      "width": 390,
+      "dialogWidth": 390,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "todo"
+    },
+    {
+      "width": 430,
+      "dialogWidth": 430,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "days"
+    },
+    {
+      "width": 430,
+      "dialogWidth": 430,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "detail"
+    },
+    {
+      "width": 430,
+      "dialogWidth": 430,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "map"
+    },
+    {
+      "width": 430,
+      "dialogWidth": 430,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 843,
+      "view": "todo"
+    }
+  ],
+  "noStorageWrites": true,
+  "noIndexedDBOpens": true,
+  "pageErrors": []
+}

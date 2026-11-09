@@ -54,8 +54,32 @@ function hero(){return `<section class="hero">
  <div class="hero-content"><div class="eyebrow">DÉCEMBRE 2026 · PARIS, FRANCE</div><h1 class="hero-title">Paris, at our pace<small>我们的巴黎慢旅行</small></h1><div class="hero-hr"></div><div class="hero-sub">2026.12.07 — 12.14<br>第一次巴黎 · 两个人 · 冬日圣诞季</div></div><span class="hero-badge">${safe(getCountdown())}</span>
  </section><div class="top-meta"><div class="meta-item"><span class="meta-value">8 DAYS</span><span class="meta-label">12/7–12/14</span></div><div class="meta-item"><span class="meta-value">7 NIGHTS</span><span class="meta-label">七晚巴黎</span></div><div class="meta-item"><span class="meta-value">2 PEOPLE</span><span class="meta-label">我们的旅行</span></div></div>`}
 function typeChip(type){return type==='必去'?'<span class="chip chip-gold">必去</span>':type==='交通'?'<span class="chip chip-gray">交通</span>':type==='景点'?'<span class="chip chip-green">景点</span>':type==='体验'?'<span class="chip chip-coral">体验</span>':''}
-function renderActivity(activity,i,total){const place=activity.place && trip.locations[activity.place]; const extras=(activity.extraPlaces||[]).map(x=>trip.locations[x]).filter(Boolean);const bn=activity.booking && trip.bookings.find(b=>b.id===activity.booking);const checked=bn && saved.booked.includes(bn.id);
- return `<div data-activity-id="${safe(activity.id)}" class="time-row ${activity.type==='必去'||activity.fixed?'important':''}"><div class="time-col">${safe(activity.time)}${activity.end?`<span class="to">${safe(activity.end)}</span>`:''}</div><div class="line-col"><span class="dot"></span>${i+1<total?'<span class="thread"></span>':''}</div><div class="activity-card"><div class="activity-top"><div class="activity-title">${safe(activity.title)}</div>${typeChip(activity.type)}</div><div class="activity-description">${safe(activity.detail)}</div><div class="activity-actions">${place?`${extras.length?`<span class="map-place-label">${safe(place.name)}</span>`:''}${mapLinks(place)}`:''}${extras.map(x=>`<span class="map-place-label">${safe(x.name)}</span>${mapLinks(x)}`).join('')}${bn?`<button class="text-link dark" type="button" data-action="go-booking" data-id="${safe(bn.id)}">${icons.calendar} ${checked?'已标记预约':'待预约'}</button>`:''}<button class="text-link edit-activity" type="button" data-action="edit-activity" data-id="${safe(activity.id)}" aria-label="编辑 ${safe(activity.title)}">编辑${saved.customActivities[activity.id]?' · 新增':saved.activityOverrides[activity.id]?' · 已修改':''}</button><button class="text-link reorder-activity" type="button" data-action="move-up" data-id="${safe(activity.id)}" aria-label="上移 ${safe(activity.title)}" ${i===0?'disabled':''}>↑ 上移</button><button class="text-link reorder-activity" type="button" data-action="move-down" data-id="${safe(activity.id)}" aria-label="下移 ${safe(activity.title)}" ${i+1===total?'disabled':''}>↓ 下移</button></div></div></div>`}
+function renderActivity(activity){
+ return `<div data-activity-id="${safe(activity.id)}" class="time-row"><div class="time-col">${safe(activity.time)}${activity.end?`<span class="to">${safe(activity.end)}</span>`:''}</div><button class="activity-open" type="button" data-action="view-activity" data-id="${safe(activity.id)}" aria-label="查看 ${safe(activity.title)} 的详情"><span class="activity-title">${safe(activity.title)}</span><span aria-hidden="true">›</span></button></div>`;
+}
+const detailDialog=document.getElementById('activity-detail-dialog');
+let detailActivityId=null,detailTrigger=null;
+function openActivityDetail(id,trigger){
+ const activity=itinerary.find(trip,saved,id);if(!activity)return;
+ detailActivityId=id;detailTrigger=trigger;
+ const day=currentDays().find(d=>d.date===activity.date),index=day?.activities.findIndex(a=>a.id===id)??-1;
+ const places=[activity.place,...(activity.extraPlaces||[])].filter(Boolean).map(key=>trip.locations[key]).filter(Boolean);
+ const booking=trip.bookings.find(b=>b.id===activity.booking);
+ document.getElementById('activity-detail-content').innerHTML=`<p class="detail-meta">${prettyDate(activity.date)} · ${safe(activity.time)}${activity.end?`–${safe(activity.end)}`:''} · 巴黎时间</p><h2 id="detail-title" class="detail-heading">${safe(activity.title)}</h2><p class="detail-status">${booking&&saved.booked.includes(booking.id)?'本机已标记预约 · 请以实际订单为准':'拟定安排 · 非预约确认'}</p><section class="detail-section"><h3 class="detail-label">活动说明</h3><p class="activity-description detail-copy">${safe(activity.detail)||'暂无补充说明'}</p></section>${places.map(place=>`<section class="detail-section"><h3 class="detail-label">地点与导航</h3><strong>${safe(place.name)}</strong><p class="detail-address">${safe(place.en)}</p><p class="detail-copy">${safe(place.info||'景点参考位置，实际入口或集合处请核对订单。')}</p>${mapLinks(place)}</section>`).join('')}${booking?`<section class="detail-section"><h3 class="detail-label">关联预约与个人记录</h3><p class="detail-copy">${safe(booking.title)}</p><button class="secondary-btn full" type="button" data-detail-action="booking">${saved.booked.includes(booking.id)?'已标记预约':'待预约'} · 查看记录和备注 →</button></section>`:''}<section class="detail-section"><h3 class="detail-label">本机行程管理</h3><p class="detail-copy">现有编辑与个人记录继续可用。修改仅保存于本机，不会确认门票。</p><button class="primary-btn full" type="button" data-detail-action="edit">编辑这项活动${saved.activityOverrides[id]?' · 已修改':''}</button><div class="btn-row"><button class="secondary-btn" type="button" data-detail-action="move-up" ${index<=0?'disabled':''}>↑ 上移</button><button class="secondary-btn" type="button" data-detail-action="move-down" ${index<0||index===day.activities.length-1?'disabled':''}>↓ 下移</button></div><button class="secondary-btn full" type="button" data-detail-action="day-note">查看当日随手记 →</button></section>`;
+ detailDialog.showModal();detailDialog.scrollTop=0;
+}
+document.getElementById('activity-detail-close').addEventListener('click',()=>detailDialog.close());
+detailDialog.addEventListener('close',()=>{if(detailTrigger?.isConnected)detailTrigger.focus({preventScroll:true});});
+detailDialog.addEventListener('click',event=>{
+ const action=event.target.closest('[data-detail-action]');if(!action)return;
+ const id=detailActivityId,name=action.dataset.detailAction,trigger=detailTrigger;
+ detailTrigger=null;
+ detailDialog.close();
+ if(name==='edit')openActivityEditor(id,trigger);
+ else if(name==='move-up'||name==='move-down')changeActivity(name,id);
+ else if(name==='booking')switchTab('bookings');
+ else if(name==='day-note')document.getElementById('day-note')?.focus();
+});
 function renderDays(){const d=currentDays()[dayIndex], today=getParisToday();
  const deleted=itinerary.all(trip,saved).filter(a=>a.date===d.date&&saved.deletedActivityIds.includes(a.id));main.innerHTML=hero()+`<section class="content"><div class="section-head"><div><div class="mini-caps">DAILY ITINERARY</div><h2 class="section-title">每日行程</h2></div><span class="section-aside">所有时间为巴黎当地时间<br>可点击切换日期</span></div>
  <div class="date-strip" role="tablist" aria-label="选择旅行日期">${trip.days.map((x,i)=>`<button class="date-chip ${dayIndex===i?'active':''} ${today===x.date?'today':''}" type="button" role="tab" aria-selected="${dayIndex===i}" data-day="${i}"><small>${safe(x.weekday)}</small><strong>${x.date.slice(-2)}</strong><small>DEC</small></button>`).join('')}</div>
@@ -65,7 +89,7 @@ function renderDays(){const d=currentDays()[dayIndex], today=getParisToday();
  <div class="timeline">${d.activities.map((a,i)=>renderActivity(a,i,d.activities.length)).join('')||'<p class="empty-day">这一天还没有活动。可以添加活动，或恢复已删除的安排。</p>'}</div>
  ${deleted.length?`<details class="deleted-activities"><summary>已删除的安排（${deleted.length}）</summary>${deleted.map(a=>`<div class="deleted-row"><span>${safe(a.title)}</span><button class="secondary-btn" type="button" data-action="restore-activity" data-id="${safe(a.id)}" aria-label="恢复 ${safe(a.title)}">恢复</button></div>`).join('')}</details>`:''}
  <div class="day-footer"><div class="footer-lead">✦ 今日温馨提示</div><p class="footer-text">${safe(d.note)}</p></div>
- <div class="notes-box"><label class="field-title" for="day-note">我的 ${prettyDate(d.date)} 随手记</label><textarea class="note-input" id="day-note" data-note-day="${d.date}" placeholder="例如：想去的餐厅、补充景点、实际预约时间……">${safe(saved.dayNotes[d.date]||'')}</textarea><p class="notes-hint">文字自动保存在这台设备。点击「编辑」可调整日期、时间和描述；上移/下移可调整顺序；旅行卡片中可导出备份。</p></div></section>`;
+ <div class="notes-box"><label class="field-title" for="day-note">我的 ${prettyDate(d.date)} 随手记</label><textarea class="note-input" id="day-note" data-note-day="${d.date}" placeholder="例如：想去的餐厅、补充景点、实际预约时间……">${safe(saved.dayNotes[d.date]||'')}</textarea><p class="notes-hint">文字自动保存在这台设备。点击活动查看详情，可继续编辑或调整顺序；旅行卡片中可导出备份。</p></div></section>`;
 }
 function bookingGroup(items,label){return `<div class="group-label">${label}</div>${items.map(b=>{const done=saved.booked.includes(b.id);return `<article class="card"><div class="booking-row"><input type="checkbox" class="book-check" id="book-${b.id}" data-book="${b.id}" ${done?'checked':''}><div class="booking-content"><label for="book-${b.id}" class="booking-title ${done?'done':''}">${safe(b.title)}</label><div class="booking-date">${safe(b.date)}</div><div class="booking-note">${safe(b.note)}</div>${b.url?`<div class="booking-actions"><a class="mini-link" href="${safe(b.url)}" target="_blank" rel="noopener noreferrer">官方入口 ${icons.arrow}</a></div>`:''}<textarea class="inline-note" data-booking-note="${b.id}" rows="2" aria-label="${safe(b.title)} 的预订备注" placeholder="确认号、票价、集合点等……">${safe(saved.bookingNotes[b.id]||'')}</textarea></div>${done?'<span class="chip chip-green tag-right">已标记</span>':''}</div></article>`}).join('')}`}
 function renderBookings(){const done=trip.bookings.filter(b=>saved.booked.includes(b.id)).length;const high=trip.bookings.filter(b=>b.priority==='high'),mid=trip.bookings.filter(b=>b.priority==='medium'),later=trip.bookings.filter(b=>b.priority==='later');main.innerHTML=`<section class="page-heading"><div class="mini-caps">KEEP IT SIMPLE</div><h1>预订清单</h1><p>先锁定最影响行程的项目。勾选仅表示你已完成预订，不会自动购买门票。</p></section><section class="page-body"><div class="progress-header"><span>我们的准备进度</span><strong>${done} / ${trip.bookings.length}</strong></div><div class="progress-bg"><div class="progress-inner" style="width:${(done/trip.bookings.length)*100}%"></div></div><div class="callout">所有项目目前都是拟定安排，并非已出票。预订确认号可以记在各项目下方，信息只保存在这台设备。</div>${bookingGroup(high,'01 · 尽快确定')}${bookingGroup(mid,'02 · 提前预约')}${bookingGroup(later,'03 · 临近再看')}</section>`}
@@ -75,7 +99,7 @@ function renderMap(){if(mapInstance){mapInstance.stop();mapInstance.remove();map
  initializeLeaflet(places,generation);
 }
 function loadLeaflet(){ if(window.L) return Promise.resolve();if(leafletPromise)return leafletPromise;
- leafletPromise=new Promise((resolve,reject)=>{let finished=false;const good=()=>{if(!finished){finished=true;resolve()}};const bad=(err)=>{if(!finished){finished=true;reject(err)}};setTimeout(()=>bad(new Error('地图加载超时')),7000);const link=document.createElement('link');link.rel='stylesheet';link.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';link.crossOrigin='anonymous';document.head.appendChild(link);const script=document.createElement('script');script.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';script.crossOrigin='anonymous';script.onload=()=>window.L?good():bad(new Error('地图引擎未加载'));script.onerror=()=>bad(new Error('离线 / 地图资源不可用'));document.head.appendChild(script)});return leafletPromise;
+ leafletPromise=new Promise((resolve,reject)=>{let finished=false;const good=()=>{if(!finished){finished=true;resolve()}};const bad=(err)=>{if(!finished){finished=true;reject(err)}};setTimeout(()=>bad(new Error('地图加载超时')),7000);const link=document.createElement('link');link.rel='stylesheet';link.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';link.crossOrigin='anonymous';document.head.appendChild(link);const script=document.createElement('script');script.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';script.crossOrigin='anonymous';script.onload=()=>window.L?good():bad(new Error('地图引擎未加载'));script.onerror=()=>bad(new Error('离线 / 地图资源不可用'));document.head.appendChild(script)}).catch(error=>{leafletPromise=null;throw error;});return leafletPromise;
 }
 async function initializeLeaflet(places,generation){try{await loadLeaflet();if(tab!=='map'||generation!==mapGeneration)return;const target=document.getElementById('leaflet-target');if(!target)return;
  if(mapInstance){mapInstance.remove();mapInstance=null;}
@@ -130,7 +154,7 @@ function openActivityEditor(id, trigger){
 }
 function closeActivityEditor(){document.getElementById('activity-dialog').close();}
 function focusActivity(id){
- const button=Array.from(main.querySelectorAll('[data-action="edit-activity"]')).find(el=>el.dataset.id===id);
+ const button=Array.from(main.querySelectorAll('[data-action="view-activity"]')).find(el=>el.dataset.id===id);
  (button||main.querySelector('[data-action="add-activity"]'))?.focus({preventScroll:true});
 }
 function commitActivity(edit, reset=false){
@@ -182,7 +206,7 @@ function installHelp(){const modal=document.getElementById('install-dialog');if(
 main.addEventListener('click',e=>{
  const chip=e.target.closest('[data-day]');if(chip){dayIndex=Number(chip.dataset.day);renderDays();document.querySelector('.date-chip.active')?.scrollIntoView({block:'nearest',inline:'center'});window.scrollTo({top:0,behavior:'smooth'});return;}
  const filter=e.target.closest('[data-map-filter]');if(filter){mapFilter=filter.dataset.mapFilter;renderMap();return;}
- const action=e.target.closest('[data-action]');if(action){const name=action.dataset.action;if(name==='add-activity')openActivityEditor(null,action);else if(['move-up','move-down','restore-activity'].includes(name))changeActivity(name,action.dataset.id);else if(name==='edit-activity')openActivityEditor(action.dataset.id,action);else if(name==='go-booking')switchTab('bookings');else if(name==='install-help')installHelp();else if(name==='export-backup')downloadBackup();else if(name==='import-backup')document.getElementById('backup-file')?.click();return;}
+ const action=e.target.closest('[data-action]');if(action){const name=action.dataset.action;if(name==='view-activity')openActivityDetail(action.dataset.id,action);else if(name==='add-activity')openActivityEditor(null,action);else if(['move-up','move-down','restore-activity'].includes(name))changeActivity(name,action.dataset.id);else if(name==='edit-activity')openActivityEditor(action.dataset.id,action);else if(name==='go-booking')switchTab('bookings');else if(name==='install-help')installHelp();else if(name==='export-backup')downloadBackup();else if(name==='import-backup')document.getElementById('backup-file')?.click();return;}
 });
 main.addEventListener('change',e=>{
  if(e.target.matches('[data-book]')){
@@ -222,6 +246,8 @@ if('serviceWorker' in navigator && (location.protocol==='https:' || location.hos
  }).catch(()=>showToast('离线缓存暂不可用，联网后请重新打开'));
  navigator.serviceWorker.addEventListener('controllerchange',()=>{if(requestedUpdate)location.reload();});
 }
+if(window.ParisVisualPreview)window.ParisVisualPreview.mount({trip,loadLeaflet,mapLinks,safe});
+else document.getElementById('design-preview-btn').hidden=true;
 render();
 if(storageBlocked){
  const warning=document.getElementById('storage-warning');warning.hidden=false;

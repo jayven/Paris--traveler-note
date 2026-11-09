@@ -1,11 +1,11 @@
 # Paris Pocket — 从这里继续
 
-先读 [AGENTS.md](AGENTS.md)、[PRODUCT_BRIEF.md](PRODUCT_BRIEF.md)、[Phase 1 评审包](docs/PHASE_1_REVIEW.md)。
+先读 [AGENTS](AGENTS.md)、[PRODUCT_BRIEF](PRODUCT_BRIEF.md)、[Phase 2 评审包](docs/phase-2/README.md)。
 
-当前开发分支 `feature/paris-pocket-v2-refactor` 基于 `main` 的 `05790404b87b616db7b1a786770232dc55fbfe7b`。Phase 1 已完成当前代码审计和方案，**等用户评审后再开始 Phase 2**。不要把本轮 Phase 1 理解为实施旧架构草案里的数据迁移阶段。
+用户已批准 Phase 1 与 Phase 2 实施。本轮完成视觉、截图及回归后，**等待用户视觉批准，不开始 Phase 3**。分支继续为 feature/paris-pocket-v2-refactor，现有草稿 PR #2，不合并 main、不部署生产。
 
-最新方向是只读官方行程、活动本机备注、官方+本地 To-do、可信每日地图和单向官方同步。旧编辑器退出未来范围，但所有旧编辑数据必须保留。最新行程来自 v4.12，不是尚未切换的 `trip-data.js`；五家酒店已确认。
+本阶段保留现有编辑/预约/笔记/备份和原 storage schema。主界面已换视觉、行程行点击真实详情后仍可编辑与排序；v4.12 和 To-do 未来设计在独立视觉预览中，不保存、不同步，不替代可用的主导航。
 
-后续顺序：Phase 2 视觉与必要支撑重构 → 行程/详情/地图/To-do 四张手机截图评审 → Phase 3 数据/迁移/同步/地图集成 → 回归和真机验收 → 用户另行批准合并及生产发布。
+架构方向获认可，但 Phase 3 实施前仍需验证同步/回滚机制是否为这款两人小 App 的最简单可靠选择。不要现在迁移 localStorage、建立 IndexedDB 或接入官方同步；不要因最终 PRD 只读要求提前删除旧编辑器。
 
-继续时使用 [架构](docs/ARCHITECTURE_REFACTOR_PLAN_v1.0.md)、[迁移回滚](docs/DATA_MIGRATION_AND_ROLLBACK_v1.0.md)、[测试计划](docs/TEST_PLAN_v1.0.md)。保持原仓库、原 Netlify 网站和旧存储键，不直接修改 main。
+后续须先获视觉批准，再明确 Phase 3 范围。迁移方案、测试追踪及已知限制见 docs/；用户最终另批 main 合并与生产发布。
