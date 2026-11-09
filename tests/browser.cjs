@@ -3,7 +3,7 @@ const {chromium,devices}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs/promises');
 const path=require('node:path');
-const origin=process.env.TEST_URL||'http://localhost:4173';
+const origin=new URL('legacy.html',(process.env.TEST_URL||'http://localhost:4173')+'/').href;
 const key='paris-pocket-personal-v1';
 const legacy={booked:['louvre'],dayNotes:{'2026-12-07':'原有每日笔记'},bookingNotes:{louvre:'原有预约备注'},hotelNote:'原有酒店笔记',flightNote:'原有航班笔记',miscNote:'原有其他笔记'};
 async function openDetail(page,id){

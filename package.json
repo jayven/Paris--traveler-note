@@ -1,6 +1,6 @@
 {
   "name": "paris-pocket",
-  "version": "1.1.1",
+  "version": "2.0.0-phase3",
   "private": true,
   "scripts": {
     "start": "node scripts/serve.cjs",
@@ -8,7 +8,15 @@
     "test:browser": "node tests/browser.cjs",
     "test:management": "node tests/management.cjs",
     "test:pwa": "node tests/pwa.cjs",
-    "test:visual": "node tests/visual.cjs"
+    "test:visual": "node tests/visual.cjs",
+    "build:trip": "node scripts/build-trip.cjs",
+    "test:store": "node tests/store-browser.cjs",
+    "test:integrated": "node tests/integrated.cjs",
+    "build:site": "node scripts/build-site.cjs",
+    "test:concurrency": "node tests/concurrency.cjs",
+    "test:failure": "node tests/failure-ui.cjs"
   },
-  "devDependencies": { "playwright": "1.62.1" }
+  "devDependencies": {
+    "playwright": "1.62.1"
+  }
 }

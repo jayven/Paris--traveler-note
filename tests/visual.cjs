@@ -3,10 +3,10 @@ const {chromium,devices}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs/promises');
 const path=require('node:path');
-const origin=process.env.TEST_URL||'http://localhost:4173';
+const origin=new URL('legacy.html',(process.env.TEST_URL||'http://localhost:4173')+'/').href;
 const key='paris-pocket-personal-v1';
 const seed={schemaVersion:3,booked:['louvre'],dayNotes:{'2026-12-07':'测试每日笔记'},bookingNotes:{louvre:'测试预约备注'},hotelNote:'测试酒店记录',flightNote:'测试航班记录',miscNote:'测试随手记',activityOverrides:{'d1-2':{time:'12:15',end:'14:15',detail:'测试描述'}},customActivities:{},deletedActivityIds:[],activityOrder:{},futureField:{preserve:true}};
-const output=path.join(__dirname,'../docs/phase-2/screenshots');
+const output=path.join(__dirname,'../test-results/phase-2-regression');
 (async()=>{
  const browser=await chromium.launch({headless:true,...(process.env.PW_CHANNEL?{channel:process.env.PW_CHANNEL}:{})});
  try{

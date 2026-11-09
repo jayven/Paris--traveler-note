@@ -1,256 +1,124 @@
-(() => {
+/* Paris Pocket: official itinerary + private, device-local records. No backend or login. */
+(async()=>{
 'use strict';
-const trip = window.PARIS_TRIP;
-if (!trip) { document.getElementById('main-content').textContent='行程文件未加载，请确认 trip-data.js 与网页在同一文件夹。'; return; }
-const main = document.getElementById('main-content');
-const personal = window.ParisPersonal;
-const itinerary = window.ParisItinerary;
-const loaded = personal.read({ getItem: key => localStorage.getItem(key) });
-try { loaded.data=itinerary.validate(trip,loaded.data); }
-catch(error){loaded.error=error;loaded.data=personal.normalize({});}
-let saved = loaded.data;
-let expectedRaw = loaded.raw, storageConflict = false;
-let creatingActivity = false;
-const currentDays = () => itinerary.days(trip, saved);
-const storageBlocked = Boolean(loaded.error);
-let editingActivity = null, editorTrigger = null;
-let tab='days', dayIndex=0, mapFilter='all', mapInstance=null, leafletPromise=null;
-let toastTimer=null, mapGeneration=0;
-
-const icons={
- pin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z"/><circle cx="12" cy="10" r="2.5"/></svg>',
- arrow:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>',
- calendar:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18"/></svg>'
-};
-const safe=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const num=(n)=>String(n).padStart(2,'0');
-const mapHref=window.ParisMapLinks.view;
-function mapLinks(place){
- return `<span class="map-links"><a class="text-link" href="${safe(mapHref(place))}" target="_blank" rel="noopener noreferrer" aria-label="在 Google Maps 查看 ${safe(place.name)}">${icons.pin} Google Maps</a><a class="text-link" href="${safe(window.ParisMapLinks.directions(place,'walking'))}" target="_blank" rel="noopener noreferrer" aria-label="用 Google Maps 步行前往 ${safe(place.name)}">步行 ↗</a><a class="text-link" href="${safe(window.ParisMapLinks.directions(place,'driving'))}" target="_blank" rel="noopener noreferrer" aria-label="用 Google Maps 驾车前往 ${safe(place.name)}">驾车 ↗</a></span>`;
+const APP_VERSION='2.0.0-phase3';
+const V=window.ParisViews,O=window.ParisOfficial,main=document.getElementById('main-content');
+const {safe,date,link}=V;
+let store,state,storageError='',syncMessage='',tab='days',dayIndex=0,taskFilter='pending';
+let mapFilter='all',focusedStop=null,routesVisible=true,mapInstance=null,mapGeneration=0,leafletPromise;
+let detailId=null,detailTrigger=null,editingTask=null,importPayload=null,importRevision=null;
+let queue=Promise.resolve(),noteTimer,toastTimer,syncing=false,writing=0;
+const drafts=new Map(),noteRevisions=new Map(),noteBases=new Map();
+let taskRevision=null;
+const data=()=>state.official.data;
+const canWrite=()=>!!store&&!!state.personal&&!state.migrationBlocked&&!storageError;
+const clone=x=>JSON.parse(JSON.stringify(x));
+function today(){return new Intl.DateTimeFormat('en-CA',{timeZone:'Europe/Paris',year:'numeric',month:'2-digit',day:'2-digit'}).format(new Date());}
+function toast(message){const el=document.getElementById('toast');el.textContent=message;el.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('visible'),3500);}
+function warning(message,reload=false){const el=document.getElementById('storage-warning');el.textContent=message;el.hidden=!message;document.getElementById('reload-data').hidden=!reload;}
+function serialize(fn){const run=queue.then(fn);queue=run.catch(()=>{});return run;}
+async function write(change,expectedRevision){return serialize(async()=>{
+ if(!canWrite())throw new Error('个人资料暂不能保存。旧资料原文仍保留，请先检查恢复区或导出备份。');
+ const revision=expectedRevision??state.personal.revision;
+ const next=clone(state.personal);change(next);writing++;
+ try{state=await store.changePersonal(revision,next);return state;}
+ catch(error){warning(error.code==='STORAGE_CONFLICT'?'另一个窗口已修改本机资料。请重新读取最新资料；未保存草稿仍保留。':'保存失败，输入仍保留。请导出备份并检查可用存储空间。',true);throw error;}
+ finally{writing--;}
+ });}
+function noteStatus(text,error=false){const el=document.getElementById('note-status');if(el){el.textContent=text;el.classList.toggle('error',error);}const retry=document.getElementById('note-retry');if(retry)retry.hidden=!error;}
+async function saveNote(id){if(!drafts.has(id))return true;const value=drafts.get(id);
+ if(id===detailId)noteStatus('正在保存到此设备…');
+ try{const revision=noteRevisions.get(id);await write(p=>{p.notesByActivityId[id]=value;},revision);noteRevisions.set(id,revision+1);noteBases.set(id,value);if(drafts.get(id)===value)drafts.delete(id);if(id===detailId)noteStatus(drafts.has(id)?'还有输入等待保存…':'已保存到此设备');return true;}
+ catch(error){if(id===detailId)noteStatus('未保存，草稿仍保留。重新读取资料后可重试。',true);toast(error.message);return false;}
 }
-function save(next) {
- if (storageBlocked) { showToast('原有数据无法读取，已暂停保存。请先检查浏览器存储或备份。'); return false; }
- try {
-  saved = personal.write(localStorage, next, expectedRaw);
-  expectedRaw = JSON.stringify(saved);return true;
- }catch(error){
-  if(error.code==='STORAGE_CONFLICT'){storageConflict=true;showStorageConflict();showToast(error.message);}
-  else showToast('未保存：本机存储不可用，请保留输入并重试');
-  return false;
- }
+async function flushNotes(){clearTimeout(noteTimer);let ok=true;for(const id of [...drafts.keys()])if(!await saveNote(id))ok=false;return ok;}
+function destroyMap(){mapGeneration++;if(mapInstance){mapInstance.stop();mapInstance.remove();mapInstance=null;}}
+function render(){destroyMap();if(tab==='days')main.innerHTML=V.days(data(),dayIndex);if(tab==='todo')main.innerHTML=V.todos(data(),state.personal,taskFilter,today());if(tab==='map')renderMap();if(tab==='more')renderMore();
+ if(!canWrite())main.querySelectorAll('[data-complete],[data-action="task-add"]').forEach(el=>el.disabled=true);
+ document.querySelectorAll('.bottom-nav [data-tab]').forEach(el=>{el.classList.toggle('active',el.dataset.tab===tab);if(el.dataset.tab===tab)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');});
 }
-const showToast=message=>{const el=document.getElementById('toast');el.textContent=message;el.classList.add('visible');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.remove('visible'),2400)};
-function prettyDate(s) { const [y,m,d]=s.split('-');return `${Number(m)}月${Number(d)}日` }
-function getParisToday(){try{const ps=new Intl.DateTimeFormat('en-US',{year:'numeric',month:'2-digit',day:'2-digit',timeZone:trip.timezone}).formatToParts(new Date());const m=Object.fromEntries(ps.map(p=>[p.type,p.value]));return `${m.year}-${m.month}-${m.day}`}catch(e){return ''}}
-function getCountdown(){
- const today=getParisToday(); if(!today)return '8 DAYS IN PARIS';
- const day=Date.parse(today+'T00:00:00Z'), start=Date.parse(trip.startDate+'T00:00:00Z'), end=Date.parse(trip.endDate+'T00:00:00Z');
- if(day<start)return `距离巴黎还有 ${Math.ceil((start-day)/86400000)} 天`;
- if(day<=end)return 'BONJOUR, PARIS!';
- return 'OUR PARIS MEMORIES';
-}
-function hero(){return `<section class="hero">
- <svg class="eiffel-art" viewBox="0 0 170 238" aria-hidden="true"><path d="M84 11v10m-15 6h30M83 19l-4 18-6 26-12 38-11 30-13 30-19 39M85 19l4 18 6 26 12 38 11 30 13 30 19 39M24 197h126M38 170h94M52 135h65M61 108h47M73 64h23M18 197c24-10 39-8 56-5m24 0c17-3 32-5 52 5M47 140c17-11 59-11 77 0M54 122c16-5 48-5 63 0"/><path d="M50 169c22-29 49-29 73 0M75 40h18m-19 8h20"/></svg>
- <div class="hero-content"><div class="eyebrow">DÉCEMBRE 2026 · PARIS, FRANCE</div><h1 class="hero-title">Paris, at our pace<small>我们的巴黎慢旅行</small></h1><div class="hero-hr"></div><div class="hero-sub">2026.12.07 — 12.14<br>第一次巴黎 · 两个人 · 冬日圣诞季</div></div><span class="hero-badge">${safe(getCountdown())}</span>
- </section><div class="top-meta"><div class="meta-item"><span class="meta-value">8 DAYS</span><span class="meta-label">12/7–12/14</span></div><div class="meta-item"><span class="meta-value">7 NIGHTS</span><span class="meta-label">七晚巴黎</span></div><div class="meta-item"><span class="meta-value">2 PEOPLE</span><span class="meta-label">我们的旅行</span></div></div>`}
-function typeChip(type){return type==='必去'?'<span class="chip chip-gold">必去</span>':type==='交通'?'<span class="chip chip-gray">交通</span>':type==='景点'?'<span class="chip chip-green">景点</span>':type==='体验'?'<span class="chip chip-coral">体验</span>':''}
-function renderActivity(activity){
- return `<div data-activity-id="${safe(activity.id)}" class="time-row"><div class="time-col">${safe(activity.time)}${activity.end?`<span class="to">${safe(activity.end)}</span>`:''}</div><button class="activity-open" type="button" data-action="view-activity" data-id="${safe(activity.id)}" aria-label="查看 ${safe(activity.title)} 的详情"><span class="activity-title">${safe(activity.title)}</span><span aria-hidden="true">›</span></button></div>`;
-}
+function switchTab(next){tab=next;render();window.scrollTo({top:0});main.focus({preventScroll:true});}
 const detailDialog=document.getElementById('activity-detail-dialog');
-let detailActivityId=null,detailTrigger=null;
-function openActivityDetail(id,trigger){
- const activity=itinerary.find(trip,saved,id);if(!activity)return;
- detailActivityId=id;detailTrigger=trigger;
- const day=currentDays().find(d=>d.date===activity.date),index=day?.activities.findIndex(a=>a.id===id)??-1;
- const places=[activity.place,...(activity.extraPlaces||[])].filter(Boolean).map(key=>trip.locations[key]).filter(Boolean);
- const booking=trip.bookings.find(b=>b.id===activity.booking);
- document.getElementById('activity-detail-content').innerHTML=`<p class="detail-meta">${prettyDate(activity.date)} · ${safe(activity.time)}${activity.end?`–${safe(activity.end)}`:''} · 巴黎时间</p><h2 id="detail-title" class="detail-heading">${safe(activity.title)}</h2><p class="detail-status">${booking&&saved.booked.includes(booking.id)?'本机已标记预约 · 请以实际订单为准':'拟定安排 · 非预约确认'}</p><section class="detail-section"><h3 class="detail-label">活动说明</h3><p class="activity-description detail-copy">${safe(activity.detail)||'暂无补充说明'}</p></section>${places.map(place=>`<section class="detail-section"><h3 class="detail-label">地点与导航</h3><strong>${safe(place.name)}</strong><p class="detail-address">${safe(place.en)}</p><p class="detail-copy">${safe(place.info||'景点参考位置，实际入口或集合处请核对订单。')}</p>${mapLinks(place)}</section>`).join('')}${booking?`<section class="detail-section"><h3 class="detail-label">关联预约与个人记录</h3><p class="detail-copy">${safe(booking.title)}</p><button class="secondary-btn full" type="button" data-detail-action="booking">${saved.booked.includes(booking.id)?'已标记预约':'待预约'} · 查看记录和备注 →</button></section>`:''}<section class="detail-section"><h3 class="detail-label">本机行程管理</h3><p class="detail-copy">现有编辑与个人记录继续可用。修改仅保存于本机，不会确认门票。</p><button class="primary-btn full" type="button" data-detail-action="edit">编辑这项活动${saved.activityOverrides[id]?' · 已修改':''}</button><div class="btn-row"><button class="secondary-btn" type="button" data-detail-action="move-up" ${index<=0?'disabled':''}>↑ 上移</button><button class="secondary-btn" type="button" data-detail-action="move-down" ${index<0||index===day.activities.length-1?'disabled':''}>↓ 下移</button></div><button class="secondary-btn full" type="button" data-detail-action="day-note">查看当日随手记 →</button></section>`;
- detailDialog.showModal();detailDialog.scrollTop=0;
-}
+function openDetail(id,trigger){if(!data().activities.some(a=>a.id===id))return;detailId=id;detailTrigger=trigger;if(!drafts.has(id)){noteRevisions.set(id,state.personal?.revision);noteBases.set(id,state.personal?.notesByActivityId?.[id]||'');}document.getElementById('activity-detail-content').innerHTML=V.detail(data(),state.personal,id,drafts.get(id));const note=document.getElementById('activity-note');if(note)note.disabled=!canWrite();if(drafts.has(id))noteStatus('有未保存草稿，请重试保存。',true);if(!detailDialog.open)detailDialog.showModal();detailDialog.scrollTop=0;}
+detailDialog.addEventListener('input',e=>{if(e.target.id==='activity-note'){const id=e.target.dataset.noteId;drafts.set(id,e.target.value);noteStatus('等待保存…');clearTimeout(noteTimer);noteTimer=setTimeout(()=>saveNote(id),450);}});
+detailDialog.addEventListener('close',()=>{flushNotes();detailId=null;if(detailTrigger?.isConnected)detailTrigger.focus({preventScroll:true});});
 document.getElementById('activity-detail-close').addEventListener('click',()=>detailDialog.close());
-detailDialog.addEventListener('close',()=>{if(detailTrigger?.isConnected)detailTrigger.focus({preventScroll:true});});
-detailDialog.addEventListener('click',event=>{
- const action=event.target.closest('[data-detail-action]');if(!action)return;
- const id=detailActivityId,name=action.dataset.detailAction,trigger=detailTrigger;
- detailTrigger=null;
- detailDialog.close();
- if(name==='edit')openActivityEditor(id,trigger);
- else if(name==='move-up'||name==='move-down')changeActivity(name,id);
- else if(name==='booking')switchTab('bookings');
- else if(name==='day-note')document.getElementById('day-note')?.focus();
+function openTask(id,activityId){editingTask=id||null;taskRevision=state.personal?.revision;const t=id?state.personal?.localTasks[id]:null;if(id&&!t)return;document.getElementById('task-form').innerHTML=V.taskForm(data(),t||{},activityId);if(!document.getElementById('task-dialog').open)document.getElementById('task-dialog').showModal();document.getElementById('task-name').focus();}
+document.getElementById('task-form').addEventListener('submit',async e=>{
+ e.preventDefault();const submit=e.target.querySelector('[type="submit"]');submit.disabled=true;const at=new Date().toISOString();
+ try{const existing=editingTask&&state.personal.localTasks[editingTask];const next=O.validateLocalTask({...(existing||{}),id:editingTask||'local-'+crypto.randomUUID(),title:document.getElementById('task-name').value,priority:document.getElementById('task-priority').value,dueDate:document.getElementById('task-due').value||null,url:document.getElementById('task-url').value.trim(),note:document.getElementById('task-note').value,activityId:document.getElementById('task-activity').value||null,dayId:document.getElementById('task-day').value||null,createdAt:existing?.createdAt||at,updatedAt:at});
+ const activity=next.activityId&&data().activities.find(a=>a.id===next.activityId);if(activity&&next.dayId&&activity.dayId!==next.dayId)throw new Error('关联日期与活动不一致，请选择同一天或留空。');
+ await write(p=>{p.localTasks[next.id]=next;},taskRevision);document.getElementById('task-dialog').close();if(tab==='todo')render();toast('任务已保存到此设备');
+ }catch(error){document.getElementById('task-error').textContent=error.message;}finally{submit.disabled=false;}
 });
-function renderDays(){const d=currentDays()[dayIndex], today=getParisToday();
- const deleted=itinerary.all(trip,saved).filter(a=>a.date===d.date&&saved.deletedActivityIds.includes(a.id));main.innerHTML=hero()+`<section class="content"><div class="section-head"><div><div class="mini-caps">DAILY ITINERARY</div><h2 class="section-title">每日行程</h2></div><span class="section-aside">所有时间为巴黎当地时间<br>可点击切换日期</span></div>
- <div class="date-strip" role="tablist" aria-label="选择旅行日期">${trip.days.map((x,i)=>`<button class="date-chip ${dayIndex===i?'active':''} ${today===x.date?'today':''}" type="button" role="tab" aria-selected="${dayIndex===i}" data-day="${i}"><small>${safe(x.weekday)}</small><strong>${x.date.slice(-2)}</strong><small>DEC</small></button>`).join('')}</div>
- <section class="day-hero"><div class="mini-caps">DAY ${num(dayIndex+1)} / ${prettyDate(d.date)} · ${safe(d.weekday)}</div><h3 class="day-headline">${safe(d.theme)}</h3><div class="day-subline">${safe(d.area)} · ${safe(d.mood)}</div><div class="day-highlight">✦ 今日重点：${safe(d.highlight)}</div></section>
- <div class="section-head"><div><div class="mini-caps">THE PLAN</div><h2 class="section-title" style="font-size:21px">Today's moments</h2></div><span class="section-aside">${d.activities.length} 项安排</span></div>
- <button class="secondary-btn full add-activity" type="button" data-action="add-activity">＋ 添加活动</button>
- <div class="timeline">${d.activities.map((a,i)=>renderActivity(a,i,d.activities.length)).join('')||'<p class="empty-day">这一天还没有活动。可以添加活动，或恢复已删除的安排。</p>'}</div>
- ${deleted.length?`<details class="deleted-activities"><summary>已删除的安排（${deleted.length}）</summary>${deleted.map(a=>`<div class="deleted-row"><span>${safe(a.title)}</span><button class="secondary-btn" type="button" data-action="restore-activity" data-id="${safe(a.id)}" aria-label="恢复 ${safe(a.title)}">恢复</button></div>`).join('')}</details>`:''}
- <div class="day-footer"><div class="footer-lead">✦ 今日温馨提示</div><p class="footer-text">${safe(d.note)}</p></div>
- <div class="notes-box"><label class="field-title" for="day-note">我的 ${prettyDate(d.date)} 随手记</label><textarea class="note-input" id="day-note" data-note-day="${d.date}" placeholder="例如：想去的餐厅、补充景点、实际预约时间……">${safe(saved.dayNotes[d.date]||'')}</textarea><p class="notes-hint">文字自动保存在这台设备。点击活动查看详情，可继续编辑或调整顺序；旅行卡片中可导出备份。</p></div></section>`;
+function modeName(mode){return ({walking:'步行',driving:'驾车',rail:'铁路',boat:'水路',unknown:'交通待核'})[mode]||'待核';}
+function dayStops(){return data().stops.filter(s=>s.dayId===data().days[dayIndex].id).sort((a,b)=>a.order-b.order);}
+function placeFor(stop){return data().places.find(p=>p.id===stop.placeId);}
+function stopType(s){const t=placeFor(s)?.locationType;return t==='hotel'?'hotel':['transport','airport','station','pier'].includes(t)?'transport':'visit';}
+function renderMap(){const day=data().days[dayIndex],stops=dayStops(),shown=stops.filter(s=>mapFilter==='all'||stopType(s)===mapFilter),segments=data().segments.filter(s=>s.dayId===day.id).sort((a,b)=>a.order-b.order);const verified=segments.filter(s=>s.geometry&&s.verifiedStatus==='verified').length;
+ main.innerHTML=`<div class="page-heading"><div class="mini-caps">DAILY MAP</div><h1>沿着巴黎走</h1><p>按行程顺序，保留每次到访与取包节点</p></div><section class="page-body">${V.dates(data(),dayIndex)}${V.section('OUR ROUTE',day.theme,`${stops.length} 个停靠点`)}<div class="preview-filter" aria-label="地图地点筛选">${[['all','全部'],['visit','游览'],['hotel','酒店'],['transport','交通']].map(([v,n])=>`<button data-map-filter="${v}" aria-pressed="${mapFilter===v}" class="${mapFilter===v?'active':''}">${n}</button>`).join('')}</div><label class="route-toggle"><input type="checkbox" id="routes-visible" ${routesVisible?'checked':''}>显示已核验参考路径</label><div id="daily-map" class="map-frame"><p class="map-fallback">正在载入底图…</p></div><p id="map-status" class="tiny" role="status">${verified}/${segments.length} 段有核验道路路径；未核实路段不绘线。底图需要网络。</p><p class="tiny route-attribution">路径：© OpenStreetMap contributors · ${link('https://www.openstreetmap.org/copyright','ODbL')} · FOSSGIS / OSRM。${link('https://routing.openstreetmap.de/about.html','来源/许可')}${link('https://www.openstreetmap.org/fixthemap','修正地图')}</p><div class="map-stop-list">${shown.map(s=>{const p=placeFor(s),a=data().activities.find(a=>a.id===s.activityId),group=stops.filter(x=>x.placeId===s.placeId).map(x=>x.order),incoming=segments.find(x=>x.toStopId===s.id),from=incoming&&stops.find(x=>x.id===incoming.fromStopId),origin=from&&placeFor(from);return `<article class="location-row" data-stop-id="${safe(s.id)}" ${focusedStop===s.id?'aria-current="location"':''}><span class="location-number">${s.order}</span><div class="location-copy"><button class="stop-detail" data-action="detail" data-id="${safe(a.id)}"><strong>${safe(s.label||p.name)}</strong><small>${safe(a.timeLabel)} · ${safe(a.title)}</small></button>${group.length>1?`<p class="tiny">同一地点第 ${group.indexOf(s.order)+1}/${group.length} 次到访 · 地图标号 ${group.join('/')}</p>`:''}<p class="tiny">${safe(p.address||p.en||'准确位置待核')}${p.verifiedStatus!=='verified'?' · 仅参考/待核':''}</p>${V.navigation(p)}${incoming?`<details class="segment-detail"><summary>上一站 → 此站 · ${modeName(incoming.mode)}</summary><p class="tiny">${safe(origin?.name)} → ${safe(p.name)}<br>${incoming.geometry?'核验地图计算参考路径；不是未来实时路况或实际入口保证。':'此段没有核验路径，不在地图绘线。'}${incoming.mode==='rail'||incoming.mode==='boat'?'铁路/水路以运营方票务和站台/码头为准。':''}</p>${origin?.navigationTarget&&p.navigationTarget&&!['rail','boat','unknown'].includes(incoming.mode)?V.navigation(p,origin):''}</details>`:''}</div></article>`;}).join('')||'<p class="empty-day">此筛选下没有停靠点。</p>'}</div></section>`;
+ loadMap(shown,segments);
 }
-function bookingGroup(items,label){return `<div class="group-label">${label}</div>${items.map(b=>{const done=saved.booked.includes(b.id);return `<article class="card"><div class="booking-row"><input type="checkbox" class="book-check" id="book-${b.id}" data-book="${b.id}" ${done?'checked':''}><div class="booking-content"><label for="book-${b.id}" class="booking-title ${done?'done':''}">${safe(b.title)}</label><div class="booking-date">${safe(b.date)}</div><div class="booking-note">${safe(b.note)}</div>${b.url?`<div class="booking-actions"><a class="mini-link" href="${safe(b.url)}" target="_blank" rel="noopener noreferrer">官方入口 ${icons.arrow}</a></div>`:''}<textarea class="inline-note" data-booking-note="${b.id}" rows="2" aria-label="${safe(b.title)} 的预订备注" placeholder="确认号、票价、集合点等……">${safe(saved.bookingNotes[b.id]||'')}</textarea></div>${done?'<span class="chip chip-green tag-right">已标记</span>':''}</div></article>`}).join('')}`}
-function renderBookings(){const done=trip.bookings.filter(b=>saved.booked.includes(b.id)).length;const high=trip.bookings.filter(b=>b.priority==='high'),mid=trip.bookings.filter(b=>b.priority==='medium'),later=trip.bookings.filter(b=>b.priority==='later');main.innerHTML=`<section class="page-heading"><div class="mini-caps">KEEP IT SIMPLE</div><h1>预订清单</h1><p>先锁定最影响行程的项目。勾选仅表示你已完成预订，不会自动购买门票。</p></section><section class="page-body"><div class="progress-header"><span>我们的准备进度</span><strong>${done} / ${trip.bookings.length}</strong></div><div class="progress-bg"><div class="progress-inner" style="width:${(done/trip.bookings.length)*100}%"></div></div><div class="callout">所有项目目前都是拟定安排，并非已出票。预订确认号可以记在各项目下方，信息只保存在这台设备。</div>${bookingGroup(high,'01 · 尽快确定')}${bookingGroup(mid,'02 · 提前预约')}${bookingGroup(later,'03 · 临近再看')}</section>`}
-function uniquePlacesForDay(i){const seen=new Set();const list=[];currentDays()[i].activities.forEach(a=>{[a.place,...(a.extraPlaces||[])].forEach(key=>{if(key && trip.locations[key] && !seen.has(key)){list.push({key,day:i,place:trip.locations[key]});seen.add(key)}})});return list}
-function allPlaces(){return trip.days.flatMap((d,i)=>uniquePlacesForDay(i))}
-function renderMap(){if(mapInstance){mapInstance.stop();mapInstance.remove();mapInstance=null;}const generation=++mapGeneration;mapFilter=mapFilter??'all';const raw=mapFilter==='all'?allPlaces():uniquePlacesForDay(Number(mapFilter));const seen=new Set();const places=raw.filter(item=>!seen.has(item.key)&&seen.add(item.key));main.innerHTML=`<section class="page-heading"><div class="mini-caps">WHERE WE WANDER</div><h1>巴黎地图</h1><p>按日期查看行程地点，用 Google Maps 查看位置或选择步行、驾车导航。</p></section><section class="page-body"><div class="map-filter"><button class="filter-btn ${mapFilter==='all'?'selected':''}" data-map-filter="all">全部</button>${trip.days.map((d,i)=>`<button class="filter-btn ${String(i)===mapFilter?'selected':''}" data-map-filter="${i}">12/${7+i} ${safe(d.weekday)}</button>`).join('')}</div><div class="map-frame" id="map-container"><div id="leaflet-target" style="height:100%;width:100%"><div class="map-fallback">正在载入在线街道地图…<br>下方地点列表可随时用于导航</div></div></div><p class="map-hint">定位采用景点经纬度，非导览集合处、出租车上下客点或游船具体码头。互动街道底图需联网。导航起点由 Google Maps 获取或由你填写；请核对实际入口。</p><div class="section-head"><h2 class="section-title" style="font-size:21px">${mapFilter==='all'?'所有景点':`${prettyDate(trip.days[Number(mapFilter)].date)} 的景点`}</h2><span class="section-aside">${places.length} 个位置</span></div>${places.map((item,i)=>`<div class="location-row"><span class="location-number">${i+1}</span><div class="location-copy"><strong>${safe(item.place.name)}</strong><small>${safe(item.place.en)} · ${mapFilter==='all'?`12/${item.day+7}`:''}</small>${item.place.info?`<small>${safe(item.place.info)}</small>`:''}${mapLinks(item.place)}</div></div>`).join('')}</section>`;
- initializeLeaflet(places,generation);
+function loadLeaflet(){if(window.L)return Promise.resolve(window.L);if(leafletPromise)return leafletPromise;leafletPromise=new Promise((resolve,reject)=>{const css=document.createElement('link');css.rel='stylesheet';css.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';css.integrity='sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';css.crossOrigin='';document.head.appendChild(css);const js=document.createElement('script');js.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';js.integrity='sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';js.crossOrigin='';let timer=setTimeout(()=>reject(new Error('底图组件载入超时')),10000);js.onload=()=>{clearTimeout(timer);resolve(window.L);};js.onerror=()=>{clearTimeout(timer);reject(new Error('底图组件不可用'));};document.head.appendChild(js);}).catch(e=>{leafletPromise=null;throw e;});return leafletPromise;}
+async function loadMap(stops,segments){const generation=++mapGeneration,target=document.getElementById('daily-map');try{const L=await loadLeaflet();if(generation!==mapGeneration||tab!=='map'||!target.isConnected)return;target.innerHTML='';mapInstance=L.map(target,{scrollWheelZoom:false,zoomAnimation:false,fadeAnimation:false,markerZoomAnimation:false}).setView([48.86,2.34],12);
+ let failed=false;const tiles=L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'});tiles.on('tileerror',()=>{if(generation!==mapGeneration||failed)return;failed=true;document.getElementById('map-status').textContent='部分底图未能载入。停靠点、已存路径和下方导航列表仍可使用。';});tiles.addTo(mapInstance);
+ const points=[];const groups=new Map();for(const s of stops){const p=placeFor(s);if(!Number.isFinite(p.lat)||!Number.isFinite(p.lng))continue;if(!groups.has(p.id))groups.set(p.id,[]);groups.get(p.id).push(s);}
+ for(const group of groups.values()){const p=placeFor(group[0]),numbers=group.map(s=>s.order).join('/');const marker=L.marker([p.lat,p.lng],{icon:L.divIcon({className:'stop-marker',html:`<span>${numbers}</span>`,iconSize:[44,44],iconAnchor:[22,22]})});const box=document.createElement('div'),title=document.createElement('strong');title.textContent=p.name;box.appendChild(title);for(const s of group){const button=document.createElement('button');button.className='secondary-btn full';button.textContent=`${s.order}. ${s.label||data().activities.find(a=>a.id===s.activityId).title}`;button.addEventListener('click',()=>openDetail(s.activityId,button));box.appendChild(button);}marker.bindPopup(box).addTo(mapInstance);if(group.some(s=>s.id===focusedStop))marker.openPopup();points.push([p.lat,p.lng]);}
+ const visible=new Set(stops.map(s=>s.id));if(routesVisible)for(const s of segments){if(!s.geometry||s.verifiedStatus!=='verified'||!['walking','driving'].includes(s.mode)||!visible.has(s.fromStopId)||!visible.has(s.toStopId))continue;const layer=L.geoJSON(s.geometry,{style:{color:s.mode==='walking'?'#197446':'#385a98',weight:4,opacity:.9}});layer.addTo(mapInstance);}
+ if(points.length)mapInstance.fitBounds(points,{padding:[24,24],maxZoom:15,animate:false});
+ }catch(error){if(generation!==mapGeneration||!target.isConnected)return;target.innerHTML='<p class="map-fallback">底图暂不可用。可继续查看下方停靠点、活动详情和 Google Maps 链接。</p>';}}
+function formatTime(value){return value?new Intl.DateTimeFormat('zh-CN',{timeZone:'Europe/Paris',dateStyle:'short',timeStyle:'short'}).format(new Date(value)):'尚无';}
+function renderMore(){const d=data(),p=state.personal;const orphan=Object.entries(p?.notesByActivityId||{}).filter(([id,n])=>n&&!d.activities.some(a=>a.id===id));
+ main.innerHTML=`<div class="page-heading"><div class="mini-caps">OUR TRAVEL CARDS</div><h1>旅行卡片</h1><p>全程概览、酒店、版本与本机资料</p></div><section class="page-body"><section class="card info-card">${V.section('AT A GLANCE','八天，慢慢走')}<p class="detail-copy">${date(d.trip.startDate)}—${date(d.trip.endDate)} · 2026<br>CDG 抵达 ${safe(d.trip.arrival.time)} / 离境 ${safe(d.trip.departure.time)}<br>时间均为 Europe/Paris。</p>${d.days.map((day,i)=>`<button class="overview-day" data-overview-day="${i}"><span>${date(day.date)}</span><strong>${safe(day.theme)}</strong><span>›</span></button>`).join('')}</section><section class="card info-card"><div class="mini-caps">STAYING IN PARIS</div><h2 class="section-title">我们的酒店</h2>${d.hotels.map(h=>{const place=d.places.find(p=>p.id===h.placeId);return `<div class="hotel-row"><strong>${safe(place.name)}</strong><span class="detail-status">已确认 · ${h.nights.map(date).join('、')} 夜</span><p>${safe(place.address)}</p>${V.navigation(place)}</div>`;}).join('')}<p class="tiny">确认状态来自 v4.12。提前入住、入口和接送位置另行核对。</p></section><section class="card info-card"><div class="mini-caps">KEEP IT CURRENT</div><h2 class="section-title">官方行程同步</h2><p>App ${APP_VERSION}<br>行程 v${safe(d.tripDataVersion)} · 发布序号 ${d.releaseSequence}<br>最近成功载入：${formatTime(state.official.syncedAt)}<br>最近检查：${formatTime(state.official.checkedAt)}</p><p id="sync-status" class="save-status" role="status">${safe(syncMessage||'仅同步官方内容；个人备注和勾选保存在此设备。')}</p>${state.official.rollbackPin?'<p class="notice">当前使用回退快照。普通检查会跳过已隔离的发布；更高发布序号仍可同步。</p>':''}<button class="primary-btn full" data-action="sync" ${syncing||!store?'disabled':''}>${syncing?'正在检查…':'检查并同步官方行程'}</button>${state.previousAvailable?'<button class="secondary-btn full" data-action="rollback">回退到上个官方快照</button>':''}${state.official.rollbackPin?'<button class="secondary-btn full" data-action="sync-force">明确重试被隔离的发布</button>':''}</section><section class="card info-card"><div class="mini-caps">YOURS, ON THIS DEVICE</div><h2 class="section-title">本机备份与恢复</h2><p>备注、任务和完成状态没有云端副本。换手机或清除网站数据前，请导出备份并妥善保存。</p><div class="btn-row"><button class="primary-btn" data-action="backup" ${store?'':'disabled'}>导出完整备份</button><button class="secondary-btn" data-action="import" ${store?'':'disabled'}>导入备份</button></div>${state.importUndoAvailable?'<button class="secondary-btn full" data-action="undo-import">撤销上次导入</button>':''}<p class="tiny">导入前先预览和确认；旧 v1 备份只进入旧资料恢复区，不覆盖新版备注。</p>${drafts.size?`<p class="notice">${drafts.size} 项草稿尚未保存。${[...drafts].map(([id,value])=>`<details><summary>${safe(d.activities.find(a=>a.id===id)?.title||id)}</summary><pre>${safe(value)}</pre></details>`).join('')}<button class="secondary-btn full" data-action="draft-export">导出未保存草稿</button><button class="secondary-btn full" data-action="note-retry">重试保存草稿</button></p>`:''}</section><section class="card info-card" id="legacy-recovery"><div class="mini-caps">LEGACY & RECOVERY</div><h2 class="section-title">旧资料完整保留</h2><p>旧笔记、预约勾选、活动修改、自建活动、排序及删除项保存在独立档案，不会自动覆盖 v4.12。</p><a href="./legacy.html" class="secondary-btn full legacy-link">打开旧行程、编辑器和预约记录 →</a><button class="secondary-btn full" data-action="legacy-live-export">导出当前旧存储原文</button>${(p?.legacyArchive||[]).map((entry,i)=>`<details class="legacy-record"><summary>旧资料档案 ${i+1} · ${entry.error?'待修复':'已保留'} · ${safe(entry.sourceSchemaVersion??'未标版本')}</summary><p class="tiny">保存于 ${formatTime(entry.migratedAt)}${entry.error?` · ${safe(entry.error)}`:''}</p><button class="secondary-btn full" data-action="legacy-export" data-index="${i}">导出原始字符串</button><pre>${safe(entry.sourceRaw)}</pre></details>`).join('')||`<p class="tiny">${p?'尚无已保存的旧资料档案。旧存储键未被更改。':'个人库无法读取；仍可尝试导出旧存储原文。'}</p>`}${orphan.length?`<details class="legacy-record"><summary>已退役活动的备注（${orphan.length}）</summary>${orphan.map(([id,n])=>`<h3>${safe(p.archivedSnapshots?.[id]?.activity?.title||id)}</h3><pre>${safe(n)}</pre>`).join('')}</details>`:''}<p class="tiny">在旧窗口继续编辑后，新版会另存恢复候选，不覆盖新版个人资料。</p></section><button class="secondary-btn full" data-action="install">添加到 iPhone 主屏幕</button><p class="tiny version-line">预约状态以实际订单为准；游船、卢浮宫时段、鹿特丹车船和约拍的待核项见对应活动与官方任务。</p></section>`;
 }
-function loadLeaflet(){ if(window.L) return Promise.resolve();if(leafletPromise)return leafletPromise;
- leafletPromise=new Promise((resolve,reject)=>{let finished=false;const good=()=>{if(!finished){finished=true;resolve()}};const bad=(err)=>{if(!finished){finished=true;reject(err)}};setTimeout(()=>bad(new Error('地图加载超时')),7000);const link=document.createElement('link');link.rel='stylesheet';link.href='https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';link.crossOrigin='anonymous';document.head.appendChild(link);const script=document.createElement('script');script.src='https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';script.crossOrigin='anonymous';script.onload=()=>window.L?good():bad(new Error('地图引擎未加载'));script.onerror=()=>bad(new Error('离线 / 地图资源不可用'));document.head.appendChild(script)}).catch(error=>{leafletPromise=null;throw error;});return leafletPromise;
+async function sync(force=false){if(!store||syncing)return;await flushNotes();syncing=true;syncMessage='正在检查官方发布…';if(tab==='more')render();try{const before=state.official.manifest.sha256;state=await serialize(()=>store.sync({force}));syncMessage=before===state.official.manifest.sha256?'已检查：当前已是可用的最新行程。':'官方行程已完整校验并更新。个人资料保持不变。';if(detailId&&before!==state.official.manifest.sha256&&!drafts.has(detailId))openDetail(detailId,detailTrigger);}
+ catch(error){syncMessage='同步未完成，继续使用最近成功的行程。'+error.message;}
+ finally{syncing=false;if(tab==='more'||tab==='days'||tab==='todo'||tab==='map')render();if(tab==='more')document.getElementById('sync-status')?.setAttribute('aria-live','polite');}
 }
-async function initializeLeaflet(places,generation){try{await loadLeaflet();if(tab!=='map'||generation!==mapGeneration)return;const target=document.getElementById('leaflet-target');if(!target)return;
- if(mapInstance){mapInstance.remove();mapInstance=null;}
- target.innerHTML='';mapInstance=L.map(target,{zoomControl:true,scrollWheelZoom:false,zoomAnimation:false,fadeAnimation:false,markerZoomAnimation:false}).setView([48.864,2.33],12);
- L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:19,attribution:'© OpenStreetMap contributors'}).addTo(mapInstance);
- const markers=[];places.forEach((item,i)=>{const icon=L.divIcon({className:'',html:`<span class="map-marker"><span>${i+1}</span></span>`,iconSize:[28,32],iconAnchor:[14,30]});const marker=L.marker([item.place.lat,item.place.lng],{icon,title:item.place.name}).addTo(mapInstance).bindPopup(`<strong>${safe(item.place.name)}</strong><br>${safe(item.place.en)}<br>${mapLinks(item.place)}`);markers.push(marker)});
- if(markers.length>1)mapInstance.fitBounds(L.featureGroup(markers).getBounds().pad(.18),{maxZoom:14,animate:false});else if(markers.length===1)mapInstance.setView(markers[0].getLatLng(),14);
- const instance=mapInstance;setTimeout(()=>{if(mapInstance===instance)instance.invalidateSize({animate:false})},200);
- }catch(e){leafletPromise=null;const target=document.getElementById('leaflet-target');if(tab==='map'&&generation===mapGeneration&&target)target.innerHTML='<div class="map-fallback"><div><strong>街道地图需要联网</strong><br>行程中的景点位置都在下方<br>下方可用 Google Maps 查看位置或选择步行、驾车</div></div>';}}
-function renderMore(){main.innerHTML=`<section class="page-heading"><div class="mini-caps">THE LITTLE DETAILS</div><h1>旅行卡片</h1><p>航班、酒店、交通习惯，还有旅行路上的灵感。</p></section><section class="page-body"><div class="info-stat"><div class="stat-box"><div class="stat-eyebrow">ARRIVAL</div><strong>12/07</strong><p>08:00 · CDG<br>巴黎戴高乐机场</p></div><div class="stat-box"><div class="stat-eyebrow">DEPARTURE</div><strong>12/14</strong><p>22:20 · CDG<br>建议约 19:00 抵达机场</p></div></div><section class="card info-card"><h3>⌂ 酒店 · 暂未确定</h3><p>优先对比 Hilton / Hyatt 免房券及 Amex FHR。候选住宿区：Opéra / Madeleine / Place Vendôme / Louvre。为减少搬行李，尽量不超过一次换酒店。</p><div class="field-wrap"><label for="hotel-note">住宿预订记录</label><textarea class="note-input" id="hotel-note" data-note-field="hotelNote" placeholder="酒店名称、入住日期、确认号、FHR 权益……">${safe(saved.hotelNote)}</textarea></div></section><section class="card info-card"><h3>✈ 航班与机场</h3><p>12/7 08:00 抵达，12/14 22:20 离开。市区主要打车；12/14 出发去 CDG 的时间，要在酒店确定后按当天路况微调。</p><div class="field-wrap"><label for="flight-note">航班 / 接送机备注</label><textarea class="note-input" id="flight-note" data-note-field="flightNote" placeholder="航班号、航站楼、打车安排……">${safe(saved.flightNote)}</textarea></div></section><section class="card info-card"><h3>♡ 旅行习惯</h3><p>景点与巴黎生活各半；凡尔赛宫必去；卢浮宫安排 4–5 小时；以打车为主，景点紧邻时步行。圣诞灯饰、下午日落与咖啡馆留出灵活时间。</p></section><section class="card info-card"><h3>◈ 实用提醒</h3><ul class="tip-list">${trip.important.map(x=>`<li><strong>${safe(x.title)}：</strong>${safe(x.text)}</li>`).join('')}</ul></section><section class="card info-card"><h3>✎ 其他想法</h3><textarea class="note-input" data-note-field="miscNote" placeholder="购物愿望清单、餐厅候选、特别想去的小店……">${safe(saved.miscNote)}</textarea></section><section class="card info-card"><h3>保存与后续更新</h3><p>活动修改、勾选状态和私人笔记保存在<strong>当前浏览器 / 当前网址</strong>。同一网站发布新行程文件，会保留这些数据（已修改的活动优先使用本机版本）。换设备或换网站地址前，可以先导出备份再导入。</p><div class="btn-row"><button class="secondary-btn" data-action="export-backup">导出个人备份</button><button class="secondary-btn" data-action="import-backup">导入备份</button></div><input type="file" id="backup-file" accept="application/json,.json" hidden><div class="btn-row"><button class="primary-btn full" data-action="install-help">如何添加到 iPhone 主屏幕 ↗</button></div><p class="tiny" style="margin-top:13px">当前行程 ${safe(trip.version)} · 数据与安装说明可随时更新。</p></section></section>`}
-function render(){mapGeneration++;if(mapInstance){mapInstance.stop();mapInstance.remove();mapInstance=null;}if(tab==='days')renderDays();if(tab==='bookings')renderBookings();if(tab==='map')renderMap();if(tab==='more')renderMore();document.querySelectorAll('.nav-item').forEach(b=>{const active=b.dataset.tab===tab;b.classList.toggle('active',active);b.setAttribute('aria-current',active?'page':'false')})}
-function switchTab(next){if(next===tab)return;tab=next;render();window.scrollTo({top:0,behavior:'instant'})}
-function downloadBackup(){if(storageBlocked){showToast('原有数据无法读取，暂不能导出。请检查浏览器存储。');return;}const payload=personal.backup(saved,trip.version);const blob=new Blob([JSON.stringify(payload,null,2)],{type:'application/json'});const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='paris-pocket-backup.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),500);showToast('活动修改、备注和预约进度已导出')}
-async function importBackup(file){
- try {
-  if(!file)return;
-  if(file.size>5*1024*1024)throw new Error('备份文件过大（最多 5 MB）');
-  const data=JSON.parse(await file.text());
-  const next=itinerary.validate(trip,personal.restore(data,saved));
-  const message=(data.schemaVersion??1)<3
-    ? '这是旧版备份：替换笔记与预约状态，合并支持的活动修改，并保留当前新增、删除、日期和顺序。建议先导出当前备份。继续吗？'
-    : '导入将替换本机完整活动安排、预约状态与笔记。建议先导出当前备份。继续吗？';
-  if(!confirm(message))return;
-  if(!save(next))return;
-  render();showToast('备份导入成功');
- }catch(e){showToast(e.message||'导入失败')}
- finally { const input=document.getElementById('backup-file');if(input)input.value=''; }
-}
-function newActivityId(){
- const value=typeof crypto.randomUUID==='function'?crypto.randomUUID():Array.from(crypto.getRandomValues(new Uint8Array(16)),n=>n.toString(16).padStart(2,'0')).join('');
- return 'user-'+value;
-}
-function openActivityEditor(id, trigger){
- const activity=id?itinerary.find(trip,saved,id):{id:newActivityId(),date:trip.days[dayIndex].date,title:'',time:'',end:'',detail:''};
- if(!activity)return;
- editingActivity=activity;creatingActivity=!id;editorTrigger=trigger;
- const modal=document.getElementById('activity-dialog');
- document.getElementById('activity-title').textContent=id?'编辑活动':'添加活动';
- document.getElementById('activity-date').textContent='所有活动时间为巴黎当地时间';
- document.getElementById('activity-name').value=activity.title;
- const dateSelect=document.getElementById('activity-day');
- dateSelect.innerHTML=trip.days.map(day=>`<option value="${day.date}">${prettyDate(day.date)} · ${safe(day.weekday)}</option>`).join('');
- dateSelect.value=activity.date;
- document.getElementById('activity-time').value=activity.time;
- document.getElementById('activity-end').value=activity.end||'';
- document.getElementById('activity-detail').value=activity.detail;
- document.getElementById('activity-error').textContent='';
- document.getElementById('activity-fixed').hidden=!activity.fixed;
- document.getElementById('activity-reset').hidden=creatingActivity||Boolean(saved.customActivities[activity.id])||!saved.activityOverrides[activity.id];
- document.getElementById('activity-delete').hidden=creatingActivity;
- modal.showModal();
-}
-function closeActivityEditor(){document.getElementById('activity-dialog').close();}
-function focusActivity(id){
- const button=Array.from(main.querySelectorAll('[data-action="view-activity"]')).find(el=>el.dataset.id===id);
- (button||main.querySelector('[data-action="add-activity"]'))?.focus({preventScroll:true});
-}
-function commitActivity(edit, reset=false){
- if(!editingActivity)return;
- try {
-  const id=editingActivity.id;
-  const next=reset?itinerary.reset(trip,saved,id):itinerary.edit(trip,saved,id,edit,creatingActivity);
-  if(!save(next)){
-   document.getElementById('activity-error').textContent=storageConflict?'另一窗口已保存修改，请先导出当前备份并重新载入。输入仍保留。':'未保存。请保留输入，检查本机存储后重试。';return;
-  }
-  const destination=itinerary.find(trip,next,id).date;
-  dayIndex=trip.days.findIndex(day=>day.date===destination);
-  const y=window.scrollY;closeActivityEditor();renderDays();window.scrollTo(0,y);focusActivity(id);
-  showToast(reset?'已恢复原始名称、日期、时间和描述':'活动安排已保存在本机');
- }catch(error){document.getElementById('activity-error').textContent=error.message;}
-}
-function changeActivity(action,id){
- try {
-  const next=action==='restore-activity'?itinerary.restore(trip,saved,id):itinerary.reorder(trip,saved,id,action==='move-up'?-1:1);
-  if(!save(next))return;
-  const y=window.scrollY;renderDays();window.scrollTo(0,y);focusActivity(id);
-  showToast(action==='restore-activity'?'活动已恢复':'活动顺序已保存');
- }catch(error){showToast(error.message);}
-}
-const activityDialog=document.getElementById('activity-dialog');
-activityDialog.addEventListener('close',()=>{if(!activityDialog.open){editingActivity=null;creatingActivity=false;}if(editorTrigger?.isConnected)editorTrigger.focus({preventScroll:true});});
-document.getElementById('activity-cancel').addEventListener('click',closeActivityEditor);
-document.getElementById('activity-form').addEventListener('submit',event=>{
- event.preventDefault();commitActivity({title:document.getElementById('activity-name').value,date:document.getElementById('activity-day').value,time:document.getElementById('activity-time').value,end:document.getElementById('activity-end').value,detail:document.getElementById('activity-detail').value});
-});
-document.getElementById('activity-reset').addEventListener('click',()=>{
- if(confirm('恢复这项活动的原始名称、日期、时间和描述？预约状态与笔记会保留。'))commitActivity(null,true);
-});
-document.getElementById('activity-delete').addEventListener('click',()=>{
- if(!editingActivity||!confirm('从行程中删除这项活动？不会取消实际预约或删除预约笔记，可在「已删除的安排」中恢复。'))return;
- if(!save(itinerary.remove(trip,saved,editingActivity.id))){document.getElementById('activity-error').textContent='未删除：无法保存。请检查本机存储或另一窗口的修改。';return;}
- closeActivityEditor();renderDays();main.querySelector('[data-action="add-activity"]')?.focus({preventScroll:true});showToast('活动已删除，可在下方恢复');
-});
-function showStorageConflict(){
- const warning=document.getElementById('storage-warning');warning.hidden=false;
- warning.textContent='另一窗口已更新个人数据。为避免覆盖，请先导出本窗口备份，再重新载入。未保存输入可先复制。';
- document.getElementById('reload-data').hidden=false;
-}
-window.addEventListener('storage',event=>{if(event.key===personal.KEY||event.key===null){storageConflict=true;showStorageConflict();}});
-document.getElementById('reload-data').addEventListener('click',()=>{
- if(confirm('重新载入另一窗口的最新数据？请先保存备份并复制未保存的输入。'))location.reload();
-});
-function installHelp(){const modal=document.getElementById('install-dialog');if(modal.showModal)modal.showModal();else modal.setAttribute('open','')}
-main.addEventListener('click',e=>{
- const chip=e.target.closest('[data-day]');if(chip){dayIndex=Number(chip.dataset.day);renderDays();document.querySelector('.date-chip.active')?.scrollIntoView({block:'nearest',inline:'center'});window.scrollTo({top:0,behavior:'smooth'});return;}
- const filter=e.target.closest('[data-map-filter]');if(filter){mapFilter=filter.dataset.mapFilter;renderMap();return;}
- const action=e.target.closest('[data-action]');if(action){const name=action.dataset.action;if(name==='view-activity')openActivityDetail(action.dataset.id,action);else if(name==='add-activity')openActivityEditor(null,action);else if(['move-up','move-down','restore-activity'].includes(name))changeActivity(name,action.dataset.id);else if(name==='edit-activity')openActivityEditor(action.dataset.id,action);else if(name==='go-booking')switchTab('bookings');else if(name==='install-help')installHelp();else if(name==='export-backup')downloadBackup();else if(name==='import-backup')document.getElementById('backup-file')?.click();return;}
-});
-main.addEventListener('change',e=>{
- if(e.target.matches('[data-book]')){
-  const id=e.target.dataset.book,checked=e.target.checked;
-  const booked=checked?[...new Set([...saved.booked,id])]:saved.booked.filter(x=>x!==id);
-  if(!save({...saved,booked})){e.target.checked=!checked;return;}
-  const y=window.scrollY;renderBookings();window.scrollTo(0,y);
-  showToast(checked?'已标记为预订完成':'已恢复为待预约');
- }
- if(e.target.id==='backup-file')importBackup(e.target.files?.[0]);
-});
-main.addEventListener('input',e=>{
- const el=e.target;
- if(el.matches('[data-note-day]'))save({...saved,dayNotes:{...saved.dayNotes,[el.dataset.noteDay]:el.value}});
- else if(el.matches('[data-booking-note]'))save({...saved,bookingNotes:{...saved.bookingNotes,[el.dataset.bookingNote]:el.value}});
- else if(el.matches('[data-note-field]'))save({...saved,[el.dataset.noteField]:el.value});
-});
-document.querySelectorAll('.nav-item').forEach(btn=>btn.addEventListener('click',()=>switchTab(btn.dataset.tab)));
-document.getElementById('help-btn').addEventListener('click',installHelp);document.getElementById('close-dialog').addEventListener('click',()=>document.getElementById('install-dialog').close());document.getElementById('dialog-done').addEventListener('click',()=>document.getElementById('install-dialog').close());
-if('serviceWorker' in navigator && (location.protocol==='https:' || location.hostname==='localhost')){
- const updateButton=document.getElementById('app-update');
- let requestedUpdate=false;
- navigator.serviceWorker.register('./sw.js').then(registration=>{
-  const offerUpdate=()=>{if(registration.waiting && navigator.serviceWorker.controller)updateButton.hidden=false;};
-  offerUpdate();
-  registration.addEventListener('updatefound',()=>{
-   const worker=registration.installing;
-   worker?.addEventListener('statechange',()=>{
-    if(worker.state==='installed'&&navigator.serviceWorker.controller)updateButton.hidden=false;
-    else offerUpdate();
-   });
-  });
-  updateButton.addEventListener('click',()=>{
-   if(editingActivity){showToast('请先保存或取消正在编辑的活动');return;}
-   if(registration.waiting){requestedUpdate=true;registration.waiting.postMessage({type:'SKIP_WAITING'});}
-  });
- }).catch(()=>showToast('离线缓存暂不可用，联网后请重新打开'));
- navigator.serviceWorker.addEventListener('controllerchange',()=>{if(requestedUpdate)location.reload();});
-}
-if(window.ParisVisualPreview)window.ParisVisualPreview.mount({trip,loadLeaflet,mapLinks,safe});
-else document.getElementById('design-preview-btn').hidden=true;
-render();
-if(storageBlocked){
- const warning=document.getElementById('storage-warning');warning.hidden=false;
- warning.textContent='原有个人数据暂时无法读取。为保护笔记，已暂停保存和导入。请检查浏览器存储后重新打开；不要清除网站数据。';
-}
+function download(name,content,type='application/json'){const blob=new Blob([content],{type}),href=URL.createObjectURL(blob),a=document.createElement('a');a.href=href;a.download=name;a.click();setTimeout(()=>URL.revokeObjectURL(href),1000);}
+async function previewImport(file){if(!file)return;if(file.size>10000000){toast('备份超过 10MB，未读取或写入。');return;}try{if(!await flushNotes())throw new Error('仍有未保存草稿，请先保存或导出草稿后再导入。');const parsed=JSON.parse(await file.text());const summary=await window.ParisStore.inspectBackup(parsed);importPayload=parsed;importRevision=state.personal.revision;document.getElementById('backup-preview').innerHTML=`<p>${summary.kind==='v1'?'旧版备份：完整保留为恢复档案，不替换新版备注、任务或完成状态。':'新版完整备份：将替换此设备的新版个人资料；现有旧资料档案继续保留。'}</p><p>备注 ${summary.counts.notes} 项 · 本地任务 ${summary.counts.localTasks} 项 · 已完成 ${summary.counts.completion} 项 · 旧档案 ${summary.counts.legacyArchives} 份。</p><p>确认后会先建立可撤销检查点。官方行程不会被备份替换。</p><p class="tiny">仅导入你信任的个人备份；内容不会上传。</p>`;document.getElementById('backup-error').textContent='';document.getElementById('backup-dialog').showModal();}
+ catch(error){toast('备份未导入：'+error.message);}finally{document.getElementById('backup-file').value='';}}
+document.getElementById('backup-file').addEventListener('change',e=>previewImport(e.target.files?.[0]));
+document.getElementById('backup-cancel').addEventListener('click',()=>{importPayload=null;document.getElementById('backup-dialog').close();});
+document.getElementById('backup-confirm').addEventListener('click',async e=>{if(!importPayload)return;e.target.disabled=true;try{state=await serialize(()=>store.restoreBackup(importPayload,importRevision));importPayload=null;storageError='';warning(state.migrationBlocked?'旧资料需要修复，写入仍暂停。':'');document.getElementById('backup-dialog').close();render();toast('导入完成；可在旅行卡片撤销此次导入');}catch(error){document.getElementById('backup-error').textContent=error.message;}finally{e.target.disabled=false;}});
+async function action(el){const name=el.dataset.action,id=el.dataset.id;try{
+ if(name==='detail')openDetail(id,el);
+ if(name==='day-map'){focusedStop=null;switchTab('map');}
+ if(name==='map-location'){const stop=data().stops.find(s=>s.activityId===el.dataset.activity&&s.placeId===el.dataset.place);if(stop){await flushNotes();detailDialog.close();dayIndex=data().days.findIndex(d=>d.id===stop.dayId);focusedStop=stop.id;mapFilter='all';switchTab('map');}}
+ if(name==='task-add'){await flushNotes();if(detailDialog.open)detailDialog.close();openTask(null,el.dataset.activity);}
+ if(name==='task-edit')openTask(id);
+ if(name==='task-close')document.getElementById('task-dialog').close();
+ if(name==='task-open'){await flushNotes();detailDialog.close();taskFilter='all';switchTab('todo');main.querySelector(`[data-task-id="${id}"]`)?.scrollIntoView({block:'center'});}
+ if(name==='task-delete'&&editingTask&&confirm('删除此本地任务？')){await write(p=>{delete p.localTasks[editingTask];delete p.completionByTaskId[editingTask];},taskRevision);document.getElementById('task-dialog').close();render();}
+ if(name==='note-retry'){for(const [noteId,value] of [...drafts]){const fresh=await serialize(()=>store.read());const latest=fresh.personal.notesByActivityId[noteId]||'';if(latest!==(noteBases.get(noteId)||'')&&latest!==value&&!confirm('另一窗口或导入已更新此活动备注。使用当前草稿覆盖最新备注？取消会保留草稿。'))continue;state=fresh;noteRevisions.set(noteId,state.personal.revision);await saveNote(noteId);}if(!drafts.size)toast('草稿已保存到此设备');if(tab==='more')render();}
+ if(name==='sync')await sync();
+ if(name==='sync-force'&&confirm('重新校验并尝试安装此前回退隔离的官方发布？个人资料不变。'))await sync(true);
+ if(name==='rollback'&&confirm('只回退官方行程到上个快照？本机备注、任务和勾选会保留。')){await flushNotes();state=await serialize(()=>store.rollback());syncMessage='已回退官方快照；被隔离的发布不会在普通检查时重新安装。';render();}
+ if(name==='backup'){if(!await flushNotes())throw new Error('完整备份未导出：请先保存草稿，或用恢复区的「导出未保存草稿」。');const backup=await serialize(()=>store.backup());download(`paris-pocket-${today()}.json`,JSON.stringify(backup,null,2));}
+ if(name==='draft-export')download(`paris-pocket-drafts-${today()}.json`,JSON.stringify({kind:'unsaved-drafts',activityNotes:Object.fromEntries(drafts)},null,2));
+ if(name==='import'){if(!await flushNotes())throw new Error('请先保存或导出未保存草稿，再导入备份。');document.getElementById('backup-file').click();}
+ if(name==='undo-import'&&confirm('撤销上次导入，恢复导入前的个人资料？')){if(!await flushNotes())throw new Error('请先保存或导出未保存草稿，再撤销导入。');state=await serialize(()=>store.undoImport(state.personal.revision));render();toast('已恢复导入前资料');}
+ if(name==='legacy-live-export'){const raw=localStorage.getItem('paris-pocket-personal-v1');if(raw===null)throw new Error('当前没有旧存储资料。');download('paris-pocket-legacy-original.json',raw,'text/plain');}
+ if(name==='legacy-export'){const entry=state.personal.legacyArchive[Number(el.dataset.index)];download(`paris-pocket-legacy-${Number(el.dataset.index)+1}.json`,entry.sourceRaw,'text/plain');}
+ if(name==='install')document.getElementById('install-dialog').showModal();
+ }catch(error){toast(error.message);}}
+document.addEventListener('click',e=>{const el=e.target.closest('[data-action]');if(el){action(el);return;}const day=e.target.closest('[data-day]');if(day){dayIndex=Number(day.dataset.day);render();main.querySelector('.date-chip.active')?.focus({preventScroll:true});main.querySelector('.date-chip.active')?.scrollIntoView({block:'nearest',inline:'center'});return;}const overview=e.target.closest('[data-overview-day]');if(overview){dayIndex=Number(overview.dataset.overviewDay);switchTab('days');return;}const filter=e.target.closest('[data-task-filter]');if(filter){taskFilter=filter.dataset.taskFilter;render();return;}const map=e.target.closest('[data-map-filter]');if(map){mapFilter=map.dataset.mapFilter;render();}});
+main.addEventListener('change',async e=>{const el=e.target;if(el.id==='routes-visible'){routesVisible=el.checked;render();}if(el.matches('[data-complete]')){const checked=el.checked;el.disabled=true;try{await write(p=>{p.completionByTaskId[el.dataset.complete]=checked;});const y=scrollY;render();window.scrollTo(0,y);}catch(error){el.checked=!checked;el.disabled=false;toast(error.message);}}});
+document.querySelectorAll('.nav-item').forEach(el=>el.addEventListener('click',()=>switchTab(el.dataset.tab)));
+document.getElementById('help-btn').addEventListener('click',()=>document.getElementById('install-dialog').showModal());
+for(const id of ['close-dialog','dialog-done'])document.getElementById(id).addEventListener('click',()=>document.getElementById('install-dialog').close());
+document.getElementById('reload-data').addEventListener('click',async()=>{try{state=await serialize(()=>store.read());storageError='';warning(state.migrationBlocked?'旧资料尚未验证，已暂停个人写入；请先导出原文并检查恢复区。':'');if(detailId)openDetail(detailId,detailTrigger);render();}catch(error){toast(error.message);}});
+async function captureLegacy(){if(!store)return;try{const raw=localStorage.getItem('paris-pocket-personal-v1');state=await serialize(()=>store.captureLegacy(raw));if(tab==='more')render();}catch(error){warning('旧资料暂时不能读取或归档；旧存储键未被修改。请保留页面并导出已有备份。');}}
+window.addEventListener('storage',e=>{if(e.key==='paris-pocket-personal-v1')captureLegacy();});
+document.addEventListener('visibilitychange',()=>{if(document.hidden)flushNotes();else captureLegacy();});
+window.addEventListener('beforeunload',e=>{if(drafts.size||writing||document.getElementById('task-dialog').open){e.preventDefault();e.returnValue='';}});
+function registerWorker(){if(!('serviceWorker'in navigator))return;const update=document.getElementById('app-update');let requested=false;navigator.serviceWorker.register('./sw.js',{updateViaCache:'none'}).then(r=>{const offer=()=>{update.hidden=!(r.waiting&&navigator.serviceWorker.controller);};offer();r.addEventListener('updatefound',()=>r.installing?.addEventListener('statechange',offer));update.addEventListener('click',async()=>{if(document.getElementById('task-dialog').open||document.getElementById('backup-dialog').open){toast('请先保存或取消当前表单');return;}if(!await flushNotes()){toast('仍有未保存草稿，请先保存或导出');return;}if(r.waiting){requested=true;r.waiting.postMessage({type:'SKIP_WAITING'});}});}).catch(()=>toast('离线缓存暂不可用，请联网重试'));navigator.serviceWorker.addEventListener('controllerchange',()=>{if(requested)location.reload();});}
+try{
+ let raw;try{raw=localStorage.getItem('paris-pocket-personal-v1');}catch(error){storageError='旧资料读取失败；已暂停初始化个人存储，避免把读取失败当作空资料。';}
+ if(storageError)throw new Error(storageError);
+ store=await window.ParisStore.open();state=await store.initialize(window.PARIS_BOOTSTRAP,raw);
+ const currentRaw=localStorage.getItem('paris-pocket-personal-v1');if(currentRaw!==raw)state=await store.captureLegacy(currentRaw);
+ if(state.migrationBlocked)warning('旧资料无法完整验证，原文已保存且原键未改；个人写入暂时暂停。请在旅行卡片导出并检查恢复区。');
+ render();registerWorker();sync();
+}catch(error){store?.close();store=null;storageError=error.message;try{const d=O.validate(window.PARIS_BOOTSTRAP.data);if(await O.digest(JSON.stringify(d))!==window.PARIS_BOOTSTRAP.manifest.sha256)throw new Error('离线快照校验失败');state={official:{data:d,manifest:window.PARIS_BOOTSTRAP.manifest},personal:null};render();warning('个人存储暂不可用，已暂停保存。可只读查看随 App 附带的行程；原资料未被清空。'+storageError);registerWorker();}catch(fatal){main.innerHTML='<p class="storage-warning">行程无法安全载入。请联网重新打开；不要清除网站资料。</p>';}}
 })();

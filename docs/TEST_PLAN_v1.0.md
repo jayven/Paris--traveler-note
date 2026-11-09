@@ -1,5 +1,7 @@
 # Paris Pocket — Test & Acceptance Plan v1.0
 
+> 历史 Phase 1 方案/基线保留供追溯；当前 Phase 3 实现与实际测试见 [评审包](phase-3/README.md) 和 [实施决策](phase-3/IMPLEMENTATION.md)。未实施的未来门槛不得视为已经通过。
+
 日期：2026-11-08。分清「本轮已重跑的旧版基线」与「后续必须新建的测试」。所有自动化只用模拟资料和隔离 profile/origin，不读取真实用户 localStorage、不提交私人备份。
 
 ## 1. 本轮基线结果

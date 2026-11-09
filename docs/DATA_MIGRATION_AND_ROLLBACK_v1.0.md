@@ -1,5 +1,7 @@
 # Personal Data Migration & Rollback v1.0
 
+> 历史 Phase 1 方案/基线保留供追溯；当前 Phase 3 实现与实际测试见 [评审包](phase-3/README.md) 和 [实施决策](phase-3/IMPLEMENTATION.md)。未实施的未来门槛不得视为已经通过。
+
 日期：2026-11-08。**设计规范，Phase 1 不执行任何用户数据迁移。** 代码基线 main `0579040`。只使用模拟资料做后续自动化测试，不索取真实私人备份作为测试 fixture。
 
 ## 1. 已核实的旧存储契约

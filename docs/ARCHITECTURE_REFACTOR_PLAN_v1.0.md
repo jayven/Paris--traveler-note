@@ -1,5 +1,7 @@
 # Paris Pocket — Architecture Refactor Plan v1.0
 
+> 历史 Phase 1 方案/基线保留供追溯；当前 Phase 3 实现与实际测试见 [评审包](phase-3/README.md) 和 [实施决策](phase-3/IMPLEMENTATION.md)。未实施的未来门槛不得视为已经通过。
+
 日期：2026-11-08。状态：**Phase 1 评审方案，尚未实现**。审查基线 `05790404b87b616db7b1a786770232dc55fbfe7b`；替代仅审过旧 ZIP 的 v0.1。执行范围以用户 Controlled Refactor 请求为准，不采用 v0.1 的内部阶段编号推进开发。
 
 ## 1. 基于实际代码的决策

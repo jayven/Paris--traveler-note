@@ -2,7 +2,7 @@ const {chromium,devices}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs/promises');
 const path=require('node:path');
-const origin=process.env.TEST_URL||'http://localhost:4173',key='paris-pocket-personal-v1';
+const origin=new URL('legacy.html',(process.env.TEST_URL||'http://localhost:4173')+'/').href,key='paris-pocket-personal-v1';
 const legacy={schemaVersion:2,booked:['louvre'],dayNotes:{'2026-12-07':'原有每日笔记'},bookingNotes:{louvre:'原有预约备注'},hotelNote:'原有酒店笔记',activityOverrides:{'d1-2':{time:'12:15',end:'14:15',detail:'之前保存的描述'}}};
 async function openDetail(page,id){
  await page.locator(`[data-action="view-activity"][data-id="${id}"]`).click();
