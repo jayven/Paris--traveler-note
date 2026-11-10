@@ -2,7 +2,9 @@
 
 ## 当前授权（2026-11-09）
 
-- 当前仅做用户指定的 **Selected-State Color Refinement**：用 `--selected-bg:#58443e` / `--selected-text:#fff` 替换深色选中填充，覆盖主界面、兼容筛选和隔离预览；保留 `7837a82` MapLibre、黑色正文/描边/硬阴影、绿色功能与交通色。不改数据/几何/同步/预订、不重新设计。提供黑棕对照和四宽回归，更新原草稿 PR #2 后停止评审；不得触发新部署，保留 Netlify skip 门。
+- 用户已认可 `6ab2762` 棕色选中态，**冻结现有视觉**（`#58443E`、MapLibre + OpenFreeMap Positron），不再重设计。已授权并完成现有站点的单个隔离 HTTPS draft，来源 commit `6ab27623d4d7d6888c25d8846524e7c68ed57ee5`、Deploy ID `6af2bf7c9b1e9384dabc6255`。只上传经过校验的 `dist/` 23 文件；不发布仓库根目录、不改共享/生产设置、不合并 main、不操作生产资料。详见 [预览验收包](docs/phase-3/https-preview/README.md)。
+- 现有预览登录保护保持不变；API 已逐字节核对全部部署文件，但未登录 CDN 返回 401，线上 SW/外部 SDK/缓存响应头自动浏览器检查仍待正常登录后执行。用户已在自己的浏览器看到预览，不将此等同真 iPhone 验收或生产旧数据迁移证明。等待真机结果；未经另批不再次部署，PR 标题/后续评审提交继续保留 `[skip netlify]`，不触发 Git 自动部署。
+- 已完成 **Selected-State Color Refinement**：`--selected-bg:#58443e` / `--selected-text:#fff` 覆盖主界面、兼容筛选和隔离预览；保留黑色正文/描边/硬阴影、绿色功能与交通色。黑棕对照和四宽回归已通过；不改数据/几何/同步/预订。
 
 - 本轮用户明确授权 **Map Renderer Upgrade**：仅将新版主界面 Leaflet/OSM raster 换为固定版本 MapLibre GL JS + OpenFreeMap Positron；Liberty 仅比较截图。保留全部官方快照/路线、位置来源、稳定 ID、交通方式、个人 schema 和其他功能。新版映射依赖仅地图页按需加载；旧兼容页维持原实现。验收后停止评审，不移除 Netlify skip 或部署。
 

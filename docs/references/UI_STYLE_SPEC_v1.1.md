@@ -111,6 +111,8 @@ The **DAILY ITINERARY** list must not look like a spreadsheet with separated tim
 
 ## 8. Selected-state color refinement — 2026-11-09
 
+**Review status:** the user approved commit `6ab2762`. Freeze this visual design and `#58443E`; preserve MapLibre + OpenFreeMap Positron. Further UI redesign is outside the current scope. The separately authorized HTTPS preview is for acceptance, not production release.
+
 User-directed refinement: replace near-black **selected background fills only** with warm, muted dark chocolate `#58443E`. Use `--selected-bg` and `--selected-text` consistently for bottom navigation, selected dates, To-do status tabs, daily-map filter buttons, the legacy map filter and their isolated visual-preview equivalents. White text has **9.09:1** contrast against this brown; navigation icons inherit the same white via `currentColor`.
 
 The requested P3 reference identifies a brown swatch by appearance; its `D7FF28` label is **not** the background color. No P3 image was available in this refinement's accessible attachments, so the implementation uses the user's explicitly suggested `#58443E`, without claiming an image-sampled match.

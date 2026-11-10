@@ -1,0 +1,77 @@
+{
+  "origin": "http://localhost:4179",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "day": "2026-12-09",
+  "manifestSha256": "af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708",
+  "physicalIPhone": false,
+  "stops": [
+    {
+      "id": "stop-ghpr-checkout",
+      "activityId": "act-ghpr-checkout",
+      "listDetail": true,
+      "focusedPopupDetail": true
+    },
+    {
+      "id": "stop-sainte-visit",
+      "activityId": "act-sainte-visit",
+      "listDetail": true,
+      "focusedPopupDetail": true
+    },
+    {
+      "id": "stop-notredame-visit",
+      "activityId": "act-notredame-visit",
+      "listDetail": true,
+      "focusedPopupDetail": true
+    },
+    {
+      "id": "stop-luxembourg-walk",
+      "activityId": "act-luxembourg-walk",
+      "listDetail": true,
+      "focusedPopupDetail": true
+    },
+    {
+      "id": "stop-orsay-transfer",
+      "activityId": "act-orsay-transfer",
+      "listDetail": true,
+      "focusedPopupDetail": true
+    },
+    {
+      "id": "stop-orsay-lunch",
+      "activityId": "act-orsay-lunch",
+      "listDetail": true,
+      "focusedPopupDetail": true
+    },
+    {
+      "id": "stop-orsay-visit",
+      "activityId": "act-orsay-visit",
+      "listDetail": true,
+      "focusedPopupDetail": true
+    },
+    {
+      "id": "stop-ghpr-luggage",
+      "activityId": "act-ghpr-luggage",
+      "listDetail": true,
+      "focusedPopupDetail": true
+    },
+    {
+      "id": "stop-waldorf-arrival",
+      "activityId": "act-waldorf-arrival",
+      "listDetail": true,
+      "focusedPopupDetail": true
+    }
+  ],
+  "gestures": {
+    "emulatedPinchZoom": true,
+    "emulatedTouchPan": true,
+    "physicalIPhone": false
+  },
+  "pageErrors": [],
+  "chromium": "157.0.8103.40",
+  "exactGeometryPreserved": true,
+  "officialAndPersonalDataUnchanged": true,
+  "allNineStopsAccessible": true,
+  "centralParisZoomPopups": true
+}

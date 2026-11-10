@@ -2,7 +2,9 @@
 
 中文优先、iPhone 优先的原生 JavaScript PWA。继续使用 [现有 Netlify 站点](https://stirring-cheesecake-37698e.netlify.app/) 和 `jayven/Paris--traveler-note`。
 
-当前 `feature/paris-pocket-v2-refactor` 为 **Phase 3 功能评审候选**，尚未合并或部署。用户已批准 Phase 3，生产发布另需批准。先读 [AGENTS](AGENTS.md)、[PRODUCT_BRIEF](PRODUCT_BRIEF.md)。
+当前 `feature/paris-pocket-v2-refactor` 为 **Phase 3 功能评审候选**，尚未合并或部署生产。`6ab2762` 视觉已批准并冻结；获批的独立 HTTPS 预览已使用 dist 白名单上传，等待真 iPhone 验收。生产发布另需批准。先读 [AGENTS](AGENTS.md)、[PRODUCT_BRIEF](PRODUCT_BRIEF.md)。
+
+[当前 HTTPS 预览、部署 SHA、文件核验与 iPhone 清单](docs/phase-3/https-preview/README.md)；预览与生产资料属于不同 origin，不能替代生产旧安装迁移验收。
 
 最新视觉微调：[选中态黑棕对照、390px 截图与四宽回归](docs/phase-3/selected-state/README.md)。沿用 MapLibre 候选，只把选中填充统一为 `#58443E`，不改布局与数据。
 

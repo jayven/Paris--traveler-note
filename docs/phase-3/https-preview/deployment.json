@@ -1,0 +1,166 @@
+{
+  "sourceCommit": "6ab27623d4d7d6888c25d8846524e7c68ed57ee5",
+  "uploadDirectory": "dist/",
+  "draftRequested": true,
+  "sharedConfigurationChanged": false,
+  "before": {
+    "id": "7998275f-56b4-4599-80ef-d05a772a00e1",
+    "name": "stirring-cheesecake-37698e",
+    "production": {
+      "id": "6acdda4772ee0e568f484bcb",
+      "commit": "05790404b87b616db7b1a786770232dc55fbfe7b"
+    },
+    "settings": {
+      "build": null,
+      "publish": null,
+      "base": null,
+      "productionBranch": "main"
+    },
+    "url": "https://stirring-cheesecake-37698e.netlify.app"
+  },
+  "inventory": [
+    {
+      "file": "index.html",
+      "size": 4737,
+      "sha256": "836ff0a9e620dc78f9535f5f2343d6a9a4432c722d018762bf79a14d5a2a82a8"
+    },
+    {
+      "file": "legacy.html",
+      "size": 7557,
+      "sha256": "94eb9638eb7c626b560919da0c1d2f6522d71607e081113320439b20ac120bf2"
+    },
+    {
+      "file": "styles.css",
+      "size": 40165,
+      "sha256": "9140a39d49f938b860e381efbb716b30a579369d308fa2c1aebf4e1bffa85af0"
+    },
+    {
+      "file": "app.js",
+      "size": 28464,
+      "sha256": "61b60d389284fcea3e88ff90eb97a320af06d255581f5388a574f55fd9824b21"
+    },
+    {
+      "file": "map-renderer.js",
+      "size": 14689,
+      "sha256": "68075673830853f345e61b7a26baf6d1e951bdc93104dab84a06a41b91f8204a"
+    },
+    {
+      "file": "legacy-app.js",
+      "size": 33380,
+      "sha256": "ac1d607cf5086ffcb0b53fcb1e4cf1c9021b09545dcad0e2746e8ef5638332ba"
+    },
+    {
+      "file": "views.js",
+      "size": 12273,
+      "sha256": "38b4f7b443011512033b6d865e386fb42d784d5ea59d21ab8bfe8e8016b1f623"
+    },
+    {
+      "file": "personal-data.js",
+      "size": 7122,
+      "sha256": "265317eaf7d280468f12495ca053fd4aae5114994926d9e94fbc5f391624373e"
+    },
+    {
+      "file": "itinerary-data.js",
+      "size": 4878,
+      "sha256": "a7e6ffe536b74f95b85330c3cf915bb1aa1cd784f58ef839e95ca6c031b7253c"
+    },
+    {
+      "file": "map-links.js",
+      "size": 2035,
+      "sha256": "ff10617b256bf4a76fbd647b3f307d87d768e4ecd6667ce93c5b012a523e488b"
+    },
+    {
+      "file": "official-data.js",
+      "size": 14394,
+      "sha256": "e804658eb1ed31c63e78d88c9be3955bcea0d69a1fe4c9bdcf0706e6e712779d"
+    },
+    {
+      "file": "local-store.js",
+      "size": 27374,
+      "sha256": "b0cc27ad4bf27ba0120695cd2aed6dcd636ca24b69d6538614d4b9388be91bb2"
+    },
+    {
+      "file": "visual-preview.js",
+      "size": 16942,
+      "sha256": "d918225623b1c6ea418a1c3e6ff71107ccb93b39f6b6aeac03e763e99314b237"
+    },
+    {
+      "file": "trip-data.js",
+      "size": 15549,
+      "sha256": "935b7a1648189f813d3b347b9d796da2ed17d443e3f5aa8f7eda1a8d35f09a14"
+    },
+    {
+      "file": "sw.js",
+      "size": 2035,
+      "sha256": "4571329813d619ce26ef565135cd102805a9deb4dd509574ab49b25fc2d6aa3a"
+    },
+    {
+      "file": "manifest.webmanifest",
+      "size": 653,
+      "sha256": "f669e4b8518e0cd79a2c6daf9e1098f0f8ce331033b09b059c22a347e065ac91"
+    },
+    {
+      "file": "assets/icon-192.png",
+      "size": 1802,
+      "sha256": "044e83e061c4c9b5eab8b414f0f81827eadb02be0e150c6253cef50a466e8ac7"
+    },
+    {
+      "file": "assets/icon-512.png",
+      "size": 5516,
+      "sha256": "57d6b422c73c3e523d5c3ca69711c81655a6ae59f87c263c5425da75e6cdf86d"
+    },
+    {
+      "file": "assets/apple-touch-icon.png",
+      "size": 1675,
+      "sha256": "67cf56163557daa23a1b65a8cf1bb5c1c3770dd6ef86653b9ccbb8942603e2dd"
+    },
+    {
+      "file": "trip/bootstrap.js",
+      "size": 216446,
+      "sha256": "4b86447edbd1ffaf15d68cf2df449e9b64871800c281660098c1ced6c6c9aeba"
+    },
+    {
+      "file": "trip/manifest.json",
+      "size": 316,
+      "sha256": "3a3bbd276d82f735c9a9712be9baed4b44f3860ffb654b439b28b9b97d533632"
+    },
+    {
+      "file": "trip/releases/af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708.json",
+      "size": 216051,
+      "sha256": "af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708"
+    },
+    {
+      "file": "_headers",
+      "size": 149,
+      "sha256": "41d12e9a9938ab17b724560c1262a048467d86468c4fd7f279120436c4571206"
+    }
+  ],
+  "id": "6af2bf7c9b1e9384dabc6255",
+  "deployUrl": "https://feature-paris-pocket-v2-refactor--stirring-cheesecake-37698e.netlify.app",
+  "after": {
+    "id": "7998275f-56b4-4599-80ef-d05a772a00e1",
+    "name": "stirring-cheesecake-37698e",
+    "production": {
+      "id": "6acdda4772ee0e568f484bcb",
+      "commit": "05790404b87b616db7b1a786770232dc55fbfe7b"
+    },
+    "settings": {
+      "build": null,
+      "publish": null,
+      "base": null,
+      "productionBranch": "main"
+    },
+    "url": "https://stirring-cheesecake-37698e.netlify.app"
+  },
+  "deploy": {
+    "id": "6af2bf7c9b1e9384dabc6255",
+    "siteId": "7998275f-56b4-4599-80ef-d05a772a00e1",
+    "state": "ready",
+    "context": "deploy-preview",
+    "branch": "feature-paris-pocket-v2-refactor",
+    "commitRef": "6ab27623d4d7d6888c25d8846524e7c68ed57ee5",
+    "title": "Paris Pocket iPhone acceptance | source 6ab27623d4d7d6888c25d8846524e7c68ed57ee5 | validated dist only",
+    "url": "https://feature-paris-pocket-v2-refactor--stirring-cheesecake-37698e.netlify.app",
+    "createdAt": "2026-11-10T06:53:48.284Z"
+  }
+}

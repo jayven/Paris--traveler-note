@@ -1,0 +1,41 @@
+{
+  "sourceCommit": "6ab27623d4d7d6888c25d8846524e7c68ed57ee5",
+  "servedDirectory": "dist/",
+  "testOrigin": "http://localhost:4179",
+  "isolatedSyntheticProfiles": true,
+  "runtimeSameBytesAsVerifiedDeploy": true,
+  "tests": [
+    {
+      "command": "TEST_URL=http://localhost:4179 PW_CHANNEL=chrome npm run test:integrated",
+      "exitCode": 0,
+      "checks": [
+        "notes/reload/escaping",
+        "To-do CRUD/completion",
+        "legacy raw preserved",
+        "backup import/undo",
+        "offline shell/notes/tasks/map list",
+        "verified routes/filter/repeated stops/shared detail",
+        "four screens at 320/375/390/430px",
+        "zero page errors"
+      ]
+    },
+    {
+      "command": "TEST_URL=http://localhost:4179 PW_CHANNEL=chrome node tests/https-preview-map.cjs",
+      "exitCode": 0,
+      "checks": [
+        "all9 Dec9 stops/details/focused popup",
+        "six true coordinates",
+        "GHPR 2/Orsay 3 activity entries",
+        "four exact stored road geometries",
+        "emulated touch pinch/pan",
+        "day switching/data preserved"
+      ]
+    }
+  ],
+  "notVerified": [
+    "protected preview CDN response headers",
+    "Service Worker installation and external map loading on actual protected preview origin",
+    "physical iPhone Safari and standalone",
+    "production-origin user data migration"
+  ]
+}

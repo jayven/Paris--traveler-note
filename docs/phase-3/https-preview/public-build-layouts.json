@@ -1,0 +1,136 @@
+{
+  "viewportHeight": 844,
+  "layouts": [
+    {
+      "screen": "days",
+      "width": 320,
+      "contentWidth": 320,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "detail",
+      "width": 320,
+      "contentWidth": 282,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "map",
+      "width": 320,
+      "contentWidth": 320,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "todo",
+      "width": 320,
+      "contentWidth": 320,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "days",
+      "width": 375,
+      "contentWidth": 375,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "detail",
+      "width": 375,
+      "contentWidth": 337,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "map",
+      "width": 375,
+      "contentWidth": 375,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "todo",
+      "width": 375,
+      "contentWidth": 375,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "days",
+      "width": 390,
+      "contentWidth": 390,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "detail",
+      "width": 390,
+      "contentWidth": 352,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "map",
+      "width": 390,
+      "contentWidth": 390,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "todo",
+      "width": 390,
+      "contentWidth": 390,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "days",
+      "width": 430,
+      "contentWidth": 430,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "detail",
+      "width": 430,
+      "contentWidth": 392,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "map",
+      "width": 430,
+      "contentWidth": 430,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "todo",
+      "width": 430,
+      "contentWidth": 430,
+      "overflow": 0,
+      "pageOverflow": 0,
+      "navBottom": 844
+    }
+  ],
+  "pageErrors": [],
+  "isolatedProfiles": true,
+  "legacyRawUnchanged": true
+}

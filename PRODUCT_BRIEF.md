@@ -8,6 +8,8 @@
 
 Phase 1、Phase 2 已评审，用户已批准开始 Phase 3。本分支现整合官方 v4.12、IDB 个人资料、备注/To-do、地图与同步；旧编辑/预约/笔记/备份完整保留在独立旧页面。所有迁移/升级测试使用隔离模拟资料；不合并 main、不部署生产、不操作生产个人资料。
 
+`6ab2762` 的 `#58443E` 棕色选中态已获视觉批准，冻结当前设计并保留 MapLibre / OpenFreeMap Positron。用户已授权独立 HTTPS 测试预览，使用现有站点、校验后的 dist 白名单，不改共享/生产设置；[当前预览验收包](docs/phase-3/https-preview/README.md) 记录实际部署与待验项目。此预览不构成生产发布或生产旧资料迁移批准。
+
 ## 来源与实现状态
 
 - 功能：PRD v1.0；旅行：v4.12 PDF（2026-11-04）；外观：UI Reference Package v1.1；架构：[经当前代码修订的 v1.0](docs/ARCHITECTURE_REFACTOR_PLAN_v1.0.md)。见 [来源登记](docs/SOURCE_REGISTER.md)。

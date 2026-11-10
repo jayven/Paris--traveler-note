@@ -1,5 +1,7 @@
 # HTTPS 预览与 iPhone 验收
 
+> 历史准备记录。用户随后批准单个隔离 draft；`6ab2762` 已用 dist 白名单上传。当前 URL、API 文件核验、12/9 地图及精简真机清单见 [当前 HTTPS 验收包](https-preview/README.md)。本文旧 fe21176 与“尚未部署”描述仅对应当时状态。
+
 2026-11-09；本轮只读核查和准备，未更改 Netlify 项目设置，未启动任何部署。现有 PR 标题使用 `[skip netlify]`，以免更新评审代码时自动发布新的 Deploy Preview。
 
 ## 已确认的现有项目

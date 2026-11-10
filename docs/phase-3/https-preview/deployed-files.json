@@ -1,0 +1,271 @@
+{
+  "deployId": "6af2bf7c9b1e9384dabc6255",
+  "sourceCommit": "6ab27623d4d7d6888c25d8846524e7c68ed57ee5",
+  "readOnly": true,
+  "verificationMethod": "Authenticated official Netlify deployment-files API; original uploaded bytes, not CDN runtime",
+  "apiEndpoint": "https://api.netlify.com/api/v1/deploys/6af2bf7c9b1e9384dabc6255/files",
+  "publicFileCount": 23,
+  "allFilesMatchValidatedDist": true,
+  "files": [
+    {
+      "path": "/_headers",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 149,
+      "sha1": "4c348946dfca81db4ed60a5e0b214307b0a522c8",
+      "sha256": "41d12e9a9938ab17b724560c1262a048467d86468c4fd7f279120436c4571206",
+      "rawResponseContentType": "text/plain; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/app.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 28464,
+      "sha1": "fcbb6cfec4c955b6e093a15d6cc0a5f16fee72e6",
+      "sha256": "61b60d389284fcea3e88ff90eb97a320af06d255581f5388a574f55fd9824b21",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/assets/apple-touch-icon.png",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 1675,
+      "sha1": "be0ae5946eb7307240ef34a20e97be14b5a4f010",
+      "sha256": "67cf56163557daa23a1b65a8cf1bb5c1c3770dd6ef86653b9ccbb8942603e2dd",
+      "rawResponseContentType": "image/png; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/assets/icon-192.png",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 1802,
+      "sha1": "7ca2b6700e627a7d8dad2789205c1114c98fddf3",
+      "sha256": "044e83e061c4c9b5eab8b414f0f81827eadb02be0e150c6253cef50a466e8ac7",
+      "rawResponseContentType": "image/png; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/assets/icon-512.png",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 5516,
+      "sha1": "588c5eee59250ec507078752b98645c23919908a",
+      "sha256": "57d6b422c73c3e523d5c3ca69711c81655a6ae59f87c263c5425da75e6cdf86d",
+      "rawResponseContentType": "image/png; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/index.html",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 4737,
+      "sha1": "e57bf0eb2faa92d70bec2afee59e92172c7cb53d",
+      "sha256": "836ff0a9e620dc78f9535f5f2343d6a9a4432c722d018762bf79a14d5a2a82a8",
+      "rawResponseContentType": "text/html; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/itinerary-data.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 4878,
+      "sha1": "c4696a8e132d1d8c8d8d27c70e723e528147fa66",
+      "sha256": "a7e6ffe536b74f95b85330c3cf915bb1aa1cd784f58ef839e95ca6c031b7253c",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/legacy-app.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 33380,
+      "sha1": "87e85f81d699ad781c7484d4e4b3dc31305a4db7",
+      "sha256": "ac1d607cf5086ffcb0b53fcb1e4cf1c9021b09545dcad0e2746e8ef5638332ba",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/legacy.html",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 7557,
+      "sha1": "431b9714f1426fe6f1a5696fa7f44700e3886880",
+      "sha256": "94eb9638eb7c626b560919da0c1d2f6522d71607e081113320439b20ac120bf2",
+      "rawResponseContentType": "text/html; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/local-store.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 27374,
+      "sha1": "c7bad67c8387a786957ee39a7c8943698b4294c5",
+      "sha256": "b0cc27ad4bf27ba0120695cd2aed6dcd636ca24b69d6538614d4b9388be91bb2",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/manifest.webmanifest",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 653,
+      "sha1": "11d1cf5d6f433c8f74d39ce02ea3be6b8fee601d",
+      "sha256": "f669e4b8518e0cd79a2c6daf9e1098f0f8ce331033b09b059c22a347e065ac91",
+      "rawResponseContentType": "application/octet-stream; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/map-links.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 2035,
+      "sha1": "beb6d7adccf755b0694ff42f7b4205c42e5c987b",
+      "sha256": "ff10617b256bf4a76fbd647b3f307d87d768e4ecd6667ce93c5b012a523e488b",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/map-renderer.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 14689,
+      "sha1": "c8ced721e4df72bce1e6d0fd2f3977a601fecc1d",
+      "sha256": "68075673830853f345e61b7a26baf6d1e951bdc93104dab84a06a41b91f8204a",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/official-data.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 14394,
+      "sha1": "453b1a6dc541951229c41629ffe4e9ffb96534d7",
+      "sha256": "e804658eb1ed31c63e78d88c9be3955bcea0d69a1fe4c9bdcf0706e6e712779d",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/personal-data.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 7122,
+      "sha1": "5245f0301a17efc8869e6e266c258fb1322af3b7",
+      "sha256": "265317eaf7d280468f12495ca053fd4aae5114994926d9e94fbc5f391624373e",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/styles.css",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 40165,
+      "sha1": "13c102d8c5fe395e94e64f921fa4abad3f50b795",
+      "sha256": "9140a39d49f938b860e381efbb716b30a579369d308fa2c1aebf4e1bffa85af0",
+      "rawResponseContentType": "text/css; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/sw.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 2035,
+      "sha1": "497e4b558e94feda0472b44d38ff6a22a1a13ad8",
+      "sha256": "4571329813d619ce26ef565135cd102805a9deb4dd509574ab49b25fc2d6aa3a",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/trip-data.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 15549,
+      "sha1": "c80890c10ae4c5a47e27cf5e7945cd057d8835f9",
+      "sha256": "935b7a1648189f813d3b347b9d796da2ed17d443e3f5aa8f7eda1a8d35f09a14",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/trip/bootstrap.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 216446,
+      "sha1": "19c2a3b35f3456f41de2b22dd79d508a65bc633d",
+      "sha256": "4b86447edbd1ffaf15d68cf2df449e9b64871800c281660098c1ced6c6c9aeba",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/trip/manifest.json",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 316,
+      "sha1": "bf6d64c7b5a9ae9a469de21d985001d31b219e9c",
+      "sha256": "3a3bbd276d82f735c9a9712be9baed4b44f3860ffb654b439b28b9b97d533632",
+      "rawResponseContentType": "application/json; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/trip/releases/af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708.json",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 216051,
+      "sha1": "e79912052a049f9545fa1015cda7e808f65fe209",
+      "sha256": "af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708",
+      "rawResponseContentType": "application/json; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/views.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 12273,
+      "sha1": "5162b812078fc14c080b05c5e25030226ac471fa",
+      "sha256": "38b4f7b443011512033b6d865e386fb42d784d5ea59d21ab8bfe8e8016b1f623",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    },
+    {
+      "path": "/visual-preview.js",
+      "deployId": "6af2bf7c9b1e9384dabc6255",
+      "size": 16942,
+      "sha1": "45de5c3a968d1c6f20aac2604522f36df58eba22",
+      "sha256": "d918225623b1c6ea418a1c3e6ff71107ccb93b39f6b6aeac03e763e99314b237",
+      "rawResponseContentType": "application/javascript; charset=utf-8",
+      "matchesValidatedDist": true
+    }
+  ],
+  "forbiddenFilesAbsent": [
+    {
+      "path": "/AGENTS.md",
+      "status": 404
+    },
+    {
+      "path": "/PRODUCT_BRIEF.md",
+      "status": 404
+    },
+    {
+      "path": "/package.json",
+      "status": 404
+    },
+    {
+      "path": "/package-lock.json",
+      "status": 404
+    },
+    {
+      "path": "/scripts/build-site.cjs",
+      "status": 404
+    },
+    {
+      "path": "/tests/selected-state.cjs",
+      "status": 404
+    },
+    {
+      "path": "/docs/phase-3/README.md",
+      "status": 404
+    },
+    {
+      "path": "/.git/config",
+      "status": 404
+    },
+    {
+      "path": "/.netlify/state.json",
+      "status": 404
+    },
+    {
+      "path": "/trip/source.json",
+      "status": 404
+    }
+  ],
+  "serviceWorker": {
+    "cacheVersion": "paris-pocket-v8-selected-brown",
+    "coreURLCount": 20,
+    "allCoreResourcesPresent": true
+  },
+  "headersRules": "/trip/manifest.json\n  Cache-Control: no-store\n/trip/releases/*\n  Cache-Control: public, max-age=31536000, immutable\n/sw.js\n  Cache-Control: no-cache\n",
+  "limitations": [
+    "CDN delivery and cache headers remain unverified behind unchanged HTTP401 protection",
+    "Browser Service Worker installation, official sync and external MapLibre loading require normal preview access; API bytes alone do not prove runtime behavior",
+    "Preview origin does not prove production personal-data migration"
+  ]
+}
