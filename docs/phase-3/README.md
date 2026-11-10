@@ -1,5 +1,7 @@
 # Paris Pocket — Phase 3 功能评审包
 
+> 第一轮历史交付。最新地图分类、发布保留修复及 PR/真机准备见 [首轮反馈收尾](REVIEW_FOLLOWUP.md)，当前 Node 检查为58项。此处的36项/八套浏览器结果保留为 fe21176 的运行证据。
+
 2026-11-09。用户已批准开始 Phase 3。所有工作位于 `feature/paris-pocket-v2-refactor` / [现有草稿 PR #2](https://github.com/jayven/Paris--traveler-note/pull/2)，保留 Phase 2 已认可视觉。**未合并 main、未部署生产、未更改 Netlify 设置、未访问或迁移真实生产个人资料。**
 
 本轮完成可测试的功能整合候选；地图全路径覆盖和真实 iPhone 验收仍有门槛，因此不宣称全部 P0 完成或可直接生产发布。

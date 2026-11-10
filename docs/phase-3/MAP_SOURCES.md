@@ -61,6 +61,8 @@ The route preparation made 29 serial requests, spaced at least 1.5 seconds apart
 
 ## Coverage and deliberate gaps
 
+Review follow-up: [all 40 missing segments classified](ROUTE_GAP_AUDIT.md). Road geometry is **not** an objective for all 68 segments: 24/24 walking and 4/8 driving have stored paths; unknown/internal/rail/boat legs are classified by purpose. The audit changes no modes, locations or geometry.
+
 `trip/route-overrides.json` holds **28 verified source-mode road segments / 68 total segments**, containing 3,199 actual provider-returned vertices. Geometry is GeoJSON `[longitude, latitude]`. There are **40 gaps** with explicit reasons. Some are same-venue transitions, unknown transport modes, rail or boat, and do not represent 40 missing road journeys. This coverage must not be represented as complete P0 “all daily real routes” acceptance.
 
 | Day | Stored walking/driving segments | Explicit gaps |

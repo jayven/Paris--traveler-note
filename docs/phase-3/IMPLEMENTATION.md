@@ -43,9 +43,9 @@ AppVersion 与 tripDataVersion 分开。SW 的 scope、URL 和 manifest id/start
 1. 修改公开 `trip/source-v4.12.json`，保留同目标 ID；不同预订目标用新 ID。删除任务改 explicit archive，删除活动记录 retiredActivityIds。
 2. 核实事实、地点语义和供应商许可；未核实的路线保持 null。路线准备默认离线报告，`--fetch` 仅维护者手动低频调用，见 [地图来源](MAP_SOURCES.md)。
 3. 修改版本时同时调整 tripDataVersion、releaseSequence 和 routeDataVersion，然后 `npm run build:trip`、运行测试。构建器不做网络地理编码，不产生私人资料。
-4. **保留已经发布的 hash 文件。** 此轮仅删除未公开的中间开发快照，仓库保留当前首个发布候选。后续不得替换已发布 hash 的内容。
-5. `npm run build:site` 生成 `dist/` 明确公开白名单：完整运行 shell、图标、manifest/bootstrap、当前 hash 快照及缓存 headers；排除 docs/tests/scripts、来源 PDF/ZIP、私人备份、dotfiles。构建不是部署。
-6. 此轮没有修改 Netlify 设置。未来获批准时，先核对现有 site 的 Deploy Preview/发布目录，使用 dist 完整产物，做独立 HTTPS 真机检查。只推 feature 不合 main；main 的既有 webhook 可能立即生产发布。
+4. **保留已经发布的 hash 文件。** 此轮仅删除未公开的中间开发快照，仓库保留当前首个发布候选。构建会验证并复制 `trip/releases/` 全部保留的合法 hash 文件，不能只复制 active；当前无自动裁剪策略。PR 检查相对 base commit 拒绝删除/修改既有文件。后续不得替换已发布 hash 的内容。
+5. `npm run build:site` 生成 `dist/` 明确公开白名单：完整运行 shell、图标、manifest/bootstrap、全部保留的合法 hash 快照及缓存 headers；排除 docs/tests/scripts、来源 PDF/ZIP、私人备份、dotfiles。构建不是部署。
+6. 此轮没有修改 Netlify 设置。现有 PR #2 preview 的 fe21176 已由 Netlify 只读部署记录核实；后台 build/publish 设置未暴露、未登录访问 401，详见 [预览核查](HTTPS_IPHONE_ACCEPTANCE.md)。当前 PR 标题 `[skip netlify]` 防止评审更新自动部署；解除或手动 draft 均须另批。未来获批准时，先核对 existing site 的发布目录，使用 dist 完整产物，做独立 HTTPS 真机检查。只推 feature 不合 main；main 的既有 webhook 可能立即生产发布。
 7. App 代码发布需同步 appVersion/package 及 SW CACHE_VERSION；纯官方内容更新可保持 shell，但仍须验证 schema 兼容和不可变版本契约。
 
 本实现不保证浏览器永不清理存储。Safari/主屏幕/不同 origin 的个人记录并不自动共享；需要导出备份。未保存草稿只在当前内存中，页面被系统强制关闭可能丢失；失败时及时复制或导出。

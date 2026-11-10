@@ -14,7 +14,8 @@
     "test:integrated": "node tests/integrated.cjs",
     "build:site": "node scripts/build-site.cjs",
     "test:concurrency": "node tests/concurrency.cjs",
-    "test:failure": "node tests/failure-ui.cjs"
+    "test:failure": "node tests/failure-ui.cjs",
+    "check:releases": "node scripts/check-releases.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1"

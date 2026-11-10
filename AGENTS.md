@@ -2,12 +2,13 @@
 
 ## 当前授权（2026-11-09）
 
-- 用户已批准开始 **Phase 3 — 功能与数据整合**，继续使用 `feature/paris-pocket-v2-refactor` / 草稿 PR #2。Phase 2 视觉方向已认可，保持现有设计，不重新设计。
+- 用户已接受 `fe21176` 为 Phase 3 首轮功能评审候选，授权继续地图缺口审计、不可变发布保留、PR 自动验证和 HTTPS/iPhone 验收准备；不得扩展产品功能。用户已批准开始 **Phase 3 — 功能与数据整合**，继续使用 `feature/paris-pocket-v2-refactor` / 草稿 PR #2。Phase 2 视觉方向已认可，保持现有设计，不重新设计。
 - 授权本分支实现和用隔离模拟资料测试官方行程、个人存储、旧资料保护、备注、To-do、地图、同步与回退。**不合并 main、不部署生产、不改 Netlify 设置、不操作生产浏览器个人资料。** 真实生产升级另需批准。
 - 采用已核实的最小实现：原生 JS、一个版本化官方快照、一个 IDB 数据库/单个 object store 的独立 records。只支持 data schema 1；未知版本整包拒绝，不预先实现泛用多 schema 同步框架。具体决策与后续 schema 升级门槛见 [Phase 3 实施决策](docs/phase-3/IMPLEMENTATION.md)。
 - 新主界面官方行程只读，个人备注/任务可编辑。`legacy.html` / `legacy-app.js` 继续提供原编辑器、预约和笔记；新版从不改写/清空 `paris-pocket-personal-v1`。旧窗口写入另存恢复候选，不覆盖新版资料。
 - Activity Detail 只从行程或地图进入，不增加独立底部 tab。主界面没有 Phase 2/mock/debug 横幅；历史预览仅留在旧页面并清楚标记。
 - [Phase 3 评审包](docs/phase-3/README.md) 是当前入口。地图缺口与真 iPhone 验收未通过前，不称完整 P0 已完成，不申请生产发布。
+- 现有 Netlify PR 预览已由只读 API 确认为 ready（fe21176），未登录访问 401。当前评审提交使用 PR 标题 `[skip netlify]` 防止自动预览部署；未经另批不得移除该部署门。GitHub CI 仅校验，不部署。详见 [HTTPS/iPhone 验收](docs/phase-3/HTTPS_IPHONE_ACCEPTANCE.md)。
 - 既有公开资料授权与现有仓库继续保留；不得提交私人备份、凭证、确认号或订单管理链接。
 
 ## 来源优先级
