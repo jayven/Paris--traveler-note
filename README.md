@@ -6,6 +6,8 @@
 
 [当前 HTTPS 预览、部署 SHA、文件核验与 iPhone 清单](docs/phase-3/https-preview/README.md)；预览与生产资料属于不同 origin，不能替代生产旧安装迁移验收。
 
+[用户提供的纸艺 P 安装图标](docs/phase-3/app-icon/README.md) 已在功能分支接入，尚未部署；不改变已批准的应用内界面。
+
 最新视觉微调：[选中态黑棕对照、390px 截图与四宽回归](docs/phase-3/selected-state/README.md)。沿用 MapLibre 候选，只把选中填充统一为 `#58443E`，不改布局与数据。
 
 [当前地图升级评审/截图](docs/phase-3/map-renderer/README.md) · [安全收尾评审](docs/phase-3/REVIEW_FOLLOWUP.md) · [地图缺口决策](docs/phase-3/ROUTE_GAP_AUDIT.md) · [HTTPS/iPhone 验收](docs/phase-3/HTTPS_IPHONE_ACCEPTANCE.md) · [Phase 3 结果与截图](docs/phase-3/README.md) · [架构与维护](docs/phase-3/IMPLEMENTATION.md) · [地图来源及缺口](docs/phase-3/MAP_SOURCES.md) · [PRD](docs/references/Paris_Pocket_PRD_v1.0.md)

@@ -1,0 +1,60 @@
+{
+  "origin": "http://localhost:4178",
+  "chromium": "157.0.8103.40",
+  "images": [
+    {
+      "src": "./assets/icon-paper-p-192.png",
+      "expected": 192,
+      "width": 192,
+      "height": 192
+    },
+    {
+      "src": "./assets/icon-paper-p-512.png",
+      "expected": 512,
+      "width": 512,
+      "height": 512
+    },
+    {
+      "src": "./assets/apple-touch-icon-paper-p.png",
+      "expected": 180,
+      "width": 180,
+      "height": 180
+    }
+  ],
+  "cached": [
+    {
+      "src": "./assets/icon-paper-p-192.png",
+      "present": true
+    },
+    {
+      "src": "./assets/icon-paper-p-512.png",
+      "present": true
+    },
+    {
+      "src": "./assets/apple-touch-icon-paper-p.png",
+      "present": true
+    }
+  ],
+  "offline": [
+    {
+      "src": "./assets/icon-paper-p-192.png",
+      "status": 200,
+      "bytes": 40745
+    },
+    {
+      "src": "./assets/icon-paper-p-512.png",
+      "status": 200,
+      "bytes": 277299
+    },
+    {
+      "src": "./assets/apple-touch-icon-paper-p.png",
+      "status": 200,
+      "bytes": 36227
+    }
+  ],
+  "manifestIdentityUnchanged": true,
+  "htmlReferencesUpdated": true,
+  "artworkRedrawn": false,
+  "physicalIPhone": false,
+  "installedOSIconRefresh": "not-tested"
+}
