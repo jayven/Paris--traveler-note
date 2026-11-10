@@ -2,6 +2,8 @@
 
 ## 当前授权（2026-11-09）
 
+- 本轮用户明确授权 **Map Renderer Upgrade**：仅将新版主界面 Leaflet/OSM raster 换为固定版本 MapLibre GL JS + OpenFreeMap Positron；Liberty 仅比较截图。保留全部官方快照/路线、位置来源、稳定 ID、交通方式、个人 schema 和其他功能。新版映射依赖仅地图页按需加载；旧兼容页维持原实现。验收后停止评审，不移除 Netlify skip 或部署。
+
 - 用户已接受 `fe21176` 为 Phase 3 首轮功能评审候选，授权继续地图缺口审计、不可变发布保留、PR 自动验证和 HTTPS/iPhone 验收准备；不得扩展产品功能。用户已批准开始 **Phase 3 — 功能与数据整合**，继续使用 `feature/paris-pocket-v2-refactor` / 草稿 PR #2。Phase 2 视觉方向已认可，保持现有设计，不重新设计。
 - 授权本分支实现和用隔离模拟资料测试官方行程、个人存储、旧资料保护、备注、To-do、地图、同步与回退。**不合并 main、不部署生产、不改 Netlify 设置、不操作生产浏览器个人资料。** 真实生产升级另需批准。
 - 采用已核实的最小实现：原生 JS、一个版本化官方快照、一个 IDB 数据库/单个 object store 的独立 records。只支持 data schema 1；未知版本整包拒绝，不预先实现泛用多 schema 同步框架。具体决策与后续 schema 升级门槛见 [Phase 3 实施决策](docs/phase-3/IMPLEMENTATION.md)。

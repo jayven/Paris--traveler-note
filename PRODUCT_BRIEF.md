@@ -12,6 +12,7 @@ Phase 1、Phase 2 已评审，用户已批准开始 Phase 3。本分支现整合
 
 - 功能：PRD v1.0；旅行：v4.12 PDF（2026-11-04）；外观：UI Reference Package v1.1；架构：[经当前代码修订的 v1.0](docs/ARCHITECTURE_REFACTOR_PLAN_v1.0.md)。见 [来源登记](docs/SOURCE_REGISTER.md)。
 - 当前 main 是原生 JS 静态 PWA，具备本机活动编辑、schema 3 存储、备份兼容、Google Maps 查看/步行/驾车、Leaflet 图钉、手动 PWA 更新和离线 shell。
+- 当前功能分支主地图已改为固定 MapLibre GL JS 6.17.0 + OpenFreeMap Positron；只换渲染与底图，Liberty 仅比较截图，旧兼容页维持 Leaflet。SDK 按需加载，故障保留列表/详情/Google 导航；不增加实时路由或离线瓦片下载。见 [地图评审](docs/phase-3/map-renderer/README.md)。
 - 当前功能分支已有独立活动备注、统一 To-do、Stop/Segment、版本化官方快照与一键同步。官方 v4.12.1 为 62 活动/76 Stop/48 Place/68 Segment/14 任务；28 段有核验道路几何，其余明确降级。旧行程/编辑/预约/笔记在 `legacy.html` 继续可用，未套用到新官方活动。尚未合并或上线。
 - 地图缺口按用途验收，不以 68/68 道路几何为目标：24 walking 已全有几何；8 driving 中4段待端点；32 unknown、2 rail、2 boat 按 [缺口审计](docs/phase-3/ROUTE_GAP_AUDIT.md) 分类，事实未决不自动选交通。
 - 审计差距见 [AUDIT.md](AUDIT.md)。目标需求不能写成已实现或上线。

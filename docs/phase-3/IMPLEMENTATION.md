@@ -11,7 +11,7 @@
 - `trip/manifest.json`：schema 1、tripId、tripDataVersion、releaseSequence、同源哈希路径、SHA256 与字节数。
 - `trip/releases/<sha256>.json`：不可变快照；`trip/bootstrap.js` 与它内容一致，随完整 shell 缓存，用于空 IDB 的首次离线初始化。
 - `local-store.js`：单个 `paris-pocket-local` IDB，DB version 1、单个 `records` object store；`personal`、`current`、`previous`、`importPrevious` 分开的 key。个人 schema 4。原生事务完成后再报告成功。
-- `views.js`：无状态 HTML 组件；`app.js`：四个导航、表单、自动保存、同步及 Leaflet；沿用 `styles.css` 的已批准视觉。
+- `views.js`：无状态 HTML 组件；`app.js`：四个导航、表单、自动保存、同步；`map-renderer.js` 负责主地图按需加载 MapLibre6.17.0 / OpenFreeMap Positron、标记/图层/故障回退。沿用 `styles.css` 的已批准视觉。
 - `legacy.html` / `legacy-app.js`：Phase 2 原功能完整保留，仍使用未改的 `personal-data.js` / `itinerary-data.js` / `trip-data.js`。隔离历史设计预览不进入新版主界面。
 
 一个 IDB 事务可以提交 current/previous 与必要归档，避免两套新存储。只有一个 previous 官方版本和一个导入检查点；不承诺任意历史时间旅行。
@@ -36,7 +36,7 @@
 
 **当前只接受 data schema 1。** 未知 schema 整包拒绝，不修改 current/previous，也不读写不认识的个人 schema；必要时只读使用同 shell 的校验 bootstrap。没有未来 schema 2 写入器，因此不引入 speculative compatibleActiveBySchema 表。未来升级 data schema/DB version 前，必须另外设计保留每个仍支持旧客户端的兼容快照，新增连续两次新 schema 发布与旧客户端离线恢复测试，不能直接复用本实现覆盖唯一兼容版本。
 
-AppVersion 与 tripDataVersion 分开。SW 的 scope、URL 和 manifest id/start_url 未改；只缓存完整代码/bootstrap/图标。独立官方 manifest/releases 绕过 shell cache。等待用户点击更新，保护备注和表单，失败安装保留旧完整 shell。地图底图/CDN 不批量缓存。
+AppVersion 与 tripDataVersion 分开。SW 的 scope、URL 和 manifest id/start_url 未改；只缓存完整代码/bootstrap/图标。独立官方 manifest/releases 绕过 shell cache。等待用户点击更新，保护备注和表单，失败安装保留旧完整 shell。地图底图/CDN 不批量缓存。MapLibre SDK/CSS/worker 不进入 CORE；本地 renderer helper 随 shell 原子安装，地图页才加载外部资源。
 
 ## 维护与发布准备
 

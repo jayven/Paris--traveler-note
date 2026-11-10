@@ -1,6 +1,6 @@
 # Phase 3 — Map location and road geometry source record
 
-Review date: 2026-11-09. This is release preparation on the feature branch, not production deployment. It verifies public geographic references and precomputed road geometry, not personal reservations, travel-day access, tickets, guides, airport terminals or ferry operations.
+Review date: 2026-11-09. The later [renderer upgrade](map-renderer/README.md) uses MapLibre/OpenFreeMap for the basemap; this document remains the unchanged OSRM/location provenance record, with route attribution kept separate. This is release preparation on the feature branch, not production deployment. It verifies public geographic references and precomputed road geometry, not personal reservations, travel-day access, tickets, guides, airport terminals or ferry operations.
 
 ## What was verified
 

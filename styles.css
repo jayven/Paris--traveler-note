@@ -400,3 +400,24 @@ button:disabled{opacity:.5}.modal input,.modal textarea,.modal select{font-size:
 #activity-note{min-height:140px}.map-stop-list .location-copy{min-width:0}.map-stop-list .location-copy>.tiny{overflow-wrap:anywhere}.time-col{overflow-wrap:anywhere}
 .time-value{display:block;white-space:nowrap}.time-qualifier{display:block;font-size:10px;font-weight:600;line-height:1.5;margin-top:2px;color:var(--muted)}
 .map-stop-list [aria-current="location"]{outline:2px solid var(--green);outline-offset:3px}
+/* Current itinerary map only. The isolated legacy viewer retains its own map CSS. */
+#daily-map.maplibregl-map{font-family:var(--font-display);background:#f3f3ef}
+#daily-map .maplibregl-ctrl-group{border:var(--outline);border-radius:var(--radius);box-shadow:var(--hard-shadow);overflow:hidden}
+#daily-map .maplibregl-ctrl-group button{width:44px;height:44px;min-width:44px;min-height:44px;background:var(--paper)}
+#daily-map .maplibregl-ctrl-group button+button{border-top:var(--outline)}
+#daily-map .maplibregl-ctrl-group button:focus-visible{outline-offset:-3px}
+#daily-map .maplibregl-ctrl-attrib{font-size:10px;line-height:1.6;background:rgba(255,255,255,.94);color:var(--ink);max-width:calc(100% - 8px)}
+#daily-map .maplibregl-ctrl-attrib a{text-decoration:underline;color:var(--ink)}
+#daily-map .maplibregl-ctrl-attrib-button{width:44px;height:44px}
+#daily-map .maplibregl-popup-content{border:var(--outline);border-radius:var(--radius);box-shadow:var(--hard-shadow);padding:18px 14px 14px;background:var(--paper);color:var(--ink);max-height:240px;overflow-y:auto}
+#daily-map .maplibregl-popup-close-button{min-width:44px;min-height:44px;font-size:23px;line-height:1.4;color:var(--ink);background:var(--paper);border-left:var(--outline);border-bottom:var(--outline);border-radius:0}
+#daily-map .maplibregl-popup-tip{border-top-color:var(--ink);border-bottom-color:var(--ink)}
+#daily-map .paris-map-popup{font-family:var(--font-display);font-size:12px;line-height:1.7;padding-top:15px}
+#daily-map .paris-map-popup>strong{display:block;font-size:13px;line-height:1.7;padding-right:24px}
+#daily-map .paris-map-popup .secondary-btn{display:block;margin-top:10px;min-height:44px;text-align:left;font-size:12px}
+#daily-map .paris-stop-marker{min-width:44px;min-height:44px;border:0;padding:5px;background:transparent;color:var(--ink);display:flex;align-items:center;justify-content:center;font-family:var(--font-display)}
+#daily-map .paris-stop-marker>span{display:flex;align-items:center;justify-content:center;min-width:32px;min-height:32px;padding:3px 6px;border:var(--outline);background:var(--peach-solid);box-shadow:var(--hard-shadow);font-size:12px;line-height:1.4;font-weight:800;white-space:nowrap}
+#daily-map .paris-stop-marker[aria-expanded="true"]>span{background:var(--green)}
+#daily-map .maplibregl-canvas:focus-visible{outline-offset:-3px}
+#daily-map .map-fallback{margin:0;display:flex;min-height:100%;align-items:center;justify-content:center;padding:22px;text-align:left}
+.basemap-attribution{margin-top:8px}.basemap-attribution .text-link{font-size:10px;min-height:44px;padding:5px;border:0;background:transparent}

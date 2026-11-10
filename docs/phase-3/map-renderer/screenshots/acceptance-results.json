@@ -1,0 +1,69 @@
+{
+  "viewports": [
+    {
+      "width": 320,
+      "pageOverflow": 0,
+      "mapWidth": 292,
+      "mapOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "width": 375,
+      "pageOverflow": 0,
+      "mapWidth": 343,
+      "mapOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "width": 390,
+      "pageOverflow": 0,
+      "mapWidth": 358,
+      "mapOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "width": 430,
+      "pageOverflow": 0,
+      "mapWidth": 398,
+      "mapOverflow": 0,
+      "navBottom": 844
+    }
+  ],
+  "engines": {
+    "chromium": {
+      "passed": true,
+      "version": "157.0.8103.40",
+      "webgl": "SwiftShader WebGL2 in isolated headless tests",
+      "realIPhone": false
+    },
+    "webkit": {
+      "rendererPassed": true,
+      "version": "26.5",
+      "realIPhone": false,
+      "notes": "Playwright WebKit is an engine check, not iPhone Safari or installed PWA hardware acceptance",
+      "cachedShell": {
+        "index": true,
+        "renderer": true,
+        "bootstrap": true
+      },
+      "offlineColdStart": {
+        "status": "not-verified",
+        "error": "WebKit encountered an internal error during simulated offline navigation",
+        "baselineCommit": "a4abd91",
+        "baselineObservation": "Separately reproduced with WebKit 26.5 on a4abd91 during 2026-11-09 review; this command does not rerun the old baseline"
+      }
+    }
+  },
+  "nodeVersion": "v25.8.0",
+  "snapshotSha256": "af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708",
+  "realDeviceTested": false,
+  "sdk": {
+    "version": "6.17.0",
+    "module": "https://unpkg.com/maplibre-gl@6.17.0/dist/maplibre-gl.mjs",
+    "defaultStyle": "https://tiles.openfreemap.org/styles/positron"
+  },
+  "completedAt": "2026-11-10T05:48:43.198Z",
+  "requiredRendererChecksPassed": true,
+  "physicalIPhoneAcceptanceComplete": false,
+  "uncaughtPageErrors": []
+}
