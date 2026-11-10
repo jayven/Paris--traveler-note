@@ -20,7 +20,7 @@ const server=http.createServer(async(req,res)=>{
   res.writeHead(200,{'Content-Type':mime,'Cache-Control':'no-store'}).end(bytes);
  }catch{res.writeHead(404).end();}
 });
-async function update(page){await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});await page.waitForFunction(async()=>Boolean((await navigator.serviceWorker.getRegistration()).waiting));}
+async function update(page){await page.evaluate(async()=>{const r=await navigator.serviceWorker.getRegistration();await r.update();});await page.waitForFunction(async()=>{const registration=await navigator.serviceWorker.getRegistration();return Boolean(registration.waiting&&!registration.installing);});}
 async function storeState(page){return page.evaluate(async()=>{const s=await ParisStore.open();try{return await s.read();}finally{s.close();}});}
 (async()=>{
  await new Promise(resolve=>server.listen(4174,'127.0.0.1',resolve));
