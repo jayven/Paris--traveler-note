@@ -33,11 +33,11 @@
 
 执行：只读验证官方/历史快照 → 重建并比较生成文件是否漂移 → Node 回归 → 公开 build 输出。没有部署步骤、Netlify token、浏览器下载、外部服务或新框架；没有修改 branch protection。PR 标题中的 `[skip netlify]` 只用于阻止 Netlify 发布，未使用会跳过 GitHub 验证的 `[skip ci]`。
 
-GitHub hosted run 的实际结果在推送后核验；不能把本地等价命令通过说成 GitHub 已执行。当前本地：**58/58 Node PASS**（含嵌套子案例），`check:releases --base-ref fe21176` PASS、`build:trip` 后 `trip/` 零差异、`build:site` PASS、`git diff --check` PASS。此轮未改 runtime，无须重复上轮全部手机浏览器回归；原八套通过证据保留在 [第一轮评审包](README.md)。
+GitHub hosted [PR validation run 42729599021](https://github.com/jayven/Paris--traveler-note/actions/runs/42729599021) 已在 9010b2c 推送后核验 success，各检查步骤均实际完成；不能仅凭本地等价命令通过判定 hosted 成功。当前本地：**58/58 Node PASS**（含嵌套子案例），`check:releases --base-ref fe21176` PASS、`build:trip` 后 `trip/` 零差异、`build:site` PASS、`git diff --check` PASS。此轮未改 runtime，无须重复上轮全部手机浏览器回归；原八套通过证据保留在 [第一轮评审包](README.md)。
 
 ## 现有 HTTPS 预览与 iPhone
 
-Netlify 只读 API 确认现有 production 仍是 main/0579040，PR #2 的 fe21176 预览已 ready：[现有 HTTPS 预览](https://deploy-preview-2--stirring-cheesecake-37698e.netlify.app/)。未登录访问 401，需用对应账号核实保护/登录条件；没有绕过。后台 build command/publish directory/预览开关未由公开接口暴露，浏览器连接失败，不能误称已核实为空或关闭。
+Netlify 只读 API 确认现有 production 仍是 main/0579040，PR #2 的 fe21176 预览已 ready：[现有 HTTPS 预览](https://deploy-preview-2--stirring-cheesecake-37698e.netlify.app/)。未登录访问 401，需用对应账号核实保护/登录条件；没有绕过。公开 API 未暴露后台设置，但用户随后两张截图已核实：Base `/`，Build command/Publish directory 均 **Not set**，Build status **Active**，Production branch **main**，Branch deploys **only production branch**，Deploy Previews **any PR against production/branch-deploy branches**。这证明 PR #2 具备预览范围，不代表已经使用 dist 白名单，也不解决 401 的访问条件。
 
 没有为取得预览而新建 site、部署或修改设置。为避免本次推送自动产生新预览，已经按 [Netlify 官方 skip 规则](https://docs.netlify.com/deploy/manage-deploys/manage-deploys-overview/) 给现有 PR 标题加 `[skip netlify]`；解除或手动 draft 上传另需批准。
 
@@ -45,4 +45,4 @@ Netlify 只读 API 确认现有 production 仍是 main/0579040，PR #2 的 fe211
 
 ## 停止评审点
 
-剩余用户决定：道路需求字段对齐、未决端点/交通和条件选择；确认 Netlify 后台设置/预览登录权限；决定何时批准仅更新隔离预览并执行真机表。当前不申请 main 合并或生产发布。地图/真机门槛仍保留，但不再把“所有 Segment 必须有道路几何”当完成条件。
+剩余用户决定：道路需求字段对齐、未决端点/交通和条件选择；核实预览登录权限；决定何时批准更新隔离预览的产物方式并执行真机表。Netlify 后台四项设置已由截图确认，不再是未核实项目。当前不申请 main 合并或生产发布。地图/真机门槛仍保留，但不再把“所有 Segment 必须有道路几何”当完成条件。

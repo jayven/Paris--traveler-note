@@ -8,7 +8,7 @@
 - 新主界面官方行程只读，个人备注/任务可编辑。`legacy.html` / `legacy-app.js` 继续提供原编辑器、预约和笔记；新版从不改写/清空 `paris-pocket-personal-v1`。旧窗口写入另存恢复候选，不覆盖新版资料。
 - Activity Detail 只从行程或地图进入，不增加独立底部 tab。主界面没有 Phase 2/mock/debug 横幅；历史预览仅留在旧页面并清楚标记。
 - [Phase 3 评审包](docs/phase-3/README.md) 是当前入口。地图缺口与真 iPhone 验收未通过前，不称完整 P0 已完成，不申请生产发布。
-- 现有 Netlify PR 预览已由只读 API 确认为 ready（fe21176），未登录访问 401。当前评审提交使用 PR 标题 `[skip netlify]` 防止自动预览部署；未经另批不得移除该部署门。GitHub CI 仅校验，不部署。详见 [HTTPS/iPhone 验收](docs/phase-3/HTTPS_IPHONE_ACCEPTANCE.md)。
+- 用户截图已核实 Netlify：Base `/`，Build command/Publish directory 均 Not set，Build status Active，Production branch main，Branch deploys 仅 production，Deploy Previews 对 production/branch-deploy branches 的 PR 开启。未改设置，尚未启用 dist 发布。现有 Netlify PR 预览已由只读 API 确认为 ready（fe21176），未登录访问 401。当前评审提交使用 PR 标题 `[skip netlify]` 防止自动预览部署；未经另批不得移除该部署门。GitHub CI 仅校验，不部署。详见 [HTTPS/iPhone 验收](docs/phase-3/HTTPS_IPHONE_ACCEPTANCE.md)。
 - 既有公开资料授权与现有仓库继续保留；不得提交私人备份、凭证、确认号或订单管理链接。
 
 ## 来源优先级

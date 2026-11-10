@@ -4,7 +4,7 @@
 
 ## 已确认的现有项目
 
-通过 Netlify 官方公开只读 API，核对了现有 project 及实际部署记录；没有读取令牌、环境变量或生产浏览器资料。
+通过 Netlify 官方公开只读 API 核对现有 project 及实际部署记录，并根据用户随后提供的 Build settings、Branches and deploy contexts 两张截图核实后台选项；没有读取令牌、环境变量或生产浏览器资料。
 
 | 项目 | 核查结果 |
 | --- | --- |
@@ -15,16 +15,23 @@
 | HTTPS 预览 URL | [现有 PR #2 预览](https://deploy-preview-2--stirring-cheesecake-37698e.netlify.app/) |
 | 未登录 HTTP 检查 | 返回 **401**，无法直接读取页面或验证其实际资源；不尝试绕过访问限制 |
 | GitHub deployment/status | GitHub API 未列出 deployment/status；这**不能证明 Netlify 没有预览**，Netlify 部署记录已确认预览存在 |
-| Build command / Publish directory / 后台预览开关 | **未核实**：公开 site API 的 `build_settings` 为 `{}`、未暴露预览开关；不是设置为空的证据。已打开管理页的浏览器连接失败，尚无法读取后台选项 |
+| 所属团队 | `jayvenyin’s team`（只读 API）；此前截图选择的是另一个 `jayven’s team` |
+| Base directory | `/`（用户 Build settings 截图） |
+| Build command | **Not set**（用户截图）；本轮没有改为 build:site |
+| Publish directory | **Not set**（用户截图）；不能把未设置记成已经发布 dist |
+| Build status | **Active**（用户截图） |
+| Production branch | **main**（用户 Branches and deploy contexts 截图） |
+| Branch deploys | **Deploy only the production branch**（用户截图）；非生产分支未启用独立 branch deploy |
+| Deploy Previews | **Any pull request against your production branch / branch deploy branches**（用户截图）；PR #2 的 base 为 main，符合此预览范围 |
 | 本地设置 | 没有 `netlify.toml` 或链接用 `.netlify/state.json`；当前环境没有可用 Netlify CLI/auth。未安装或登录新工具 |
 
-证据来自 GET `/api/v1/sites/<existing-domain>` 及 GET `/api/v1/sites/<verified-project-id>/deploys`；仅保存上述公开字段，没有提交完整 API 响应。项目管理入口：[现有 Netlify 项目](https://app.netlify.com/projects/stirring-cheesecake-37698e/overview)。
+证据来自 GET `/api/v1/sites/<existing-domain>`、GET `/api/v1/sites/<verified-project-id>/deploys` 和用户提供的两张后台设置截图。公开 API 的空 `build_settings` 本身不构成设置值证据；现由截图补全。仅保存所需设置文字，没有提交原始截图、完整 API 响应或账户信息。项目管理入口：[现有 Netlify 项目](https://app.netlify.com/projects/stirring-cheesecake-37698e/overview)。
 
 因此，优先**复用已有预览**做 iPhone 功能验收，无需新站点或生产改动。需由可访问该项目的账号在 iPhone Safari 验证 401 的实际登录/保护要求；401 本身不足以判断是密码、团队登录还是其他访问策略。当前 UI/runtime 与 fe21176 一致，本轮只改审计、发布构建和检查；预览不能冒充已包含本轮新构建修复。
 
 ## 获批后如何获得更新的隔离 HTTPS 预览
 
-- **首选现有 PR Deploy Preview**：先在管理页核对当前 Production branch、Build command、Publish directory、Deploy Preview 控制与保护方式。核对后另行批准仅更新 PR 预览，移除 PR 的 skip marker 并推送不含 skip marker 的评审提交；现有 URL 保持，验收前核对部署 commit。不得通过合 main 获取预览。
+- **首选复用现有 PR Deploy Preview**：Production branch、Build command、Publish directory 和 Deploy Preview 范围已由截图核实。当前仍须确认预览访问保护/登录要求；保留 skip marker。以后仅在用户另行批准更新预览并确定发布产物方式后，才移除 skip marker 并推送不含 skip marker 的评审提交；现有 URL 保持，验收前核对部署 commit。不得通过合 main 获取预览。当前全局 build/publish 都是 Not set，不能声称自动预览已使用 dist 白名单。
 - 若当前自动预览不能发布 `dist/`，可在用户明确批准后，使用同一已确认 Project ID 做一次手动 **draft** 上传。先在本机构建并验证 dist，再由已授权账号执行下列命令。它不是本轮已经执行的动作，不需要新建站点或修改后台 build/publish 设置：
 
 ```sh
