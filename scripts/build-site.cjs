@@ -6,7 +6,7 @@ const crypto=require('node:crypto');
 const Official=require('../official-data.js');
 const PROJECT_ROOT=path.resolve(__dirname,'..');
 const SHELL_FILES=Object.freeze(['index.html','legacy.html','styles.css','app.js','map-renderer.js','legacy-app.js','views.js','personal-data.js','itinerary-data.js','map-links.js','official-data.js','local-store.js','visual-preview.js','trip-data.js','sw.js','manifest.webmanifest','assets/icon-192.png','assets/icon-512.png','assets/apple-touch-icon.png','assets/icon-paper-p-192.png','assets/icon-paper-p-512.png','assets/apple-touch-icon-paper-p.png','trip/bootstrap.js','trip/manifest.json']);
-const HEADERS='/trip/manifest.json\n  Cache-Control: no-store\n/trip/releases/*\n  Cache-Control: public, max-age=31536000, immutable\n/sw.js\n  Cache-Control: no-cache\n';
+const HEADERS='/manifest.webmanifest\n  Content-Type: application/manifest+json\n/trip/manifest.json\n  Cache-Control: no-store\n/trip/releases/*\n  Cache-Control: public, max-age=31536000, immutable\n/sw.js\n  Cache-Control: no-cache\n';
 const MAX_RELEASE_BYTES=5000000;
 
 async function regularFile(root,file){
