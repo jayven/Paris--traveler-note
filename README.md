@@ -4,6 +4,8 @@
 
 当前 `feature/paris-pocket-v2-refactor` 为 **Phase 3 功能评审候选**，尚未合并或部署。用户已批准 Phase 3，生产发布另需批准。先读 [AGENTS](AGENTS.md)、[PRODUCT_BRIEF](PRODUCT_BRIEF.md)。
 
+最新视觉微调：[选中态黑棕对照、390px 截图与四宽回归](docs/phase-3/selected-state/README.md)。沿用 MapLibre 候选，只把选中填充统一为 `#58443E`，不改布局与数据。
+
 [当前地图升级评审/截图](docs/phase-3/map-renderer/README.md) · [安全收尾评审](docs/phase-3/REVIEW_FOLLOWUP.md) · [地图缺口决策](docs/phase-3/ROUTE_GAP_AUDIT.md) · [HTTPS/iPhone 验收](docs/phase-3/HTTPS_IPHONE_ACCEPTANCE.md) · [Phase 3 结果与截图](docs/phase-3/README.md) · [架构与维护](docs/phase-3/IMPLEMENTATION.md) · [地图来源及缺口](docs/phase-3/MAP_SOURCES.md) · [PRD](docs/references/Paris_Pocket_PRD_v1.0.md)
 
 主界面：v4.12 官方只读行程 → 活动详情/本机备注 → 每日地图/Google Maps → 官方与本地 To-do。旅行卡片提供概览、酒店、官方同步/回退、本机备份和旧资料恢复。保留 Phase 2 淡色 Neo-Brutalist 设计、横线时间列表与四个底部导航，详情不占独立 tab。
@@ -30,6 +32,7 @@ TEST_URL=http://localhost:4178 npm run test:management
 TEST_URL=http://localhost:4178 npm run test:visual
 TEST_URL=http://localhost:4178 npm run test:integrated
 TEST_URL=http://localhost:4178 npm run test:map
+TEST_URL=http://localhost:4178 npm run test:selected
 TEST_URL=http://localhost:4178 npm run test:concurrency
 TEST_URL=http://localhost:4178 npm run test:failure
 npm run test:store

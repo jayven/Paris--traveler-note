@@ -8,11 +8,13 @@
 
 Match the supplied PM tool's playful, precise **pastel / light neo-brutalist** visual language: stark near-black outlines, squared edges, pastel panels, typographic hierarchy, green actionable accents, restrained hard-edge shadows. The PM tool is a desktop-oriented React app; Paris Pocket is a Chinese-first, iPhone-first PWA. **Transfer the visual design, not the desktop information architecture.**
 
-## 2. Design tokens — extracted from the reference source
+## 2. Design tokens — reference source and approved selected-state override
 
-| Token | Exact source value | Intended use |
+| Token | Reference / approved value | Intended use |
 |---|---|---|
-| Ink | `#0D0D0D` | Primary text, outlines, active navigation backgrounds |
+| Ink | `#0D0D0D` | Primary text, outlines and hard-edge shadows |
+| Selected background | `#58443E` | Dark-filled active navigation, dates and filter/status controls |
+| Selected text | `#FFFFFF` | Labels and currentColor icons on the selected background |
 | White | `#FFFFFF` | Cards, menus, primary surfaces |
 | Page gray | `#FAFAFA` | Scrolling page background |
 | Secondary text | `#666666` | Secondary descriptions and metadata |
@@ -37,6 +39,8 @@ Match the supplied PM tool's playful, precise **pastel / light neo-brutalist** v
 ```css
 :root {
   --ink: #0d0d0d;
+  --selected-bg: #58443e;
+  --selected-text: #ffffff;
   --paper: #ffffff;
   --canvas: #fafafa;
   --muted: #666;
@@ -61,14 +65,14 @@ Do not self-host or share font files; use licensed standard web loading or syste
 | Paris Pocket surface | Visual treatment, not new behavior |
 |---|---|
 | App header / selected travel day | Pale peach background; near-black bottom border; bold title, small uppercase spaced-out English overline |
-| Date strip | Flat, squared date tabs separated by near-black outlines; black filled selected state with white text; horizontal overflow on iPhone |
+| Date strip | Flat, squared date tabs separated by near-black outlines; muted dark chocolate selected fill (`--selected-bg`) with white text (`--selected-text`); horizontal overflow on iPhone |
 | Daily itinerary | White boxed list against `#FAFAFA`; black 1px borders; time in compact strong type, name in bold; **no extra badges, blurbs or tags on timeline cards; NO VERTICAL COLUMN DIVIDER between time and activity title**. Separate activities with horizontal row rules only (as agreed in PRD) |
 | Activity detail sheet | White panel with black boundaries, peach header, clear section labels, pink/blue/mint accent strips only as useful separation |
 | Notes field | Plain white rectangular text area, black stroke; 16px+ input text on iPhone; clear focus treatment; keep existing local save logic |
 | To-do | Squared checkbox, green checked fill, compact item rows separated by dark fine rules; priority badges use pale pink/peach/blue, not saturated all-over fills |
 | Daily map | Keep the genuine map tiles untouched; apply the style to surrounding panel, filter chips, route legends, selected-place popovers and buttons; do not draw fake routes |
 | Sync/refresh | Green prominent button with black outline; concise local data safety text in muted type |
-| Bottom navigation | Retain iPhone-friendly bottom navigation (no persistent desktop sidebar). Active item: black background/white text; subdued inactive tabs; honor safe-area inset |
+| Bottom navigation | Retain iPhone-friendly bottom navigation (no persistent desktop sidebar). Active item: selected brown background/white text; subdued inactive tabs; honor safe-area inset |
 | Dialogs, backup, errors | Square white panels; solid 1px borders; hard shadows; danger red only when appropriate |
 
 ## 4. Typography and mobile adaptation
@@ -87,11 +91,11 @@ Do not self-host or share font files; use licensed standard web loading or syste
 - Keep official trip facts and To-do definitions sourced from the authoritative v4.12 itinerary and subsequent approved revisions, not from PM-tool demo project data.
 - Maintain stable activity/task identifiers, local notes and To-do states, backups, one-tap cloud refresh, offline itinerary, real daily routes, Google Maps handoff, and the current Netlify production origin.
 - Do not add private booking confirmations or credentials to public code or JSON.
-- No Netlify production deployment until explicit user approval. Stage on preview branch / deploy preview.
+- Keep work on the existing feature branch and draft PR. No deployment (including a new Deploy Preview), Netlify configuration change or main merge without explicit user approval; preserve the `[skip netlify]` gates.
 
 ## 6. Review and visual acceptance checks
 
-1. On an iPhone-width screenshot, the header/date tabs/card/list/button treatment immediately resembles the reference PM tool: pale peach/pink washes, sharp 1px black outlines, black/white active states, sturdy type, green CTAs.
+1. On an iPhone-width screenshot, the header/date tabs/card/list/button treatment immediately resembles the reference PM tool: pale peach/pink washes, sharp 1px black outlines, muted dark chocolate/white selected states, sturdy type, green CTAs.
 2. Daily timeline cards display **only time and activity title**; no vertical rule divides time from title. Keep subtle horizontal separators between activities; details stay in activity detail view.
 3. To-do unchecked/checked/archived states remain distinguishable by text or icon, not color alone.
 4. Bottom navigation and Google Maps launch buttons remain easy to tap on 320–430px devices.
@@ -104,3 +108,13 @@ Do not self-host or share font files; use licensed standard web loading or syste
 ## 7. Approved visual refinement — v1.1
 
 The **DAILY ITINERARY** list must not look like a spreadsheet with separated time and activity columns. Remove the vertical black border to the right of the time cell, preserve the horizontal black rules between consecutive activity rows, and retain time/title alignment. This is a **visual-only** refinement, not a change to itinerary structure, labels, editing, or interactions. The date strip, to-do list, and other panels keep their existing border treatments.
+
+## 8. Selected-state color refinement — 2026-11-09
+
+User-directed refinement: replace near-black **selected background fills only** with warm, muted dark chocolate `#58443E`. Use `--selected-bg` and `--selected-text` consistently for bottom navigation, selected dates, To-do status tabs, daily-map filter buttons, the legacy map filter and their isolated visual-preview equivalents. White text has **9.09:1** contrast against this brown; navigation icons inherit the same white via `currentColor`.
+
+The requested P3 reference identifies a brown swatch by appearance; its `D7FF28` label is **not** the background color. No P3 image was available in this refinement's accessible attachments, so the implementation uses the user's explicitly suggested `#58443E`, without claiming an image-sampled match.
+
+Do not replace `--ink` globally. Keep near-black body text, 1px outlines, hard-edge shadows, black informational toast/isolated-preview headers, peach/pink/mint surfaces, green actions/completion/location focus, error colors and walking/driving route colors. Preserve typography, spacing, navigation, horizontal-only itinerary row separators and existing pressed/focus feedback. This decision changes no itinerary, geometry, personal data, sync or booking state. The worker cache name advances only so the existing manual app-update flow can deliver the stylesheet; update logic is unchanged.
+
+Review evidence: [390px black/brown comparisons and four-width regression results](../phase-3/selected-state/README.md). Screenshots use isolated synthetic profiles; real iPhone acceptance remains separate. This document does not authorize a deployment.

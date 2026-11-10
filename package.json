@@ -16,7 +16,8 @@
     "test:concurrency": "node tests/concurrency.cjs",
     "test:failure": "node tests/failure-ui.cjs",
     "check:releases": "node scripts/check-releases.cjs",
-    "test:map": "node tests/map-renderer.cjs"
+    "test:map": "node tests/map-renderer.cjs",
+    "test:selected": "node tests/selected-state.cjs"
   },
   "devDependencies": {
     "playwright": "1.62.1"

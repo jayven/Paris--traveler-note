@@ -2,6 +2,8 @@
 
 ## 当前授权（2026-11-09）
 
+- 当前仅做用户指定的 **Selected-State Color Refinement**：用 `--selected-bg:#58443e` / `--selected-text:#fff` 替换深色选中填充，覆盖主界面、兼容筛选和隔离预览；保留 `7837a82` MapLibre、黑色正文/描边/硬阴影、绿色功能与交通色。不改数据/几何/同步/预订、不重新设计。提供黑棕对照和四宽回归，更新原草稿 PR #2 后停止评审；不得触发新部署，保留 Netlify skip 门。
+
 - 本轮用户明确授权 **Map Renderer Upgrade**：仅将新版主界面 Leaflet/OSM raster 换为固定版本 MapLibre GL JS + OpenFreeMap Positron；Liberty 仅比较截图。保留全部官方快照/路线、位置来源、稳定 ID、交通方式、个人 schema 和其他功能。新版映射依赖仅地图页按需加载；旧兼容页维持原实现。验收后停止评审，不移除 Netlify skip 或部署。
 
 - 用户已接受 `fe21176` 为 Phase 3 首轮功能评审候选，授权继续地图缺口审计、不可变发布保留、PR 自动验证和 HTTPS/iPhone 验收准备；不得扩展产品功能。用户已批准开始 **Phase 3 — 功能与数据整合**，继续使用 `feature/paris-pocket-v2-refactor` / 草稿 PR #2。Phase 2 视觉方向已认可，保持现有设计，不重新设计。
