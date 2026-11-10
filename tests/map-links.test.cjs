@@ -34,3 +34,15 @@ test('every canonical place retains its coordinates in all Google links',()=>{
   for(const mode of ['walking','driving'])assert.equal(new URL(maps.directions(place,mode)).searchParams.get('destination'),coordinates);
  }
 });
+
+test('verified address navigation and explicit single-leg origins are encoded without geocoding',()=>{
+ const target={address:'Rue Auber / Rue Scribe, Paris, France'};
+ const search=new URL(maps.view(target));assert.equal(search.searchParams.get('query'),target.address);
+ const origin={lat:48.8631637,lng:2.3378569,googlePlaceId:'explicit-origin-id'};
+ const route=new URL(maps.directions(target,'walking',origin));
+ assert.equal(route.searchParams.get('origin'),'48.8631637,2.3378569');
+ assert.equal(route.searchParams.get('origin_place_id'),'explicit-origin-id');
+ assert.equal(route.searchParams.get('destination'),target.address);
+ assert.equal(route.searchParams.get('travelmode'),'walking');
+ assert.throws(()=>maps.view({address:''}));assert.throws(()=>maps.directions(target,'rail',origin));
+});

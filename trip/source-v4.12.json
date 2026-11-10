@@ -1,0 +1,4281 @@
+{
+  "schemaVersion": 1,
+  "tripId": "paris-2026",
+  "tripDataVersion": "4.12.1",
+  "releaseSequence": 1,
+  "trip": {
+    "title": "Paris, at our pace",
+    "startDate": "2026-12-07",
+    "endDate": "2026-12-14",
+    "timezone": "Europe/Paris",
+    "arrival": {
+      "date": "2026-12-07",
+      "time": "08:00",
+      "airport": "CDG"
+    },
+    "departure": {
+      "date": "2026-12-14",
+      "time": "22:20",
+      "airport": "CDG"
+    },
+    "sourceVersion": "v4.12",
+    "sourceDate": "2026-11-04",
+    "sourceNote": "建议/目标时间不是预订确认。DATA-01…05 未决事实保留待核。"
+  },
+  "days": [
+    {
+      "id": "day-arrival",
+      "date": "2026-12-07",
+      "weekday": "周一",
+      "theme": "抵达 · 橘园 · 夜游",
+      "note": "抵达有不确定性，橘园优先。游船周一首选、周四后备，仅乘一次，产品与时刻待确认。",
+      "hotelIds": [
+        "hotel-marquis"
+      ]
+    },
+    {
+      "id": "day-opera",
+      "date": "2026-12-08",
+      "weekday": "周二",
+      "theme": "歌剧院 · 皇家宫殿 · 蒙马特",
+      "note": "午间先回 Marquis 取包换 GHPR，寄存不依赖提前入住；蒙马特尽量保证日落前到达。",
+      "hotelIds": [
+        "hotel-ghpr"
+      ]
+    },
+    {
+      "id": "day-orsay",
+      "date": "2026-12-09",
+      "weekday": "周三",
+      "theme": "西岱岛 · 卢森堡 · 奥赛",
+      "note": "周三不去卢浮宫。GHPR 早寄存、傍晚取包后赴凡尔赛，保留两次独立访问。",
+      "hotelIds": [
+        "hotel-waldorf"
+      ]
+    },
+    {
+      "id": "day-versailles",
+      "date": "2026-12-10",
+      "weekday": "周四",
+      "theme": "凡尔赛宫 · 返回巴黎",
+      "note": "约 16:00 离园，先回 Waldorf 取包，再返回 Grand Powers。周一已乘船则周四不再乘。",
+      "hotelIds": [
+        "hotel-grand-powers"
+      ]
+    },
+    {
+      "id": "day-louvre",
+      "date": "2026-12-11",
+      "weekday": "周五",
+      "theme": "凯旋门 · 购物 · 卢浮宫",
+      "note": "Grand Powers 连住。凯旋门仅外观；卢浮宫中文私人导览实际时段与集合点待核。",
+      "hotelIds": [
+        "hotel-grand-powers"
+      ]
+    },
+    {
+      "id": "day-photos",
+      "date": "2026-12-12",
+      "weekday": "周六",
+      "theme": "铁塔约拍 · 换店 · 玛黑",
+      "note": "摄影前先整理行李、轻装外出；摄影后回 Grand Powers 取箱，再换 Maison Astor。",
+      "hotelIds": [
+        "hotel-maison-astor"
+      ]
+    },
+    {
+      "id": "day-sunday",
+      "date": "2026-12-13",
+      "weekday": "周日",
+      "theme": "鹿特丹 · 全天一日游",
+      "note": "全天 BLOCK，Maison Astor 连住轻装。DATA-03：Eurostar／WaterShuttle 冬季时刻、施工、票务均待核；下列均为来源目标，非确认班次或实时 ETA。",
+      "hotelIds": [
+        "hotel-maison-astor"
+      ]
+    },
+    {
+      "id": "day-departure",
+      "date": "2026-12-14",
+      "weekday": "周一",
+      "theme": "圣日耳曼 · 购物 · 返程",
+      "note": "行李寄存 Maison Astor，购物后回店取包，目标 17:00–17:30 离市赴 CDG；不补卢森堡公园。",
+      "hotelIds": [
+        "hotel-maison-astor"
+      ]
+    }
+  ],
+  "activities": [
+    {
+      "id": "act-arrival-hotel",
+      "dayId": "day-arrival",
+      "order": 1,
+      "title": "抵达 CDG · Marquis 寄存行李",
+      "timeLabel": "08:00–12:30",
+      "detail": "08:00 抵达；入境、取行李、入城与午餐。提前入住未保证。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-cdg",
+        "place-marquis"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-faubourg-walk",
+      "dayId": "day-arrival",
+      "order": 2,
+      "title": "福宝街 · 马德莱娜 · 旺多姆",
+      "timeLabel": "12:30–14:30",
+      "detail": "挑重点散步，不深逛全部；包括圣奥诺雷街。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-faubourg",
+        "place-madeleine",
+        "place-vendome"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-orangerie-visit",
+      "dayId": "day-arrival",
+      "order": 3,
+      "title": "橘园美术馆",
+      "timeLabel": "14:45–16:00 目标",
+      "detail": "Carte Blanche 办理、预约与现场排队另行确认；目标时间不是已订票。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-orangerie"
+      ],
+      "taskIds": [
+        "task-orangerie"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-tuileries-concorde",
+      "dayId": "day-arrival",
+      "order": 4,
+      "title": "杜乐丽花园 · 协和广场",
+      "timeLabel": "16:00–17:30",
+      "detail": "花园短走，之后衔接游船取决于最终船型与码头。花园中心不等于市集入口。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-tuileries",
+        "place-concorde"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-cruise-preferred",
+      "dayId": "day-arrival",
+      "order": 5,
+      "title": "塞纳河夜游 · 周一首选",
+      "timeLabel": "时间待确认",
+      "detail": "DATA-01：来源同时写 Bateaux-Mouches 约 1 小时 18:00/18:30、La Calife 晚餐船 18:30/20:40，且与 19:15 回店冲突。产品、船班、登船点均待确认，不生成码头导航。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [],
+      "taskIds": [
+        "task-cruise"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ],
+      "conditionGroupId": "condition-one-cruise",
+      "conditionText": "周一首选；遇延误或疲劳未成行时才改周四，全程只乘一次。"
+    },
+    {
+      "id": "act-arrival-rest",
+      "dayId": "day-arrival",
+      "order": 6,
+      "title": "返回 Marquis · 休息",
+      "timeLabel": "晚间 · 衔接待核",
+      "detail": "源表 19:15 返回与晚餐船时间冲突；实际返回时间待船型确认。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-marquis"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-opera-visit",
+      "dayId": "day-opera",
+      "order": 1,
+      "title": "巴黎歌剧院",
+      "timeLabel": "10:00–11:30 目标",
+      "detail": "内部参观目标场次与开放区域待核。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-opera"
+      ],
+      "taskIds": [
+        "task-opera"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-department-stores",
+      "dayId": "day-opera",
+      "order": 2,
+      "title": "老佛爷 · 巴黎春天",
+      "timeLabel": "11:40–12:30",
+      "detail": "看穹顶、圣诞装饰并简短逛店。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-lafayette",
+        "place-printemps"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-marquis-to-ghpr",
+      "dayId": "day-opera",
+      "order": 3,
+      "title": "Marquis 取包 · 换入 GHPR",
+      "timeLabel": "12:30–14:15",
+      "detail": "简餐后先回 Marquis 取行李，再到 Grand Hôtel du Palais Royal 寄存／入住；不依赖提前入住。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-marquis",
+        "place-ghpr"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-palais-royal",
+      "dayId": "day-opera",
+      "order": 4,
+      "title": "皇家宫殿花园 · 黑白柱阵",
+      "timeLabel": "14:15–14:45",
+      "detail": "皇家宫殿优先，薇薇安为附近可选短逛。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-royal"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-vivienne-optional",
+      "dayId": "day-opera",
+      "order": 5,
+      "title": "薇薇安拱廊",
+      "timeLabel": "视时间",
+      "detail": "可选；若换店延误优先保证蒙马特日落前行程。",
+      "status": "optional",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-vivienne"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-montmartre",
+      "dayId": "day-opera",
+      "order": 6,
+      "title": "蒙马特 · 小丘广场 · 圣心堂",
+      "timeLabel": "14:45–17:45",
+      "detail": "打车至 Abbesses，约 15:15 到达较理想；走艺术家广场与圣心堂。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-abbesses",
+        "place-tertre",
+        "place-sacre"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-martyrs-optional",
+      "dayId": "day-opera",
+      "order": 7,
+      "title": "Rue des Martyrs 短逛",
+      "timeLabel": "视时间",
+      "detail": "蒙马特之后有时间再走。",
+      "status": "optional",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-martyrs"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-ghpr-checkout",
+      "dayId": "day-orsay",
+      "order": 1,
+      "title": "GHPR 退房 · 寄存行李",
+      "timeLabel": "08:15–09:00",
+      "detail": "退房寄存后步行去圣礼拜堂，预留安检。傍晚回同一酒店取包。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-ghpr"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-sainte-visit",
+      "dayId": "day-orsay",
+      "order": 2,
+      "title": "圣礼拜堂",
+      "timeLabel": "09:00–10:00 目标",
+      "detail": "彩窗与建筑；目标场次以实际预订为准。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-sainte"
+      ],
+      "taskIds": [
+        "task-sainte"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-notredame-visit",
+      "dayId": "day-orsay",
+      "order": 3,
+      "title": "巴黎圣母院",
+      "timeLabel": "10:15–11:15",
+      "detail": "外观与内部计划；排队、礼拜可能影响节奏。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-notredame"
+      ],
+      "taskIds": [
+        "task-notredame"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-luxembourg-walk",
+      "dayId": "day-orsay",
+      "order": 4,
+      "title": "卢森堡公园",
+      "timeLabel": "11:15–12:20",
+      "detail": "步行前往，园内短逛约 30–40 分钟；圣母院延误则缩短。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-lux"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-orsay-transfer",
+      "dayId": "day-orsay",
+      "order": 5,
+      "title": "前往奥赛 · 安检",
+      "timeLabel": "12:20–13:00",
+      "detail": "打车前往奥赛，预留安检及馆内餐厅入场。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-orsay"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-orsay-lunch",
+      "dayId": "day-orsay",
+      "order": 6,
+      "title": "Le Restaurant 午餐",
+      "timeLabel": "13:00–14:00 目标",
+      "detail": "DATA-04：目标午餐，不保证座位或排队时长；过久改简餐以保证观展。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-orsay"
+      ],
+      "taskIds": [
+        "task-orsay-lunch"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-orsay-visit",
+      "dayId": "day-orsay",
+      "order": 7,
+      "title": "奥赛博物馆",
+      "timeLabel": "14:00–17:15 目标",
+      "detail": "主要观展时段约 14:00–17:15；源文档写 17:30 左右开始清场，实际规则待核。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-orsay"
+      ],
+      "taskIds": [
+        "task-orsay"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-ghpr-luggage",
+      "dayId": "day-orsay",
+      "order": 8,
+      "title": "返回 GHPR · 取行李",
+      "timeLabel": "17:15–18:15",
+      "detail": "返回 Grand Hôtel du Palais Royal 取包、叫车；与早上寄存为不同 Stop。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-ghpr"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-waldorf-arrival",
+      "dayId": "day-orsay",
+      "order": 9,
+      "title": "前往凡尔赛 · Waldorf 入住",
+      "timeLabel": "18:15 后",
+      "detail": "取包后打车至 Waldorf Astoria Versailles – Trianon Palace。酒店已确认，不代表抵达时间已保证。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-waldorf"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-waldorf-breakfast",
+      "dayId": "day-versailles",
+      "order": 1,
+      "title": "Waldorf 早餐 · 寄存行李",
+      "timeLabel": "08:15–09:00",
+      "detail": "收好行李寄存在前台，步行至宫殿入口。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-waldorf"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-versailles-palace",
+      "dayId": "day-versailles",
+      "order": 2,
+      "title": "凡尔赛主宫殿 · 镜厅",
+      "timeLabel": "09:00–11:30 目标",
+      "detail": "提前预约入场时段，目标并非出票。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-versailles"
+      ],
+      "taskIds": [
+        "task-versailles"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-versailles-gardens",
+      "dayId": "day-versailles",
+      "order": 3,
+      "title": "午餐 · 凡尔赛花园",
+      "timeLabel": "12:00–13:30",
+      "detail": "天气不佳可缩短户外；如回 Waldorf 用餐则缩短花园时间。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-versailles"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-trianon-visit",
+      "dayId": "day-versailles",
+      "order": 4,
+      "title": "特里亚农宫",
+      "timeLabel": "13:45–16:00",
+      "detail": "王后村庄另视天气、开放与时间择选。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-trianon"
+      ],
+      "taskIds": [
+        "task-versailles"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-hamlet-optional",
+      "dayId": "day-versailles",
+      "order": 5,
+      "title": "王后村庄",
+      "timeLabel": "视天气与时间",
+      "detail": "可选；不保证开放，须留足取包和返巴黎时间。",
+      "status": "optional",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-hamlet"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-waldorf-to-powers",
+      "dayId": "day-versailles",
+      "order": 6,
+      "title": "Waldorf 取包 · Grand Powers 入住",
+      "timeLabel": "16:00–19:30 预计",
+      "detail": "先返回 Waldorf 取行李，再打车回 Grand Powers；返巴黎时段为预计，不是实时路况承诺。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-waldorf",
+        "place-grand-powers"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-versailles-evening",
+      "dayId": "day-versailles",
+      "order": 7,
+      "title": "晚餐 · 休息",
+      "timeLabel": "19:30 后",
+      "detail": "正常安排为晚餐与休息；周一已乘游船就不再安排夜游。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-cruise-backup",
+      "dayId": "day-versailles",
+      "order": 8,
+      "title": "塞纳河游船 · 周四后备",
+      "timeLabel": "仅周一未成行 · 时刻待确认",
+      "detail": "DATA-01：来源暂写 20:30／21:00 左右 Bateaux-Mouches；产品、船班、码头仍待确认，不能与周一重复乘船。",
+      "status": "backup",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [],
+      "taskIds": [
+        "task-cruise"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        }
+      ],
+      "conditionGroupId": "condition-one-cruise",
+      "conditionText": "仅周一未乘船时启用；全程只乘一次。"
+    },
+    {
+      "id": "act-arc-exterior",
+      "dayId": "day-louvre",
+      "order": 1,
+      "title": "凯旋门外观",
+      "timeLabel": "08:45–09:45",
+      "detail": "从 Grand Powers 打车前往，外观与拍照，不安排登顶。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-grand-powers",
+        "place-arc"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-champs-shopping",
+      "dayId": "day-louvre",
+      "order": 2,
+      "title": "香榭丽舍 · George V 购物",
+      "timeLabel": "09:45–11:50",
+      "detail": "沿香街向东步行，George V／François 1er 周边购物，返回酒店方向。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-champs",
+        "place-george-v"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-powers-shopping-bags",
+      "dayId": "day-louvre",
+      "order": 3,
+      "title": "Grand Powers 放购物袋 · 午餐",
+      "timeLabel": "11:50–12:30",
+      "detail": "连住，无需换房；放袋后简单午餐。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-grand-powers"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-louvre-transfer",
+      "dayId": "day-louvre",
+      "order": 4,
+      "title": "前往卢浮宫 · 安检与会合",
+      "timeLabel": "12:30–13:30 暂排",
+      "detail": "DATA-02/05：源文档此处暂排会合，但导览时段存在冲突，出发、午餐缓冲与集合点需随最终预约调整。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-louvre"
+      ],
+      "taskIds": [
+        "task-louvre-guide"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-louvre-private-guide",
+      "dayId": "day-louvre",
+      "order": 5,
+      "title": "卢浮宫中文私人导览",
+      "timeLabel": "下午 · 时段待确认",
+      "detail": "DATA-02：来源要点为 13:30–16:30 目标，时间行为 16:30–20:00。不能选其一为结论；约三小时中文私人导览，优先夜场关闭的目标展厅，实际开放与导览后留馆规则待确认。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-louvre"
+      ],
+      "taskIds": [
+        "task-louvre-guide"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-powers-friday-return",
+      "dayId": "day-louvre",
+      "order": 6,
+      "title": "返回 Grand Powers · 晚餐",
+      "timeLabel": "晚间",
+      "detail": "周一／周四已安排条件游船，不重复叠加。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-grand-powers"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-powers-pack",
+      "dayId": "day-photos",
+      "order": 1,
+      "title": "Grand Powers 整理行李",
+      "timeLabel": "08:00 起 · 约拍前",
+      "detail": "来源 08:00–11:00 为整理／寄存和约拍的整体时段，未给独立打包结束时间。先收好行李，轻装外出；寄存服务细则未核。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-grand-powers"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-eiffel-photos",
+      "dayId": "day-photos",
+      "order": 2,
+      "title": "特罗卡德罗 · 铁塔约拍",
+      "timeLabel": "09:00–10:30／11:00 目标",
+      "detail": "DATA-04：摄影时间与集合点待确认。特罗卡德罗／夏约宫、铁塔附近白天约拍，不安排登塔。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-trocadero",
+        "place-eiffel"
+      ],
+      "taskIds": [
+        "task-photoshoot"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-powers-to-astor",
+      "dayId": "day-photos",
+      "order": 3,
+      "title": "Grand Powers 取包 · 换入 Maison Astor",
+      "timeLabel": "11:00–13:30",
+      "detail": "摄影后回 Grand Powers 取行李，前往 Maison Astor 寄存／入住加简餐，不依赖提前入住。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-grand-powers",
+        "place-maison-astor"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-marais-afternoon",
+      "dayId": "day-photos",
+      "order": 4,
+      "title": "玛黑区 · 孚日广场",
+      "timeLabel": "13:30 后",
+      "detail": "设计小店与咖啡馆；午间换店之后再去玛黑。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-marais",
+        "place-vosges"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-marais-optionals",
+      "dayId": "day-photos",
+      "order": 5,
+      "title": "市政厅 · 圣路易岛",
+      "timeLabel": "视时间",
+      "detail": "可选短逛，按体力和天色取舍。",
+      "status": "optional",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-hotel-de-ville",
+        "place-saint-louis"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-rotterdam-outbound",
+      "dayId": "day-sunday",
+      "order": 1,
+      "title": "巴黎北站 → 鹿特丹",
+      "timeLabel": "去程时刻待核",
+      "detail": "未给明确去程发车时刻，不补猜；目标到达 Rotterdam Centraal 10:02。往返运营、施工及订票状态待核。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-gare-nord",
+        "place-rotterdam-centraal"
+      ],
+      "taskIds": [
+        "task-eurostar"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-erasmus-transfer",
+      "dayId": "day-sunday",
+      "order": 2,
+      "title": "前往 Erasmusbrug 码头区域",
+      "timeLabel": "10:02–10:45 目标",
+      "detail": "来源建议地铁或打车；具体上下船点另核，不把桥梁中心作已确认码头。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-erasmusbrug"
+      ],
+      "taskIds": [
+        "task-watershuttle"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-watershuttle-wait",
+      "dayId": "day-sunday",
+      "order": 3,
+      "title": "候船 · 准备登船",
+      "timeLabel": "10:45–11:10 目标",
+      "detail": "预留缓冲；冬季船班须以运营方最新时刻确认。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-erasmusbrug"
+      ],
+      "taskIds": [
+        "task-watershuttle"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-watershuttle-outbound",
+      "dayId": "day-sunday",
+      "order": 4,
+      "title": "WaterShuttle 前往 Kinderdijk",
+      "timeLabel": "11:20–11:50 目标",
+      "detail": "约 30 分钟为来源目标，冬季运营未确认，不承诺可乘。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-kinderdijk"
+      ],
+      "taskIds": [
+        "task-watershuttle"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-kinderdijk-visit",
+      "dayId": "day-sunday",
+      "order": 5,
+      "title": "Kinderdijk 风车群 · 简餐",
+      "timeLabel": "11:50–13:55 目标",
+      "detail": "风车群参观，含简单午餐／自带食物；票务与实际开放待核。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-kinderdijk"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-kinderdijk-boarding",
+      "dayId": "day-sunday",
+      "order": 6,
+      "title": "返回码头 · 候船",
+      "timeLabel": "13:55–14:15 目标",
+      "detail": "具体码头及候船时刻待运营方确认。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-kinderdijk"
+      ],
+      "taskIds": [
+        "task-watershuttle"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-watershuttle-return",
+      "dayId": "day-sunday",
+      "order": 7,
+      "title": "WaterShuttle 返回鹿特丹",
+      "timeLabel": "14:15–14:45 目标",
+      "detail": "目标回程，冬季时刻待核；不以驾车路径替代水路。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-erasmusbrug"
+      ],
+      "taskIds": [
+        "task-watershuttle"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-fenix-transfer",
+      "dayId": "day-sunday",
+      "order": 8,
+      "title": "码头 → Fenix",
+      "timeLabel": "14:45–15:25 目标",
+      "detail": "建议出租车或 Water Taxi；交通选择和时间是规划缓冲，不是实时 ETA。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-fenix"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-fenix-visit",
+      "dayId": "day-sunday",
+      "order": 9,
+      "title": "Fenix 美术馆 + Tornado",
+      "timeLabel": "15:30–17:00 目标",
+      "detail": "目标参观时段，非已预约；当天开放、入场与 Tornado 规则待核。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-fenix"
+      ],
+      "taskIds": [
+        "task-rotterdam-venues"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-markthal-transfer",
+      "dayId": "day-sunday",
+      "order": 10,
+      "title": "前往 Markthal",
+      "timeLabel": "17:00–17:20 预估",
+      "detail": "来源建议打车，预留交通缓冲。",
+      "status": "tentative",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-markthal"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-markthal-visit",
+      "dayId": "day-sunday",
+      "order": 11,
+      "title": "Markthal 简餐 · 参观",
+      "timeLabel": "17:20–17:45 目标",
+      "detail": "源文档目标停留；实际营业与餐饮情况待核。",
+      "status": "tentative",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-markthal"
+      ],
+      "taskIds": [
+        "task-rotterdam-venues"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-cube-houses-exterior",
+      "dayId": "day-sunday",
+      "order": 12,
+      "title": "Cube Houses 外观",
+      "timeLabel": "17:45–18:00 目标",
+      "detail": "外观短看；源文档写无需票，但运营与进入范围仍待核。",
+      "status": "tentative",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-cube-houses"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-rotterdam-station-return",
+      "dayId": "day-sunday",
+      "order": 13,
+      "title": "前往 Rotterdam Centraal · 候车",
+      "timeLabel": "18:00–18:30 目标",
+      "detail": "市内交通与候车缓冲，不承诺实时通行时间。",
+      "status": "tentative",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-rotterdam-centraal"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-eurostar-return",
+      "dayId": "day-sunday",
+      "order": 14,
+      "title": "Eurostar 返回巴黎",
+      "timeLabel": "18:58 目标",
+      "detail": "目标回程班次与出票状态待核，未给巴黎到站时间，不补猜。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-gare-nord"
+      ],
+      "taskIds": [
+        "task-eurostar"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-astor-sunday-return",
+      "dayId": "day-sunday",
+      "order": 15,
+      "title": "返回 Maison Astor · 连住",
+      "timeLabel": "返巴黎后 · 时间待核",
+      "detail": "连住第二晚，无需搬运行李；返店时间随实际列车确认。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-maison-astor"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-astor-checkout",
+      "dayId": "day-departure",
+      "order": 1,
+      "title": "Maison Astor 早餐 · 退房寄存",
+      "timeLabel": "09:00–10:15",
+      "detail": "购物结束后回同一酒店取行李。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-maison-astor"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-saint-germain-walk",
+      "dayId": "day-departure",
+      "order": 2,
+      "title": "圣日耳曼街区 · 咖啡",
+      "timeLabel": "10:30–12:00",
+      "detail": "漫步后前往 Le Bon Marché；不安排卢森堡公园补游。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-saint-germain"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-bon-marche-shopping",
+      "dayId": "day-departure",
+      "order": 3,
+      "title": "Le Bon Marché · 午餐购物",
+      "timeLabel": "12:00–15:45",
+      "detail": "Le Bon Marché／La Grande Épicerie，优先购买重点商品，严格保留机场缓冲。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-bon-marche",
+        "place-grande-epicerie"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-astor-final-luggage",
+      "dayId": "day-departure",
+      "order": 4,
+      "title": "返回 Maison Astor · 取行李",
+      "timeLabel": "16:00 左右",
+      "detail": "源表 16:00–17:30 包含取包和出城，目标 17:00–17:30 叫车赴机场。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-maison-astor"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-cdg-departure-transfer",
+      "dayId": "day-departure",
+      "order": 5,
+      "title": "前往 CDG",
+      "timeLabel": "17:00–17:30 出发目标",
+      "detail": "打车出发时间为目标；实际路况、航站楼与航空公司要求另核。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-cdg"
+      ],
+      "taskIds": [
+        "task-flight"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    },
+    {
+      "id": "act-cdg-flight",
+      "dayId": "day-departure",
+      "order": 6,
+      "title": "CDG 起飞",
+      "timeLabel": "22:20",
+      "detail": "航班时刻来自用户行程；未录入航班号、私人订单或航站楼，以实际航空公司要求为准。",
+      "status": "planned",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-cdg"
+      ],
+      "taskIds": [
+        "task-flight"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "places": [
+    {
+      "id": "place-cdg",
+      "name": "巴黎戴高乐机场",
+      "en": "Paris Charles de Gaulle Airport",
+      "locationType": "airport",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-marquis",
+      "name": "Marquis Faubourg Saint-Honoré",
+      "en": "Marquis Faubourg Saint-Honoré",
+      "locationType": "hotel",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ],
+      "address": "8 Rue d’Anjou, 75008 Paris, France"
+    },
+    {
+      "id": "place-ghpr",
+      "name": "Grand Hôtel du Palais Royal",
+      "en": "Grand Hôtel du Palais Royal",
+      "locationType": "hotel",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ],
+      "address": "4 Rue de Valois, 75001 Paris, France"
+    },
+    {
+      "id": "place-waldorf",
+      "name": "Waldorf Astoria Versailles – Trianon Palace",
+      "en": "Waldorf Astoria Versailles – Trianon Palace",
+      "locationType": "hotel",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ],
+      "address": "1 Boulevard de la Reine, 78000 Versailles, France"
+    },
+    {
+      "id": "place-grand-powers",
+      "name": "Grand Powers",
+      "en": "Grand Powers",
+      "locationType": "hotel",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ],
+      "address": "52 Rue François 1er, 75008 Paris, France"
+    },
+    {
+      "id": "place-maison-astor",
+      "name": "Maison Astor Paris",
+      "en": "Maison Astor Paris",
+      "locationType": "hotel",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ],
+      "address": "11 Rue d’Astorg, 75008 Paris, France"
+    },
+    {
+      "id": "place-faubourg",
+      "name": "爱马仕福宝街总店",
+      "en": "Hermès Faubourg Saint-Honoré",
+      "locationType": "shopping",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-madeleine",
+      "name": "马德莱娜教堂",
+      "en": "Église de la Madeleine",
+      "locationType": "sight",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-vendome",
+      "name": "旺多姆广场",
+      "en": "Place Vendôme",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.86747,
+      "lng": 2.32944
+    },
+    {
+      "id": "place-orangerie",
+      "name": "橘园美术馆",
+      "en": "Musée de l’Orangerie",
+      "locationType": "museum",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-tuileries",
+      "name": "杜乐丽花园",
+      "en": "Jardin des Tuileries",
+      "locationType": "garden",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.8635,
+      "lng": 2.3274
+    },
+    {
+      "id": "place-concorde",
+      "name": "协和广场",
+      "en": "Place de la Concorde",
+      "locationType": "sight",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-opera",
+      "name": "巴黎歌剧院",
+      "en": "Palais Garnier",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.871944,
+      "lng": 2.332222
+    },
+    {
+      "id": "place-lafayette",
+      "name": "老佛爷百货",
+      "en": "Galeries Lafayette Haussmann",
+      "locationType": "shopping",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.87366,
+      "lng": 2.3322
+    },
+    {
+      "id": "place-printemps",
+      "name": "巴黎春天百货",
+      "en": "Printemps Haussmann",
+      "locationType": "shopping",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-royal",
+      "name": "皇家宫殿花园",
+      "en": "Jardin du Palais-Royal",
+      "locationType": "garden",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.86501,
+      "lng": 2.33782
+    },
+    {
+      "id": "place-vivienne",
+      "name": "薇薇安拱廊",
+      "en": "Galerie Vivienne",
+      "locationType": "shopping",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.8667,
+      "lng": 2.3397
+    },
+    {
+      "id": "place-abbesses",
+      "name": "Abbesses",
+      "en": "Abbesses, Montmartre",
+      "locationType": "neighborhood",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-tertre",
+      "name": "小丘广场",
+      "en": "Place du Tertre",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.88643,
+      "lng": 2.34087
+    },
+    {
+      "id": "place-sacre",
+      "name": "圣心堂",
+      "en": "Sacré-Cœur",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.886944,
+      "lng": 2.343056
+    },
+    {
+      "id": "place-martyrs",
+      "name": "殉道者街",
+      "en": "Rue des Martyrs",
+      "locationType": "neighborhood",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-sainte",
+      "name": "圣礼拜堂",
+      "en": "Sainte-Chapelle",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.855278,
+      "lng": 2.345
+    },
+    {
+      "id": "place-notredame",
+      "name": "巴黎圣母院",
+      "en": "Notre-Dame de Paris",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.853056,
+      "lng": 2.349722
+    },
+    {
+      "id": "place-lux",
+      "name": "卢森堡公园",
+      "en": "Jardin du Luxembourg",
+      "locationType": "garden",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.84671,
+      "lng": 2.33637
+    },
+    {
+      "id": "place-orsay",
+      "name": "奥赛博物馆",
+      "en": "Musée d’Orsay",
+      "locationType": "museum",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.85992,
+      "lng": 2.32653
+    },
+    {
+      "id": "place-versailles",
+      "name": "凡尔赛宫",
+      "en": "Château de Versailles",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.804328,
+      "lng": 2.120936
+    },
+    {
+      "id": "place-trianon",
+      "name": "大特里亚农宫",
+      "en": "Grand Trianon",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.81475,
+      "lng": 2.1049
+    },
+    {
+      "id": "place-hamlet",
+      "name": "王后村庄",
+      "en": "Hameau de la Reine",
+      "locationType": "sight",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-arc",
+      "name": "凯旋门外观",
+      "en": "Arc de Triomphe",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.87378,
+      "lng": 2.29504
+    },
+    {
+      "id": "place-champs",
+      "name": "香榭丽舍大道",
+      "en": "Avenue des Champs-Élysées",
+      "locationType": "neighborhood",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.8698,
+      "lng": 2.3079
+    },
+    {
+      "id": "place-george-v",
+      "name": "George V／François 1er 购物区",
+      "en": "Avenue George V / Rue François 1er",
+      "locationType": "shopping",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-louvre",
+      "name": "卢浮宫",
+      "en": "Musée du Louvre",
+      "locationType": "museum",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.860932,
+      "lng": 2.335902
+    },
+    {
+      "id": "place-trocadero",
+      "name": "特罗卡德罗／夏约宫",
+      "en": "Place du Trocadéro / Palais de Chaillot",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.863038,
+      "lng": 2.287108
+    },
+    {
+      "id": "place-eiffel",
+      "name": "埃菲尔铁塔",
+      "en": "Tour Eiffel",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.85837,
+      "lng": 2.29448
+    },
+    {
+      "id": "place-marais",
+      "name": "玛黑区",
+      "en": "Le Marais",
+      "locationType": "neighborhood",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-vosges",
+      "name": "孚日广场",
+      "en": "Place des Vosges",
+      "locationType": "sight",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.85564,
+      "lng": 2.36554
+    },
+    {
+      "id": "place-hotel-de-ville",
+      "name": "巴黎市政厅",
+      "en": "Hôtel de Ville",
+      "locationType": "sight",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-saint-louis",
+      "name": "圣路易岛",
+      "en": "Île Saint-Louis",
+      "locationType": "neighborhood",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-gare-nord",
+      "name": "巴黎北站",
+      "en": "Paris Gare du Nord",
+      "locationType": "station",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-rotterdam-centraal",
+      "name": "鹿特丹中央车站",
+      "en": "Rotterdam Centraal",
+      "locationType": "station",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-erasmusbrug",
+      "name": "Erasmusbrug 码头区域",
+      "en": "Erasmusbrug boarding area",
+      "locationType": "pier",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-kinderdijk",
+      "name": "Kinderdijk 风车群",
+      "en": "Kinderdijk",
+      "locationType": "sight",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-fenix",
+      "name": "Fenix 美术馆",
+      "en": "Fenix",
+      "locationType": "museum",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-markthal",
+      "name": "Markthal 市场",
+      "en": "Markthal",
+      "locationType": "shopping",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-cube-houses",
+      "name": "立方体房屋外观",
+      "en": "Cube Houses",
+      "locationType": "sight",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-saint-germain",
+      "name": "圣日耳曼街区",
+      "en": "Saint-Germain-des-Prés",
+      "locationType": "neighborhood",
+      "verifiedStatus": "reference",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        }
+      ],
+      "lat": 48.85397,
+      "lng": 2.33447
+    },
+    {
+      "id": "place-bon-marche",
+      "name": "Le Bon Marché",
+      "en": "Le Bon Marché Rive Gauche",
+      "locationType": "shopping",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-grande-epicerie",
+      "name": "La Grande Épicerie",
+      "en": "La Grande Épicerie de Paris",
+      "locationType": "shopping",
+      "verifiedStatus": "unverified",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    }
+  ],
+  "stops": [
+    {
+      "id": "stop-arrival-hotel-1",
+      "activityId": "act-arrival-hotel",
+      "placeId": "place-cdg",
+      "dayId": "day-arrival",
+      "order": 1
+    },
+    {
+      "id": "stop-arrival-hotel-2",
+      "activityId": "act-arrival-hotel",
+      "placeId": "place-marquis",
+      "dayId": "day-arrival",
+      "order": 2
+    },
+    {
+      "id": "stop-faubourg-walk-1",
+      "activityId": "act-faubourg-walk",
+      "placeId": "place-faubourg",
+      "dayId": "day-arrival",
+      "order": 3
+    },
+    {
+      "id": "stop-faubourg-walk-2",
+      "activityId": "act-faubourg-walk",
+      "placeId": "place-madeleine",
+      "dayId": "day-arrival",
+      "order": 4
+    },
+    {
+      "id": "stop-faubourg-walk-3",
+      "activityId": "act-faubourg-walk",
+      "placeId": "place-vendome",
+      "dayId": "day-arrival",
+      "order": 5
+    },
+    {
+      "id": "stop-orangerie-visit",
+      "activityId": "act-orangerie-visit",
+      "placeId": "place-orangerie",
+      "dayId": "day-arrival",
+      "order": 6
+    },
+    {
+      "id": "stop-tuileries-concorde-1",
+      "activityId": "act-tuileries-concorde",
+      "placeId": "place-tuileries",
+      "dayId": "day-arrival",
+      "order": 7
+    },
+    {
+      "id": "stop-tuileries-concorde-2",
+      "activityId": "act-tuileries-concorde",
+      "placeId": "place-concorde",
+      "dayId": "day-arrival",
+      "order": 8
+    },
+    {
+      "id": "stop-arrival-rest",
+      "activityId": "act-arrival-rest",
+      "placeId": "place-marquis",
+      "dayId": "day-arrival",
+      "order": 9
+    },
+    {
+      "id": "stop-opera-visit",
+      "activityId": "act-opera-visit",
+      "placeId": "place-opera",
+      "dayId": "day-opera",
+      "order": 1
+    },
+    {
+      "id": "stop-department-stores-1",
+      "activityId": "act-department-stores",
+      "placeId": "place-lafayette",
+      "dayId": "day-opera",
+      "order": 2
+    },
+    {
+      "id": "stop-department-stores-2",
+      "activityId": "act-department-stores",
+      "placeId": "place-printemps",
+      "dayId": "day-opera",
+      "order": 3
+    },
+    {
+      "id": "stop-marquis-to-ghpr-1",
+      "activityId": "act-marquis-to-ghpr",
+      "placeId": "place-marquis",
+      "dayId": "day-opera",
+      "order": 4
+    },
+    {
+      "id": "stop-marquis-to-ghpr-2",
+      "activityId": "act-marquis-to-ghpr",
+      "placeId": "place-ghpr",
+      "dayId": "day-opera",
+      "order": 5
+    },
+    {
+      "id": "stop-palais-royal",
+      "activityId": "act-palais-royal",
+      "placeId": "place-royal",
+      "dayId": "day-opera",
+      "order": 6
+    },
+    {
+      "id": "stop-vivienne-optional",
+      "activityId": "act-vivienne-optional",
+      "placeId": "place-vivienne",
+      "dayId": "day-opera",
+      "order": 7
+    },
+    {
+      "id": "stop-montmartre-1",
+      "activityId": "act-montmartre",
+      "placeId": "place-abbesses",
+      "dayId": "day-opera",
+      "order": 8
+    },
+    {
+      "id": "stop-montmartre-2",
+      "activityId": "act-montmartre",
+      "placeId": "place-tertre",
+      "dayId": "day-opera",
+      "order": 9
+    },
+    {
+      "id": "stop-montmartre-3",
+      "activityId": "act-montmartre",
+      "placeId": "place-sacre",
+      "dayId": "day-opera",
+      "order": 10
+    },
+    {
+      "id": "stop-martyrs-optional",
+      "activityId": "act-martyrs-optional",
+      "placeId": "place-martyrs",
+      "dayId": "day-opera",
+      "order": 11
+    },
+    {
+      "id": "stop-ghpr-checkout",
+      "activityId": "act-ghpr-checkout",
+      "placeId": "place-ghpr",
+      "dayId": "day-orsay",
+      "order": 1
+    },
+    {
+      "id": "stop-sainte-visit",
+      "activityId": "act-sainte-visit",
+      "placeId": "place-sainte",
+      "dayId": "day-orsay",
+      "order": 2
+    },
+    {
+      "id": "stop-notredame-visit",
+      "activityId": "act-notredame-visit",
+      "placeId": "place-notredame",
+      "dayId": "day-orsay",
+      "order": 3
+    },
+    {
+      "id": "stop-luxembourg-walk",
+      "activityId": "act-luxembourg-walk",
+      "placeId": "place-lux",
+      "dayId": "day-orsay",
+      "order": 4
+    },
+    {
+      "id": "stop-orsay-transfer",
+      "activityId": "act-orsay-transfer",
+      "placeId": "place-orsay",
+      "dayId": "day-orsay",
+      "order": 5
+    },
+    {
+      "id": "stop-orsay-lunch",
+      "activityId": "act-orsay-lunch",
+      "placeId": "place-orsay",
+      "dayId": "day-orsay",
+      "order": 6
+    },
+    {
+      "id": "stop-orsay-visit",
+      "activityId": "act-orsay-visit",
+      "placeId": "place-orsay",
+      "dayId": "day-orsay",
+      "order": 7
+    },
+    {
+      "id": "stop-ghpr-luggage",
+      "activityId": "act-ghpr-luggage",
+      "placeId": "place-ghpr",
+      "dayId": "day-orsay",
+      "order": 8
+    },
+    {
+      "id": "stop-waldorf-arrival",
+      "activityId": "act-waldorf-arrival",
+      "placeId": "place-waldorf",
+      "dayId": "day-orsay",
+      "order": 9
+    },
+    {
+      "id": "stop-waldorf-breakfast",
+      "activityId": "act-waldorf-breakfast",
+      "placeId": "place-waldorf",
+      "dayId": "day-versailles",
+      "order": 1
+    },
+    {
+      "id": "stop-versailles-palace",
+      "activityId": "act-versailles-palace",
+      "placeId": "place-versailles",
+      "dayId": "day-versailles",
+      "order": 2
+    },
+    {
+      "id": "stop-versailles-gardens",
+      "activityId": "act-versailles-gardens",
+      "placeId": "place-versailles",
+      "dayId": "day-versailles",
+      "order": 3
+    },
+    {
+      "id": "stop-trianon-visit",
+      "activityId": "act-trianon-visit",
+      "placeId": "place-trianon",
+      "dayId": "day-versailles",
+      "order": 4
+    },
+    {
+      "id": "stop-hamlet-optional",
+      "activityId": "act-hamlet-optional",
+      "placeId": "place-hamlet",
+      "dayId": "day-versailles",
+      "order": 5
+    },
+    {
+      "id": "stop-waldorf-to-powers-1",
+      "activityId": "act-waldorf-to-powers",
+      "placeId": "place-waldorf",
+      "dayId": "day-versailles",
+      "order": 6
+    },
+    {
+      "id": "stop-waldorf-to-powers-2",
+      "activityId": "act-waldorf-to-powers",
+      "placeId": "place-grand-powers",
+      "dayId": "day-versailles",
+      "order": 7
+    },
+    {
+      "id": "stop-arc-exterior-1",
+      "activityId": "act-arc-exterior",
+      "placeId": "place-grand-powers",
+      "dayId": "day-louvre",
+      "order": 1
+    },
+    {
+      "id": "stop-arc-exterior-2",
+      "activityId": "act-arc-exterior",
+      "placeId": "place-arc",
+      "dayId": "day-louvre",
+      "order": 2
+    },
+    {
+      "id": "stop-champs-shopping-1",
+      "activityId": "act-champs-shopping",
+      "placeId": "place-champs",
+      "dayId": "day-louvre",
+      "order": 3
+    },
+    {
+      "id": "stop-champs-shopping-2",
+      "activityId": "act-champs-shopping",
+      "placeId": "place-george-v",
+      "dayId": "day-louvre",
+      "order": 4
+    },
+    {
+      "id": "stop-powers-shopping-bags",
+      "activityId": "act-powers-shopping-bags",
+      "placeId": "place-grand-powers",
+      "dayId": "day-louvre",
+      "order": 5
+    },
+    {
+      "id": "stop-louvre-transfer",
+      "activityId": "act-louvre-transfer",
+      "placeId": "place-louvre",
+      "dayId": "day-louvre",
+      "order": 6
+    },
+    {
+      "id": "stop-louvre-private-guide",
+      "activityId": "act-louvre-private-guide",
+      "placeId": "place-louvre",
+      "dayId": "day-louvre",
+      "order": 7
+    },
+    {
+      "id": "stop-powers-friday-return",
+      "activityId": "act-powers-friday-return",
+      "placeId": "place-grand-powers",
+      "dayId": "day-louvre",
+      "order": 8
+    },
+    {
+      "id": "stop-powers-pack",
+      "activityId": "act-powers-pack",
+      "placeId": "place-grand-powers",
+      "dayId": "day-photos",
+      "order": 1
+    },
+    {
+      "id": "stop-eiffel-photos-1",
+      "activityId": "act-eiffel-photos",
+      "placeId": "place-trocadero",
+      "dayId": "day-photos",
+      "order": 2
+    },
+    {
+      "id": "stop-eiffel-photos-2",
+      "activityId": "act-eiffel-photos",
+      "placeId": "place-eiffel",
+      "dayId": "day-photos",
+      "order": 3
+    },
+    {
+      "id": "stop-powers-to-astor-1",
+      "activityId": "act-powers-to-astor",
+      "placeId": "place-grand-powers",
+      "dayId": "day-photos",
+      "order": 4
+    },
+    {
+      "id": "stop-powers-to-astor-2",
+      "activityId": "act-powers-to-astor",
+      "placeId": "place-maison-astor",
+      "dayId": "day-photos",
+      "order": 5
+    },
+    {
+      "id": "stop-marais-afternoon-1",
+      "activityId": "act-marais-afternoon",
+      "placeId": "place-marais",
+      "dayId": "day-photos",
+      "order": 6
+    },
+    {
+      "id": "stop-marais-afternoon-2",
+      "activityId": "act-marais-afternoon",
+      "placeId": "place-vosges",
+      "dayId": "day-photos",
+      "order": 7
+    },
+    {
+      "id": "stop-marais-optionals-1",
+      "activityId": "act-marais-optionals",
+      "placeId": "place-hotel-de-ville",
+      "dayId": "day-photos",
+      "order": 8
+    },
+    {
+      "id": "stop-marais-optionals-2",
+      "activityId": "act-marais-optionals",
+      "placeId": "place-saint-louis",
+      "dayId": "day-photos",
+      "order": 9
+    },
+    {
+      "id": "stop-rotterdam-outbound-1",
+      "activityId": "act-rotterdam-outbound",
+      "placeId": "place-gare-nord",
+      "dayId": "day-sunday",
+      "order": 1
+    },
+    {
+      "id": "stop-rotterdam-outbound-2",
+      "activityId": "act-rotterdam-outbound",
+      "placeId": "place-rotterdam-centraal",
+      "dayId": "day-sunday",
+      "order": 2
+    },
+    {
+      "id": "stop-erasmus-transfer",
+      "activityId": "act-erasmus-transfer",
+      "placeId": "place-erasmusbrug",
+      "dayId": "day-sunday",
+      "order": 3
+    },
+    {
+      "id": "stop-watershuttle-wait",
+      "activityId": "act-watershuttle-wait",
+      "placeId": "place-erasmusbrug",
+      "dayId": "day-sunday",
+      "order": 4
+    },
+    {
+      "id": "stop-watershuttle-outbound",
+      "activityId": "act-watershuttle-outbound",
+      "placeId": "place-kinderdijk",
+      "dayId": "day-sunday",
+      "order": 5
+    },
+    {
+      "id": "stop-kinderdijk-visit",
+      "activityId": "act-kinderdijk-visit",
+      "placeId": "place-kinderdijk",
+      "dayId": "day-sunday",
+      "order": 6
+    },
+    {
+      "id": "stop-kinderdijk-boarding",
+      "activityId": "act-kinderdijk-boarding",
+      "placeId": "place-kinderdijk",
+      "dayId": "day-sunday",
+      "order": 7
+    },
+    {
+      "id": "stop-watershuttle-return",
+      "activityId": "act-watershuttle-return",
+      "placeId": "place-erasmusbrug",
+      "dayId": "day-sunday",
+      "order": 8
+    },
+    {
+      "id": "stop-fenix-transfer",
+      "activityId": "act-fenix-transfer",
+      "placeId": "place-fenix",
+      "dayId": "day-sunday",
+      "order": 9
+    },
+    {
+      "id": "stop-fenix-visit",
+      "activityId": "act-fenix-visit",
+      "placeId": "place-fenix",
+      "dayId": "day-sunday",
+      "order": 10
+    },
+    {
+      "id": "stop-markthal-transfer",
+      "activityId": "act-markthal-transfer",
+      "placeId": "place-markthal",
+      "dayId": "day-sunday",
+      "order": 11
+    },
+    {
+      "id": "stop-markthal-visit",
+      "activityId": "act-markthal-visit",
+      "placeId": "place-markthal",
+      "dayId": "day-sunday",
+      "order": 12
+    },
+    {
+      "id": "stop-cube-houses-exterior",
+      "activityId": "act-cube-houses-exterior",
+      "placeId": "place-cube-houses",
+      "dayId": "day-sunday",
+      "order": 13
+    },
+    {
+      "id": "stop-rotterdam-station-return",
+      "activityId": "act-rotterdam-station-return",
+      "placeId": "place-rotterdam-centraal",
+      "dayId": "day-sunday",
+      "order": 14
+    },
+    {
+      "id": "stop-eurostar-return",
+      "activityId": "act-eurostar-return",
+      "placeId": "place-gare-nord",
+      "dayId": "day-sunday",
+      "order": 15
+    },
+    {
+      "id": "stop-astor-sunday-return",
+      "activityId": "act-astor-sunday-return",
+      "placeId": "place-maison-astor",
+      "dayId": "day-sunday",
+      "order": 16
+    },
+    {
+      "id": "stop-astor-checkout",
+      "activityId": "act-astor-checkout",
+      "placeId": "place-maison-astor",
+      "dayId": "day-departure",
+      "order": 1
+    },
+    {
+      "id": "stop-saint-germain-walk",
+      "activityId": "act-saint-germain-walk",
+      "placeId": "place-saint-germain",
+      "dayId": "day-departure",
+      "order": 2
+    },
+    {
+      "id": "stop-bon-marche-shopping-1",
+      "activityId": "act-bon-marche-shopping",
+      "placeId": "place-bon-marche",
+      "dayId": "day-departure",
+      "order": 3
+    },
+    {
+      "id": "stop-bon-marche-shopping-2",
+      "activityId": "act-bon-marche-shopping",
+      "placeId": "place-grande-epicerie",
+      "dayId": "day-departure",
+      "order": 4
+    },
+    {
+      "id": "stop-astor-final-luggage",
+      "activityId": "act-astor-final-luggage",
+      "placeId": "place-maison-astor",
+      "dayId": "day-departure",
+      "order": 5
+    },
+    {
+      "id": "stop-cdg-departure-transfer",
+      "activityId": "act-cdg-departure-transfer",
+      "placeId": "place-cdg",
+      "dayId": "day-departure",
+      "order": 6
+    },
+    {
+      "id": "stop-cdg-flight",
+      "activityId": "act-cdg-flight",
+      "placeId": "place-cdg",
+      "dayId": "day-departure",
+      "order": 7
+    }
+  ],
+  "segments": [
+    {
+      "id": "segment-arrival-hotel-1--arrival-hotel-2",
+      "fromStopId": "stop-arrival-hotel-1",
+      "toStopId": "stop-arrival-hotel-2",
+      "dayId": "day-arrival",
+      "order": 1,
+      "mode": "driving",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-arrival-hotel-2--faubourg-walk-1",
+      "fromStopId": "stop-arrival-hotel-2",
+      "toStopId": "stop-faubourg-walk-1",
+      "dayId": "day-arrival",
+      "order": 2,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-faubourg-walk-1--faubourg-walk-2",
+      "fromStopId": "stop-faubourg-walk-1",
+      "toStopId": "stop-faubourg-walk-2",
+      "dayId": "day-arrival",
+      "order": 3,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-faubourg-walk-2--faubourg-walk-3",
+      "fromStopId": "stop-faubourg-walk-2",
+      "toStopId": "stop-faubourg-walk-3",
+      "dayId": "day-arrival",
+      "order": 4,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-faubourg-walk-3--orangerie-visit",
+      "fromStopId": "stop-faubourg-walk-3",
+      "toStopId": "stop-orangerie-visit",
+      "dayId": "day-arrival",
+      "order": 5,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-orangerie-visit--tuileries-concorde-1",
+      "fromStopId": "stop-orangerie-visit",
+      "toStopId": "stop-tuileries-concorde-1",
+      "dayId": "day-arrival",
+      "order": 6,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-tuileries-concorde-1--tuileries-concorde-2",
+      "fromStopId": "stop-tuileries-concorde-1",
+      "toStopId": "stop-tuileries-concorde-2",
+      "dayId": "day-arrival",
+      "order": 7,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-tuileries-concorde-2--arrival-rest",
+      "fromStopId": "stop-tuileries-concorde-2",
+      "toStopId": "stop-arrival-rest",
+      "dayId": "day-arrival",
+      "order": 8,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-opera-visit--department-stores-1",
+      "fromStopId": "stop-opera-visit",
+      "toStopId": "stop-department-stores-1",
+      "dayId": "day-opera",
+      "order": 1,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-department-stores-1--department-stores-2",
+      "fromStopId": "stop-department-stores-1",
+      "toStopId": "stop-department-stores-2",
+      "dayId": "day-opera",
+      "order": 2,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-department-stores-2--marquis-to-ghpr-1",
+      "fromStopId": "stop-department-stores-2",
+      "toStopId": "stop-marquis-to-ghpr-1",
+      "dayId": "day-opera",
+      "order": 3,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-marquis-to-ghpr-1--marquis-to-ghpr-2",
+      "fromStopId": "stop-marquis-to-ghpr-1",
+      "toStopId": "stop-marquis-to-ghpr-2",
+      "dayId": "day-opera",
+      "order": 4,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-marquis-to-ghpr-2--palais-royal",
+      "fromStopId": "stop-marquis-to-ghpr-2",
+      "toStopId": "stop-palais-royal",
+      "dayId": "day-opera",
+      "order": 5,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-palais-royal--vivienne-optional",
+      "fromStopId": "stop-palais-royal",
+      "toStopId": "stop-vivienne-optional",
+      "dayId": "day-opera",
+      "order": 6,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-vivienne-optional--montmartre-1",
+      "fromStopId": "stop-vivienne-optional",
+      "toStopId": "stop-montmartre-1",
+      "dayId": "day-opera",
+      "order": 7,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-montmartre-1--montmartre-2",
+      "fromStopId": "stop-montmartre-1",
+      "toStopId": "stop-montmartre-2",
+      "dayId": "day-opera",
+      "order": 8,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-montmartre-2--montmartre-3",
+      "fromStopId": "stop-montmartre-2",
+      "toStopId": "stop-montmartre-3",
+      "dayId": "day-opera",
+      "order": 9,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-montmartre-3--martyrs-optional",
+      "fromStopId": "stop-montmartre-3",
+      "toStopId": "stop-martyrs-optional",
+      "dayId": "day-opera",
+      "order": 10,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-ghpr-checkout--sainte-visit",
+      "fromStopId": "stop-ghpr-checkout",
+      "toStopId": "stop-sainte-visit",
+      "dayId": "day-orsay",
+      "order": 1,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-sainte-visit--notredame-visit",
+      "fromStopId": "stop-sainte-visit",
+      "toStopId": "stop-notredame-visit",
+      "dayId": "day-orsay",
+      "order": 2,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-notredame-visit--luxembourg-walk",
+      "fromStopId": "stop-notredame-visit",
+      "toStopId": "stop-luxembourg-walk",
+      "dayId": "day-orsay",
+      "order": 3,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-luxembourg-walk--orsay-transfer",
+      "fromStopId": "stop-luxembourg-walk",
+      "toStopId": "stop-orsay-transfer",
+      "dayId": "day-orsay",
+      "order": 4,
+      "mode": "driving",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-orsay-transfer--orsay-lunch",
+      "fromStopId": "stop-orsay-transfer",
+      "toStopId": "stop-orsay-lunch",
+      "dayId": "day-orsay",
+      "order": 5,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-orsay-lunch--orsay-visit",
+      "fromStopId": "stop-orsay-lunch",
+      "toStopId": "stop-orsay-visit",
+      "dayId": "day-orsay",
+      "order": 6,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-orsay-visit--ghpr-luggage",
+      "fromStopId": "stop-orsay-visit",
+      "toStopId": "stop-ghpr-luggage",
+      "dayId": "day-orsay",
+      "order": 7,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-ghpr-luggage--waldorf-arrival",
+      "fromStopId": "stop-ghpr-luggage",
+      "toStopId": "stop-waldorf-arrival",
+      "dayId": "day-orsay",
+      "order": 8,
+      "mode": "driving",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-waldorf-breakfast--versailles-palace",
+      "fromStopId": "stop-waldorf-breakfast",
+      "toStopId": "stop-versailles-palace",
+      "dayId": "day-versailles",
+      "order": 1,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-versailles-palace--versailles-gardens",
+      "fromStopId": "stop-versailles-palace",
+      "toStopId": "stop-versailles-gardens",
+      "dayId": "day-versailles",
+      "order": 2,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-versailles-gardens--trianon-visit",
+      "fromStopId": "stop-versailles-gardens",
+      "toStopId": "stop-trianon-visit",
+      "dayId": "day-versailles",
+      "order": 3,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-trianon-visit--hamlet-optional",
+      "fromStopId": "stop-trianon-visit",
+      "toStopId": "stop-hamlet-optional",
+      "dayId": "day-versailles",
+      "order": 4,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-hamlet-optional--waldorf-to-powers-1",
+      "fromStopId": "stop-hamlet-optional",
+      "toStopId": "stop-waldorf-to-powers-1",
+      "dayId": "day-versailles",
+      "order": 5,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "源文档仅明确取包后打车返巴黎；园区/王后村庄至 Waldorf 的交通方式未指定，不能自动推为驾车。"
+        }
+      ]
+    },
+    {
+      "id": "segment-waldorf-to-powers-1--waldorf-to-powers-2",
+      "fromStopId": "stop-waldorf-to-powers-1",
+      "toStopId": "stop-waldorf-to-powers-2",
+      "dayId": "day-versailles",
+      "order": 6,
+      "mode": "driving",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-arc-exterior-1--arc-exterior-2",
+      "fromStopId": "stop-arc-exterior-1",
+      "toStopId": "stop-arc-exterior-2",
+      "dayId": "day-louvre",
+      "order": 1,
+      "mode": "driving",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-arc-exterior-2--champs-shopping-1",
+      "fromStopId": "stop-arc-exterior-2",
+      "toStopId": "stop-champs-shopping-1",
+      "dayId": "day-louvre",
+      "order": 2,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-champs-shopping-1--champs-shopping-2",
+      "fromStopId": "stop-champs-shopping-1",
+      "toStopId": "stop-champs-shopping-2",
+      "dayId": "day-louvre",
+      "order": 3,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-champs-shopping-2--powers-shopping-bags",
+      "fromStopId": "stop-champs-shopping-2",
+      "toStopId": "stop-powers-shopping-bags",
+      "dayId": "day-louvre",
+      "order": 4,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-powers-shopping-bags--louvre-transfer",
+      "fromStopId": "stop-powers-shopping-bags",
+      "toStopId": "stop-louvre-transfer",
+      "dayId": "day-louvre",
+      "order": 5,
+      "mode": "driving",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-louvre-transfer--louvre-private-guide",
+      "fromStopId": "stop-louvre-transfer",
+      "toStopId": "stop-louvre-private-guide",
+      "dayId": "day-louvre",
+      "order": 6,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-louvre-private-guide--powers-friday-return",
+      "fromStopId": "stop-louvre-private-guide",
+      "toStopId": "stop-powers-friday-return",
+      "dayId": "day-louvre",
+      "order": 7,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-powers-pack--eiffel-photos-1",
+      "fromStopId": "stop-powers-pack",
+      "toStopId": "stop-eiffel-photos-1",
+      "dayId": "day-photos",
+      "order": 1,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-eiffel-photos-1--eiffel-photos-2",
+      "fromStopId": "stop-eiffel-photos-1",
+      "toStopId": "stop-eiffel-photos-2",
+      "dayId": "day-photos",
+      "order": 2,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-eiffel-photos-2--powers-to-astor-1",
+      "fromStopId": "stop-eiffel-photos-2",
+      "toStopId": "stop-powers-to-astor-1",
+      "dayId": "day-photos",
+      "order": 3,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-powers-to-astor-1--powers-to-astor-2",
+      "fromStopId": "stop-powers-to-astor-1",
+      "toStopId": "stop-powers-to-astor-2",
+      "dayId": "day-photos",
+      "order": 4,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-powers-to-astor-2--marais-afternoon-1",
+      "fromStopId": "stop-powers-to-astor-2",
+      "toStopId": "stop-marais-afternoon-1",
+      "dayId": "day-photos",
+      "order": 5,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-marais-afternoon-1--marais-afternoon-2",
+      "fromStopId": "stop-marais-afternoon-1",
+      "toStopId": "stop-marais-afternoon-2",
+      "dayId": "day-photos",
+      "order": 6,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-marais-afternoon-2--marais-optionals-1",
+      "fromStopId": "stop-marais-afternoon-2",
+      "toStopId": "stop-marais-optionals-1",
+      "dayId": "day-photos",
+      "order": 7,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-marais-optionals-1--marais-optionals-2",
+      "fromStopId": "stop-marais-optionals-1",
+      "toStopId": "stop-marais-optionals-2",
+      "dayId": "day-photos",
+      "order": 8,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-rotterdam-outbound-1--rotterdam-outbound-2",
+      "fromStopId": "stop-rotterdam-outbound-1",
+      "toStopId": "stop-rotterdam-outbound-2",
+      "dayId": "day-sunday",
+      "order": 1,
+      "mode": "rail",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-rotterdam-outbound-2--erasmus-transfer",
+      "fromStopId": "stop-rotterdam-outbound-2",
+      "toStopId": "stop-erasmus-transfer",
+      "dayId": "day-sunday",
+      "order": 2,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-erasmus-transfer--watershuttle-wait",
+      "fromStopId": "stop-erasmus-transfer",
+      "toStopId": "stop-watershuttle-wait",
+      "dayId": "day-sunday",
+      "order": 3,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-watershuttle-wait--watershuttle-outbound",
+      "fromStopId": "stop-watershuttle-wait",
+      "toStopId": "stop-watershuttle-outbound",
+      "dayId": "day-sunday",
+      "order": 4,
+      "mode": "boat",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-watershuttle-outbound--kinderdijk-visit",
+      "fromStopId": "stop-watershuttle-outbound",
+      "toStopId": "stop-kinderdijk-visit",
+      "dayId": "day-sunday",
+      "order": 5,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-kinderdijk-visit--kinderdijk-boarding",
+      "fromStopId": "stop-kinderdijk-visit",
+      "toStopId": "stop-kinderdijk-boarding",
+      "dayId": "day-sunday",
+      "order": 6,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-kinderdijk-boarding--watershuttle-return",
+      "fromStopId": "stop-kinderdijk-boarding",
+      "toStopId": "stop-watershuttle-return",
+      "dayId": "day-sunday",
+      "order": 7,
+      "mode": "boat",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-watershuttle-return--fenix-transfer",
+      "fromStopId": "stop-watershuttle-return",
+      "toStopId": "stop-fenix-transfer",
+      "dayId": "day-sunday",
+      "order": 8,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-fenix-transfer--fenix-visit",
+      "fromStopId": "stop-fenix-transfer",
+      "toStopId": "stop-fenix-visit",
+      "dayId": "day-sunday",
+      "order": 9,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-fenix-visit--markthal-transfer",
+      "fromStopId": "stop-fenix-visit",
+      "toStopId": "stop-markthal-transfer",
+      "dayId": "day-sunday",
+      "order": 10,
+      "mode": "driving",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-markthal-transfer--markthal-visit",
+      "fromStopId": "stop-markthal-transfer",
+      "toStopId": "stop-markthal-visit",
+      "dayId": "day-sunday",
+      "order": 11,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-markthal-visit--cube-houses-exterior",
+      "fromStopId": "stop-markthal-visit",
+      "toStopId": "stop-cube-houses-exterior",
+      "dayId": "day-sunday",
+      "order": 12,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-cube-houses-exterior--rotterdam-station-return",
+      "fromStopId": "stop-cube-houses-exterior",
+      "toStopId": "stop-rotterdam-station-return",
+      "dayId": "day-sunday",
+      "order": 13,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-rotterdam-station-return--eurostar-return",
+      "fromStopId": "stop-rotterdam-station-return",
+      "toStopId": "stop-eurostar-return",
+      "dayId": "day-sunday",
+      "order": 14,
+      "mode": "rail",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-eurostar-return--astor-sunday-return",
+      "fromStopId": "stop-eurostar-return",
+      "toStopId": "stop-astor-sunday-return",
+      "dayId": "day-sunday",
+      "order": 15,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-astor-checkout--saint-germain-walk",
+      "fromStopId": "stop-astor-checkout",
+      "toStopId": "stop-saint-germain-walk",
+      "dayId": "day-departure",
+      "order": 1,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-saint-germain-walk--bon-marche-shopping-1",
+      "fromStopId": "stop-saint-germain-walk",
+      "toStopId": "stop-bon-marche-shopping-1",
+      "dayId": "day-departure",
+      "order": 2,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-bon-marche-shopping-1--bon-marche-shopping-2",
+      "fromStopId": "stop-bon-marche-shopping-1",
+      "toStopId": "stop-bon-marche-shopping-2",
+      "dayId": "day-departure",
+      "order": 3,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-bon-marche-shopping-2--astor-final-luggage",
+      "fromStopId": "stop-bon-marche-shopping-2",
+      "toStopId": "stop-astor-final-luggage",
+      "dayId": "day-departure",
+      "order": 4,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-astor-final-luggage--cdg-departure-transfer",
+      "fromStopId": "stop-astor-final-luggage",
+      "toStopId": "stop-cdg-departure-transfer",
+      "dayId": "day-departure",
+      "order": 5,
+      "mode": "driving",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    },
+    {
+      "id": "segment-cdg-departure-transfer--cdg-flight",
+      "fromStopId": "stop-cdg-departure-transfer",
+      "toStopId": "stop-cdg-flight",
+      "dayId": "day-departure",
+      "order": 6,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.1",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 6,
+          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+        }
+      ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "task-cruise",
+      "title": "确认游船产品、班次与登船码头",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "DATA-01/05：周一首选、周四后备，全程只乘一次。Bateaux-Mouches 与 La Calife 来源冲突，需用户确认。",
+      "activityId": "act-cruise-preferred",
+      "dayId": "day-arrival"
+    },
+    {
+      "id": "task-louvre-guide",
+      "title": "确认卢浮宫中文私人导览时段",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "DATA-02：13:30–16:30 与 16:30–20:00 来源冲突；核实集合点、实际馆室开放及导览后留馆规则。",
+      "activityId": "act-louvre-private-guide",
+      "dayId": "day-louvre",
+      "url": "https://www.louvre.fr/en"
+    },
+    {
+      "id": "task-eurostar",
+      "title": "核实 Eurostar 往返、施工与票务",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "DATA-03：目标抵达 10:02、返程 18:58；去程发车、返巴黎时间及运营均未确认。",
+      "activityId": "act-rotterdam-outbound",
+      "dayId": "day-sunday",
+      "url": "https://www.nsinternational.com/en"
+    },
+    {
+      "id": "task-watershuttle",
+      "title": "核实 WaterShuttle 冬季船班与码头",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "DATA-03：来源时间线为目标，冬季船班需用最新官方时刻确认。",
+      "activityId": "act-watershuttle-outbound",
+      "dayId": "day-sunday"
+    },
+    {
+      "id": "task-photoshoot",
+      "title": "确认周六约拍时间与集合点",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "DATA-04：09:00–10:30／11:00 只是目标，尚无确认预约。",
+      "activityId": "act-eiffel-photos",
+      "dayId": "day-photos"
+    },
+    {
+      "id": "task-orangerie",
+      "title": "核实橘园入场与 Carte Blanche",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "activityId": "act-orangerie-visit",
+      "dayId": "day-arrival",
+      "url": "https://www.musee-orangerie.fr/en"
+    },
+    {
+      "id": "task-opera",
+      "title": "核实歌剧院场次与开放范围",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "activityId": "act-opera-visit",
+      "dayId": "day-opera",
+      "url": "https://www.operadeparis.fr/en/visits/palais-garnier"
+    },
+    {
+      "id": "task-sainte",
+      "title": "核实圣礼拜堂定时入场",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "activityId": "act-sainte-visit",
+      "dayId": "day-orsay",
+      "url": "https://www.sainte-chapelle.fr/en/"
+    },
+    {
+      "id": "task-notredame",
+      "title": "核实圣母院参观与礼拜安排",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "activityId": "act-notredame-visit",
+      "dayId": "day-orsay",
+      "url": "https://www.notredamedeparis.fr/en/"
+    },
+    {
+      "id": "task-orsay",
+      "title": "核实奥赛门票与入场安排",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "activityId": "act-orsay-visit",
+      "dayId": "day-orsay",
+      "url": "https://www.musee-orsay.fr/en"
+    },
+    {
+      "id": "task-orsay-lunch",
+      "title": "核实 Le Restaurant 午餐安排",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "DATA-04：13:00 午餐为目标，不保证座位；等候过久改简餐。",
+      "activityId": "act-orsay-lunch",
+      "dayId": "day-orsay",
+      "url": "https://www.musee-orsay.fr/en"
+    },
+    {
+      "id": "task-versailles",
+      "title": "核实凡尔赛入场与园区开放",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "activityId": "act-versailles-palace",
+      "dayId": "day-versailles",
+      "url": "https://en.chateauversailles.fr/plan-your-visit"
+    },
+    {
+      "id": "task-rotterdam-venues",
+      "title": "核实鹿特丹场馆开放与入场",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "Fenix／Tornado、Kinderdijk 及 Markthal 的目标停留非预约证明。",
+      "activityId": "act-fenix-visit",
+      "dayId": "day-sunday"
+    },
+    {
+      "id": "task-flight",
+      "title": "核对 CDG 航班与机场出发缓冲",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "22:20 起飞；航站楼、航班号及实际出城路况未录入。",
+      "activityId": "act-cdg-flight",
+      "dayId": "day-departure"
+    }
+  ],
+  "hotels": [
+    {
+      "id": "hotel-marquis",
+      "placeId": "place-marquis",
+      "nights": [
+        "2026-12-07"
+      ],
+      "status": "confirmed",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "用户行程确认住宿，不含私人确认号；早入住、寄存细则、前台和上下客点另核。"
+        }
+      ]
+    },
+    {
+      "id": "hotel-ghpr",
+      "placeId": "place-ghpr",
+      "nights": [
+        "2026-12-08"
+      ],
+      "status": "confirmed",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "用户行程确认住宿，不含私人确认号；早入住、寄存细则、前台和上下客点另核。"
+        }
+      ]
+    },
+    {
+      "id": "hotel-waldorf",
+      "placeId": "place-waldorf",
+      "nights": [
+        "2026-12-09"
+      ],
+      "status": "confirmed",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "用户行程确认住宿，不含私人确认号；早入住、寄存细则、前台和上下客点另核。"
+        }
+      ]
+    },
+    {
+      "id": "hotel-grand-powers",
+      "placeId": "place-grand-powers",
+      "nights": [
+        "2026-12-10",
+        "2026-12-11"
+      ],
+      "status": "confirmed",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "用户行程确认住宿，不含私人确认号；早入住、寄存细则、前台和上下客点另核。"
+        }
+      ]
+    },
+    {
+      "id": "hotel-maison-astor",
+      "placeId": "place-maison-astor",
+      "nights": [
+        "2026-12-12",
+        "2026-12-13"
+      ],
+      "status": "confirmed",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "用户行程确认住宿，不含私人确认号；早入住、寄存细则、前台和上下客点另核。"
+        }
+      ]
+    }
+  ],
+  "retiredActivityIds": [],
+  "conditionGroups": [
+    {
+      "id": "condition-one-cruise",
+      "maxOccurrences": 1,
+      "activityIds": [
+        "act-cruise-preferred",
+        "act-cruise-backup"
+      ],
+      "note": "周一首选；仅周一未乘船时启用周四后备，产品与班次待核。"
+    }
+  ]
+}

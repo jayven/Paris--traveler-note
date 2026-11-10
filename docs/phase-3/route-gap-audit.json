@@ -1,0 +1,833 @@
+{
+  "schemaVersion": 1,
+  "reviewDate": "2026-11-09",
+  "snapshotSha256": "af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708",
+  "tripDataVersion": "4.12.1",
+  "totalSegments": 68,
+  "storedGeometryCount": 28,
+  "missingCount": 40,
+  "classificationCounts": {
+    "required-road": 2,
+    "same-venue-no-road": 7,
+    "rail-boat": 4,
+    "blocked-decision": 27
+  },
+  "modeCounts": {
+    "walking": {
+      "total": 24,
+      "storedGeometry": 24
+    },
+    "driving": {
+      "total": 8,
+      "storedGeometry": 4
+    },
+    "unknown": {
+      "total": 32,
+      "storedGeometry": 0
+    },
+    "rail": {
+      "total": 2,
+      "storedGeometry": 0
+    },
+    "boat": {
+      "total": 2,
+      "storedGeometry": 0
+    }
+  },
+  "decisionGroups": [
+    {
+      "id": "road-montmartre",
+      "category": "required-road",
+      "title": "蒙马特来源已明确的步行",
+      "reason": "来源活动说明明确写“走艺术家广场与圣心堂”；当前 mode 仍为 unknown。作为两段待对齐的步行候选，不在本轮改 mode 或生成几何。",
+      "requiredDecision": "评审同意按既有来源对齐两段 walking 字段后，再按原核验规则生成路径。",
+      "count": 2
+    },
+    {
+      "id": "same-venue",
+      "category": "same-venue-no-road",
+      "title": "同场地与无须外部道路的衔接",
+      "reason": "这些是同一场地的到达/等候/用餐/参观/出发阶段，保留 Stop 身份；不需要用两点直线伪装道路。",
+      "requiredDecision": "认可保留为无道路几何；不推断馆内通道、花园路线、航站楼或码头内部路径。",
+      "count": 7
+    },
+    {
+      "id": "rail-boat",
+      "category": "rail-boat",
+      "title": "鹿特丹两段铁路及两段水路",
+      "reason": "交通模式已明确为 rail/boat，禁止套用 driving；具体冬季班次、运营与码头仍待 DATA-03 核实。",
+      "requiredDecision": "确认往返车票、冬季船运是否运行、运营方及上下船点；道路几何不作为此组验收目标。",
+      "count": 4
+    },
+    {
+      "id": "airport",
+      "category": "blocked-decision",
+      "title": "CDG 抵离两段驾车",
+      "reason": "道路模式 driving 已明确；实际抵达/出发航站楼未提供，不能用机场中心替代上下车点。",
+      "requiredDecision": "提供实际抵离航站楼，之后核验对应落客/上车位置。",
+      "count": 2
+    },
+    {
+      "id": "luxembourg-pickup",
+      "category": "blocked-decision",
+      "title": "卢森堡公园 → 奥赛的驾车起点",
+      "reason": "来源明确打车，但公园中心不是上车点；已拒绝距道路吸附 270m 的结果，未放宽阈值。",
+      "requiredDecision": "确认可用的街边上车位置；之后重做原标准道路核验。",
+      "count": 1
+    },
+    {
+      "id": "louvre",
+      "category": "blocked-decision",
+      "title": "卢浮宫私人导览相关三段",
+      "reason": "DATA-02/05：实际时段、集合点/入口及结束离馆点不确定；相同 Louvre placeId 不证明两阶段在同一位置。",
+      "requiredDecision": "确认导览时段/集合及结束地点，再确认返 Grand Powers 的方式。",
+      "count": 3
+    },
+    {
+      "id": "photos",
+      "category": "blocked-decision",
+      "title": "铁塔约拍往返与场内点位",
+      "reason": "DATA-04：摄影集合点、结束点和地点间移动方式未确认，Trocadéro/铁塔仅是场地参考。",
+      "requiredDecision": "确认摄影集合/结束地点与移动安排，再确认酒店往返方式。",
+      "count": 3
+    },
+    {
+      "id": "rotterdam-piers",
+      "category": "blocked-decision",
+      "title": "鹿特丹/Kinderdijk 码头与陆路衔接",
+      "reason": "实际码头/下船侧与交通选择未定。Kinderdijk 游客地址不等于船码头，即使两个 Stop 暂引用同一 Place 也不归为同场地无移动。",
+      "requiredDecision": "确认 Erasmusbrug/Kinderdijk 船码头、中央站赴码头方式、回程码头赴 Fenix 是出租车还是 Water Taxi。",
+      "count": 4
+    },
+    {
+      "id": "urban-transfers",
+      "category": "blocked-decision",
+      "title": "明确目的地但方式未定的市内/酒店交通",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "count": 10
+    },
+    {
+      "id": "conditional-links",
+      "category": "blocked-decision",
+      "title": "条件活动影响的衔接",
+      "reason": "游船、可选薇薇安/王后村庄、凡尔赛午餐位置影响真实上一站或方式。去 Abbesses 来源写打车，但可选活动跳过后的实际起点未定。",
+      "requiredDecision": "确认游船及可选点/午餐条件；保留原顺序，不在本轮静默改起点或选择交通。",
+      "count": 4
+    }
+  ],
+  "entries": [
+    {
+      "segmentId": "segment-arrival-hotel-1--arrival-hotel-2",
+      "date": "2026-12-07",
+      "mode": "driving",
+      "fromStopId": "stop-arrival-hotel-1",
+      "toStopId": "stop-arrival-hotel-2",
+      "from": "巴黎戴高乐机场",
+      "to": "Marquis Faubourg Saint-Honoré",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "airport",
+      "reason": "道路模式 driving 已明确；实际抵达/出发航站楼未提供，不能用机场中心替代上下车点。",
+      "requiredDecision": "提供实际抵离航站楼，之后核验对应落客/上车位置。",
+      "sourceActivityIds": [
+        "act-arrival-hotel"
+      ]
+    },
+    {
+      "segmentId": "segment-tuileries-concorde-2--arrival-rest",
+      "date": "2026-12-07",
+      "mode": "unknown",
+      "fromStopId": "stop-tuileries-concorde-2",
+      "toStopId": "stop-arrival-rest",
+      "from": "协和广场",
+      "to": "Marquis Faubourg Saint-Honoré",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "conditional-links",
+      "reason": "游船、可选薇薇安/王后村庄、凡尔赛午餐位置影响真实上一站或方式。去 Abbesses 来源写打车，但可选活动跳过后的实际起点未定。",
+      "requiredDecision": "确认游船及可选点/午餐条件；保留原顺序，不在本轮静默改起点或选择交通。",
+      "sourceActivityIds": [
+        "act-tuileries-concorde",
+        "act-arrival-rest"
+      ]
+    },
+    {
+      "segmentId": "segment-department-stores-2--marquis-to-ghpr-1",
+      "date": "2026-12-08",
+      "mode": "unknown",
+      "fromStopId": "stop-department-stores-2",
+      "toStopId": "stop-marquis-to-ghpr-1",
+      "from": "巴黎春天百货",
+      "to": "Marquis Faubourg Saint-Honoré",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-department-stores",
+        "act-marquis-to-ghpr"
+      ]
+    },
+    {
+      "segmentId": "segment-marquis-to-ghpr-1--marquis-to-ghpr-2",
+      "date": "2026-12-08",
+      "mode": "unknown",
+      "fromStopId": "stop-marquis-to-ghpr-1",
+      "toStopId": "stop-marquis-to-ghpr-2",
+      "from": "Marquis Faubourg Saint-Honoré",
+      "to": "Grand Hôtel du Palais Royal",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-marquis-to-ghpr"
+      ]
+    },
+    {
+      "segmentId": "segment-vivienne-optional--montmartre-1",
+      "date": "2026-12-08",
+      "mode": "unknown",
+      "fromStopId": "stop-vivienne-optional",
+      "toStopId": "stop-montmartre-1",
+      "from": "薇薇安拱廊",
+      "to": "Abbesses",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "conditional-links",
+      "reason": "游船、可选薇薇安/王后村庄、凡尔赛午餐位置影响真实上一站或方式。去 Abbesses 来源写打车，但可选活动跳过后的实际起点未定。",
+      "requiredDecision": "确认游船及可选点/午餐条件；保留原顺序，不在本轮静默改起点或选择交通。",
+      "sourceActivityIds": [
+        "act-vivienne-optional",
+        "act-montmartre"
+      ]
+    },
+    {
+      "segmentId": "segment-montmartre-1--montmartre-2",
+      "date": "2026-12-08",
+      "mode": "unknown",
+      "fromStopId": "stop-montmartre-1",
+      "toStopId": "stop-montmartre-2",
+      "from": "Abbesses",
+      "to": "小丘广场",
+      "samePlaceId": false,
+      "category": "required-road",
+      "decisionGroup": "road-montmartre",
+      "reason": "来源活动说明明确写“走艺术家广场与圣心堂”；当前 mode 仍为 unknown。作为两段待对齐的步行候选，不在本轮改 mode 或生成几何。",
+      "requiredDecision": "评审同意按既有来源对齐两段 walking 字段后，再按原核验规则生成路径。",
+      "sourceActivityIds": [
+        "act-montmartre"
+      ]
+    },
+    {
+      "segmentId": "segment-montmartre-2--montmartre-3",
+      "date": "2026-12-08",
+      "mode": "unknown",
+      "fromStopId": "stop-montmartre-2",
+      "toStopId": "stop-montmartre-3",
+      "from": "小丘广场",
+      "to": "圣心堂",
+      "samePlaceId": false,
+      "category": "required-road",
+      "decisionGroup": "road-montmartre",
+      "reason": "来源活动说明明确写“走艺术家广场与圣心堂”；当前 mode 仍为 unknown。作为两段待对齐的步行候选，不在本轮改 mode 或生成几何。",
+      "requiredDecision": "评审同意按既有来源对齐两段 walking 字段后，再按原核验规则生成路径。",
+      "sourceActivityIds": [
+        "act-montmartre"
+      ]
+    },
+    {
+      "segmentId": "segment-luxembourg-walk--orsay-transfer",
+      "date": "2026-12-09",
+      "mode": "driving",
+      "fromStopId": "stop-luxembourg-walk",
+      "toStopId": "stop-orsay-transfer",
+      "from": "卢森堡公园",
+      "to": "奥赛博物馆",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "luxembourg-pickup",
+      "reason": "来源明确打车，但公园中心不是上车点；已拒绝距道路吸附 270m 的结果，未放宽阈值。",
+      "requiredDecision": "确认可用的街边上车位置；之后重做原标准道路核验。",
+      "sourceActivityIds": [
+        "act-luxembourg-walk",
+        "act-orsay-transfer"
+      ]
+    },
+    {
+      "segmentId": "segment-orsay-transfer--orsay-lunch",
+      "date": "2026-12-09",
+      "mode": "unknown",
+      "fromStopId": "stop-orsay-transfer",
+      "toStopId": "stop-orsay-lunch",
+      "from": "奥赛博物馆",
+      "to": "奥赛博物馆",
+      "samePlaceId": true,
+      "category": "same-venue-no-road",
+      "decisionGroup": "same-venue",
+      "reason": "这些是同一场地的到达/等候/用餐/参观/出发阶段，保留 Stop 身份；不需要用两点直线伪装道路。",
+      "requiredDecision": "认可保留为无道路几何；不推断馆内通道、花园路线、航站楼或码头内部路径。",
+      "sourceActivityIds": [
+        "act-orsay-transfer",
+        "act-orsay-lunch"
+      ]
+    },
+    {
+      "segmentId": "segment-orsay-lunch--orsay-visit",
+      "date": "2026-12-09",
+      "mode": "unknown",
+      "fromStopId": "stop-orsay-lunch",
+      "toStopId": "stop-orsay-visit",
+      "from": "奥赛博物馆",
+      "to": "奥赛博物馆",
+      "samePlaceId": true,
+      "category": "same-venue-no-road",
+      "decisionGroup": "same-venue",
+      "reason": "这些是同一场地的到达/等候/用餐/参观/出发阶段，保留 Stop 身份；不需要用两点直线伪装道路。",
+      "requiredDecision": "认可保留为无道路几何；不推断馆内通道、花园路线、航站楼或码头内部路径。",
+      "sourceActivityIds": [
+        "act-orsay-lunch",
+        "act-orsay-visit"
+      ]
+    },
+    {
+      "segmentId": "segment-orsay-visit--ghpr-luggage",
+      "date": "2026-12-09",
+      "mode": "unknown",
+      "fromStopId": "stop-orsay-visit",
+      "toStopId": "stop-ghpr-luggage",
+      "from": "奥赛博物馆",
+      "to": "Grand Hôtel du Palais Royal",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-orsay-visit",
+        "act-ghpr-luggage"
+      ]
+    },
+    {
+      "segmentId": "segment-versailles-palace--versailles-gardens",
+      "date": "2026-12-10",
+      "mode": "unknown",
+      "fromStopId": "stop-versailles-palace",
+      "toStopId": "stop-versailles-gardens",
+      "from": "凡尔赛宫",
+      "to": "凡尔赛宫",
+      "samePlaceId": true,
+      "category": "same-venue-no-road",
+      "decisionGroup": "same-venue",
+      "reason": "这些是同一场地的到达/等候/用餐/参观/出发阶段，保留 Stop 身份；不需要用两点直线伪装道路。",
+      "requiredDecision": "认可保留为无道路几何；不推断馆内通道、花园路线、航站楼或码头内部路径。",
+      "sourceActivityIds": [
+        "act-versailles-palace",
+        "act-versailles-gardens"
+      ]
+    },
+    {
+      "segmentId": "segment-versailles-gardens--trianon-visit",
+      "date": "2026-12-10",
+      "mode": "unknown",
+      "fromStopId": "stop-versailles-gardens",
+      "toStopId": "stop-trianon-visit",
+      "from": "凡尔赛宫",
+      "to": "大特里亚农宫",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "conditional-links",
+      "reason": "游船、可选薇薇安/王后村庄、凡尔赛午餐位置影响真实上一站或方式。去 Abbesses 来源写打车，但可选活动跳过后的实际起点未定。",
+      "requiredDecision": "确认游船及可选点/午餐条件；保留原顺序，不在本轮静默改起点或选择交通。",
+      "sourceActivityIds": [
+        "act-versailles-gardens",
+        "act-trianon-visit"
+      ]
+    },
+    {
+      "segmentId": "segment-hamlet-optional--waldorf-to-powers-1",
+      "date": "2026-12-10",
+      "mode": "unknown",
+      "fromStopId": "stop-hamlet-optional",
+      "toStopId": "stop-waldorf-to-powers-1",
+      "from": "王后村庄",
+      "to": "Waldorf Astoria Versailles – Trianon Palace",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "conditional-links",
+      "reason": "游船、可选薇薇安/王后村庄、凡尔赛午餐位置影响真实上一站或方式。去 Abbesses 来源写打车，但可选活动跳过后的实际起点未定。",
+      "requiredDecision": "确认游船及可选点/午餐条件；保留原顺序，不在本轮静默改起点或选择交通。",
+      "sourceActivityIds": [
+        "act-hamlet-optional",
+        "act-waldorf-to-powers"
+      ]
+    },
+    {
+      "segmentId": "segment-powers-shopping-bags--louvre-transfer",
+      "date": "2026-12-11",
+      "mode": "driving",
+      "fromStopId": "stop-powers-shopping-bags",
+      "toStopId": "stop-louvre-transfer",
+      "from": "Grand Powers",
+      "to": "卢浮宫",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "louvre",
+      "reason": "DATA-02/05：实际时段、集合点/入口及结束离馆点不确定；相同 Louvre placeId 不证明两阶段在同一位置。",
+      "requiredDecision": "确认导览时段/集合及结束地点，再确认返 Grand Powers 的方式。",
+      "sourceActivityIds": [
+        "act-powers-shopping-bags",
+        "act-louvre-transfer"
+      ]
+    },
+    {
+      "segmentId": "segment-louvre-transfer--louvre-private-guide",
+      "date": "2026-12-11",
+      "mode": "unknown",
+      "fromStopId": "stop-louvre-transfer",
+      "toStopId": "stop-louvre-private-guide",
+      "from": "卢浮宫",
+      "to": "卢浮宫",
+      "samePlaceId": true,
+      "category": "blocked-decision",
+      "decisionGroup": "louvre",
+      "reason": "DATA-02/05：实际时段、集合点/入口及结束离馆点不确定；相同 Louvre placeId 不证明两阶段在同一位置。",
+      "requiredDecision": "确认导览时段/集合及结束地点，再确认返 Grand Powers 的方式。",
+      "sourceActivityIds": [
+        "act-louvre-transfer",
+        "act-louvre-private-guide"
+      ]
+    },
+    {
+      "segmentId": "segment-louvre-private-guide--powers-friday-return",
+      "date": "2026-12-11",
+      "mode": "unknown",
+      "fromStopId": "stop-louvre-private-guide",
+      "toStopId": "stop-powers-friday-return",
+      "from": "卢浮宫",
+      "to": "Grand Powers",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "louvre",
+      "reason": "DATA-02/05：实际时段、集合点/入口及结束离馆点不确定；相同 Louvre placeId 不证明两阶段在同一位置。",
+      "requiredDecision": "确认导览时段/集合及结束地点，再确认返 Grand Powers 的方式。",
+      "sourceActivityIds": [
+        "act-louvre-private-guide",
+        "act-powers-friday-return"
+      ]
+    },
+    {
+      "segmentId": "segment-powers-pack--eiffel-photos-1",
+      "date": "2026-12-12",
+      "mode": "unknown",
+      "fromStopId": "stop-powers-pack",
+      "toStopId": "stop-eiffel-photos-1",
+      "from": "Grand Powers",
+      "to": "特罗卡德罗／夏约宫",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "photos",
+      "reason": "DATA-04：摄影集合点、结束点和地点间移动方式未确认，Trocadéro/铁塔仅是场地参考。",
+      "requiredDecision": "确认摄影集合/结束地点与移动安排，再确认酒店往返方式。",
+      "sourceActivityIds": [
+        "act-powers-pack",
+        "act-eiffel-photos"
+      ]
+    },
+    {
+      "segmentId": "segment-eiffel-photos-1--eiffel-photos-2",
+      "date": "2026-12-12",
+      "mode": "unknown",
+      "fromStopId": "stop-eiffel-photos-1",
+      "toStopId": "stop-eiffel-photos-2",
+      "from": "特罗卡德罗／夏约宫",
+      "to": "埃菲尔铁塔",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "photos",
+      "reason": "DATA-04：摄影集合点、结束点和地点间移动方式未确认，Trocadéro/铁塔仅是场地参考。",
+      "requiredDecision": "确认摄影集合/结束地点与移动安排，再确认酒店往返方式。",
+      "sourceActivityIds": [
+        "act-eiffel-photos"
+      ]
+    },
+    {
+      "segmentId": "segment-eiffel-photos-2--powers-to-astor-1",
+      "date": "2026-12-12",
+      "mode": "unknown",
+      "fromStopId": "stop-eiffel-photos-2",
+      "toStopId": "stop-powers-to-astor-1",
+      "from": "埃菲尔铁塔",
+      "to": "Grand Powers",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "photos",
+      "reason": "DATA-04：摄影集合点、结束点和地点间移动方式未确认，Trocadéro/铁塔仅是场地参考。",
+      "requiredDecision": "确认摄影集合/结束地点与移动安排，再确认酒店往返方式。",
+      "sourceActivityIds": [
+        "act-eiffel-photos",
+        "act-powers-to-astor"
+      ]
+    },
+    {
+      "segmentId": "segment-powers-to-astor-1--powers-to-astor-2",
+      "date": "2026-12-12",
+      "mode": "unknown",
+      "fromStopId": "stop-powers-to-astor-1",
+      "toStopId": "stop-powers-to-astor-2",
+      "from": "Grand Powers",
+      "to": "Maison Astor Paris",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-powers-to-astor"
+      ]
+    },
+    {
+      "segmentId": "segment-powers-to-astor-2--marais-afternoon-1",
+      "date": "2026-12-12",
+      "mode": "unknown",
+      "fromStopId": "stop-powers-to-astor-2",
+      "toStopId": "stop-marais-afternoon-1",
+      "from": "Maison Astor Paris",
+      "to": "玛黑区",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-powers-to-astor",
+        "act-marais-afternoon"
+      ]
+    },
+    {
+      "segmentId": "segment-marais-afternoon-1--marais-afternoon-2",
+      "date": "2026-12-12",
+      "mode": "unknown",
+      "fromStopId": "stop-marais-afternoon-1",
+      "toStopId": "stop-marais-afternoon-2",
+      "from": "玛黑区",
+      "to": "孚日广场",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-marais-afternoon"
+      ]
+    },
+    {
+      "segmentId": "segment-rotterdam-outbound-1--rotterdam-outbound-2",
+      "date": "2026-12-13",
+      "mode": "rail",
+      "fromStopId": "stop-rotterdam-outbound-1",
+      "toStopId": "stop-rotterdam-outbound-2",
+      "from": "巴黎北站",
+      "to": "鹿特丹中央车站",
+      "samePlaceId": false,
+      "category": "rail-boat",
+      "decisionGroup": "rail-boat",
+      "reason": "交通模式已明确为 rail/boat，禁止套用 driving；具体冬季班次、运营与码头仍待 DATA-03 核实。",
+      "requiredDecision": "确认往返车票、冬季船运是否运行、运营方及上下船点；道路几何不作为此组验收目标。",
+      "sourceActivityIds": [
+        "act-rotterdam-outbound"
+      ]
+    },
+    {
+      "segmentId": "segment-rotterdam-outbound-2--erasmus-transfer",
+      "date": "2026-12-13",
+      "mode": "unknown",
+      "fromStopId": "stop-rotterdam-outbound-2",
+      "toStopId": "stop-erasmus-transfer",
+      "from": "鹿特丹中央车站",
+      "to": "Erasmusbrug 码头区域",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "rotterdam-piers",
+      "reason": "实际码头/下船侧与交通选择未定。Kinderdijk 游客地址不等于船码头，即使两个 Stop 暂引用同一 Place 也不归为同场地无移动。",
+      "requiredDecision": "确认 Erasmusbrug/Kinderdijk 船码头、中央站赴码头方式、回程码头赴 Fenix 是出租车还是 Water Taxi。",
+      "sourceActivityIds": [
+        "act-rotterdam-outbound",
+        "act-erasmus-transfer"
+      ]
+    },
+    {
+      "segmentId": "segment-erasmus-transfer--watershuttle-wait",
+      "date": "2026-12-13",
+      "mode": "unknown",
+      "fromStopId": "stop-erasmus-transfer",
+      "toStopId": "stop-watershuttle-wait",
+      "from": "Erasmusbrug 码头区域",
+      "to": "Erasmusbrug 码头区域",
+      "samePlaceId": true,
+      "category": "same-venue-no-road",
+      "decisionGroup": "same-venue",
+      "reason": "这些是同一场地的到达/等候/用餐/参观/出发阶段，保留 Stop 身份；不需要用两点直线伪装道路。",
+      "requiredDecision": "认可保留为无道路几何；不推断馆内通道、花园路线、航站楼或码头内部路径。",
+      "sourceActivityIds": [
+        "act-erasmus-transfer",
+        "act-watershuttle-wait"
+      ]
+    },
+    {
+      "segmentId": "segment-watershuttle-wait--watershuttle-outbound",
+      "date": "2026-12-13",
+      "mode": "boat",
+      "fromStopId": "stop-watershuttle-wait",
+      "toStopId": "stop-watershuttle-outbound",
+      "from": "Erasmusbrug 码头区域",
+      "to": "Kinderdijk 风车群",
+      "samePlaceId": false,
+      "category": "rail-boat",
+      "decisionGroup": "rail-boat",
+      "reason": "交通模式已明确为 rail/boat，禁止套用 driving；具体冬季班次、运营与码头仍待 DATA-03 核实。",
+      "requiredDecision": "确认往返车票、冬季船运是否运行、运营方及上下船点；道路几何不作为此组验收目标。",
+      "sourceActivityIds": [
+        "act-watershuttle-wait",
+        "act-watershuttle-outbound"
+      ]
+    },
+    {
+      "segmentId": "segment-watershuttle-outbound--kinderdijk-visit",
+      "date": "2026-12-13",
+      "mode": "unknown",
+      "fromStopId": "stop-watershuttle-outbound",
+      "toStopId": "stop-kinderdijk-visit",
+      "from": "Kinderdijk 风车群",
+      "to": "Kinderdijk 风车群",
+      "samePlaceId": true,
+      "category": "blocked-decision",
+      "decisionGroup": "rotterdam-piers",
+      "reason": "实际码头/下船侧与交通选择未定。Kinderdijk 游客地址不等于船码头，即使两个 Stop 暂引用同一 Place 也不归为同场地无移动。",
+      "requiredDecision": "确认 Erasmusbrug/Kinderdijk 船码头、中央站赴码头方式、回程码头赴 Fenix 是出租车还是 Water Taxi。",
+      "sourceActivityIds": [
+        "act-watershuttle-outbound",
+        "act-kinderdijk-visit"
+      ]
+    },
+    {
+      "segmentId": "segment-kinderdijk-visit--kinderdijk-boarding",
+      "date": "2026-12-13",
+      "mode": "unknown",
+      "fromStopId": "stop-kinderdijk-visit",
+      "toStopId": "stop-kinderdijk-boarding",
+      "from": "Kinderdijk 风车群",
+      "to": "Kinderdijk 风车群",
+      "samePlaceId": true,
+      "category": "blocked-decision",
+      "decisionGroup": "rotterdam-piers",
+      "reason": "实际码头/下船侧与交通选择未定。Kinderdijk 游客地址不等于船码头，即使两个 Stop 暂引用同一 Place 也不归为同场地无移动。",
+      "requiredDecision": "确认 Erasmusbrug/Kinderdijk 船码头、中央站赴码头方式、回程码头赴 Fenix 是出租车还是 Water Taxi。",
+      "sourceActivityIds": [
+        "act-kinderdijk-visit",
+        "act-kinderdijk-boarding"
+      ]
+    },
+    {
+      "segmentId": "segment-kinderdijk-boarding--watershuttle-return",
+      "date": "2026-12-13",
+      "mode": "boat",
+      "fromStopId": "stop-kinderdijk-boarding",
+      "toStopId": "stop-watershuttle-return",
+      "from": "Kinderdijk 风车群",
+      "to": "Erasmusbrug 码头区域",
+      "samePlaceId": false,
+      "category": "rail-boat",
+      "decisionGroup": "rail-boat",
+      "reason": "交通模式已明确为 rail/boat，禁止套用 driving；具体冬季班次、运营与码头仍待 DATA-03 核实。",
+      "requiredDecision": "确认往返车票、冬季船运是否运行、运营方及上下船点；道路几何不作为此组验收目标。",
+      "sourceActivityIds": [
+        "act-kinderdijk-boarding",
+        "act-watershuttle-return"
+      ]
+    },
+    {
+      "segmentId": "segment-watershuttle-return--fenix-transfer",
+      "date": "2026-12-13",
+      "mode": "unknown",
+      "fromStopId": "stop-watershuttle-return",
+      "toStopId": "stop-fenix-transfer",
+      "from": "Erasmusbrug 码头区域",
+      "to": "Fenix 美术馆",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "rotterdam-piers",
+      "reason": "实际码头/下船侧与交通选择未定。Kinderdijk 游客地址不等于船码头，即使两个 Stop 暂引用同一 Place 也不归为同场地无移动。",
+      "requiredDecision": "确认 Erasmusbrug/Kinderdijk 船码头、中央站赴码头方式、回程码头赴 Fenix 是出租车还是 Water Taxi。",
+      "sourceActivityIds": [
+        "act-watershuttle-return",
+        "act-fenix-transfer"
+      ]
+    },
+    {
+      "segmentId": "segment-fenix-transfer--fenix-visit",
+      "date": "2026-12-13",
+      "mode": "unknown",
+      "fromStopId": "stop-fenix-transfer",
+      "toStopId": "stop-fenix-visit",
+      "from": "Fenix 美术馆",
+      "to": "Fenix 美术馆",
+      "samePlaceId": true,
+      "category": "same-venue-no-road",
+      "decisionGroup": "same-venue",
+      "reason": "这些是同一场地的到达/等候/用餐/参观/出发阶段，保留 Stop 身份；不需要用两点直线伪装道路。",
+      "requiredDecision": "认可保留为无道路几何；不推断馆内通道、花园路线、航站楼或码头内部路径。",
+      "sourceActivityIds": [
+        "act-fenix-transfer",
+        "act-fenix-visit"
+      ]
+    },
+    {
+      "segmentId": "segment-markthal-transfer--markthal-visit",
+      "date": "2026-12-13",
+      "mode": "unknown",
+      "fromStopId": "stop-markthal-transfer",
+      "toStopId": "stop-markthal-visit",
+      "from": "Markthal 市场",
+      "to": "Markthal 市场",
+      "samePlaceId": true,
+      "category": "same-venue-no-road",
+      "decisionGroup": "same-venue",
+      "reason": "这些是同一场地的到达/等候/用餐/参观/出发阶段，保留 Stop 身份；不需要用两点直线伪装道路。",
+      "requiredDecision": "认可保留为无道路几何；不推断馆内通道、花园路线、航站楼或码头内部路径。",
+      "sourceActivityIds": [
+        "act-markthal-transfer",
+        "act-markthal-visit"
+      ]
+    },
+    {
+      "segmentId": "segment-cube-houses-exterior--rotterdam-station-return",
+      "date": "2026-12-13",
+      "mode": "unknown",
+      "fromStopId": "stop-cube-houses-exterior",
+      "toStopId": "stop-rotterdam-station-return",
+      "from": "立方体房屋外观",
+      "to": "鹿特丹中央车站",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-cube-houses-exterior",
+        "act-rotterdam-station-return"
+      ]
+    },
+    {
+      "segmentId": "segment-rotterdam-station-return--eurostar-return",
+      "date": "2026-12-13",
+      "mode": "rail",
+      "fromStopId": "stop-rotterdam-station-return",
+      "toStopId": "stop-eurostar-return",
+      "from": "鹿特丹中央车站",
+      "to": "巴黎北站",
+      "samePlaceId": false,
+      "category": "rail-boat",
+      "decisionGroup": "rail-boat",
+      "reason": "交通模式已明确为 rail/boat，禁止套用 driving；具体冬季班次、运营与码头仍待 DATA-03 核实。",
+      "requiredDecision": "确认往返车票、冬季船运是否运行、运营方及上下船点；道路几何不作为此组验收目标。",
+      "sourceActivityIds": [
+        "act-rotterdam-station-return",
+        "act-eurostar-return"
+      ]
+    },
+    {
+      "segmentId": "segment-eurostar-return--astor-sunday-return",
+      "date": "2026-12-13",
+      "mode": "unknown",
+      "fromStopId": "stop-eurostar-return",
+      "toStopId": "stop-astor-sunday-return",
+      "from": "巴黎北站",
+      "to": "Maison Astor Paris",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-eurostar-return",
+        "act-astor-sunday-return"
+      ]
+    },
+    {
+      "segmentId": "segment-astor-checkout--saint-germain-walk",
+      "date": "2026-12-14",
+      "mode": "unknown",
+      "fromStopId": "stop-astor-checkout",
+      "toStopId": "stop-saint-germain-walk",
+      "from": "Maison Astor Paris",
+      "to": "圣日耳曼街区",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-astor-checkout",
+        "act-saint-germain-walk"
+      ]
+    },
+    {
+      "segmentId": "segment-bon-marche-shopping-2--astor-final-luggage",
+      "date": "2026-12-14",
+      "mode": "unknown",
+      "fromStopId": "stop-bon-marche-shopping-2",
+      "toStopId": "stop-astor-final-luggage",
+      "from": "La Grande Épicerie",
+      "to": "Maison Astor Paris",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "urban-transfers",
+      "reason": "有明确的行程衔接，但来源未确认此段 walking/driving/公交等方式；不由距离或有行李推断出租车。",
+      "requiredDecision": "逐组确认这些交通方式；街区代表点还须在确定具体目的地后复核路径端点。",
+      "sourceActivityIds": [
+        "act-bon-marche-shopping",
+        "act-astor-final-luggage"
+      ]
+    },
+    {
+      "segmentId": "segment-astor-final-luggage--cdg-departure-transfer",
+      "date": "2026-12-14",
+      "mode": "driving",
+      "fromStopId": "stop-astor-final-luggage",
+      "toStopId": "stop-cdg-departure-transfer",
+      "from": "Maison Astor Paris",
+      "to": "巴黎戴高乐机场",
+      "samePlaceId": false,
+      "category": "blocked-decision",
+      "decisionGroup": "airport",
+      "reason": "道路模式 driving 已明确；实际抵达/出发航站楼未提供，不能用机场中心替代上下车点。",
+      "requiredDecision": "提供实际抵离航站楼，之后核验对应落客/上车位置。",
+      "sourceActivityIds": [
+        "act-astor-final-luggage",
+        "act-cdg-departure-transfer"
+      ]
+    },
+    {
+      "segmentId": "segment-cdg-departure-transfer--cdg-flight",
+      "date": "2026-12-14",
+      "mode": "unknown",
+      "fromStopId": "stop-cdg-departure-transfer",
+      "toStopId": "stop-cdg-flight",
+      "from": "巴黎戴高乐机场",
+      "to": "巴黎戴高乐机场",
+      "samePlaceId": true,
+      "category": "same-venue-no-road",
+      "decisionGroup": "same-venue",
+      "reason": "这些是同一场地的到达/等候/用餐/参观/出发阶段，保留 Stop 身份；不需要用两点直线伪装道路。",
+      "requiredDecision": "认可保留为无道路几何；不推断馆内通道、花园路线、航站楼或码头内部路径。",
+      "sourceActivityIds": [
+        "act-cdg-departure-transfer",
+        "act-cdg-flight"
+      ]
+    }
+  ]
+}

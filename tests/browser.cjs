@@ -3,9 +3,20 @@ const {chromium,devices}=require('playwright');
 const assert=require('node:assert/strict');
 const fs=require('node:fs/promises');
 const path=require('node:path');
-const origin=process.env.TEST_URL||'http://localhost:4173';
+const origin=new URL('legacy.html',(process.env.TEST_URL||'http://localhost:4173')+'/').href;
 const key='paris-pocket-personal-v1';
 const legacy={booked:['louvre'],dayNotes:{'2026-12-07':'原有每日笔记'},bookingNotes:{louvre:'原有预约备注'},hotelNote:'原有酒店笔记',flightNote:'原有航班笔记',miscNote:'原有其他笔记'};
+async function openDetail(page,id){
+ await page.locator(`[data-action="view-activity"][data-id="${id}"]`).click();
+ assert.equal(await page.locator('#activity-detail-dialog').evaluate(el=>el.open),true);
+}
+async function closeDetail(page){await page.locator('#activity-detail-close').click();}
+async function openEditor(page,id){
+ await openDetail(page,id);
+ await page.locator('#activity-detail-dialog [data-detail-action="edit"]').click();
+ assert.equal(await page.locator('#activity-detail-dialog').evaluate(el=>el.open),false);
+ assert.equal(await page.locator('#activity-dialog').evaluate(el=>el.open),true);
+}
 (async()=>{
  const browser=await chromium.launch({headless:true,...(process.env.PW_CHANNEL?{channel:process.env.PW_CHANNEL}:{})});
  const context=await browser.newContext({...devices['iPhone 13'],defaultBrowserType:undefined});
@@ -18,24 +29,35 @@ const legacy={booked:['louvre'],dayNotes:{'2026-12-07':'原有每日笔记'},boo
  await page.reload();
  await page.waitForFunction(()=>navigator.serviceWorker.controller);
  assert.equal(await page.locator('#day-note').inputValue(),legacy.dayNotes['2026-12-07']);
- const editButton=page.locator('[data-action="edit-activity"][data-id="d1-2"]');
- await editButton.click();
+ const beforeDetail=await page.evaluate(key=>localStorage.getItem(key),key);
+ await openDetail(page,'d1-2');await closeDetail(page);
+ await page.waitForFunction(()=>document.activeElement?.matches('[data-action="view-activity"][data-id="d1-2"]'));
+ assert.equal(await page.evaluate(key=>localStorage.getItem(key),key),beforeDetail);
+ await openDetail(page,'d1-2');
+ await page.locator('#activity-detail-dialog [data-detail-action="day-note"]').click();
+ await page.waitForFunction(()=>document.activeElement?.id==='day-note');
+ assert.equal(await page.locator('#activity-detail-dialog').evaluate(el=>el.open),false);
+ assert.equal(await page.evaluate(key=>localStorage.getItem(key),key),beforeDetail);
+ console.log('PASS real detail close/note navigation restores the right focus without storage writes');
+ await openEditor(page,'d1-2');
  assert.equal(await page.locator('#activity-time').inputValue(),'12:00');
  await page.locator('#activity-time').fill('12:15');
  await page.locator('#activity-end').fill('14:15');
  const detail='新描述\n<img src=x onerror=alert(1)> 保留为文字';
  await page.locator('#activity-detail').fill(detail);
  await page.locator('#activity-form button[type=submit]').click();
- assert.equal(await page.locator('[data-activity-id="d1-2"] .activity-description').textContent(),detail);
- assert.equal(await page.locator('[data-activity-id="d1-2"] .activity-description img').count(),0);
+ await openDetail(page,'d1-2');
+ assert.equal(await page.locator('#activity-detail-dialog .activity-description').textContent(),detail);
+ assert.equal(await page.locator('#activity-detail-dialog .activity-description img').count(),0);
+ await closeDetail(page);
  await page.reload();
  assert.match(await page.locator('[data-activity-id="d1-2"] .time-col').textContent(),/12:15/);
  let stored=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);
  for(const field of Object.keys(legacy))assert.deepEqual(stored[field],legacy[field]);
  console.log('PASS edit, escaping, reload, legacy notes/bookings');
- await editButton.click();await page.locator('#activity-time').fill('18:00');await page.locator('#activity-cancel').click();
+ await openEditor(page,'d1-2');await page.locator('#activity-time').fill('18:00');await page.locator('#activity-cancel').click();
  assert.match(await page.locator('[data-activity-id="d1-2"] .time-col').textContent(),/12:15/);
- await editButton.click();await page.locator('#activity-time').fill('25:00');
+ await openEditor(page,'d1-2');await page.locator('#activity-time').fill('25:00');
  await page.locator('#activity-form button[type=submit]').click();
  assert.match(await page.locator('#activity-error').textContent(),/00:00/);
  await page.locator('#activity-cancel').click();
@@ -48,7 +70,7 @@ const legacy={booked:['louvre'],dayNotes:{'2026-12-07':'原有每日笔记'},boo
  await page.locator('#backup-file').setInputFiles({name:'legacy.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({_format:'paris-pocket-backup-v1',...legacy}))});
  await page.waitForFunction(()=>document.getElementById('toast').textContent==='备份导入成功');
  stored=await page.evaluate(key=>JSON.parse(localStorage.getItem(key)),key);assert.equal(stored.activityOverrides['d1-2'].time,'12:15');
- await page.locator('[data-tab=days]').click();await editButton.click();
+ await page.locator('[data-tab=days]').click();await openEditor(page,'d1-2');
  await page.locator('#activity-reset').click();
  assert.match(await page.locator('[data-activity-id="d1-2"] .time-col').textContent(),/12:00/);
  await page.locator('[data-tab=more]').click();
@@ -62,7 +84,7 @@ const legacy={booked:['louvre'],dayNotes:{'2026-12-07':'原有每日笔记'},boo
  await page.locator('#backup-file').setInputFiles({name:'bad.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify({_format:'paris-pocket-backup-v1',booked:'bad'}))});
  await page.waitForFunction(()=>document.getElementById('toast').textContent.includes('格式不正确'));
  assert.equal(await page.evaluate(key=>localStorage.getItem(key),key),before);
- await page.locator('[data-tab=days]').click();await editButton.click();
+ await page.locator('[data-tab=days]').click();await openEditor(page,'d1-2');
  await page.evaluate(()=>{Storage.prototype.setItem=function(){throw new DOMException('Quota','QuotaExceededError')};});
  await page.locator('#activity-time').fill('13:00');await page.locator('#activity-form button[type=submit]').click();
  assert.match(await page.locator('#activity-error').textContent(),/未保存/);
@@ -73,7 +95,7 @@ const legacy={booked:['louvre'],dayNotes:{'2026-12-07':'原有每日笔记'},boo
  for(const width of [320,375,390,430,1024]){
   await page.setViewportSize({width,height:844});
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`overflow at ${width}`);
-  await editButton.click();
+  await openEditor(page,'d1-2');
   assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth),`editor overflow at ${width}`);
   assert.equal(await page.locator('#activity-time').evaluate(el=>getComputedStyle(el).fontSize),'16px');
   await page.locator('#activity-cancel').click();
@@ -81,8 +103,10 @@ const legacy={booked:['louvre'],dayNotes:{'2026-12-07':'原有每日笔记'},boo
  await page.setViewportSize({width:390,height:844});
  await context.setOffline(true);await page.reload();
  assert.match(await page.locator('[data-activity-id="d1-2"] .time-col').textContent(),/12:15/);
- await editButton.click();await page.locator('#activity-detail').fill('离线修改');await page.locator('#activity-form button[type=submit]').click();
- await page.reload();assert.equal(await page.locator('[data-activity-id="d1-2"] .activity-description').textContent(),'离线修改');
+ await openEditor(page,'d1-2');await page.locator('#activity-detail').fill('离线修改');await page.locator('#activity-form button[type=submit]').click();
+ await page.reload();await openDetail(page,'d1-2');
+ assert.equal(await page.locator('#activity-detail-dialog .activity-description').textContent(),'离线修改');
+ await closeDetail(page);
  await page.locator('[data-tab=map]').click();
  await page.waitForFunction(()=>document.querySelector('.map-fallback')?.textContent.includes('需要联网'));
  const mapRows=page.locator('.location-row');
@@ -98,10 +122,10 @@ const legacy={booked:['louvre'],dayNotes:{'2026-12-07':'原有每日笔记'},boo
  console.log('PASS widths 320–1024px, offline editing/reload, map fallback and major tabs');
  await context.setOffline(false);await page.locator('[data-tab=days]').click();
  await fs.mkdir(path.join(__dirname,'../test-results'),{recursive:true});
- await editButton.click();await page.screenshot({path:path.join(__dirname,'../test-results/activity-editor.png')});await page.locator('#activity-cancel').click();
+ await openEditor(page,'d1-2');await page.screenshot({path:path.join(__dirname,'../test-results/activity-editor.png')});await page.locator('#activity-cancel').click();
  await page.evaluate(key=>localStorage.setItem(key,'{bad'),key);await page.reload();
  assert.equal(await page.locator('#storage-warning').isVisible(),true);
- await editButton.click();await page.locator('#activity-form button[type=submit]').click();
+ await openEditor(page,'d1-2');await page.locator('#activity-form button[type=submit]').click();
  assert.equal(await page.evaluate(key=>localStorage.getItem(key),key),'{bad');
  assert.match(await page.locator('#activity-error').textContent(),/未保存/);
  assert.deepEqual(errors,[]);

@@ -1,0 +1,189 @@
+{
+  "viewports": [
+    320,
+    375,
+    390,
+    430
+  ],
+  "height": 844,
+  "selectedBackground": "#58443E",
+  "selectedText": "#FFFFFF",
+  "comparisons": {
+    "before": "Test-only --selected-bg override to prior #0d0d0d; no application code or data changes",
+    "after": "Production stylesheet; no override"
+  },
+  "layouts": [
+    {
+      "screen": "daily-itinerary",
+      "width": 320,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "todo",
+      "width": 320,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "daily-map",
+      "width": 320,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "daily-itinerary",
+      "width": 375,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "todo",
+      "width": 375,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "daily-map",
+      "width": 375,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "daily-itinerary",
+      "width": 390,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "todo",
+      "width": 390,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "daily-map",
+      "width": 390,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "daily-itinerary",
+      "width": 430,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "todo",
+      "width": 430,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    },
+    {
+      "screen": "daily-map",
+      "width": 430,
+      "preview": false,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 844
+    }
+  ],
+  "isolatedPreviews": [
+    {
+      "screen": "days",
+      "width": 320,
+      "preview": true,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 843
+    },
+    {
+      "screen": "todo",
+      "width": 320,
+      "preview": true,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 843
+    },
+    {
+      "screen": "days",
+      "width": 375,
+      "preview": true,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 843
+    },
+    {
+      "screen": "todo",
+      "width": 375,
+      "preview": true,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 843
+    },
+    {
+      "screen": "days",
+      "width": 390,
+      "preview": true,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 843
+    },
+    {
+      "screen": "todo",
+      "width": 390,
+      "preview": true,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 843
+    },
+    {
+      "screen": "days",
+      "width": 430,
+      "preview": true,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 843
+    },
+    {
+      "screen": "todo",
+      "width": 430,
+      "preview": true,
+      "pageOverflow": 0,
+      "contentOverflow": 0,
+      "navBottom": 843
+    }
+  ],
+  "pageErrors": [],
+  "realIPhoneTested": false,
+  "chromium": "157.0.8103.40",
+  "syntheticProfiles": true,
+  "legacyRawUnchanged": true,
+  "personalDataUnchanged": true,
+  "officialSnapshotUnchanged": true,
+  "mapGeoJSONAndModeColorsUnchanged": true,
+  "greenCompletionAndActionsUnchanged": true,
+  "previewNoWritesOrIDB": true
+}

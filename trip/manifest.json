@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "tripId": "paris-2026",
+  "tripDataVersion": "4.12.1",
+  "releaseSequence": 1,
+  "snapshotUrl": "./trip/releases/af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708.json",
+  "sha256": "af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708",
+  "byteLength": 216051
+}

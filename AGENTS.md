@@ -1,57 +1,53 @@
 # Paris Pocket — Repository Instructions
 
-## Product contract
-- Maintain **Paris Pocket / 巴黎手帐**, a Chinese-first, mobile-first PWA for a two-person Paris trip, 7–14 December 2026.
-- Preserve the existing production origin `https://stirring-cheesecake-37698e.netlify.app/` (do not create a replacement Netlify site as part of code edits).
-- Prioritize an excellent iPhone Safari / Add to Home Screen experience, accessibility, usability, performance and reliability.
-- The itinerary is **planning data**, not proof of booked tickets or hotel reservations. Never imply tentative times are confirmed.
-- All itinerary times are in `Europe/Paris`. Arrival: CDG 2026-12-07 08:00; departure: CDG 2026-12-14 22:20.
-- First Paris visit, two travelers. Preferences: 50% classic attractions and 50% Paris neighborhoods/food/shopping; Versailles is mandatory; mainly taxis, walking between nearby attractions; hotel TBD, Hilton/Hyatt free-night awards and Amex FHR are considerations.
+## 当前授权（2026-11-09）
 
-## Existing project
-- `index.html`, `styles.css`, `app.js`: vanilla front end.
-- `trip-data.js`: canonical itinerary, locations, bookings and trip details. Read it before changing itinerary content.
-- `manifest.webmanifest`, `sw.js`, `assets/`: installed PWA and offline support.
-- Browser localStorage currently holds user booking checkboxes and notes (`paris-pocket-personal-v1`). Preserve and migrate these keys if refactoring. Provide export/import before destructive changes.
-- `personal-data.js` validates/migrates personal storage and backups; local changes must overlay the canonical itinerary without rewriting it.
-- Keep an embedded itinerary map. Leaflet/CDN and online tiles are the current implementation. Google Maps HTTPS URLs are now the default external location/directions provider, with walking/driving links. `map-links.js` centralizes URL construction; keep the embedded map and existing location coordinates.
+- 用户新增授权更换 App 安装图标：使用提供的立体纸艺 P 原图，按原样导出 180/192/512px；只调整图标引用、SW 资源缓存版本和公开白名单，保留旧图标路径、PWA id/scope/start_url 及所有资料。当前 UI 设计冻结仍适用于其他界面；不重新部署，现有 HTTPS 预览仍为 `6ab2762`，更新原分支/草稿 PR #2 后等待评审。
 
-## Engineering boundaries
-- Work incrementally. Avoid a full framework rewrite unless justified by a practical need and agreed upon.
-- Keep trip content in a structured, easily edited data layer, separate from UI, and use stable IDs for places, days and bookings.
-- Preserve correct geolocations, particularly Tuileries Garden (center at 48.8635, 2.3274). Venue center coordinates must not be misrepresented as entrances, tour meeting points or taxi pickup locations.
-- Prefer a small number of well-tested improvements to a wide but unfinished rewrite.
-- Support iPhone Safari with touch-friendly controls, accessible labels, responsive layouts and browser storage failure handling.
-- When editing or adding local persistence, use backwards-compatible migrations and test reload/offline/update scenarios.
-- If an activity is moved or edited, associated notes and booking state must stay attached to its stable ID.
-- Do not add secrets, API credentials, personal travel confirmation numbers or paid services to source control.
-- Before declaring completion: run the app, test major flows, report changed files, remaining known issues and manual checks on iOS.
-- Do not auto-deploy to production or alter Netlify settings without explicit authorization. Use a branch/PR for review when connected to GitHub.
+- 用户已认可 `6ab2762` 棕色选中态，**冻结现有视觉**（`#58443E`、MapLibre + OpenFreeMap Positron），不再重设计。已授权并完成现有站点的单个隔离 HTTPS draft，来源 commit `6ab27623d4d7d6888c25d8846524e7c68ed57ee5`、Deploy ID `6af2bf7c9b1e9384dabc6255`。只上传经过校验的 `dist/` 23 文件；不发布仓库根目录、不改共享/生产设置、不合并 main、不操作生产资料。详见 [预览验收包](docs/phase-3/https-preview/README.md)。
+- 现有预览登录保护保持不变；API 已逐字节核对全部部署文件，但未登录 CDN 返回 401，线上 SW/外部 SDK/缓存响应头自动浏览器检查仍待正常登录后执行。用户已在自己的浏览器看到预览，不将此等同真 iPhone 验收或生产旧数据迁移证明。等待真机结果；未经另批不再次部署，PR 标题/后续评审提交继续保留 `[skip netlify]`，不触发 Git 自动部署。
+- 已完成 **Selected-State Color Refinement**：`--selected-bg:#58443e` / `--selected-text:#fff` 覆盖主界面、兼容筛选和隔离预览；保留黑色正文/描边/硬阴影、绿色功能与交通色。黑棕对照和四宽回归已通过；不改数据/几何/同步/预订。
 
-## Agreed development roadmap
-- **V1.1 — Editable itinerary:** add, edit, delete and reorder activities; edit activity dates, times and descriptions; persist safely with compatible migrations, stable IDs, recoverable deletion and backup/restore. Activity dates initially stay within the agreed trip dates; changing the trip dates/flight facts is a separate explicit product decision.
-- **V1.2 — Maps and navigation:** retain an embedded itinerary map; Google Maps is the default external map/navigation provider, with walking and driving options.
-- **V1.3 — Hotel, restaurant and booking management.**
-- **V2.0 — Multi-device and two-person synchronization:** plan architecture/privacy/cost before adding authentication or a backend.
+- 本轮用户明确授权 **Map Renderer Upgrade**：仅将新版主界面 Leaflet/OSM raster 换为固定版本 MapLibre GL JS + OpenFreeMap Positron；Liberty 仅比较截图。保留全部官方快照/路线、位置来源、稳定 ID、交通方式、个人 schema 和其他功能。新版映射依赖仅地图页按需加载；旧兼容页维持原实现。验收后停止评审，不移除 Netlify skip 或部署。
 
-## Google Maps requirements (V1.2)
-- Use Google Maps URLs for external location viewing and directions, not Apple Maps by default. Keep the embedded itinerary map inside Paris Pocket; it need not use Google's paid map SDK.
-- Provide walking and driving navigation options. Do not invent routes or travel durations.
-- Use verified coordinates, addresses or Google Place IDs and retain verification sources; distinguish venue centers from entrances, meeting points and pickup locations. Never guess a Place ID.
-- Open Google Maps on iPhone when supported using app-compatible HTTPS URLs, with browser fallback. OS/app availability controls handoff; do not promise that every link launches the app.
-- No paid Google Maps API integration unless necessary and explicitly approved. Do not add API keys or paid services as part of URL-based navigation.
+- 用户已接受 `fe21176` 为 Phase 3 首轮功能评审候选，授权继续地图缺口审计、不可变发布保留、PR 自动验证和 HTTPS/iPhone 验收准备；不得扩展产品功能。用户已批准开始 **Phase 3 — 功能与数据整合**，继续使用 `feature/paris-pocket-v2-refactor` / 草稿 PR #2。Phase 2 视觉方向已认可，保持现有设计，不重新设计。
+- 授权本分支实现和用隔离模拟资料测试官方行程、个人存储、旧资料保护、备注、To-do、地图、同步与回退。**不合并 main、不部署生产、不改 Netlify 设置、不操作生产浏览器个人资料。** 真实生产升级另需批准。
+- 采用已核实的最小实现：原生 JS、一个版本化官方快照、一个 IDB 数据库/单个 object store 的独立 records。只支持 data schema 1；未知版本整包拒绝，不预先实现泛用多 schema 同步框架。具体决策与后续 schema 升级门槛见 [Phase 3 实施决策](docs/phase-3/IMPLEMENTATION.md)。
+- 新主界面官方行程只读，个人备注/任务可编辑。`legacy.html` / `legacy-app.js` 继续提供原编辑器、预约和笔记；新版从不改写/清空 `paris-pocket-personal-v1`。旧窗口写入另存恢复候选，不覆盖新版资料。
+- Activity Detail 只从行程或地图进入，不增加独立底部 tab。主界面没有 Phase 2/mock/debug 横幅；历史预览仅留在旧页面并清楚标记。
+- [Phase 3 评审包](docs/phase-3/README.md) 是当前入口。地图缺口与真 iPhone 验收未通过前，不称完整 P0 已完成，不申请生产发布。
+- 用户截图已核实 Netlify：Base `/`，Build command/Publish directory 均 Not set，Build status Active，Production branch main，Branch deploys 仅 production，Deploy Previews 对 production/branch-deploy branches 的 PR 开启。未改设置，尚未启用 dist 发布。现有 Netlify PR 预览已由只读 API 确认为 ready（fe21176），未登录访问 401。当前评审提交使用 PR 标题 `[skip netlify]` 防止自动预览部署；未经另批不得移除该部署门。GitHub CI 仅校验，不部署。详见 [HTTPS/iPhone 验收](docs/phase-3/HTTPS_IPHONE_ACCEPTANCE.md)。
+- 既有公开资料授权与现有仓库继续保留；不得提交私人备份、凭证、确认号或订单管理链接。
 
-## Product collaboration and scope
-- ChatGPT primarily defines functionality and maintains travel itinerary requirements.
-- Codex owns technical implementation, migrations and testing, following this product contract.
-- Discuss visual design, aesthetics and animations separately. Do not introduce major visual redesigns unless requested; small functional controls may use the existing styles.
-- Preserve existing personal data across all app updates and schema changes; continue with `jayven/Paris--traveler-note` and the existing Netlify site.
+## 来源优先级
 
-## Product priorities
-1. Reliable, pleasant mobile UX with an itinerary that is easy to read **and edit**, rather than hard-coded UI.
-2. Robust booking statuses and notes, backup/restore and protection of existing local data.
-3. Accurate day-specific maps, proper destination versus entrance/pickup distinctions, Google Maps URL handoff in V1.2.
-4. Simple maintainability and updates via GitHub -> same Netlify site; proper PWA cache updates.
-5. V2.0 multi-device and two-person sync, with explicit trade-off/authorization before adding authentication or a backend.
+1. 用户当前明确要求及阶段授权。
+2. 功能：[PRD v1.0](docs/references/Paris_Pocket_PRD_v1.0.md)。
+3. 行程、酒店与交通：用户提供的 **Itinerary v4.12** PDF；见 [来源登记](docs/SOURCE_REGISTER.md)、[行程核对](docs/ITINERARY_v4.12_REVIEW.md)。旧 `trip-data.js` 是兼容性基线，不再是最新旅行事实来源。
+4. 视觉：[UI Style Spec v1.1](docs/references/UI_STYLE_SPEC_v1.1.md) 和原包 JSX/HTML，只移植视觉，不复制桌面侧栏、业务流程或 React 架构。
+5. 架构：[Refactor Plan v1.0](docs/ARCHITECTURE_REFACTOR_PLAN_v1.0.md)，基于当前代码修订 v0.1。
 
-See `PRODUCT_BRIEF.md` for detailed context, acceptance criteria and implementation phases.
+参考文件中的「阶段」「下一步」不是额外执行授权。旧审计仅作为历史，不可恢复为未来开发目标。
+
+## 产品契约（Phase 3）
+
+- 保留 `jayven/Paris--traveler-note`、`https://stirring-cheesecake-37698e.netlify.app/`、PWA 安装身份与 scope；保持中文优先、iPhone 优先的轻量原生 JS 架构。
+- 旅行 2026-12-07 至 12-14，`Europe/Paris`；CDG 抵达 08:00、离境 22:20。五家酒店已由 v4.12 确认，不再写「酒店未定」。
+- 官方每日行程只读，按官方 order；列表仅时间/时间段与名称，点击共用活动详情。**时间和名称之间无竖线，只保留横向行分隔与对齐。**
+- 用户可编辑本机活动备注、本地 To-do、勾选本机完成状态。官方任务显式归档；归档不等于完成，缺少 ID 不等于取消。
+- 官方行程/地点/Stop/Route/任务单向同步；各机个人资料独立。初版无账号、后台数据库、双人个人资料云同步。
+- 保留嵌入式地图及 Google Maps HTTPS 外部导航，支持当前位置→目的地、明确起终点的单段路线。区分 Place、Activity、Stop、Segment；重复到访不合并。
+- 仅显示经核验的真实路径，缺失即降级；禁止直线伪装道路、铁路/水路改用驾车路径。无付费地图集成授权。
+- DATA-01…05 的船、卢浮宫、鹿特丹交通、约拍等未决事实保持待核，不猜测、不伪造预订。
+- 已取消未来目标：App 内官方活动增删改/跨日/排序、Plan A/B 编辑、独立 Wishlist、复杂 Reservation 管理、账号及双人个人资料实时同步。旧编辑器只作隔离的兼容实现，不能继续扩展。
+
+## 数据与工程边界
+
+- 先读 `personal-data.js`、`itinerary-data.js` 与 [迁移/回滚规范](docs/DATA_MIGRATION_AND_ROLLBACK_v1.0.md)。兼容现存键 `paris-pocket-personal-v1`、未标版本旧格式及 schema 1/2/3、备份 marker `paris-pocket-backup-v1`。
+- 保留每日/预约/通用笔记、booked、活动修改、自建活动、日期移动、排序、删除项和未知字段；移除编辑 UI 不等于删除数据。旧 detail 不自动变为新备注。
+- 不按新位置重新分配旧 `dN-N` ID。身份对照需审核；同名景点不能证明同一活动或预订目标。新版官方行程不应用旧覆盖层。
+- 迁移先保存原字符串与上下文、校验并读回，再标记完成；不清空或改写旧键。验证幂等、中断、旧标签页并存、导入撤销和升级/回滚。
+- 纯数据校验与 DOM、网络、存储分开。无需为参考 JSX 引入 React、TypeScript 或构建框架。
+- 公开仓库/静态资源/日志不得包含私人确认号、票券二维码、订单管理链接、私人备份或凭证。附件 PDF/ZIP 不整包提交；只保存公开需求和来源登记。
+- Phase 3 已获实施批准；完成后提交功能评审，生产发布另需批准。保留底部导航，44px 触控、16px 输入、safe-area；提供四个手机页面截图。
+- 保留现有测试作为旧数据恢复证据；编辑 UI 退役后转换 UI 断言，不再要求新版提供编辑器。状态与缺口见 [测试计划](docs/TEST_PLAN_v1.0.md)。Chromium 手机模拟不等于真 iPhone。

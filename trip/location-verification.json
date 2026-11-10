@@ -1,0 +1,1572 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-11-09",
+  "scope": "Public venue/address identification only; does not verify reservations, meeting points, live access, future hours or boarding piers.",
+  "attribution": "© OpenStreetMap contributors; OSM-derived coordinates are available under ODbL 1.0.",
+  "license": "https://opendatacommons.org/licenses/odbl/1-0/",
+  "places": [
+    {
+      "id": "place-cdg",
+      "verifiedStatus": "unverified",
+      "verificationNote": "CDG 航站楼尚未提供，不能用机场中心代替接送目标。",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-marquis",
+      "lat": 48.869789,
+      "lng": 2.320837,
+      "verifiedStatus": "verified",
+      "locationSemantics": "公开酒店地址附近；非前台或指定上客点。",
+      "navigationTarget": {
+        "lat": 48.869789,
+        "lng": 2.320837,
+        "label": "Marquis Faubourg Saint-Honoré（公开地址点）",
+        "kind": "address",
+        "verifiedStatus": "verified",
+        "note": "公开酒店地址附近；非前台或指定上客点。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/841987745",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=8+Rue+d+Anjou%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 place=house / 8, Rue d'Anjou, Quartier de la Madeleine, Paris 8e Arrondissement, Paris, Île-de-France, France métropolitaine, 75008, France；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.marquisfaubourgsainthonore.com/",
+          "checkedAt": "2026-11-09",
+          "note": "官网公开地址及 geo.position metadata；与 OSM 地址点相符。"
+        }
+      ]
+    },
+    {
+      "id": "place-ghpr",
+      "lat": 48.8631637,
+      "lng": 2.3378569,
+      "verifiedStatus": "verified",
+      "locationSemantics": "公开酒店地址附近；寄存和取包是两个 Stop，不能合并为同一次到访。",
+      "navigationTarget": {
+        "lat": 48.8631637,
+        "lng": 2.3378569,
+        "label": "Grand Hôtel du Palais Royal（公开地址点）",
+        "kind": "address",
+        "verifiedStatus": "verified",
+        "note": "公开酒店地址附近；寄存和取包是两个 Stop，不能合并为同一次到访。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/681624464",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=4+Rue+de+Valois%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 place=house / 4, Rue de Valois, Quartier du Palais Royal, Paris 1er Arrondissement, Paris, Île-de-France, France métropolitaine, 75001, France；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.grandhoteldupalaisroyal.com/en/",
+          "checkedAt": "2026-11-09",
+          "note": "官网地址 4 Rue de Valois；页面地图点 48.8631637,2.3378569，与 OSM 地址点相符。"
+        }
+      ]
+    },
+    {
+      "id": "place-waldorf",
+      "lat": 48.8114317,
+      "lng": 2.1210867,
+      "verifiedStatus": "verified",
+      "locationSemantics": "酒店场地参考点；非已核验前台、园区大门或出租车上客点。",
+      "navigationTarget": {
+        "lat": 48.8114317,
+        "lng": 2.1210867,
+        "label": "Waldorf Astoria Versailles – Trianon Palace（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "酒店场地参考点；非已核验前台、园区大门或出租车上客点。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/550833327",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Trianon+Palace%2C+Versailles%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=hotel / Waldorf Astoria Versailles - Trianon Palace；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.hilton.com/en/hotels/cdgtpwa-waldorf-astoria-versailles-trianon-palace/hotel-location/",
+          "checkedAt": "2026-11-09",
+          "note": "官网确认 1 Boulevard de la Reine；坐标为 OSM 酒店场地参考点，不是官网 GPS/指定大门。"
+        }
+      ]
+    },
+    {
+      "id": "place-grand-powers",
+      "lat": 48.8692228,
+      "lng": 2.3031298,
+      "verifiedStatus": "verified",
+      "locationSemantics": "官网酒店位置；非已核验前台或出租车上客点。",
+      "navigationTarget": {
+        "lat": 48.8692228,
+        "lng": 2.3031298,
+        "label": "Grand Powers（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "官网酒店位置；非已核验前台或出租车上客点。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.hotelgrandpowersparis.com/en/",
+          "checkedAt": "2026-11-09",
+          "note": "官网确认 52 Rue François 1er；坐标来自官网 JSON-LD geo。"
+        }
+      ]
+    },
+    {
+      "id": "place-maison-astor",
+      "lat": 48.8728474,
+      "lng": 2.3193054,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名酒店场地参考点；非已核验前台或出租车上客点。",
+      "navigationTarget": {
+        "lat": 48.8728474,
+        "lng": 2.3193054,
+        "label": "Maison Astor Paris（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名酒店场地参考点；非已核验前台或出租车上客点。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 8,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/289464150",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Maison+Astor%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=hotel / Maison Astor Paris, Curio Collection by Hilton；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://maisonastorparis.com/fr/page/contact-maison-astor-paris-curio-collection-by-hilton.23714.html",
+          "checkedAt": "2026-11-09",
+          "note": "官网确认 11 Rue d’Astorg；OSM 命名酒店点相符。"
+        }
+      ]
+    },
+    {
+      "id": "place-faubourg",
+      "lat": 48.8688713,
+      "lng": 2.3217186,
+      "verifiedStatus": "verified",
+      "locationSemantics": "24 Rue du Faubourg Saint-Honoré 公开地址点；不代表店内预约或队列入口。",
+      "navigationTarget": {
+        "lat": 48.8688713,
+        "lng": 2.3217186,
+        "label": "爱马仕福宝街总店（公开地址点）",
+        "kind": "address",
+        "verifiedStatus": "verified",
+        "note": "24 Rue du Faubourg Saint-Honoré 公开地址点；不代表店内预约或队列入口。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/842127566",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=24+Rue+du+Faubourg+Saint+Honore%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 place=house / 24, Rue du Faubourg Saint-Honoré, Quartier de la Madeleine, Paris 8e Arrondissement, Paris, Île-de-France, France métropolitaine, 75008, France；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.hermes.com/fr/fr/find-store/france/paris/hermes-paris-faubourg-saint-honore-DDB38Q6R/",
+          "checkedAt": "2026-11-09",
+          "note": "官网确认旗舰店公开地址 24 Rue du Faubourg Saint-Honoré。"
+        }
+      ]
+    },
+    {
+      "id": "place-madeleine",
+      "lat": 48.8701338,
+      "lng": 2.3245425,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8701338,
+        "lng": 2.3245425,
+        "label": "马德莱娜教堂（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/54180046",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Eglise+de+la+Madeleine%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 amenity=place_of_worship / Église de la Madeleine；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-vendome",
+      "lat": 48.8674634,
+      "lng": 2.3294281,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8674634,
+        "lng": 2.3294281,
+        "label": "旺多姆广场（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/54175774",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Place+Vendome%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 place=square / Place Vendôme；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-orangerie",
+      "lat": 48.8637655,
+      "lng": 2.3226602,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8637655,
+        "lng": 2.3226602,
+        "label": "橘园美术馆（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/54188996",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Musee+de+l+Orangerie%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=museum / Musée de l'Orangerie；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.musee-orangerie.fr/fr/visite/acces-horaires-tarifs",
+          "checkedAt": "2026-11-09",
+          "note": "官网确认位于杜乐丽花园靠塞纳河/协和广场一侧；定位为馆舍参考，不是票面入口核验。"
+        }
+      ]
+    },
+    {
+      "id": "place-tuileries",
+      "lat": 48.8635,
+      "lng": 2.3274,
+      "verifiedStatus": "verified",
+      "locationSemantics": "花园中心附近参考点，保留 48.8635,2.3274；不是圣诞市集入口或 Google 导航步行入口。",
+      "navigationTarget": {
+        "lat": 48.8635,
+        "lng": 2.3274,
+        "label": "杜乐丽花园（场地参考点）",
+        "kind": "area-reference",
+        "verifiedStatus": "verified",
+        "note": "花园中心附近参考点，保留 48.8635,2.3274；不是圣诞市集入口或 Google 导航步行入口。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/53820452",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Jardin+des+Tuileries%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 leisure=park / Jardin des Tuileries；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-concorde",
+      "lat": 48.8655715,
+      "lng": 2.3212248,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8655715,
+        "lng": 2.3212248,
+        "label": "协和广场（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/432819047",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Place+de+la+Concorde%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 leisure=square / Place de la Concorde；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-opera",
+      "lat": 48.8720289,
+      "lng": 2.3317851,
+      "verifiedStatus": "verified",
+      "locationSemantics": "地图为歌剧院建筑参考；参观入口在 Rue Auber / Rue Scribe 转角，以官网和现场标识为准。",
+      "navigationTarget": {
+        "address": "Entrée des visites du Palais Garnier, angle Rue Auber et Rue Scribe, 75009 Paris, France",
+        "label": "歌剧院参观入口：Rue Auber / Rue Scribe 转角",
+        "kind": "public-entrance-address",
+        "verifiedStatus": "verified",
+        "note": "地图为歌剧院建筑参考；参观入口在 Rue Auber / Rue Scribe 转角，以官网和现场标识为准。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/54667456",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Opera+Garnier%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 amenity=theatre / Opéra Garnier；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.operadeparis.fr/en/useful-information/frequently-asked-questions/visits",
+          "checkedAt": "2026-11-09",
+          "note": "官方参观入口为 Rue Auber 与 Rue Scribe 转角；建筑参考点不代替入口，导航使用公开入口地址。"
+        }
+      ]
+    },
+    {
+      "id": "place-lafayette",
+      "lat": 48.8736459,
+      "lng": 2.3321271,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8736459,
+        "lng": 2.3321271,
+        "label": "老佛爷百货（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/69224062",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Galeries+Lafayette+Haussmann%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 shop=department_store / Galeries Lafayette；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-printemps",
+      "lat": 48.873887,
+      "lng": 2.3290507,
+      "verifiedStatus": "verified",
+      "locationSemantics": "64 Boulevard Haussmann 商场参考；未使用同名停车场坐标。",
+      "navigationTarget": {
+        "lat": 48.873887,
+        "lng": 2.3290507,
+        "label": "巴黎春天百货（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "64 Boulevard Haussmann 商场参考；未使用同名停车场坐标。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/69224137",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=64+Boulevard+Haussmann%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 shop=department_store / Printemps；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.printemps.com/fr/fr/printemps-paris-haussmann",
+          "checkedAt": "2026-11-09",
+          "note": "官网确认公开地址 64 Boulevard Haussmann；匹配 OSM Printemps 商场，不使用停车场结果。"
+        }
+      ]
+    },
+    {
+      "id": "place-royal",
+      "lat": 48.8649078,
+      "lng": 2.3377594,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8649078,
+        "lng": 2.3377594,
+        "label": "皇家宫殿花园（场地参考点）",
+        "kind": "area-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/4263203",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Jardin+du+Palais+Royal%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 leisure=park / Jardin du Palais Royal；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-vivienne",
+      "lat": 48.8667277,
+      "lng": 2.339757,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8667277,
+        "lng": 2.339757,
+        "label": "薇薇安拱廊（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/relation/546789",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Galerie+Vivienne%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 shop=mall / Galerie Vivienne；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-abbesses",
+      "lat": 48.8843999,
+      "lng": 2.3383885,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8843999,
+        "lng": 2.3383885,
+        "label": "Abbesses（场地参考点）",
+        "kind": "area-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/relation/20129845",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Place+des+Abbesses%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 highway=pedestrian / Place des Abbesses；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-tertre",
+      "lat": 48.8865274,
+      "lng": 2.3408043,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8865274,
+        "lng": 2.3408043,
+        "label": "小丘广场（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/23369825",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Place+du+Tertre%2C+Paris%2C+France&format=jsonv2&addressdetails=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 highway=pedestrian / Place du Tertre；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-sacre",
+      "lat": 48.8868058,
+      "lng": 2.3430153,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8868058,
+        "lng": 2.3430153,
+        "label": "圣心堂（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/23762981",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Basilique+du+Sacre+Coeur%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 amenity=place_of_worship / Basilique du Sacré-Cœur；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-martyrs",
+      "lat": 48.8828702,
+      "lng": 2.3396922,
+      "verifiedStatus": "verified",
+      "locationSemantics": "Rue des Martyrs 北段参考位置；未指定餐厅或精确到访店铺。",
+      "navigationTarget": {
+        "lat": 48.8828702,
+        "lng": 2.3396922,
+        "label": "殉道者街（场地参考点）",
+        "kind": "area-reference",
+        "verifiedStatus": "verified",
+        "note": "Rue des Martyrs 北段参考位置；未指定餐厅或精确到访店铺。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/48674042",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Rue+des+Martyrs%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 highway=residential / Rue des Martyrs；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-sainte",
+      "lat": 48.8553933,
+      "lng": 2.3449941,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8553933,
+        "lng": 2.3449941,
+        "label": "圣礼拜堂（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/relation/3344870",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Sainte+Chapelle%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 amenity=place_of_worship / Sainte-Chapelle；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-notredame",
+      "lat": 48.8529371,
+      "lng": 2.3500501,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8529371,
+        "lng": 2.3500501,
+        "label": "巴黎圣母院（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/201611261",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Notre+Dame+de+Paris%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 amenity=place_of_worship / Cathédrale Notre-Dame de Paris；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-lux",
+      "lat": 48.8467228,
+      "lng": 2.3364148,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8467228,
+        "lng": 2.3364148,
+        "label": "卢森堡公园（场地参考点）",
+        "kind": "area-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/128206209",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Jardin+du+Luxembourg%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 leisure=park / Jardin du Luxembourg；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-orsay",
+      "lat": 48.8599179,
+      "lng": 2.3265849,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8599179,
+        "lng": 2.3265849,
+        "label": "奥赛博物馆（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/63178753",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Musee+d+Orsay%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=museum / Musée d'Orsay；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.musee-orsay.fr/fr/visite",
+          "checkedAt": "2026-11-09",
+          "note": "官网公开地址 Esplanade Valéry Giscard d’Estaing；地图为馆舍参考，Le Restaurant 无独立预约/入场承诺。"
+        }
+      ]
+    },
+    {
+      "id": "place-versailles",
+      "lat": 48.8044252,
+      "lng": 2.1202853,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8044252,
+        "lng": 2.1202853,
+        "label": "凡尔赛宫（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/relation/1149002",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Chateau+de+Versailles%2C+Versailles%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 building=palace / Château de Versailles；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-trianon",
+      "lat": 48.8149536,
+      "lng": 2.1050855,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8149536,
+        "lng": 2.1050855,
+        "label": "大特里亚农宫（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/relation/12426409",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Grand+Trianon%2C+Versailles%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=museum / Le Grand Trianon；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-hamlet",
+      "lat": 48.8192217,
+      "lng": 2.1127877,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8192217,
+        "lng": 2.1127877,
+        "label": "王后村庄（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/628276778",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Hameau+de+la+Reine%2C+Versailles%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 place=locality / Le Hameau de la Reine；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-arc",
+      "lat": 48.8737791,
+      "lng": 2.2950372,
+      "verifiedStatus": "verified",
+      "locationSemantics": "凯旋门建筑参考，仅外观计划；通行请走地下通道，不穿越环岛车道。",
+      "navigationTarget": {
+        "lat": 48.8737791,
+        "lng": 2.2950372,
+        "label": "凯旋门外观（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "凯旋门建筑参考，仅外观计划；通行请走地下通道，不穿越环岛车道。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/226413508",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Arc+de+Triomphe%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 building=triumphal_arch / Arc de Triomphe；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-champs",
+      "lat": 48.8696863,
+      "lng": 2.3079166,
+      "verifiedStatus": "verified",
+      "locationSemantics": "香榭丽舍大道中段参考点；并非指定店铺或约见位置。",
+      "navigationTarget": {
+        "lat": 48.8696863,
+        "lng": 2.3079166,
+        "label": "香榭丽舍大道（场地参考点）",
+        "kind": "area-reference",
+        "verifiedStatus": "verified",
+        "note": "香榭丽舍大道中段参考点；并非指定店铺或约见位置。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/1087767628",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Avenue+des+Champs+Elysees%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 highway=primary / Avenue des Champs-Élysées；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-george-v",
+      "lat": 48.8681258,
+      "lng": 2.3011679,
+      "verifiedStatus": "verified",
+      "locationSemantics": "Avenue George V 街段参考；François 1er 区域店铺未指定。",
+      "navigationTarget": {
+        "lat": 48.8681258,
+        "lng": 2.3011679,
+        "label": "George V／François 1er 购物区（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "Avenue George V 街段参考；François 1er 区域店铺未指定。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/4293992",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Avenue+George+V%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 highway=tertiary / Avenue George V；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-louvre",
+      "lat": 48.8609943,
+      "lng": 2.3358432,
+      "verifiedStatus": "verified",
+      "locationSemantics": "玻璃金字塔仅为卢浮宫馆区参考，绝非已确认中文私人导览集合点；DATA-02 待确认。",
+      "navigationTarget": {
+        "lat": 48.8609943,
+        "lng": 2.3358432,
+        "label": "卢浮宫（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "玻璃金字塔仅为卢浮宫馆区参考，绝非已确认中文私人导览集合点；DATA-02 待确认。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/375076234",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Pyramide+du+Louvre%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=attraction / Pyramide du Louvre；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.louvre.fr/en/visit/map-entrances-directions",
+          "checkedAt": "2026-11-09",
+          "note": "馆方入口说明；所示玻璃金字塔仅馆区参考，DATA-02 私人导览集合点待确认。"
+        }
+      ]
+    },
+    {
+      "id": "place-trocadero",
+      "lat": 48.8619948,
+      "lng": 2.2887325,
+      "verifiedStatus": "verified",
+      "locationSemantics": "观景平台参考，非已确认约拍集合点；DATA-04 待确认。",
+      "navigationTarget": {
+        "lat": 48.8619948,
+        "lng": 2.2887325,
+        "label": "特罗卡德罗／夏约宫（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "观景平台参考，非已确认约拍集合点；DATA-04 待确认。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/1697202142",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Esplanade+du+Trocadero%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=viewpoint / Esplanade du Trocadéro；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-eiffel",
+      "lat": 48.8582599,
+      "lng": 2.2945006,
+      "verifiedStatus": "verified",
+      "locationSemantics": "塔体位置参考，非票面入口或摄影集合点。",
+      "navigationTarget": {
+        "lat": 48.8582599,
+        "lng": 2.2945006,
+        "label": "埃菲尔铁塔（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "塔体位置参考，非票面入口或摄影集合点。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/5013364",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Tour+Eiffel%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 man_made=tower / Tour Eiffel；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-marais",
+      "lat": 48.8603823,
+      "lng": 2.360742,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8603823,
+        "lng": 2.360742,
+        "label": "玛黑区（场地参考点）",
+        "kind": "area-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/relation/15537328",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Le+Marais%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 place=suburb / Le Marais；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-vosges",
+      "lat": 48.8556308,
+      "lng": 2.3655346,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8556308,
+        "lng": 2.3655346,
+        "label": "孚日广场（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/14080384533",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Place+des+Vosges%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 place=square / Place des Vosges；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-hotel-de-ville",
+      "lat": 48.8564263,
+      "lng": 2.3525276,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8564263,
+        "lng": 2.3525276,
+        "label": "巴黎市政厅（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/relation/284089",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Hotel+de+Ville+de+Paris%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 amenity=townhall / Hôtel de ville；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-saint-louis",
+      "lat": 48.8516049,
+      "lng": 2.3567594,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8516049,
+        "lng": 2.3567594,
+        "label": "圣路易岛（场地参考点）",
+        "kind": "area-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/55285318",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Ile+Saint+Louis%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 place=islet / Île Saint-Louis；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-gare-nord",
+      "lat": 48.8804003,
+      "lng": 2.3549733,
+      "verifiedStatus": "verified",
+      "locationSemantics": "铁路车站参考点；不代替 Eurostar 的实际检票入口、站台或发车时刻。",
+      "navigationTarget": {
+        "lat": 48.8804003,
+        "lng": 2.3549733,
+        "label": "巴黎北站（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "铁路车站参考点；不代替 Eurostar 的实际检票入口、站台或发车时刻。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 4,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/3090733718",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Paris+Gare+du+Nord+railway+station%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 railway=station / Paris Gare du Nord；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-rotterdam-centraal",
+      "lat": 51.9253937,
+      "lng": 4.468719,
+      "verifiedStatus": "verified",
+      "locationSemantics": "铁路车站参考点；不代替实际检票入口、站台或发车时刻。",
+      "navigationTarget": {
+        "lat": 51.9253937,
+        "lng": 4.468719,
+        "label": "鹿特丹中央车站（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "铁路车站参考点；不代替实际检票入口、站台或发车时刻。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/1053173589",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Rotterdam+Centraal%2C+Rotterdam%2C+Netherlands&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 railway=stop / Rotterdam Centraal；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://mijntickets.nsinternational.nl/NL/Stations/Rotterdam-Centraal",
+          "checkedAt": "2026-11-09",
+          "note": "铁路运营商公开车站地址 Stationsplein 1；地图为铁路车站参考，不是地铁/公交站或指定站台。"
+        }
+      ]
+    },
+    {
+      "id": "place-erasmusbrug",
+      "verifiedStatus": "unverified",
+      "verificationNote": "Erasmusbrug 具体运营商/船班/登船点待 DATA-03 确认；不猜测码头坐标。",
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        }
+      ]
+    },
+    {
+      "id": "place-kinderdijk",
+      "lat": 51.8878175,
+      "lng": 4.6378776,
+      "verifiedStatus": "verified",
+      "locationSemantics": "官网参观地址 Nederwaard 1b；不是已核验的 WaterShuttle 登船点。",
+      "navigationTarget": {
+        "lat": 51.8878175,
+        "lng": 4.6378776,
+        "label": "Kinderdijk 风车群（公开地址点）",
+        "kind": "address",
+        "verifiedStatus": "verified",
+        "note": "官网参观地址 Nederwaard 1b；不是已核验的 WaterShuttle 登船点。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/7331638112",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Nederwaard+1b%2C+Kinderdijk%2C+Netherlands&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 place=house / 1b, Nederwaard, Kinderdijk, Molenlanden, Zuid-Holland, Nederland, 2961 AS, Nederland；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://kinderdijk.nl/en/contact/",
+          "checkedAt": "2026-11-09",
+          "note": "官网公开参观地址 Nederwaard 1b；导航为访客地址，不是 WaterShuttle 码头。"
+        }
+      ]
+    },
+    {
+      "id": "place-fenix",
+      "lat": 51.9020903,
+      "lng": 4.4843147,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 51.9020903,
+        "lng": 4.4843147,
+        "label": "Fenix 美术馆（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/274362142",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Fenix+museum%2C+Rotterdam%2C+Netherlands&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=museum / Fenix；不是按结果排序盲选。"
+        },
+        {
+          "source": "Venue / operator official website",
+          "url": "https://www.fenix.nl/nl/plan-je-bezoek/",
+          "checkedAt": "2026-11-09",
+          "note": "官网公开参观地址 Paul Nijghkade 5；地图为命名馆舍参考。"
+        }
+      ]
+    },
+    {
+      "id": "place-markthal",
+      "lat": 51.919771,
+      "lng": 4.4862592,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 51.919771,
+        "lng": 4.4862592,
+        "label": "Markthal 市场（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/4355663292",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Markthal%2C+Rotterdam%2C+Netherlands&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=attraction / Markthal；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-cube-houses",
+      "lat": 51.9203941,
+      "lng": 4.4901272,
+      "verifiedStatus": "verified",
+      "locationSemantics": "立方体房屋群外观参考；未使用 Kijk Kubus 收费室内展馆作为预约目标。",
+      "navigationTarget": {
+        "lat": 51.9203941,
+        "lng": 4.4901272,
+        "label": "立方体房屋外观（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "立方体房屋群外观参考；未使用 Kijk Kubus 收费室内展馆作为预约目标。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/34051054",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Kubuswoningen%2C+Rotterdam%2C+Netherlands&format=jsonv2&addressdetails=1&extratags=1&limit=4",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 tourism=attraction / Kubuswoningen；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-saint-germain",
+      "lat": 48.8539677,
+      "lng": 2.3345177,
+      "verifiedStatus": "verified",
+      "locationSemantics": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。",
+      "navigationTarget": {
+        "lat": 48.8539677,
+        "lng": 2.3345177,
+        "label": "圣日耳曼街区（场地参考点）",
+        "kind": "area-reference",
+        "verifiedStatus": "verified",
+        "note": "命名场地/街区参考点；不是已核验票面入口、集合点或营业/预约状态。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "legacy trip-data.js",
+          "note": "既有参考坐标；不是入口/集合点核验。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/way/62287173",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Eglise+Saint+Germain+des+Pres%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 amenity=place_of_worship / Église Saint-Germain des Prés；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-bon-marche",
+      "lat": 48.8511832,
+      "lng": 2.3243945,
+      "verifiedStatus": "verified",
+      "locationSemantics": "百货馆舍参考；未使用同名临近公交站。",
+      "navigationTarget": {
+        "lat": 48.8511832,
+        "lng": 2.3243945,
+        "label": "Le Bon Marché（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "百货馆舍参考；未使用同名临近公交站。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/relation/10166422",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=Le+Bon+Marche%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 shop=department_store / Le Bon Marché；不是按结果排序盲选。"
+        }
+      ]
+    },
+    {
+      "id": "place-grande-epicerie",
+      "lat": 48.850004,
+      "lng": 2.3232825,
+      "verifiedStatus": "verified",
+      "locationSemantics": "38 Rue de Sèvres 商店参考。",
+      "navigationTarget": {
+        "lat": 48.850004,
+        "lng": 2.3232825,
+        "label": "La Grande Épicerie（场地参考点）",
+        "kind": "venue-reference",
+        "verifiedStatus": "verified",
+        "note": "38 Rue de Sèvres 商店参考。"
+      },
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 5,
+          "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
+        },
+        {
+          "source": "OpenStreetMap / Nominatim one-time location review",
+          "url": "https://www.openstreetmap.org/node/5273855835",
+          "queryUrl": "https://nominatim.openstreetmap.org/search?q=La+Grande+Epicerie+de+Paris%2C+Paris%2C+France&format=jsonv2&addressdetails=1&extratags=1&limit=3",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "note": "核对对象 shop=supermarket / La Grande Épicerie de Paris；不是按结果排序盲选。"
+        }
+      ]
+    }
+  ]
+}

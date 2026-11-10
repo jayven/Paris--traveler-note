@@ -1,0 +1,23 @@
+{
+  "commit": "7837a823da40cb044625bbf265322f1cba02f879",
+  "dateBackground": "rgb(13, 13, 13)",
+  "viewport": {
+    "width": 390,
+    "height": 844
+  },
+  "captureSource": "Actual unmodified 7837a82 stylesheet captured before refinement",
+  "matchedRepeatableComparisons": {
+    "daily-itinerary-before-390.png": {
+      "identicalBytes": true,
+      "sha256": "0b1eb8aaf406af4317488743f0393becad1e5aea1ae3c0a04a486c23e6c0836d"
+    },
+    "todo-before-390.png": {
+      "identicalBytes": true,
+      "sha256": "b1d3b567f2a640be87d934a8ebb6ff2fdc8f1962f917673b5ee7e74d13690bb2"
+    },
+    "daily-map-before-390.png": {
+      "identicalBytes": true,
+      "sha256": "17b5a5d97f9791ec3012c820d843ee242e2c7cb5937e1a4fade2f5553aa2fbb0"
+    }
+  }
+}

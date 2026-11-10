@@ -1,0 +1,49 @@
+name: PR validation
+
+on:
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pr-validation-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Check out the review candidate and release history
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7
+        with:
+          fetch-depth: 0
+          persist-credentials: false
+      - name: Use Node.js 22
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7
+        with:
+          node-version: '22'
+          package-manager-cache: false
+      - name: Install locked test dependencies
+        run: npm ci --ignore-scripts
+      - name: Validate official snapshot and retained immutable releases
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.sha }}
+        run: |
+          if [ -n "$BASE_REF" ]; then
+            node scripts/check-releases.cjs --base-ref "$BASE_REF"
+          else
+            node scripts/check-releases.cjs
+          fi
+      - name: Verify committed official artifacts match their sources
+        run: |
+          npm run build:trip
+          git diff --exit-code -- trip/
+          test -z "$(git ls-files --others --exclude-standard -- trip/)"
+      - name: Run Node regressions
+        run: npm test
+      - name: Verify public build output
+        run: npm run build:site

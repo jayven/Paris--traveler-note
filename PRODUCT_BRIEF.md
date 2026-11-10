@@ -1,114 +1,67 @@
-# Paris Pocket / 巴黎手帐 — Codex Handoff Brief
+# Paris Pocket / 巴黎手帐 — 当前产品简报
 
-## 1. Goal
-Turn the current working travel-itinerary prototype into a trustworthy, polished, iPhone-first **personal travel app**. Preserve the content, existing website address and user data, and improve the app through small reviewable iterations. This is NOT a request to generate a separate redesign or throw away the existing code.
+更新：2026-11-09。本简报取代旧 V1.1 编辑器/V1.3 预约管理/V2.0 双人云同步路线图。完整功能与 FR/AC 编号以 [PRD v1.0](docs/references/Paris_Pocket_PRD_v1.0.md) 为准。
 
-Live URL (already deployed by user): https://stirring-cheesecake-37698e.netlify.app/
-Current package: this repository, originally created as a static PWA.
+## 目标与当前阶段
 
-## 2. Users and trip constraints
-- Two adults, first trip to Paris, December 7–14, 2026 (7 nights / 8 calendar days).
-- Land at CDG at 08:00 on Monday 7 December; depart CDG at 22:20 on Monday 14 December.
-- Mainly taxis, except severe traffic, with walking within compact sightseeing areas.
-- Equal interest in classic sights and Paris neighborhood life, cafes, restaurants and shopping.
-- Versailles is non-negotiable; Louvre should allow **2–3 hours with a guided group plus 1–2 hours additional self-guided viewing**, for about 4–5 hours total.
-- Hotel is undecided. Prioritize flexibility for Hilton Honors / Hyatt free-night certificates, points, and Amex Fine Hotels + Resorts.
-- Winter sunset is around 17:00. Avoid packing the day to exhaustion. Museum closure days and opening hours matter. Booking/availability information can change and should carry a last-checked date/source where factual claims are made.
+把已基本敲定的旅行做成可靠的 iPhone PWA：看每日时间线 → 活动详情与本机备注 → 每日实际动线 → Google Maps 导航 → To-do → 同步维护者发布的新官方行程。继续使用现有 GitHub 仓库、Netlify origin 和主屏幕安装身份。
 
-## 3. Planned itinerary — editable, not booked
-| Date | Theme | Key stops |
-| --- | --- | --- |
-| Mon 12/7 | Arrival / Christmas in Paris | Place Vendôme, Rue Saint-Honoré, Tuileries Christmas market |
-| Tue 12/8 | Historic center / Left Bank | Sainte-Chapelle, Notre-Dame outside/conditional interior, Saint-Germain-des-Prés, Luxembourg Garden |
-| Wed 12/9 | Louvre + covered passages | Louvre guided tour & self-paced visit, Palais Royal, Galerie Vivienne |
-| Thu 12/10 | Impressionists + Eiffel | Musée d'Orsay, Trocadéro, Eiffel Tower, Seine cruise |
-| Fri 12/11 | Versailles all day | Château de Versailles palace, gardens if weather allows, Grand/Petit Trianon |
-| Sat 12/12 | Montmartre and holiday shopping | Sacré-Cœur, Place du Tertre, Palais Garnier, Galeries Lafayette |
-| Sun 12/13 | Le Marais + panorama | Place des Vosges, shops/cafes, Arc de Triomphe, Champs-Élysées |
-| Mon 12/14 | Flexible final day | Brunch/shopping; hotel checkout, taxi to CDG, 22:20 flight |
+Phase 1、Phase 2 已评审，用户已批准开始 Phase 3。本分支现整合官方 v4.12、IDB 个人资料、备注/To-do、地图与同步；旧编辑/预约/笔记/备份完整保留在独立旧页面。所有迁移/升级测试使用隔离模拟资料；不合并 main、不部署生产、不操作生产个人资料。
 
-The `trip-data.js` source contains tentative hourly schedules, detailed place records, booking priorities, and notes. Treat it as the source of truth unless the user supplies an update. Do not invent reservations or flights beyond the timing details above.
+`6ab2762` 的 `#58443E` 棕色选中态已获视觉批准，冻结当前设计并保留 MapLibre / OpenFreeMap Positron。用户已授权独立 HTTPS 测试预览，使用现有站点、校验后的 dist 白名单，不改共享/生产设置；[当前预览验收包](docs/phase-3/https-preview/README.md) 记录实际部署与待验项目。此预览不构成生产发布或生产旧资料迁移批准。
 
-### Known location issue to preserve as fixed
-The earlier itinerary map wrongly plotted Tuileries Garden. It was corrected to approx. 48.8635, 2.3274 (garden center). Maintain distinct location types for point-of-interest, attraction entrance, meeting spot, market entrance, and taxi pickup when available. If the precise entrance is unknown, clearly label it as unverified rather than guessing.
+## 来源与实现状态
 
-### Important visitor caveats
-- Louvre: After leaving, re-entry on the same ticket generally is not allowed; any mid-day cafe break should be **inside** if continuing the visit.
-- Notre-Dame on 12/8 may have holiday-specific religious services and altered access; interior is tentative.
-- Versailles gardens in winter have a different appeal and possible closures; visiting the palace and Trianon remains a priority.
-- Arrival-day early check-in is not confirmed. Departure-day plan should allow ample airport time and avoid nonrefundable late-afternoon activities.
+- 功能：PRD v1.0；旅行：v4.12 PDF（2026-11-04）；外观：UI Reference Package v1.1；架构：[经当前代码修订的 v1.0](docs/ARCHITECTURE_REFACTOR_PLAN_v1.0.md)。见 [来源登记](docs/SOURCE_REGISTER.md)。
+- 当前 main 是原生 JS 静态 PWA，具备本机活动编辑、schema 3 存储、备份兼容、Google Maps 查看/步行/驾车、Leaflet 图钉、手动 PWA 更新和离线 shell。
+- 当前功能分支主地图已改为固定 MapLibre GL JS 6.17.0 + OpenFreeMap Positron；只换渲染与底图，Liberty 仅比较截图，旧兼容页维持 Leaflet。SDK 按需加载，故障保留列表/详情/Google 导航；不增加实时路由或离线瓦片下载。见 [地图评审](docs/phase-3/map-renderer/README.md)。
+- 当前功能分支已有独立活动备注、统一 To-do、Stop/Segment、版本化官方快照与一键同步。官方 v4.12.1 为 62 活动/76 Stop/48 Place/68 Segment/14 任务；28 段有核验道路几何，其余明确降级。旧行程/编辑/预约/笔记在 `legacy.html` 继续可用，未套用到新官方活动。尚未合并或上线。
+- 地图缺口按用途验收，不以 68/68 道路几何为目标：24 walking 已全有几何；8 driving 中4段待端点；32 unknown、2 rail、2 boat 按 [缺口审计](docs/phase-3/ROUTE_GAP_AUDIT.md) 分类，事实未决不自动选交通。
+- 审计差距见 [AUDIT.md](AUDIT.md)。目标需求不能写成已实现或上线。
 
-## 4. Existing app architecture
-The repository includes:
-- `index.html`: entry markup / navigation;
-- `styles.css`: layout and responsive styles;
-- `app.js`: itinerary rendering, tabs, booking checkboxes, local notes, Leaflet map, import/export;
-- `trip-data.js`: canonical itinerary and coordinates, exposed as `window.PARIS_TRIP`;
-- `personal-data.js`: validated personal storage, compatible migration and backup/restore;
-- `itinerary-data.js` (V1.1): pure activity projection and management operations using stable IDs;
-- `manifest.webmanifest`: home-screen PWA metadata;
-- `sw.js`: offline cache;
-- `assets/`: touch icons.
+## 当前 P0 产品契约
 
-Storage: localStorage key `paris-pocket-personal-v1`. Existing users may have real notes and booking checkboxes on the current production origin. **Never silently lose or reset these when updating the code.**
+| 模块 | 要求 |
+| --- | --- |
+| 全程概览/每日行程 | 只读，按官方 order，保留酒店、取包、换乘与离境节点。列表仅时间与名称，点击看详情 |
+| 统一详情 | 名称/日期/完整时间、说明、地址、官方预约状态、公开链接、导航、关联任务、本机备注；无地点隐藏导航 |
+| 活动备注 | 按稳定 activityId 自动保存、离线可用；官方改名/改日仍保留，删除后进入可恢复孤立记录 |
+| To-do | 官方与本地统一；本地可增删改。名称必填，默认中优先级，截止日/链接/备注/关联可选；截止日不等于参观日期 |
+| 完成/归档/排序 | 默认未完成，完成/归档分开。逾期按截止日；其余高→中→低，同优先级截止日升序、无日期置后。同目标保留 ID，变目标新 ID，取消需显式归档 |
+| 地图 | 真实底图，全部明确 Stop + 已核验道路路段，可筛选/隐藏；不改顺序，Place 与重复到访分开 |
+| 导航 | Google Maps 默认，当前位置→目的地和上一 Stop→当前 Stop；步行/驾车单段选择，铁路/水路不伪装驾车 |
+| 官方同步 | 打开检查、一键同步；appVersion/tripDataVersion 分开；全量校验后原子提交，失败保留最近成功快照 |
+| 离线/备份 | 文字、任务、本机记录离线可用，不承诺离线完整底图；旧资料安全迁移，导入前预览/确认/可回退，保留原始旧键 |
 
-## 5. Agreed development roadmap
+两台手机共享官方内容，各自保存备注、本地任务和完成状态。初版无账号/个人云同步/后端；取消 App 内官方活动编辑、Plan A/B 编辑器、独立 Wishlist、复杂预订管理、自研实时导航和实时交通。
 
-### V1.1 — Editable itinerary (current implementation milestone)
-- Add, edit, delete and reorder activities directly on an iPhone.
-- Edit activity titles, dates, start/end times and descriptions. Date changes move activities between trip days; this does not change the agreed December 7–14 trip dates or confirmed flight facts.
-- Use touch-friendly reorder controls that do not depend on drag-and-drop; keep user-selected order rather than silently sorting by time.
-- Preserve the base itinerary as a recoverable reference. Keep stable IDs for original and custom activities, preserve linked booking notes/states when moving or deleting, and make deletion recoverable with confirmation and restore.
-- Persist all activity operations safely across reloads and offline use. Validate migrations and imports; reject failed saves and stale writes without claiming success or overwriting existing data.
-- Backups must include custom activities, edits/date moves, deleted IDs and per-day order, and remain compatible with original notes/booking backups and the earlier time/description editor.
-- Keep the existing visual design. Add only the controls needed for this functionality.
+## v4.12 旅行基线
 
-### V1.2 — Maps and navigation
-- Keep an embedded itinerary map in Paris Pocket, including day filters that reflect edited dates, deletion and order.
-- Google Maps is the default external location viewing and directions provider; replace legacy Apple Maps defaults with Google Maps URLs.
-- Provide walking and driving navigation options. Use verified coordinates, addresses or Google Place IDs to prevent wrong destinations; retain provenance and distinguish venue centers, entrances, meeting spots and taxi pickups.
-- Use app-compatible HTTPS Google Maps URLs so iPhone can open the installed app when supported, with a browser fallback. Actual handoff depends on the device and app availability and must be tested on iPhone.
-- No paid Google Maps API integration unless necessary and approved. The embedded map can remain Leaflet; URL navigation does not authorize adding a paid Google SDK, keys or services.
-- Provide clear network/failure states. Any route-time estimate must have a real source or be explicitly identified as an estimate; never invent durations.
+两人、2026-12-07 至 12-14，时间 `Europe/Paris`。CDG 抵达 08:00，离境 22:20。以下来自用户文件，不代表对外重新核验开放时间或票务。
 
-### V1.3 — Hotel, restaurant and booking management
-- Manage candidate/selected hotels and restaurants, addresses, user notes and related activities.
-- Manage booking details, links and planned / reserved / confirmed / canceled statuses. Distinguish a tentative plan from an actual booking.
-- Preserve existing checkbox states and personal notes through a tested migration; do not infer confirmation from itinerary time or a venue URL.
-- Venue hours, seasonal availability and reservation requirements need official-source verification and a last-checked date.
+| 日期 | 主线 |
+| --- | --- |
+| 12/7 周一 | CDG → Marquis 寄存/入住；福宝街/马德莱娜/旺多姆；橘园；杜乐丽/协和；夜游船首选 |
+| 12/8 周二 | 歌剧院/百货；Marquis 取包换 GHPR；皇家宫殿/可选薇薇安；蒙马特 |
+| 12/9 周三 | GHPR 退房寄存；圣礼拜堂/圣母院/卢森堡；奥赛午餐与参观；回 GHPR 取包赴 Waldorf；不去卢浮宫 |
+| 12/10 周四 | Waldorf 寄存；凡尔赛宫/花园/特里亚农；Waldorf 取包赴 Grand Powers；仅周一未乘船时补游 |
+| 12/11 周五 | 凯旋门外观、购物、回 Grand Powers 放购物袋；下午中文私人卢浮宫导览，时段待核 |
+| 12/12 周六 | 特罗卡德罗/铁塔约拍待确认；回 Grand Powers 取包换 Maison Astor；玛黑/孚日广场 |
+| 12/13 周日 | 鹿特丹、Kinderdijk、Fenix 等目标计划，交通待核；Maison Astor 连住 |
+| 12/14 周一 | Maison Astor 退房寄存；圣日耳曼/Le Bon Marché；回店取包，目标 17:00–17:30 离市赴 CDG |
 
-### V2.0 — Multi-device and two-person synchronization
-- Support shared planning for two travelers across multiple devices.
-- Propose an architecture, conflict handling, privacy and cost before implementing authentication or cloud persistence. Local storage and backups remain the V1 baseline.
+已确认酒店夜晚：Marquis 12/7、GHPR 12/8、Waldorf Versailles 12/9、Grand Powers 12/10–11、Maison Astor 12/12–13。提前入住不因此确认。
 
-### Continuous engineering requirements
-- Maintain offline reliability, accessible controls, stable IDs and understandable vanilla architecture.
-- Keep automated tests for data validation, migrations/backups, activity operations and core navigation; test/document PWA updates and real iPhone acceptance.
-- Continue using GitHub `jayven/Paris--traveler-note` and the existing Netlify site. Review through a branch/PR when available; no production deployment, production-branch push/merge or Netlify settings change without approval.
+源文件待核：DATA-01 船公司/产品/码头/时间矛盾，周一首选周四后备且只乘一次；DATA-02 卢浮宫 13:30–16:30 与 16:30–20:00 冲突；DATA-03 鹿特丹车船为目标班次；DATA-04 约拍未确认、奥赛午餐不保证座位；DATA-05 未决信息影响路径。见 [逐日与冲突登记](docs/ITINERARY_v4.12_REVIEW.md)。
 
-## 6. UX guidance
-- Refined Paris travel journal, but functional over decorative: readable Chinese typography, strong hierarchy, good contrast, tap targets >=44px, predictable navigation.
-- A tabbed experience for Daily Schedule, Map, Bookings and Trip Details is fine. Consider whether Hotel and Restaurants deserve a dedicated view after user needs are clearer.
-- User should be able to see what to do now, what's booked, how to get there, and what needs a decision in just a few taps.
-- Discuss visual design, aesthetics and animations separately. Do not introduce major visual redesigns unless requested. Preserve the current visual language for functional additions.
-- Do not overload with animated splash screens, huge photo assets, or unnecessary account signup.
+## 视觉与阶段验收
 
-## 7. V1.1 acceptance criteria
-1. App still works at common iPhone viewport sizes and desktop.
-2. Existing itinerary data and map points remain correct.
-3. Existing localStorage booking statuses and notes persist after upgrade.
-4. A user can add/edit/delete/restore/reorder activities and move them between trip dates, with titles, times and descriptions persisting across reloads and offline use, and the full edited itinerary restorable from backup. Linked booking states and notes keep their stable association.
-5. Original storage and earlier backups migrate without loss. Invalid imports, storage failures and stale-window writes cannot silently replace saved data.
-6. A failed network fetch does not make itinerary content disappear; map failure produces a usable fallback.
-7. PWA updates are tested/documented; iPhone "Add to Home Screen" still works.
-8. Source changes can be reviewed through Git and deployed to existing Netlify origin without a new URL.
-9. Provide a short test report and note any open questions; do not claim unverified tests passed.
+采用 v1.1 淡桃/粉/蓝/薄荷色、1px 近黑边框、方卡、少量硬边阴影、清楚字重、绿色按钮。保留手机底部导航，不复制桌面侧栏或因 JSX 换 React。**每日时间与名称间无竖线，仅横线分行。** 输入至少 16px、触控至少 44px、适配 safe-area。
 
-## 8. Product collaboration and development process
-- ChatGPT primarily helps define functionality and maintain travel itinerary requirements.
-- Codex owns technical implementation and testing, including persistence, migrations, offline behavior and release verification.
-- Visual design, aesthetics and animations are separate discussions; no major redesign without a request.
-- First: read the existing source and this brief. Summarize architecture and prioritize 3–5 improvements.
-- Then: implement a **small, testable first milestone**, verify locally, and explain changed files and any risks.
-- Avoid broad unsupported redesigns. Propose the smallest useful implementation and make a concrete code change.
-- Do not connect Netlify or publish into production without user authorization and required account access.
+Phase 3 已提供真实功能的 390px 四屏截图并检查 320/375/430px，见 [当前评审包](docs/phase-3/README.md)。旧 [Phase 2 预览](docs/phase-2/README.md) 保留为历史设计评审。主界面不再显示预览横幅或模拟保存控件。
+
+最终按 PRD AC-01…17 验收；全部 P0 包括真实动线，不能凭图钉或部分页面称完成。先用模拟资料验证迁移/回滚，再验收真实 iPhone Safari/主屏幕/键盘/VoiceOver/Google Maps。生产合并发布另需批准。
+
+Phase 3 已完成最小可靠方案复核：单个 IDB store，分别保存个人记录、current/previous 官方快照和导入检查点；不引入后端/框架/泛用多 schema 层。未知 data schema 拒绝且保留当前兼容快照；未来 schema 升级必须新增兼容与真实旧客户端测试，见 [实施决策](docs/phase-3/IMPLEMENTATION.md)。
+
+底部导航：行程、地图、待办、旅行卡片。详情从活动行/地图打开；阶段/debug 标识仅保留在隔离旧预览。Phase 3 功能评审、HTTPS 真机验收与生产批准分别进行。
