@@ -131,7 +131,7 @@ async function runChromium(){
   await page.locator('[data-day="2"]').click();await mapReady(page);current=await assertRoutes(page,2);
   assert.equal(current.layers.length,2,'a day with both modes renders both styles');
   await page.locator('[data-map-filter=hotel]').click();await mapReady(page);await assertRoutes(page,2,'hotel');
-  assert.equal(await page.locator('.map-stop-list .location-row').count(),3);
+  assert.equal(await page.locator('.map-stop-list .location-row').count(),4);
   const marker=page.locator('.paris-stop-marker[data-place-id="place-ghpr"]');await marker.click();
   const visits=page.locator('.paris-map-popup [data-map-activity-id]');assert.equal(await visits.count(),2,'one hotel marker exposes both distinct visits');
   const stopIds=await visits.evaluateAll(nodes=>nodes.map(n=>n.dataset.stopId));assert.equal(new Set(stopIds).size,2);assert.ok(stopIds.includes('stop-ghpr-luggage'));

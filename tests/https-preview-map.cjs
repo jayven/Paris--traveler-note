@@ -38,9 +38,9 @@ async function closePopup(page){const close=page.locator('#daily-map .maplibregl
   const beforePersonal=await page.evaluate(async()=>{const store=await ParisStore.open();try{return (await store.read()).personal;}finally{store.close();}});
   await page.evaluate(async()=>{const sdk=await ParisMapRenderer.loadLibrary();window.__previewMaps=[];const add=sdk.Map.prototype.addSource;sdk.Map.prototype.addSource=function(...args){if(!window.__previewMaps.includes(this))window.__previewMaps.push(this);return add.apply(this,args);};});
   await nav(page,'map');await page.locator('[data-day="2"]').click();await ready(page);
-  assert.equal(stops.length,9);
-  assert.deepEqual(await page.locator('.map-stop-list .location-row').evaluateAll(nodes=>nodes.map(n=>n.dataset.stopId)),stops.map(s=>s.id),'all nine visits remain in order below the overview');
-  assert.equal(await page.locator('.paris-stop-marker').count(),6,'six exact locations retain nine distinct visits');
+  assert.equal(stops.length,10);
+  assert.deepEqual(await page.locator('.map-stop-list .location-row').evaluateAll(nodes=>nodes.map(n=>n.dataset.stopId)),stops.map(s=>s.id),'all ten visits remain in order below the overview');
+  assert.equal(await page.locator('.paris-stop-marker').count(),8,'eight exact locations retain ten distinct visits');
   const initial=await page.evaluate(()=>{const m=window.__previewMaps.find(m=>m.getContainer().isConnected);return {zoom:m.getZoom(),center:m.getCenter().toArray(),source:m.getStyle().sources['paris-itinerary-routes'].data};});
   const geometryById=new Map(snapshot.segments.filter(s=>s.dayId===day.id&&s.geometry&&s.verifiedStatus==='verified'&&['walking','driving'].includes(s.mode)).map(s=>[s.id,s.geometry]));
   assert.equal(initial.source.features.length,geometryById.size);
@@ -98,8 +98,8 @@ async function closePopup(page){const close=page.locator('#daily-map .maplibregl
   assert.deepEqual(await page.locator('.map-stop-list .location-row').evaluateAll(nodes=>nodes.map(n=>n.dataset.stopId)),stops.map(s=>s.id));
   assert.equal(await page.evaluate(()=>JSON.stringify(PARIS_BOOTSTRAP)),beforeTrip);
   assert.deepEqual(await page.evaluate(async()=>{const store=await ParisStore.open();try{return (await store.read()).personal;}finally{store.close();}}),beforePersonal);
-  assert.deepEqual(report.pageErrors,[]);report.chromium=await browser.version();report.exactGeometryPreserved=true;report.officialAndPersonalDataUnchanged=true;report.allNineStopsAccessible=true;report.centralParisZoomPopups=true;
+  assert.deepEqual(report.pageErrors,[]);report.chromium=await browser.version();report.exactGeometryPreserved=true;report.officialAndPersonalDataUnchanged=true;report.allStopsAccessible=true;report.centralParisZoomPopups=true;
   await fs.writeFile(path.join(output,'dec9-map-results.json'),JSON.stringify(report,null,2)+'\n');
-  await context.close();console.log('PASS Dec9: all9 ordered Stop list/details/focused popups, GHPR two visits, six exact locations, real stored geometry, emulated pinch/pan, central Paris zoom popups, switching days and data preservation. Physical iPhone remains pending.');
+  await context.close();console.log('PASS Dec9: all10 ordered Stop list/details/focused popups, GHPR two visits, eight exact locations, real stored geometry, emulated pinch/pan, central Paris zoom popups, switching days and data preservation. Physical iPhone remains pending.');
  }finally{await browser.close();}
 })().catch(error=>{console.error(error);process.exit(1);});

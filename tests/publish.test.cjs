@@ -41,7 +41,7 @@ async function serve(t,root){
 test('public build keeps the fixed allowlist, complete shell and all retained immutable releases',async t=>{
  const {root,dest,data}=await fixture(t);
  await fs.mkdir(path.join(root,'docs'),{recursive:true});await fs.writeFile(path.join(root,'docs/synthetic-private-backup.json'),'not a public build input');await fs.writeFile(path.join(root,'.synthetic-private.json'),'not a public build input');
- await release(root,data,2);
+ await release(root,data,data.releaseSequence+1);
  const result=await buildSite({root});assert.equal(result.releaseCount,2);
  const files=await filesIn(dest);
  assert.ok(!files.some(name=>/^(docs|tests|scripts|node_modules)\//.test(name)));
@@ -56,18 +56,18 @@ test('three sequential deployments keep old URLs downloadable and a higher-seque
  const {root,dest,manifest,data}=await fixture(t),initialText=await fs.readFile(path.join(root,manifest.snapshotUrl.slice(2)),'utf8');
  await buildSite({root});const get=await serve(t,dest);
  const old={data,manifest,text:initialText},releases=[old];
- for(const sequence of [2,3]){
+ for(const sequence of [manifest.releaseSequence+1,manifest.releaseSequence+2]){
   const changed=clone(data);changed.activities[0].title=`Synthetic review revision ${sequence}`;
   const next=await release(root,changed,sequence);releases.push(next);
   const built=await buildSite({root});assert.equal(built.releaseCount,releases.length);
   for(const previous of releases){const fetched=await get('/'+previous.manifest.snapshotUrl.slice(2));assert.equal(fetched.status,200);assert.equal(fetched.text,previous.text,'old immutable URLs remain byte-for-byte unchanged');Official.validate(JSON.parse(fetched.text));}
  }
  // A remote rollback is a new publication sequence carrying reviewed prior content.
- const rollback=await release(root,old.data,4);releases.push(rollback);await buildSite({root});
+ const rollback=await release(root,old.data,manifest.releaseSequence+3);releases.push(rollback);await buildSite({root});
  global.ParisOfficial=Official;const Store=require('../local-store.js');
  const downloaded=await get('/'+rollback.manifest.snapshotUrl.slice(2));
  const checked=await Store.checkEnvelope({manifest:rollback.manifest,text:downloaded.text},releases[2].data);
- assert.equal(checked.data.releaseSequence,4);assert.equal(checked.data.activities[0].title,old.data.activities[0].title);
+ assert.equal(checked.data.releaseSequence,manifest.releaseSequence+3);assert.equal(checked.data.activities[0].title,old.data.activities[0].title);
  assert.equal((await get('/'+old.manifest.snapshotUrl.slice(2))).text,initialText,'a legacy client with the original manifest can still fetch its release after rollback');
  assert.deepEqual((await filesIn(dest)).filter(file=>file.startsWith('trip/releases/')),releases.map(item=>item.manifest.snapshotUrl.slice(2)).sort());
 });
@@ -75,7 +75,7 @@ test('three sequential deployments keep old URLs downloadable and a higher-seque
 test('missing active release, tampered historical bytes and inconsistent bootstrap fail before replacing dist',async t=>{
  for(const scenario of ['missing-active','tampered-history','bootstrap-mismatch','manifest-version-mismatch']){
   await t.test(scenario,async t=>{
-   const {root,dest,manifest,data}=await fixture(t);await release(root,data,2);await buildSite({root});
+   const {root,dest,manifest,data}=await fixture(t);await release(root,data,data.releaseSequence+1);await buildSite({root});
    const marker=path.join(dest,'last-successful-build.txt');await fs.writeFile(marker,'keep this working output');
    if(scenario==='missing-active'){const active=JSON.parse(await fs.readFile(path.join(root,'trip/manifest.json'),'utf8'));await fs.rm(path.join(root,active.snapshotUrl.slice(2)));}
    if(scenario==='tampered-history')await fs.appendFile(path.join(root,manifest.snapshotUrl.slice(2)),' ');
@@ -107,12 +107,12 @@ test('later publications cannot silently drop a known task from retained release
  // Keep all ordinary shape/references valid: only historical task identity is missing.
  const target=task||next.tasks[0];next.tasks=next.tasks.filter(t=>t.id!==target.id);
  next.activities.forEach(a=>{a.taskIds=a.taskIds.filter(id=>id!==target.id);});
- await release(root,next,2);
+ await release(root,next,data.releaseSequence+1);
  await assert.rejects(buildSite({root}),/必须显式归档/);
  target.status='archived';target.archiveReason='Synthetic cancellation retaining its published identity';next.tasks.push(target);
- await release(root,next,3);
+ await release(root,next,data.releaseSequence+2);
  // Remove the intentionally invalid unpublished fixture; published originals remain.
  const badFiles=await fs.readdir(path.join(root,'trip/releases'));
- for(const name of badFiles){const file=path.join(root,'trip/releases',name),snapshot=JSON.parse(await fs.readFile(file,'utf8'));if(snapshot.releaseSequence===2)await fs.rm(file);}
+ for(const name of badFiles){const file=path.join(root,'trip/releases',name),snapshot=JSON.parse(await fs.readFile(file,'utf8'));if(snapshot.releaseSequence===data.releaseSequence+1)await fs.rm(file);}
  assert.equal((await buildSite({root})).releaseCount,2);
 });

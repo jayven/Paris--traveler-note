@@ -9,10 +9,10 @@ const manifest=JSON.parse(fs.readFileSync(path.join(root,'trip/manifest.json')))
 const data=JSON.parse(fs.readFileSync(path.join(root,manifest.snapshotUrl.slice(2))));
 const clone=value=>JSON.parse(JSON.stringify(value));
 function freeze(value){if(value&&typeof value==='object'){Object.freeze(value);Object.values(value).forEach(freeze);}return value;}
-test('renderer copies exactly the 28 verified road geometries without mutating the official snapshot',()=>{
+test('renderer copies every verified road geometry without mutating the official snapshot',()=>{
  const source=freeze(clone(data)),before=JSON.stringify(source);
  const collection=Renderer.routeCollection(source.stops,source.segments);
- assert.equal(collection.features.length,28);
+ const verified=source.segments.filter(s=>s.geometry&&s.verifiedStatus==='verified'&&['walking','driving'].includes(s.mode));assert.ok(verified.length>0);assert.equal(collection.features.length,verified.length);
  for(const feature of collection.features){const segment=source.segments.find(s=>s.id===feature.properties.id);assert.equal(feature.id,segment.id);assert.equal(feature.properties.mode,segment.mode);assert.deepEqual(feature.geometry,segment.geometry);assert.notEqual(feature.geometry,segment.geometry);}
  collection.features[0].geometry.coordinates[0][0]+=1;
  assert.equal(JSON.stringify(source),before,'MapLibre receiving projected GeoJSON cannot mutate the official geometry through shared references');
