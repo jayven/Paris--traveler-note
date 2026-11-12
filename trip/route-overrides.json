@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "tripDataVersion": "4.12.1",
+  "tripDataVersion": "4.12.2",
   "attribution": "Road geometry: OSRM on FOSSGIS servers; © OpenStreetMap contributors.",
   "license": "https://opendatacommons.org/licenses/odbl/1-0/",
   "fixMapUrl": "https://www.openstreetmap.org/fixthemap",
@@ -11,7 +11,7 @@
       "id": "segment-arrival-hotel-1--arrival-hotel-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "端点定位尚未核验（例如机场具体航站楼或运营商码头）；保留节点文字，不绘制路线。"
     },
     {
@@ -66,7 +66,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 174,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -241,7 +241,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 364.1,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -448,7 +448,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 642.1,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -783,7 +783,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 836.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -910,7 +910,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 434.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -1017,7 +1017,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 592.8,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -1044,1065 +1044,18 @@
       "id": "segment-tuileries-concorde-2--arrival-rest",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
-      "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
-    },
-    {
-      "id": "segment-opera-visit--department-stores-1",
-      "geometry": {
-        "coordinates": [
-          [
-            2.331176,
-            48.871914
-          ],
-          [
-            2.331126,
-            48.872028
-          ],
-          [
-            2.331113,
-            48.872062
-          ],
-          [
-            2.331102,
-            48.872077
-          ],
-          [
-            2.331081,
-            48.872091
-          ],
-          [
-            2.331054,
-            48.8721
-          ],
-          [
-            2.331018,
-            48.872103
-          ],
-          [
-            2.330983,
-            48.872095
-          ],
-          [
-            2.330957,
-            48.872083
-          ],
-          [
-            2.330942,
-            48.872062
-          ],
-          [
-            2.330938,
-            48.87204
-          ],
-          [
-            2.330935,
-            48.871935
-          ],
-          [
-            2.330924,
-            48.871912
-          ],
-          [
-            2.330908,
-            48.871892
-          ],
-          [
-            2.330885,
-            48.871876
-          ],
-          [
-            2.330859,
-            48.871865
-          ],
-          [
-            2.330828,
-            48.871861
-          ],
-          [
-            2.330819,
-            48.871885
-          ],
-          [
-            2.3308,
-            48.871935
-          ],
-          [
-            2.330889,
-            48.87212
-          ],
-          [
-            2.330914,
-            48.872173
-          ],
-          [
-            2.330943,
-            48.872236
-          ],
-          [
-            2.330958,
-            48.872266
-          ],
-          [
-            2.331189,
-            48.872756
-          ],
-          [
-            2.331251,
-            48.872784
-          ],
-          [
-            2.3313,
-            48.872804
-          ],
-          [
-            2.331357,
-            48.872816
-          ],
-          [
-            2.331386,
-            48.872822
-          ],
-          [
-            2.33145,
-            48.87283
-          ],
-          [
-            2.331506,
-            48.872832
-          ],
-          [
-            2.331551,
-            48.872832
-          ],
-          [
-            2.33157,
-            48.872847
-          ],
-          [
-            2.331638,
-            48.872901
-          ],
-          [
-            2.331682,
-            48.872935
-          ],
-          [
-            2.331741,
-            48.872981
-          ],
-          [
-            2.331755,
-            48.87303
-          ],
-          [
-            2.331751,
-            48.873078
-          ],
-          [
-            2.331755,
-            48.873091
-          ],
-          [
-            2.331769,
-            48.873147
-          ],
-          [
-            2.331784,
-            48.873205
-          ],
-          [
-            2.331792,
-            48.873238
-          ],
-          [
-            2.331999,
-            48.873212
-          ]
-        ],
-        "type": "LineString"
-      },
-      "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
-      "distanceMeters": 258.8,
-      "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
-      "roadSnapMeters": [
-        46.3,
-        49.1
-      ],
-      "sources": [
-        {
-          "source": "OSRM on FOSSGIS servers / OpenStreetMap",
-          "provider": "FOSSGIS",
-          "profile": "foot",
-          "mode": "walking",
-          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3317851,48.8720289;2.3321271,48.8736459?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
-          "generatedAt": "2026-11-09T19:28:59.832Z",
-          "checkedAt": "2026-11-09",
-          "license": "ODbL-1.0",
-          "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
-          "policyUrl": "https://routing.openstreetmap.de/about.html",
-          "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
-        }
-      ]
-    },
-    {
-      "id": "segment-department-stores-1--department-stores-2",
-      "geometry": {
-        "coordinates": [
-          [
-            2.331999,
-            48.873212
-          ],
-          [
-            2.331792,
-            48.873238
-          ],
-          [
-            2.331367,
-            48.873292
-          ],
-          [
-            2.331301,
-            48.873334
-          ],
-          [
-            2.331277,
-            48.873336
-          ],
-          [
-            2.331209,
-            48.873343
-          ],
-          [
-            2.331144,
-            48.87335
-          ],
-          [
-            2.331097,
-            48.873354
-          ],
-          [
-            2.331083,
-            48.873356
-          ],
-          [
-            2.331064,
-            48.873358
-          ],
-          [
-            2.331037,
-            48.87336
-          ],
-          [
-            2.330985,
-            48.873365
-          ],
-          [
-            2.330902,
-            48.873384
-          ],
-          [
-            2.330236,
-            48.87347
-          ],
-          [
-            2.329768,
-            48.873531
-          ],
-          [
-            2.329763,
-            48.873563
-          ],
-          [
-            2.329813,
-            48.874171
-          ],
-          [
-            2.329804,
-            48.874171
-          ],
-          [
-            2.329773,
-            48.874171
-          ],
-          [
-            2.329745,
-            48.874171
-          ],
-          [
-            2.329712,
-            48.874171
-          ],
-          [
-            2.329667,
-            48.87418
-          ],
-          [
-            2.329043,
-            48.874172
-          ]
-        ],
-        "type": "LineString"
-      },
-      "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
-      "distanceMeters": 296.5,
-      "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
-      "roadSnapMeters": [
-        49.1,
-        31.7
-      ],
-      "sources": [
-        {
-          "source": "OSRM on FOSSGIS servers / OpenStreetMap",
-          "provider": "FOSSGIS",
-          "profile": "foot",
-          "mode": "walking",
-          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3321271,48.8736459;2.3290507,48.873887?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
-          "generatedAt": "2026-11-09T19:29:01.508Z",
-          "checkedAt": "2026-11-09",
-          "license": "ODbL-1.0",
-          "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
-          "policyUrl": "https://routing.openstreetmap.de/about.html",
-          "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
-        }
-      ]
-    },
-    {
-      "id": "segment-department-stores-2--marquis-to-ghpr-1",
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-marquis-to-ghpr-1--marquis-to-ghpr-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
-      "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
-      "id": "segment-marquis-to-ghpr-2--palais-royal",
-      "geometry": {
-        "coordinates": [
-          [
-            2.337799,
-            48.863177
-          ],
-          [
-            2.337821,
-            48.863218
-          ],
-          [
-            2.337814,
-            48.86322
-          ],
-          [
-            2.337821,
-            48.863233
-          ],
-          [
-            2.337869,
-            48.863325
-          ],
-          [
-            2.337827,
-            48.863336
-          ],
-          [
-            2.337786,
-            48.863347
-          ],
-          [
-            2.337766,
-            48.863352
-          ],
-          [
-            2.337752,
-            48.863355
-          ],
-          [
-            2.337475,
-            48.863426
-          ],
-          [
-            2.337622,
-            48.863707
-          ],
-          [
-            2.337633,
-            48.863724
-          ],
-          [
-            2.33773,
-            48.863912
-          ],
-          [
-            2.337737,
-            48.863925
-          ],
-          [
-            2.337744,
-            48.863938
-          ],
-          [
-            2.337745,
-            48.86394
-          ],
-          [
-            2.337781,
-            48.864005
-          ],
-          [
-            2.337681,
-            48.864027
-          ],
-          [
-            2.337486,
-            48.86407
-          ],
-          [
-            2.337587,
-            48.864264
-          ],
-          [
-            2.337808,
-            48.864687
-          ],
-          [
-            2.337888,
-            48.864841
-          ],
-          [
-            2.337822,
-            48.864831
-          ],
-          [
-            2.337766,
-            48.864831
-          ],
-          [
-            2.337733,
-            48.864836
-          ]
-        ],
-        "type": "LineString"
-      },
-      "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
-      "distanceMeters": 242,
-      "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
-      "roadSnapMeters": [
-        4.5,
-        8.2
-      ],
-      "sources": [
-        {
-          "source": "OSRM on FOSSGIS servers / OpenStreetMap",
-          "provider": "FOSSGIS",
-          "profile": "foot",
-          "mode": "walking",
-          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3378569,48.8631637;2.3377594,48.8649078?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
-          "generatedAt": "2026-11-09T19:29:03.220Z",
-          "checkedAt": "2026-11-09",
-          "license": "ODbL-1.0",
-          "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
-          "policyUrl": "https://routing.openstreetmap.de/about.html",
-          "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
-        }
-      ]
-    },
-    {
-      "id": "segment-palais-royal--vivienne-optional",
-      "geometry": {
-        "coordinates": [
-          [
-            2.337733,
-            48.864836
-          ],
-          [
-            2.337766,
-            48.864831
-          ],
-          [
-            2.337822,
-            48.864831
-          ],
-          [
-            2.337888,
-            48.864841
-          ],
-          [
-            2.337937,
-            48.864861
-          ],
-          [
-            2.337981,
-            48.864888
-          ],
-          [
-            2.338022,
-            48.864934
-          ],
-          [
-            2.338038,
-            48.864989
-          ],
-          [
-            2.338026,
-            48.865043
-          ],
-          [
-            2.338008,
-            48.865066
-          ],
-          [
-            2.338096,
-            48.865232
-          ],
-          [
-            2.338318,
-            48.865654
-          ],
-          [
-            2.338439,
-            48.865884
-          ],
-          [
-            2.338453,
-            48.865881
-          ],
-          [
-            2.338475,
-            48.865924
-          ],
-          [
-            2.33848,
-            48.865935
-          ],
-          [
-            2.338563,
-            48.866086
-          ],
-          [
-            2.338572,
-            48.866104
-          ],
-          [
-            2.338635,
-            48.866089
-          ],
-          [
-            2.33864,
-            48.866097
-          ],
-          [
-            2.338646,
-            48.866109
-          ],
-          [
-            2.33866,
-            48.866134
-          ],
-          [
-            2.338664,
-            48.866141
-          ],
-          [
-            2.338647,
-            48.86615
-          ],
-          [
-            2.338638,
-            48.866169
-          ],
-          [
-            2.338697,
-            48.866275
-          ],
-          [
-            2.338724,
-            48.866279
-          ],
-          [
-            2.338727,
-            48.866285
-          ],
-          [
-            2.338745,
-            48.866319
-          ],
-          [
-            2.33875,
-            48.86633
-          ],
-          [
-            2.338759,
-            48.866345
-          ],
-          [
-            2.339084,
-            48.866268
-          ],
-          [
-            2.339462,
-            48.86618
-          ],
-          [
-            2.339475,
-            48.866207
-          ],
-          [
-            2.339695,
-            48.866634
-          ],
-          [
-            2.339745,
-            48.866731
-          ]
-        ],
-        "type": "LineString"
-      },
-      "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
-      "distanceMeters": 321.7,
-      "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
-      "roadSnapMeters": [
-        8.2,
-        1
-      ],
-      "sources": [
-        {
-          "source": "OSRM on FOSSGIS servers / OpenStreetMap",
-          "provider": "FOSSGIS",
-          "profile": "foot",
-          "mode": "walking",
-          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3377594,48.8649078;2.339757,48.8667277?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
-          "generatedAt": "2026-11-09T19:29:04.947Z",
-          "checkedAt": "2026-11-09",
-          "license": "ODbL-1.0",
-          "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
-          "policyUrl": "https://routing.openstreetmap.de/about.html",
-          "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
-        }
-      ]
-    },
-    {
-      "id": "segment-vivienne-optional--montmartre-1",
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
-      "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
-    },
-    {
-      "id": "segment-montmartre-1--montmartre-2",
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
-      "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
-    },
-    {
-      "id": "segment-montmartre-2--montmartre-3",
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
-      "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
-    },
-    {
-      "id": "segment-montmartre-3--martyrs-optional",
-      "geometry": {
-        "coordinates": [
-          [
-            2.343391,
-            48.8867
-          ],
-          [
-            2.343391,
-            48.8867
-          ],
-          [
-            2.343413,
-            48.886558
-          ],
-          [
-            2.343419,
-            48.886527
-          ],
-          [
-            2.343425,
-            48.886493
-          ],
-          [
-            2.343428,
-            48.886473
-          ],
-          [
-            2.34342,
-            48.886461
-          ],
-          [
-            2.343402,
-            48.886446
-          ],
-          [
-            2.343378,
-            48.886443
-          ],
-          [
-            2.343353,
-            48.886442
-          ],
-          [
-            2.343355,
-            48.886435
-          ],
-          [
-            2.343358,
-            48.886417
-          ],
-          [
-            2.343362,
-            48.886376
-          ],
-          [
-            2.343298,
-            48.886373
-          ],
-          [
-            2.343292,
-            48.886322
-          ],
-          [
-            2.343079,
-            48.886311
-          ],
-          [
-            2.342846,
-            48.886298
-          ],
-          [
-            2.342822,
-            48.886297
-          ],
-          [
-            2.342794,
-            48.886264
-          ],
-          [
-            2.342774,
-            48.886233
-          ],
-          [
-            2.342735,
-            48.88617
-          ],
-          [
-            2.342698,
-            48.886168
-          ],
-          [
-            2.342633,
-            48.886107
-          ],
-          [
-            2.342534,
-            48.886055
-          ],
-          [
-            2.342547,
-            48.886032
-          ],
-          [
-            2.342554,
-            48.886021
-          ],
-          [
-            2.342425,
-            48.885983
-          ],
-          [
-            2.342333,
-            48.88596
-          ],
-          [
-            2.342335,
-            48.885947
-          ],
-          [
-            2.342345,
-            48.885869
-          ],
-          [
-            2.342356,
-            48.885792
-          ],
-          [
-            2.342356,
-            48.885782
-          ],
-          [
-            2.342358,
-            48.885745
-          ],
-          [
-            2.342361,
-            48.885697
-          ],
-          [
-            2.342266,
-            48.885697
-          ],
-          [
-            2.342209,
-            48.8857
-          ],
-          [
-            2.342155,
-            48.885696
-          ],
-          [
-            2.342073,
-            48.885708
-          ],
-          [
-            2.341977,
-            48.885416
-          ],
-          [
-            2.341963,
-            48.885374
-          ],
-          [
-            2.341952,
-            48.885342
-          ],
-          [
-            2.341899,
-            48.885185
-          ],
-          [
-            2.341886,
-            48.885148
-          ],
-          [
-            2.341877,
-            48.885118
-          ],
-          [
-            2.341864,
-            48.885081
-          ],
-          [
-            2.341857,
-            48.88506
-          ],
-          [
-            2.34184,
-            48.885029
-          ],
-          [
-            2.341829,
-            48.885032
-          ],
-          [
-            2.341755,
-            48.885052
-          ],
-          [
-            2.341749,
-            48.885042
-          ],
-          [
-            2.341732,
-            48.885015
-          ],
-          [
-            2.341719,
-            48.884994
-          ],
-          [
-            2.341713,
-            48.884983
-          ],
-          [
-            2.341747,
-            48.884959
-          ],
-          [
-            2.341761,
-            48.884928
-          ],
-          [
-            2.341707,
-            48.88475
-          ],
-          [
-            2.341676,
-            48.884659
-          ],
-          [
-            2.341588,
-            48.884382
-          ],
-          [
-            2.34153,
-            48.884173
-          ],
-          [
-            2.341503,
-            48.884148
-          ],
-          [
-            2.341465,
-            48.884137
-          ],
-          [
-            2.341433,
-            48.884142
-          ],
-          [
-            2.341418,
-            48.884139
-          ],
-          [
-            2.341374,
-            48.884129
-          ],
-          [
-            2.341349,
-            48.884123
-          ],
-          [
-            2.341334,
-            48.884119
-          ],
-          [
-            2.341351,
-            48.884087
-          ],
-          [
-            2.341359,
-            48.88405
-          ],
-          [
-            2.341343,
-            48.884035
-          ],
-          [
-            2.341302,
-            48.88403
-          ],
-          [
-            2.341237,
-            48.884039
-          ],
-          [
-            2.340823,
-            48.884087
-          ],
-          [
-            2.340453,
-            48.884132
-          ],
-          [
-            2.339827,
-            48.884207
-          ],
-          [
-            2.339826,
-            48.884197
-          ],
-          [
-            2.339825,
-            48.884172
-          ],
-          [
-            2.339824,
-            48.884164
-          ],
-          [
-            2.339823,
-            48.884151
-          ],
-          [
-            2.339802,
-            48.884136
-          ],
-          [
-            2.339796,
-            48.884121
-          ],
-          [
-            2.339796,
-            48.884095
-          ],
-          [
-            2.339786,
-            48.88378
-          ],
-          [
-            2.339782,
-            48.883611
-          ],
-          [
-            2.339781,
-            48.88357
-          ],
-          [
-            2.339781,
-            48.883538
-          ],
-          [
-            2.33978,
-            48.883519
-          ],
-          [
-            2.339767,
-            48.883283
-          ],
-          [
-            2.339742,
-            48.882853
-          ],
-          [
-            2.339692,
-            48.882854
-          ],
-          [
-            2.339693,
-            48.88287
-          ]
-        ],
-        "type": "LineString"
-      },
-      "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
-      "distanceMeters": 674.8,
-      "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
-      "roadSnapMeters": [
-        29.9,
-        0.1
-      ],
-      "sources": [
-        {
-          "source": "OSRM on FOSSGIS servers / OpenStreetMap",
-          "provider": "FOSSGIS",
-          "profile": "foot",
-          "mode": "walking",
-          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3430153,48.8868058;2.3396922,48.8828702?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
-          "generatedAt": "2026-11-09T19:29:06.648Z",
-          "checkedAt": "2026-11-09",
-          "license": "ODbL-1.0",
-          "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
-          "policyUrl": "https://routing.openstreetmap.de/about.html",
-          "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
-        }
-      ]
-    },
-    {
-      "id": "segment-ghpr-checkout--sainte-visit",
+      "id": "segment-marquis-to-ghpr-2--sainte-visit",
       "geometry": {
         "coordinates": [
           [
@@ -2885,7 +1838,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 1447,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -3140,7 +2093,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 483,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -3835,7 +2788,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 1600.1,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -3859,35 +2812,331 @@
       ]
     },
     {
-      "id": "segment-luxembourg-walk--orsay-transfer",
+      "id": "segment-luxembourg-walk--orsay-lunch",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "道路几何未取得/未通过端点核验：Endpoint road snap exceeds 250m (270, 48m)"
-    },
-    {
-      "id": "segment-orsay-transfer--orsay-lunch",
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
-      "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-orsay-lunch--orsay-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
-      "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "同一场地的不同活动/访问；没有经核验的馆内或接送路线，不发布道路几何。"
     },
     {
-      "id": "segment-orsay-visit--ghpr-luggage",
+      "id": "segment-orsay-visit--department-stores-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
-      "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
-      "id": "segment-ghpr-luggage--waldorf-arrival",
+      "id": "segment-department-stores-1--department-stores-2",
+      "geometry": {
+        "coordinates": [
+          [
+            2.331999,
+            48.873212
+          ],
+          [
+            2.331792,
+            48.873238
+          ],
+          [
+            2.331367,
+            48.873292
+          ],
+          [
+            2.331301,
+            48.873334
+          ],
+          [
+            2.331277,
+            48.873336
+          ],
+          [
+            2.331209,
+            48.873343
+          ],
+          [
+            2.331144,
+            48.87335
+          ],
+          [
+            2.331097,
+            48.873354
+          ],
+          [
+            2.331083,
+            48.873356
+          ],
+          [
+            2.331064,
+            48.873358
+          ],
+          [
+            2.331037,
+            48.87336
+          ],
+          [
+            2.330985,
+            48.873365
+          ],
+          [
+            2.330902,
+            48.873384
+          ],
+          [
+            2.330236,
+            48.87347
+          ],
+          [
+            2.329768,
+            48.873531
+          ],
+          [
+            2.329763,
+            48.873563
+          ],
+          [
+            2.329813,
+            48.874171
+          ],
+          [
+            2.329804,
+            48.874171
+          ],
+          [
+            2.329773,
+            48.874171
+          ],
+          [
+            2.329745,
+            48.874171
+          ],
+          [
+            2.329712,
+            48.874171
+          ],
+          [
+            2.329667,
+            48.87418
+          ],
+          [
+            2.329043,
+            48.874172
+          ]
+        ],
+        "type": "LineString"
+      },
+      "verifiedStatus": "verified",
+      "routeDataVersion": "4.12.2",
+      "distanceMeters": 296.5,
+      "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
+      "roadSnapMeters": [
+        49.1,
+        31.7
+      ],
+      "sources": [
+        {
+          "source": "OSRM on FOSSGIS servers / OpenStreetMap",
+          "provider": "FOSSGIS",
+          "profile": "foot",
+          "mode": "walking",
+          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3321271,48.8736459;2.3290507,48.873887?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
+          "generatedAt": "2026-11-09T19:29:01.508Z",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+          "policyUrl": "https://routing.openstreetmap.de/about.html",
+          "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
+        }
+      ]
+    },
+    {
+      "id": "segment-department-stores-2--ghpr-return",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
+    },
+    {
+      "id": "segment-ghpr-checkout--palais-royal",
+      "geometry": {
+        "coordinates": [
+          [
+            2.337799,
+            48.863177
+          ],
+          [
+            2.337821,
+            48.863218
+          ],
+          [
+            2.337814,
+            48.86322
+          ],
+          [
+            2.337821,
+            48.863233
+          ],
+          [
+            2.337869,
+            48.863325
+          ],
+          [
+            2.337827,
+            48.863336
+          ],
+          [
+            2.337786,
+            48.863347
+          ],
+          [
+            2.337766,
+            48.863352
+          ],
+          [
+            2.337752,
+            48.863355
+          ],
+          [
+            2.337475,
+            48.863426
+          ],
+          [
+            2.337622,
+            48.863707
+          ],
+          [
+            2.337633,
+            48.863724
+          ],
+          [
+            2.33773,
+            48.863912
+          ],
+          [
+            2.337737,
+            48.863925
+          ],
+          [
+            2.337744,
+            48.863938
+          ],
+          [
+            2.337745,
+            48.86394
+          ],
+          [
+            2.337781,
+            48.864005
+          ],
+          [
+            2.337681,
+            48.864027
+          ],
+          [
+            2.337486,
+            48.86407
+          ],
+          [
+            2.337587,
+            48.864264
+          ],
+          [
+            2.337808,
+            48.864687
+          ],
+          [
+            2.337888,
+            48.864841
+          ],
+          [
+            2.337822,
+            48.864831
+          ],
+          [
+            2.337766,
+            48.864831
+          ],
+          [
+            2.337733,
+            48.864836
+          ]
+        ],
+        "type": "LineString"
+      },
+      "verifiedStatus": "verified",
+      "routeDataVersion": "4.12.2",
+      "distanceMeters": 242,
+      "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
+      "roadSnapMeters": [
+        4.5,
+        8.2
+      ],
+      "sources": [
+        {
+          "source": "OSRM on FOSSGIS servers / OpenStreetMap",
+          "provider": "FOSSGIS",
+          "profile": "foot",
+          "mode": "walking",
+          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3378569,48.8631637;2.3377594,48.8649078?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
+          "generatedAt": "2026-11-09T19:29:03.220Z",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+          "policyUrl": "https://routing.openstreetmap.de/about.html",
+          "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
+        }
+      ]
+    },
+    {
+      "id": "segment-palais-royal--opera-visit",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
+    },
+    {
+      "id": "segment-opera-visit--vivienne-optional",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
+    },
+    {
+      "id": "segment-vivienne-optional--montmartre-1",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
+    },
+    {
+      "id": "segment-montmartre-1--montmartre-3",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
+    },
+    {
+      "id": "segment-montmartre-3--montmartre-2",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
+    },
+    {
+      "id": "segment-montmartre-2--ghpr-luggage",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
+    },
+    {
+      "id": "segment-ghpr-luggage--waldorf-transfer",
       "geometry": {
         "coordinates": [
           [
@@ -6938,7 +6187,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 21527.7,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -6960,6 +6209,13 @@
           "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
         }
       ]
+    },
+    {
+      "id": "segment-waldorf-transfer--waldorf-arrival",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.2",
+      "verificationNote": "同一场地的不同活动/访问；没有经核验的馆内或接送路线，不发布道路几何。"
     },
     {
       "id": "segment-waldorf-breakfast--versailles-palace",
@@ -7161,7 +6417,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 1005.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -7188,14 +6444,14 @@
       "id": "segment-versailles-palace--versailles-gardens",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-versailles-gardens--trianon-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -7726,7 +6982,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 928.2,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -7753,7 +7009,7 @@
       "id": "segment-hamlet-optional--waldorf-to-powers-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -10272,7 +9528,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 18799.7,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -10631,7 +9887,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 1050.6,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -10998,7 +10254,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 1113.7,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -11213,7 +10469,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 632.6,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -11332,7 +10588,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 197.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -11359,63 +10615,63 @@
       "id": "segment-powers-shopping-bags--louvre-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "DATA-02：卢浮宫私人导览集合点待确认；金字塔仅馆区参考，不据此发布精确接送动线。"
     },
     {
       "id": "segment-louvre-transfer--louvre-private-guide",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-louvre-private-guide--powers-friday-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-powers-pack--eiffel-photos-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-eiffel-photos-1--eiffel-photos-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-eiffel-photos-2--powers-to-astor-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-powers-to-astor-1--powers-to-astor-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-powers-to-astor-2--marais-afternoon-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-marais-afternoon-1--marais-afternoon-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -11950,7 +11206,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 1146,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -12305,7 +11561,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 774.5,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -12332,63 +11588,63 @@
       "id": "segment-rotterdam-outbound-1--rotterdam-outbound-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "铁路班次/轨迹未核验；禁止用公路替代。"
     },
     {
       "id": "segment-rotterdam-outbound-2--erasmus-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-erasmus-transfer--watershuttle-wait",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-watershuttle-wait--watershuttle-outbound",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "水路运营/码头/轨迹未核验；禁止用公路替代。"
     },
     {
       "id": "segment-watershuttle-outbound--kinderdijk-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-kinderdijk-visit--kinderdijk-boarding",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-kinderdijk-boarding--watershuttle-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "水路运营/码头/轨迹未核验；禁止用公路替代。"
     },
     {
       "id": "segment-watershuttle-return--fenix-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-fenix-transfer--fenix-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -13159,7 +12415,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 3769.1,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -13186,7 +12442,7 @@
       "id": "segment-markthal-transfer--markthal-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -13385,7 +12641,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 333.2,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -13412,28 +12668,28 @@
       "id": "segment-cube-houses-exterior--rotterdam-station-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-rotterdam-station-return--eurostar-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "铁路班次/轨迹未核验；禁止用公路替代。"
     },
     {
       "id": "segment-eurostar-return--astor-sunday-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-astor-checkout--saint-germain-walk",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -13832,7 +13088,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 1004.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -13907,7 +13163,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "distanceMeters": 160.8,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -13934,21 +13190,21 @@
       "id": "segment-bon-marche-shopping-2--astor-final-luggage",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-astor-final-luggage--cdg-departure-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "端点定位尚未核验（例如机场具体航站楼或运营商码头）；保留节点文字，不绘制路线。"
     },
     {
       "id": "segment-cdg-departure-transfer--cdg-flight",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     }
   ]

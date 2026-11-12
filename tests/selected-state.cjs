@@ -51,17 +51,17 @@ async function scrollMap(p){await p.locator('#daily-map').evaluate(el=>{const st
   for(const width of report.viewports){
    await page.setViewportSize({width,height:844});
    await nav(page,'days');await page.locator('[data-day="1"]').click();await color(page,'.date-chip.active');await page.locator('[data-day="2"]').click();await color(page,'.date-chip.active');await color(page,'.bottom-nav .active');
-   assert.equal(await page.locator('.time-row').count(),9,'unchanged actual v4.12 day content');
+   assert.equal(await page.locator('.time-row').count(),9,'current official Wednesday activity count');
    const design=await page.evaluate(()=>{const date=getComputedStyle(document.querySelector('.date-chip.active')),time=getComputedStyle(document.querySelector('.time-col')),row=getComputedStyle(document.querySelector('.time-row')),root=getComputedStyle(document.documentElement);return {ink:root.getPropertyValue('--ink').trim(),outline:date.borderTopColor,borderWidth:date.borderTopWidth,shadow:date.boxShadow,bodyText:time.color,timeBorderLeft:time.borderLeftWidth,timeBorderRight:time.borderRightWidth,rowBorder:row.borderBottomColor,peach:root.getPropertyValue('--peach').trim(),pink:root.getPropertyValue('--pink').trim(),mint:root.getPropertyValue('--mint').trim()};});
    assert.equal(design.ink,'#0d0d0d');assert.equal(design.outline,ink);assert.equal(design.borderWidth,'1px');assert.match(design.shadow,/rgb\(13, 13, 13\) 2px 2px 0px 0px/);assert.equal(design.bodyText,ink);assert.equal(design.timeBorderLeft,'0px');assert.equal(design.timeBorderRight,'0px');assert.equal(design.rowBorder,ink);
    assert.equal(design.peach,'rgba(255,214,158,.4)');assert.equal(design.pink,'rgba(251,207,224,.4)');assert.equal(design.mint,'rgba(232,245,233,.4)');
    await layout(page,'daily-itinerary');
-   await page.locator('[data-action=detail][data-id=act-orsay-lunch]').click();assert.equal(await page.locator('#activity-detail-dialog').evaluate(e=>e.open),true);await page.locator('#activity-detail-close').click();
+   await page.locator('[data-action=detail][data-id=act-opera-visit]').click();assert.equal(await page.locator('#activity-detail-dialog').evaluate(e=>e.open),true);await page.locator('#activity-detail-close').click();
    await nav(page,'todo');await color(page,'.bottom-nav .active');
    for(const filter of ['completed','all','archived','pending']){await page.locator(`[data-task-filter="${filter}"]`).click();await color(page,'.preview-tabs .active');assert.equal(await page.locator(`[data-task-filter="${filter}"]`).getAttribute('aria-selected'),'true');}
    assert.equal(await page.locator('#main-content [data-action=task-add]').evaluate(e=>getComputedStyle(e).backgroundColor),green,'green action remains green');await layout(page,'todo');
    await nav(page,'map');await mapReady(page);await color(page,'.bottom-nav .active');await color(page,'.preview-filter .active');
-   await page.locator('[data-map-filter=hotel]').click();await mapReady(page);await color(page,'.preview-filter .active');assert.equal(await page.locator('.map-stop-list .location-row').count(),3,'filter still includes separate repeated hotel visits');
+   await page.locator('[data-map-filter=hotel]').click();await mapReady(page);await color(page,'.preview-filter .active');assert.equal(await page.locator('.map-stop-list .location-row').count(),4,'filter includes distinct luggage visits and departure/arrival phases');
    await page.locator('[data-map-filter=all]').click();await mapReady(page);assert.deepEqual(await mapModel(page),unchangedMap,'CSS refinement cannot change route features or mode colors');await layout(page,'daily-map');
    if(width===390){
     for(const variant of ['before','after']){

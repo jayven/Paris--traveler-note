@@ -5,11 +5,11 @@ const path=require('node:path');
 const crypto=require('node:crypto');
 const root=path.resolve(__dirname,'..');
 const audit=JSON.parse(fs.readFileSync(path.join(root,'docs/phase-3/route-gap-audit.json')));
-const manifest=JSON.parse(fs.readFileSync(path.join(root,'trip/manifest.json')));
-const bytes=fs.readFileSync(path.join(root,manifest.snapshotUrl.slice(2))),trip=JSON.parse(bytes);
+// This audit is historical evidence for the retained v4.12.1 release, not the latest route set.
+const bytes=fs.readFileSync(path.join(root,'trip/releases',audit.snapshotSha256+'.json')),trip=JSON.parse(bytes);
 test('route gap review covers every missing segment exactly once and preserves the reviewed release',()=>{
  assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),audit.snapshotSha256);
- assert.equal(manifest.sha256,audit.snapshotSha256);assert.equal(audit.totalSegments,trip.segments.length);
+ assert.equal(trip.tripDataVersion,'4.12.1');assert.equal(audit.totalSegments,trip.segments.length);
  const missing=trip.segments.filter(s=>s.geometry===null),verified=trip.segments.filter(s=>s.geometry!==null);
  assert.equal(missing.length,40);assert.equal(verified.length,28);
  assert.equal(audit.entries.length,missing.length);assert.equal(new Set(audit.entries.map(e=>e.segmentId)).size,missing.length);

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "tripId": "paris-2026",
-  "tripDataVersion": "4.12.1",
-  "releaseSequence": 1,
+  "tripDataVersion": "4.12.2",
+  "releaseSequence": 2,
   "trip": {
     "title": "Paris, at our pace",
     "startDate": "2026-12-07",
@@ -20,7 +20,7 @@
     },
     "sourceVersion": "v4.12",
     "sourceDate": "2026-11-04",
-    "sourceNote": "建议/目标时间不是预订确认。DATA-01…05 未决事实保留待核。"
+    "sourceNote": "建议/目标时间不是预订确认。DATA-01…05 未决事实保留待核。12月8/9日按2026-11-12用户安排更新；其他日期与五家酒店住宿不变。"
   },
   "days": [
     {
@@ -37,8 +37,8 @@
       "id": "day-opera",
       "date": "2026-12-08",
       "weekday": "周二",
-      "theme": "歌剧院 · 皇家宫殿 · 蒙马特",
-      "note": "午间先回 Marquis 取包换 GHPR，寄存不依赖提前入住；蒙马特尽量保证日落前到达。",
+      "theme": "圣礼拜堂 · 圣母院 · 卢森堡 · 奥赛 · 百货",
+      "note": "早上先从 Marquis 退房并到 GHPR 寄存行李，再观光。12月8日圣母院宗教活动期间的游客入场安排与限制待核。圣礼拜堂与 Le Restaurant 均未确认；晚间百货可按体力缩短。",
       "hotelIds": [
         "hotel-ghpr"
       ]
@@ -47,8 +47,8 @@
       "id": "day-orsay",
       "date": "2026-12-09",
       "weekday": "周三",
-      "theme": "西岱岛 · 卢森堡 · 奥赛",
-      "note": "周三不去卢浮宫。GHPR 早寄存、傍晚取包后赴凡尔赛，保留两次独立访问。",
+      "theme": "皇家宫殿 · 歌剧院 · 蒙马特 → 凡尔赛",
+      "note": "08:45–09:30 为 GHPR 退房寄存与皇家宫殿花园共用窗口；薇薇安可选，蒙马特保留下午。16:30–17:30 回 GHPR 取包；约17:30–18:00是从巴黎出发目标，不是凡尔赛保证抵达时间，实际车程与抵达待估。",
       "hotelIds": [
         "hotel-waldorf"
       ]
@@ -240,57 +240,12 @@
       ]
     },
     {
-      "id": "act-opera-visit",
-      "dayId": "day-opera",
-      "order": 1,
-      "title": "巴黎歌剧院",
-      "timeLabel": "10:00–11:30 目标",
-      "detail": "内部参观目标场次与开放区域待核。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-opera"
-      ],
-      "taskIds": [
-        "task-opera"
-      ],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-department-stores",
-      "dayId": "day-opera",
-      "order": 2,
-      "title": "老佛爷 · 巴黎春天",
-      "timeLabel": "11:40–12:30",
-      "detail": "看穹顶、圣诞装饰并简短逛店。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-lafayette",
-        "place-printemps"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        }
-      ]
-    },
-    {
       "id": "act-marquis-to-ghpr",
       "dayId": "day-opera",
-      "order": 3,
-      "title": "Marquis 取包 · 换入 GHPR",
-      "timeLabel": "12:30–14:15",
-      "detail": "简餐后先回 Marquis 取行李，再到 Grand Hôtel du Palais Royal 寄存／入住；不依赖提前入住。",
+      "order": 1,
+      "title": "Marquis 退房 → GHPR · 寄存行李",
+      "timeLabel": "08:00–09:15",
+      "detail": "先从 Marquis Faubourg Saint-Honoré 退房并带行李前往 Grand Hôtel du Palais Royal 寄存，再开始观光；不依赖提前入住。实际交通与寄存办理时间待核。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -303,123 +258,21 @@
           "source": "Itinerary v4.12 (2026-11-04)",
           "page": 2,
           "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-palais-royal",
-      "dayId": "day-opera",
-      "order": 4,
-      "title": "皇家宫殿花园 · 黑白柱阵",
-      "timeLabel": "14:15–14:45",
-      "detail": "皇家宫殿优先，薇薇安为附近可选短逛。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-royal"
-      ],
-      "taskIds": [],
-      "sources": [
+        },
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-vivienne-optional",
-      "dayId": "day-opera",
-      "order": 5,
-      "title": "薇薇安拱廊",
-      "timeLabel": "视时间",
-      "detail": "可选；若换店延误优先保证蒙马特日落前行程。",
-      "status": "optional",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-vivienne"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-montmartre",
-      "dayId": "day-opera",
-      "order": 6,
-      "title": "蒙马特 · 小丘广场 · 圣心堂",
-      "timeLabel": "14:45–17:45",
-      "detail": "打车至 Abbesses，约 15:15 到达较理想；走艺术家广场与圣心堂。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-abbesses",
-        "place-tertre",
-        "place-sacre"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-martyrs-optional",
-      "dayId": "day-opera",
-      "order": 7,
-      "title": "Rue des Martyrs 短逛",
-      "timeLabel": "视时间",
-      "detail": "蒙马特之后有时间再走。",
-      "status": "optional",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-martyrs"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-ghpr-checkout",
-      "dayId": "day-orsay",
-      "order": 1,
-      "title": "GHPR 退房 · 寄存行李",
-      "timeLabel": "08:15–09:00",
-      "detail": "退房寄存后步行去圣礼拜堂，预留安检。傍晚回同一酒店取包。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-ghpr"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
       ]
     },
     {
       "id": "act-sainte-visit",
-      "dayId": "day-orsay",
+      "dayId": "day-opera",
       "order": 2,
       "title": "圣礼拜堂",
-      "timeLabel": "09:00–10:00 目标",
-      "detail": "彩窗与建筑；目标场次以实际预订为准。",
+      "timeLabel": "09:30–10:30 目标",
+      "detail": "彩窗与建筑；09:30–10:30 为目标参观窗口，入场场次与安检安排待核，尚未确认预订。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
@@ -433,16 +286,21 @@
           "source": "Itinerary v4.12 (2026-11-04)",
           "page": 3,
           "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
       ]
     },
     {
       "id": "act-notredame-visit",
-      "dayId": "day-orsay",
+      "dayId": "day-opera",
       "order": 3,
       "title": "巴黎圣母院",
-      "timeLabel": "10:15–11:15",
-      "detail": "外观与内部计划；排队、礼拜可能影响节奏。",
+      "timeLabel": "10:45–11:45 目标",
+      "detail": "计划参观巴黎圣母院。12月8日有宗教活动，准确游客入场安排、礼拜时段与相关限制待核；此窗口不代表已经确认可入内或已完成预约。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
@@ -456,16 +314,21 @@
           "source": "Itinerary v4.12 (2026-11-04)",
           "page": 3,
           "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
       ]
     },
     {
       "id": "act-luxembourg-walk",
-      "dayId": "day-orsay",
+      "dayId": "day-opera",
       "order": 4,
       "title": "卢森堡公园",
-      "timeLabel": "11:15–12:20",
-      "detail": "步行前往，园内短逛约 30–40 分钟；圣母院延误则缩短。",
+      "timeLabel": "12:00–12:40",
+      "detail": "园内短逛；如上午排队或宗教活动影响节奏，注意后续午餐目标与体力，具体开放与通行另核。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -477,37 +340,21 @@
           "source": "Itinerary v4.12 (2026-11-04)",
           "page": 3,
           "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-orsay-transfer",
-      "dayId": "day-orsay",
-      "order": 5,
-      "title": "前往奥赛 · 安检",
-      "timeLabel": "12:20–13:00",
-      "detail": "打车前往奥赛，预留安检及馆内餐厅入场。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-orsay"
-      ],
-      "taskIds": [],
-      "sources": [
+        },
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
       ]
     },
     {
       "id": "act-orsay-lunch",
-      "dayId": "day-orsay",
-      "order": 6,
+      "dayId": "day-opera",
+      "order": 5,
       "title": "Le Restaurant 午餐",
-      "timeLabel": "13:00–14:00 目标",
-      "detail": "DATA-04：目标午餐，不保证座位或排队时长；过久改简餐以保证观展。",
+      "timeLabel": "13:15–14:15 目标",
+      "detail": "DATA-04：奥赛馆内 Le Restaurant 午餐目标为13:15–14:15；座位、排队与入馆安排均待核，未确认预订，不保证准时入座。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
@@ -521,16 +368,21 @@
           "source": "Itinerary v4.12 (2026-11-04)",
           "page": 3,
           "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
       ]
     },
     {
       "id": "act-orsay-visit",
-      "dayId": "day-orsay",
-      "order": 7,
+      "dayId": "day-opera",
+      "order": 6,
       "title": "奥赛博物馆",
-      "timeLabel": "14:00–17:15 目标",
-      "detail": "主要观展时段约 14:00–17:15；源文档写 17:30 左右开始清场，实际规则待核。",
+      "timeLabel": "14:15–17:15 目标",
+      "detail": "计划14:15–17:15观展；门票、实际入场与开放规则待核，此安排不代表已确认预订。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
@@ -544,16 +396,69 @@
           "source": "Itinerary v4.12 (2026-11-04)",
           "page": 3,
           "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
       ]
     },
     {
-      "id": "act-ghpr-luggage",
-      "dayId": "day-orsay",
+      "id": "act-department-stores",
+      "dayId": "day-opera",
+      "order": 7,
+      "title": "老佛爷 · 巴黎春天",
+      "timeLabel": "17:45–19:15",
+      "detail": "晚间看穹顶、圣诞装饰与逛店；可按当天体力缩短。实际营业与特别活动安排另核。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-lafayette",
+        "place-printemps"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ]
+    },
+    {
+      "id": "act-ghpr-return",
+      "dayId": "day-opera",
       "order": 8,
-      "title": "返回 GHPR · 取行李",
-      "timeLabel": "17:15–18:15",
-      "detail": "返回 Grand Hôtel du Palais Royal 取包、叫车；与早上寄存为不同 Stop。",
+      "title": "返回 GHPR · 休息",
+      "timeLabel": "晚间",
+      "detail": "百货活动后返回 Grand Hôtel du Palais Royal；当晚住宿酒店与已确认住宿日期不变，实际返回时间不作保证。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-ghpr"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ]
+    },
+    {
+      "id": "act-ghpr-checkout",
+      "dayId": "day-orsay",
+      "order": 1,
+      "title": "GHPR 退房 · 寄存行李",
+      "timeLabel": "08:45–09:30 内 · 先寄存",
+      "detail": "08:45–09:30为退房寄存与皇家宫殿花园共用窗口；先在 Grand Hôtel du Palais Royal 寄存行李，再去花园。傍晚回同一酒店取包，保留两个独立访问。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -565,6 +470,185 @@
           "source": "Itinerary v4.12 (2026-11-04)",
           "page": 3,
           "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ]
+    },
+    {
+      "id": "act-palais-royal",
+      "dayId": "day-orsay",
+      "order": 2,
+      "title": "皇家宫殿花园 · 黑白柱阵",
+      "timeLabel": "08:45–09:30 内 · 寄存后",
+      "detail": "先完成 GHPR 退房寄存，再在同一个08:45–09:30窗口内参观皇家宫殿花园与黑白柱阵；退房、寄存与游园共用该窗口，具体用时视现场。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-royal"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ]
+    },
+    {
+      "id": "act-opera-visit",
+      "dayId": "day-orsay",
+      "order": 3,
+      "title": "巴黎歌剧院",
+      "timeLabel": "10:00–11:30 目标",
+      "detail": "Palais Garnier 内部参观目标窗口为10:00–11:30；场次与开放区域待核，未确认预订。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-opera"
+      ],
+      "taskIds": [
+        "task-opera"
+      ],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ]
+    },
+    {
+      "id": "act-opera-lunch",
+      "dayId": "day-orsay",
+      "order": 4,
+      "title": "午餐",
+      "timeLabel": "11:30–12:45",
+      "detail": "午餐与可选薇薇安拱廊共用11:30–12:45窗口；午餐地点待定，可选薇薇安短逛视实际时间安排。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ]
+    },
+    {
+      "id": "act-vivienne-optional",
+      "dayId": "day-orsay",
+      "order": 5,
+      "title": "薇薇安拱廊",
+      "timeLabel": "11:30–12:45 内 · 可选",
+      "detail": "可选短逛，与午餐共用11:30–12:45窗口；是否前往视实际时间，不挤占下午蒙马特安排。",
+      "status": "optional",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-vivienne"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ]
+    },
+    {
+      "id": "act-montmartre",
+      "dayId": "day-orsay",
+      "order": 6,
+      "title": "蒙马特 · 圣心堂 · 小丘广场",
+      "timeLabel": "13:15–16:30",
+      "detail": "保留下午蒙马特、Sacré-Cœur 与 Place du Tertre 行程；Abbesses 为已有的街区参考点，不是另行指定的集合点。交通方式、实际抵达时刻与通行安排仍待核。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-abbesses",
+        "place-sacre",
+        "place-tertre"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 2,
+          "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ]
+    },
+    {
+      "id": "act-ghpr-luggage",
+      "dayId": "day-orsay",
+      "order": 7,
+      "title": "返回 GHPR · 取行李",
+      "timeLabel": "16:30–17:30",
+      "detail": "返回 Grand Hôtel du Palais Royal 领取早上寄存的行李并准备赴凡尔赛；与上午寄存为两次到访，实际返程与取包耗时待核。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-ghpr"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Itinerary v4.12 (2026-11-04)",
+          "page": 3,
+          "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ]
+    },
+    {
+      "id": "act-waldorf-transfer",
+      "dayId": "day-orsay",
+      "order": 8,
+      "title": "从巴黎出发 → Waldorf 凡尔赛",
+      "timeLabel": "约17:30–18:00 出发",
+      "detail": "此窗口指从巴黎 GHPR 取包后出发的目标，不是保证抵达凡尔赛的时间。沿用赴酒店的驾车规划；实际车程与酒店抵达时间均待估。地图地点为目的地参考，不表示已在该时刻到达。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-waldorf"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
       ]
     },
@@ -572,9 +656,9 @@
       "id": "act-waldorf-arrival",
       "dayId": "day-orsay",
       "order": 9,
-      "title": "前往凡尔赛 · Waldorf 入住",
-      "timeLabel": "18:15 后",
-      "detail": "取包后打车至 Waldorf Astoria Versailles – Trianon Palace。酒店已确认，不代表抵达时间已保证。",
+      "title": "Waldorf 入住 · 休息",
+      "timeLabel": "晚间 · 抵达待估",
+      "detail": "到达 Waldorf Astoria Versailles – Trianon Palace 后办理入住并休息。酒店及住宿日期已确认；实际抵达时间仍为估计，不把17:30–18:00出发窗口当作抵达承诺。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -586,6 +670,11 @@
           "source": "Itinerary v4.12 (2026-11-04)",
           "page": 3,
           "note": ""
+        },
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
       ]
     },
@@ -2341,81 +2430,74 @@
       "order": 9
     },
     {
-      "id": "stop-opera-visit",
-      "activityId": "act-opera-visit",
-      "placeId": "place-opera",
-      "dayId": "day-opera",
-      "order": 1
-    },
-    {
-      "id": "stop-department-stores-1",
-      "activityId": "act-department-stores",
-      "placeId": "place-lafayette",
-      "dayId": "day-opera",
-      "order": 2
-    },
-    {
-      "id": "stop-department-stores-2",
-      "activityId": "act-department-stores",
-      "placeId": "place-printemps",
-      "dayId": "day-opera",
-      "order": 3
-    },
-    {
       "id": "stop-marquis-to-ghpr-1",
       "activityId": "act-marquis-to-ghpr",
       "placeId": "place-marquis",
       "dayId": "day-opera",
-      "order": 4
+      "order": 1
     },
     {
       "id": "stop-marquis-to-ghpr-2",
       "activityId": "act-marquis-to-ghpr",
       "placeId": "place-ghpr",
       "dayId": "day-opera",
+      "order": 2
+    },
+    {
+      "id": "stop-sainte-visit",
+      "activityId": "act-sainte-visit",
+      "placeId": "place-sainte",
+      "dayId": "day-opera",
+      "order": 3
+    },
+    {
+      "id": "stop-notredame-visit",
+      "activityId": "act-notredame-visit",
+      "placeId": "place-notredame",
+      "dayId": "day-opera",
+      "order": 4
+    },
+    {
+      "id": "stop-luxembourg-walk",
+      "activityId": "act-luxembourg-walk",
+      "placeId": "place-lux",
+      "dayId": "day-opera",
       "order": 5
     },
     {
-      "id": "stop-palais-royal",
-      "activityId": "act-palais-royal",
-      "placeId": "place-royal",
+      "id": "stop-orsay-lunch",
+      "activityId": "act-orsay-lunch",
+      "placeId": "place-orsay",
       "dayId": "day-opera",
       "order": 6
     },
     {
-      "id": "stop-vivienne-optional",
-      "activityId": "act-vivienne-optional",
-      "placeId": "place-vivienne",
+      "id": "stop-orsay-visit",
+      "activityId": "act-orsay-visit",
+      "placeId": "place-orsay",
       "dayId": "day-opera",
       "order": 7
     },
     {
-      "id": "stop-montmartre-1",
-      "activityId": "act-montmartre",
-      "placeId": "place-abbesses",
+      "id": "stop-department-stores-1",
+      "activityId": "act-department-stores",
+      "placeId": "place-lafayette",
       "dayId": "day-opera",
       "order": 8
     },
     {
-      "id": "stop-montmartre-2",
-      "activityId": "act-montmartre",
-      "placeId": "place-tertre",
+      "id": "stop-department-stores-2",
+      "activityId": "act-department-stores",
+      "placeId": "place-printemps",
       "dayId": "day-opera",
       "order": 9
     },
     {
-      "id": "stop-montmartre-3",
-      "activityId": "act-montmartre",
-      "placeId": "place-sacre",
+      "id": "stop-ghpr-return",
+      "activityId": "act-ghpr-return",
+      "placeId": "place-ghpr",
       "dayId": "day-opera",
       "order": 10
-    },
-    {
-      "id": "stop-martyrs-optional",
-      "activityId": "act-martyrs-optional",
-      "placeId": "place-martyrs",
-      "dayId": "day-opera",
-      "order": 11
     },
     {
       "id": "stop-ghpr-checkout",
@@ -2425,44 +2507,44 @@
       "order": 1
     },
     {
-      "id": "stop-sainte-visit",
-      "activityId": "act-sainte-visit",
-      "placeId": "place-sainte",
+      "id": "stop-palais-royal",
+      "activityId": "act-palais-royal",
+      "placeId": "place-royal",
       "dayId": "day-orsay",
       "order": 2
     },
     {
-      "id": "stop-notredame-visit",
-      "activityId": "act-notredame-visit",
-      "placeId": "place-notredame",
+      "id": "stop-opera-visit",
+      "activityId": "act-opera-visit",
+      "placeId": "place-opera",
       "dayId": "day-orsay",
       "order": 3
     },
     {
-      "id": "stop-luxembourg-walk",
-      "activityId": "act-luxembourg-walk",
-      "placeId": "place-lux",
+      "id": "stop-vivienne-optional",
+      "activityId": "act-vivienne-optional",
+      "placeId": "place-vivienne",
       "dayId": "day-orsay",
       "order": 4
     },
     {
-      "id": "stop-orsay-transfer",
-      "activityId": "act-orsay-transfer",
-      "placeId": "place-orsay",
+      "id": "stop-montmartre-1",
+      "activityId": "act-montmartre",
+      "placeId": "place-abbesses",
       "dayId": "day-orsay",
       "order": 5
     },
     {
-      "id": "stop-orsay-lunch",
-      "activityId": "act-orsay-lunch",
-      "placeId": "place-orsay",
+      "id": "stop-montmartre-3",
+      "activityId": "act-montmartre",
+      "placeId": "place-sacre",
       "dayId": "day-orsay",
       "order": 6
     },
     {
-      "id": "stop-orsay-visit",
-      "activityId": "act-orsay-visit",
-      "placeId": "place-orsay",
+      "id": "stop-montmartre-2",
+      "activityId": "act-montmartre",
+      "placeId": "place-tertre",
       "dayId": "day-orsay",
       "order": 7
     },
@@ -2474,11 +2556,19 @@
       "order": 8
     },
     {
+      "id": "stop-waldorf-transfer",
+      "activityId": "act-waldorf-transfer",
+      "placeId": "place-waldorf",
+      "label": "赴 Waldorf 目的地参考 · 17:30–18:00为出发窗口，非抵达时间",
+      "dayId": "day-orsay",
+      "order": 9
+    },
+    {
       "id": "stop-waldorf-arrival",
       "activityId": "act-waldorf-arrival",
       "placeId": "place-waldorf",
       "dayId": "day-orsay",
-      "order": 9
+      "order": 10
     },
     {
       "id": "stop-waldorf-breakfast",
@@ -2820,7 +2910,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2838,7 +2928,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2856,7 +2946,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2874,7 +2964,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2892,7 +2982,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2910,7 +3000,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2928,7 +3018,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2946,61 +3036,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-opera-visit--department-stores-1",
-      "fromStopId": "stop-opera-visit",
-      "toStopId": "stop-department-stores-1",
-      "dayId": "day-opera",
-      "order": 1,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-department-stores-1--department-stores-2",
-      "fromStopId": "stop-department-stores-1",
-      "toStopId": "stop-department-stores-2",
-      "dayId": "day-opera",
-      "order": 2,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-department-stores-2--marquis-to-ghpr-1",
-      "fromStopId": "stop-department-stores-2",
-      "toStopId": "stop-marquis-to-ghpr-1",
-      "dayId": "day-opera",
-      "order": 3,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3014,270 +3050,342 @@
       "fromStopId": "stop-marquis-to-ghpr-1",
       "toStopId": "stop-marquis-to-ghpr-2",
       "dayId": "day-opera",
-      "order": 4,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-marquis-to-ghpr-2--palais-royal",
-      "fromStopId": "stop-marquis-to-ghpr-2",
-      "toStopId": "stop-palais-royal",
-      "dayId": "day-opera",
-      "order": 5,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-palais-royal--vivienne-optional",
-      "fromStopId": "stop-palais-royal",
-      "toStopId": "stop-vivienne-optional",
-      "dayId": "day-opera",
-      "order": 6,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-vivienne-optional--montmartre-1",
-      "fromStopId": "stop-vivienne-optional",
-      "toStopId": "stop-montmartre-1",
-      "dayId": "day-opera",
-      "order": 7,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-montmartre-1--montmartre-2",
-      "fromStopId": "stop-montmartre-1",
-      "toStopId": "stop-montmartre-2",
-      "dayId": "day-opera",
-      "order": 8,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-montmartre-2--montmartre-3",
-      "fromStopId": "stop-montmartre-2",
-      "toStopId": "stop-montmartre-3",
-      "dayId": "day-opera",
-      "order": 9,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-montmartre-3--martyrs-optional",
-      "fromStopId": "stop-montmartre-3",
-      "toStopId": "stop-martyrs-optional",
-      "dayId": "day-opera",
-      "order": 10,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-ghpr-checkout--sainte-visit",
-      "fromStopId": "stop-ghpr-checkout",
-      "toStopId": "stop-sainte-visit",
-      "dayId": "day-orsay",
       "order": 1,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+    },
+    {
+      "id": "segment-marquis-to-ghpr-2--sainte-visit",
+      "fromStopId": "stop-marquis-to-ghpr-2",
+      "toStopId": "stop-sainte-visit",
+      "dayId": "day-opera",
+      "order": 2,
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
-      ]
+      ],
+      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
     },
     {
       "id": "segment-sainte-visit--notredame-visit",
       "fromStopId": "stop-sainte-visit",
       "toStopId": "stop-notredame-visit",
-      "dayId": "day-orsay",
-      "order": 2,
+      "dayId": "day-opera",
+      "order": 3,
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
-      ]
+      ],
+      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
     },
     {
       "id": "segment-notredame-visit--luxembourg-walk",
       "fromStopId": "stop-notredame-visit",
       "toStopId": "stop-luxembourg-walk",
-      "dayId": "day-orsay",
-      "order": 3,
+      "dayId": "day-opera",
+      "order": 4,
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
-      ]
+      ],
+      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
     },
     {
-      "id": "segment-luxembourg-walk--orsay-transfer",
+      "id": "segment-luxembourg-walk--orsay-lunch",
       "fromStopId": "stop-luxembourg-walk",
-      "toStopId": "stop-orsay-transfer",
-      "dayId": "day-orsay",
-      "order": 4,
+      "toStopId": "stop-orsay-lunch",
+      "dayId": "day-opera",
+      "order": 5,
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
-      ]
-    },
-    {
-      "id": "segment-orsay-transfer--orsay-lunch",
-      "fromStopId": "stop-orsay-transfer",
-      "toStopId": "stop-orsay-lunch",
-      "dayId": "day-orsay",
-      "order": 5,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.1",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
+      ],
+      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
     },
     {
       "id": "segment-orsay-lunch--orsay-visit",
       "fromStopId": "stop-orsay-lunch",
       "toStopId": "stop-orsay-visit",
+      "dayId": "day-opera",
+      "order": 6,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "同一场馆／酒店内的连续活动或到达后入住，不绘制道路路径。"
+    },
+    {
+      "id": "segment-orsay-visit--department-stores-1",
+      "fromStopId": "stop-orsay-visit",
+      "toStopId": "stop-department-stores-1",
+      "dayId": "day-opera",
+      "order": 7,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+    },
+    {
+      "id": "segment-department-stores-1--department-stores-2",
+      "fromStopId": "stop-department-stores-1",
+      "toStopId": "stop-department-stores-2",
+      "dayId": "day-opera",
+      "order": 8,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
+    },
+    {
+      "id": "segment-department-stores-2--ghpr-return",
+      "fromStopId": "stop-department-stores-2",
+      "toStopId": "stop-ghpr-return",
+      "dayId": "day-opera",
+      "order": 9,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+    },
+    {
+      "id": "segment-ghpr-checkout--palais-royal",
+      "fromStopId": "stop-ghpr-checkout",
+      "toStopId": "stop-palais-royal",
+      "dayId": "day-orsay",
+      "order": 1,
+      "mode": "walking",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
+    },
+    {
+      "id": "segment-palais-royal--opera-visit",
+      "fromStopId": "stop-palais-royal",
+      "toStopId": "stop-opera-visit",
+      "dayId": "day-orsay",
+      "order": 2,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+    },
+    {
+      "id": "segment-opera-visit--vivienne-optional",
+      "fromStopId": "stop-opera-visit",
+      "toStopId": "stop-vivienne-optional",
+      "dayId": "day-orsay",
+      "order": 3,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+    },
+    {
+      "id": "segment-vivienne-optional--montmartre-1",
+      "fromStopId": "stop-vivienne-optional",
+      "toStopId": "stop-montmartre-1",
+      "dayId": "day-orsay",
+      "order": 4,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+    },
+    {
+      "id": "segment-montmartre-1--montmartre-3",
+      "fromStopId": "stop-montmartre-1",
+      "toStopId": "stop-montmartre-3",
+      "dayId": "day-orsay",
+      "order": 5,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+    },
+    {
+      "id": "segment-montmartre-3--montmartre-2",
+      "fromStopId": "stop-montmartre-3",
+      "toStopId": "stop-montmartre-2",
       "dayId": "day-orsay",
       "order": 6,
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
-      ]
+      ],
+      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
     },
     {
-      "id": "segment-orsay-visit--ghpr-luggage",
-      "fromStopId": "stop-orsay-visit",
+      "id": "segment-montmartre-2--ghpr-luggage",
+      "fromStopId": "stop-montmartre-2",
       "toStopId": "stop-ghpr-luggage",
       "dayId": "day-orsay",
       "order": 7,
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
-      ]
+      ],
+      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
     },
     {
-      "id": "segment-ghpr-luggage--waldorf-arrival",
+      "id": "segment-ghpr-luggage--waldorf-transfer",
       "fromStopId": "stop-ghpr-luggage",
-      "toStopId": "stop-waldorf-arrival",
+      "toStopId": "stop-waldorf-transfer",
       "dayId": "day-orsay",
       "order": 8,
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
         }
-      ]
+      ],
+      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
+    },
+    {
+      "id": "segment-waldorf-transfer--waldorf-arrival",
+      "fromStopId": "stop-waldorf-transfer",
+      "toStopId": "stop-waldorf-arrival",
+      "dayId": "day-orsay",
+      "order": 9,
+      "mode": "unknown",
+      "verifiedStatus": "unverified",
+      "geometry": null,
+      "routeDataVersion": "4.12.2",
+      "sources": [
+        {
+          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
+          "checkedAt": "2026-11-12",
+          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+        }
+      ],
+      "verificationNote": "同一场馆／酒店内的连续活动或到达后入住，不绘制道路路径。"
     },
     {
       "id": "segment-waldorf-breakfast--versailles-palace",
@@ -3288,7 +3396,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3306,7 +3414,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3324,7 +3432,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3342,7 +3450,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3360,7 +3468,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3378,7 +3486,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3396,7 +3504,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3414,7 +3522,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3432,7 +3540,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3450,7 +3558,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3468,7 +3576,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3486,7 +3594,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3504,7 +3612,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3522,7 +3630,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3540,7 +3648,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3558,7 +3666,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3576,7 +3684,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3594,7 +3702,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3612,7 +3720,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3630,7 +3738,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3648,7 +3756,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3666,7 +3774,7 @@
       "mode": "rail",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3684,7 +3792,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3702,7 +3810,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3720,7 +3828,7 @@
       "mode": "boat",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3738,7 +3846,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3756,7 +3864,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3774,7 +3882,7 @@
       "mode": "boat",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3792,7 +3900,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3810,7 +3918,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3828,7 +3936,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3846,7 +3954,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3864,7 +3972,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3882,7 +3990,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3900,7 +4008,7 @@
       "mode": "rail",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3918,7 +4026,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3936,7 +4044,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3954,7 +4062,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3972,7 +4080,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3990,7 +4098,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4008,7 +4116,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4026,7 +4134,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.1",
+      "routeDataVersion": "4.12.2",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4106,9 +4214,9 @@
       "priority": "medium",
       "dueDate": null,
       "status": "active",
-      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "note": "12月9日10:00–11:30为目标；歌剧院内部参观场次与开放区域待核，不视为已确认。截止日期未提供。",
       "activityId": "act-opera-visit",
-      "dayId": "day-opera",
+      "dayId": "day-orsay",
       "url": "https://www.operadeparis.fr/en/visits/palais-garnier"
     },
     {
@@ -4117,20 +4225,20 @@
       "priority": "medium",
       "dueDate": null,
       "status": "active",
-      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "note": "12月8日09:30–10:30为目标；定时入场、安检与实际预订待核，不视为已确认。截止日期未提供。",
       "activityId": "act-sainte-visit",
-      "dayId": "day-orsay",
+      "dayId": "day-opera",
       "url": "https://www.sainte-chapelle.fr/en/"
     },
     {
       "id": "task-notredame",
-      "title": "核实圣母院参观与礼拜安排",
+      "title": "核实12月8日圣母院参观与礼拜安排",
       "priority": "medium",
       "dueDate": null,
       "status": "active",
-      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "note": "12月8日宗教活动可能影响游客入场；准确游客入场、礼拜安排与相关限制待核。尚未确认预约；截止日期未提供。",
       "activityId": "act-notredame-visit",
-      "dayId": "day-orsay",
+      "dayId": "day-opera",
       "url": "https://www.notredamedeparis.fr/en/"
     },
     {
@@ -4139,9 +4247,9 @@
       "priority": "medium",
       "dueDate": null,
       "status": "active",
-      "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
+      "note": "12月8日14:15–17:15为目标；门票与实际入场安排待核，不视为已确认。截止日期未提供。",
       "activityId": "act-orsay-visit",
-      "dayId": "day-orsay",
+      "dayId": "day-opera",
       "url": "https://www.musee-orsay.fr/en"
     },
     {
@@ -4150,9 +4258,9 @@
       "priority": "medium",
       "dueDate": null,
       "status": "active",
-      "note": "DATA-04：13:00 午餐为目标，不保证座位；等候过久改简餐。",
+      "note": "DATA-04：12月8日13:15–14:15午餐为目标；Le Restaurant 座位、排队与入馆安排待核，未确认预订。截止日期未提供。",
       "activityId": "act-orsay-lunch",
-      "dayId": "day-orsay",
+      "dayId": "day-opera",
       "url": "https://www.musee-orsay.fr/en"
     },
     {
@@ -4266,7 +4374,10 @@
       ]
     }
   ],
-  "retiredActivityIds": [],
+  "retiredActivityIds": [
+    "act-martyrs-optional",
+    "act-orsay-transfer"
+  ],
   "conditionGroups": [
     {
       "id": "condition-one-cruise",
