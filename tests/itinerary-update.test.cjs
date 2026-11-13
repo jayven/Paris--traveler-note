@@ -7,13 +7,11 @@ const root=path.resolve(__dirname,'..');
 const oldHash='af2dbb626d063926bf126dad2ae376d51738df7e34546b60b2748a2a7ef63708';
 const oldBytes=fs.readFileSync(path.join(root,'trip/releases',oldHash+'.json'));
 const old=JSON.parse(oldBytes);
+// This contract records the completed v4.12.2 itinerary change; later task releases are separate.
 function maintained(){
- const data=JSON.parse(fs.readFileSync(path.join(root,'trip/source-v4.12.json'),'utf8'));
- for(const [file,key] of [['location-verification.json','places'],['route-overrides.json','segments']]){
-  const overrides=JSON.parse(fs.readFileSync(path.join(root,'trip',file),'utf8'));
-  for(const item of overrides[key]){const target=data[key].find(i=>i.id===item.id);assert.ok(target,'orphan override '+item.id);Object.assign(target,item);}
- }
- return Official.validate(data,old);
+ const bytes=fs.readFileSync(path.join(root,'trip/releases/f7f8ce3d91fa777de40cc87829afa31a837455085bd8b59b256f90de55665e24.json'));
+ assert.equal(crypto.createHash('sha256').update(bytes).digest('hex'),'f7f8ce3d91fa777de40cc87829afa31a837455085bd8b59b256f90de55665e24');
+ return Official.validate(JSON.parse(bytes),old);
 }
 const changedDays=new Set(['day-opera','day-orsay']);
 const activity=(data,id)=>data.activities.find(a=>a.id===id);

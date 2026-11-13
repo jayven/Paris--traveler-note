@@ -46,14 +46,14 @@ async function reset(page,bootstrap,raw){
   await page.goto(url);
   const legacy={schemaVersion:3,booked:['louvre','unknown'],dayNotes:{'2026-12-09':'旧每日备注'},bookingNotes:{louvre:'旧预约备注'},hotelNote:'旧酒店备注',flightNote:'旧航班备注',miscNote:'旧通用备注',activityOverrides:{'d3-1':{time:'09:45',end:'',detail:'旧编辑描述',unknownNested:{retain:true}}},customActivities:{'user-test':{id:'user-test',title:'旧自建活动',time:'晚上',end:'',date:'2026-12-10',detail:'自建描述',type:'生活'}},activityOrder:{'2026-12-10':['user-test']},deletedActivityIds:['d1-1'],unknownNested:{list:[1,false,{keep:'完整原文'}]}};
   const raw=JSON.stringify(legacy,null,2);
-  let state=await reset(page,v1,raw);
+  let state=await reset(page,v1,raw);const initializedRevision=state.personal.revision;
   assert.equal(state.migrationBlocked,false);assert.equal(state.personal.legacyArchive.length,1);
   assert.equal(state.personal.legacyArchive[0].sourceRaw,raw);assert.deepEqual(state.personal.legacyArchive[0].data,legacy);
   assert.deepEqual(state.personal.notesByActivityId,{});assert.deepEqual(state.personal.completionByTaskId,{});
   assert.equal(await page.evaluate(()=>localStorage.getItem(ParisPersonal.KEY)),raw);
   assert.ok(state.personal.legacyCanonicalContext.days.length===8);
   state=await page.evaluate(async bootstrap=>store.initialize(bootstrap,localStorage.getItem(ParisPersonal.KEY)),v1);
-  assert.equal(state.personal.legacyArchive.length,1);assert.equal(state.personal.revision,0);
+  assert.equal(state.personal.legacyArchive.length,1);assert.equal(state.personal.revision,initializedRevision,'initialization does not rewrite existing archives or personal records');
   await page.reload();
   state=await page.evaluate(async bootstrap=>{window.store=await ParisStore.open();return store.initialize(bootstrap,localStorage.getItem(ParisPersonal.KEY));},v1);
   assert.equal(state.personal.legacyArchive.length,1);

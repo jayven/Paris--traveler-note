@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "tripDataVersion": "4.12.2",
+  "tripDataVersion": "4.12.3",
   "attribution": "Road geometry: OSRM on FOSSGIS servers; © OpenStreetMap contributors.",
   "license": "https://opendatacommons.org/licenses/odbl/1-0/",
   "fixMapUrl": "https://www.openstreetmap.org/fixthemap",
@@ -11,7 +11,7 @@
       "id": "segment-arrival-hotel-1--arrival-hotel-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "端点定位尚未核验（例如机场具体航站楼或运营商码头）；保留节点文字，不绘制路线。"
     },
     {
@@ -66,7 +66,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 174,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -241,7 +241,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 364.1,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -448,7 +448,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 642.1,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -783,7 +783,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 836.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -910,7 +910,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 434.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -1017,7 +1017,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 592.8,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -1044,14 +1044,14 @@
       "id": "segment-tuileries-concorde-2--arrival-rest",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-marquis-to-ghpr-1--marquis-to-ghpr-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
@@ -1838,7 +1838,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 1447,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -2093,7 +2093,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 483,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -2788,7 +2788,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 1600.1,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -2815,21 +2815,21 @@
       "id": "segment-luxembourg-walk--orsay-lunch",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "道路几何未取得/未通过端点核验：Endpoint road snap exceeds 250m (270, 48m)"
     },
     {
       "id": "segment-orsay-lunch--orsay-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "同一场地的不同活动/访问；没有经核验的馆内或接送路线，不发布道路几何。"
     },
     {
       "id": "segment-orsay-visit--department-stores-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
@@ -2932,7 +2932,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 296.5,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -2959,7 +2959,7 @@
       "id": "segment-department-stores-2--ghpr-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
@@ -3070,7 +3070,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 242,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -3097,42 +3097,42 @@
       "id": "segment-palais-royal--opera-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
       "id": "segment-opera-visit--vivienne-optional",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
       "id": "segment-vivienne-optional--montmartre-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
       "id": "segment-montmartre-1--montmartre-3",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
       "id": "segment-montmartre-3--montmartre-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
       "id": "segment-montmartre-2--ghpr-luggage",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "本次调整仅明确地点顺序，未确认这两站之间的交通方式；不猜测步行或驾车，不绘制道路几何。"
     },
     {
@@ -6187,7 +6187,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 21527.7,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -6214,7 +6214,7 @@
       "id": "segment-waldorf-transfer--waldorf-arrival",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "同一场地的不同活动/访问；没有经核验的馆内或接送路线，不发布道路几何。"
     },
     {
@@ -6417,7 +6417,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 1005.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -6444,14 +6444,14 @@
       "id": "segment-versailles-palace--versailles-gardens",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-versailles-gardens--trianon-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -6982,7 +6982,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 928.2,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -7009,7 +7009,7 @@
       "id": "segment-hamlet-optional--waldorf-to-powers-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -9528,7 +9528,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 18799.7,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -9887,7 +9887,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 1050.6,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -10254,7 +10254,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 1113.7,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -10469,7 +10469,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 632.6,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -10588,7 +10588,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 197.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -10615,63 +10615,63 @@
       "id": "segment-powers-shopping-bags--louvre-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "DATA-02：卢浮宫私人导览集合点待确认；金字塔仅馆区参考，不据此发布精确接送动线。"
     },
     {
       "id": "segment-louvre-transfer--louvre-private-guide",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-louvre-private-guide--powers-friday-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-powers-pack--eiffel-photos-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-eiffel-photos-1--eiffel-photos-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-eiffel-photos-2--powers-to-astor-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-powers-to-astor-1--powers-to-astor-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-powers-to-astor-2--marais-afternoon-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-marais-afternoon-1--marais-afternoon-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -11206,7 +11206,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 1146,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -11561,7 +11561,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 774.5,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -11588,63 +11588,63 @@
       "id": "segment-rotterdam-outbound-1--rotterdam-outbound-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "铁路班次/轨迹未核验；禁止用公路替代。"
     },
     {
       "id": "segment-rotterdam-outbound-2--erasmus-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-erasmus-transfer--watershuttle-wait",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-watershuttle-wait--watershuttle-outbound",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "水路运营/码头/轨迹未核验；禁止用公路替代。"
     },
     {
       "id": "segment-watershuttle-outbound--kinderdijk-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-kinderdijk-visit--kinderdijk-boarding",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-kinderdijk-boarding--watershuttle-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "水路运营/码头/轨迹未核验；禁止用公路替代。"
     },
     {
       "id": "segment-watershuttle-return--fenix-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-fenix-transfer--fenix-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -12415,7 +12415,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 3769.1,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -12442,7 +12442,7 @@
       "id": "segment-markthal-transfer--markthal-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -12641,7 +12641,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 333.2,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -12668,28 +12668,28 @@
       "id": "segment-cube-houses-exterior--rotterdam-station-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-rotterdam-station-return--eurostar-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "铁路班次/轨迹未核验；禁止用公路替代。"
     },
     {
       "id": "segment-eurostar-return--astor-sunday-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-astor-checkout--saint-germain-walk",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
@@ -13088,7 +13088,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 1004.9,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -13163,7 +13163,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "distanceMeters": 160.8,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
       "roadSnapMeters": [
@@ -13190,21 +13190,21 @@
       "id": "segment-bon-marche-shopping-2--astor-final-luggage",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     },
     {
       "id": "segment-astor-final-luggage--cdg-departure-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "端点定位尚未核验（例如机场具体航站楼或运营商码头）；保留节点文字，不绘制路线。"
     },
     {
       "id": "segment-cdg-departure-transfer--cdg-flight",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "verificationNote": "来源未确定单一交通方式；不猜测道路模式。"
     }
   ]
