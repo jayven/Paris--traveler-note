@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "tripId": "paris-2026",
-  "tripDataVersion": "4.12.2",
-  "releaseSequence": 2,
+  "tripDataVersion": "4.12.3",
+  "releaseSequence": 3,
   "trip": {
     "title": "Paris, at our pace",
     "startDate": "2026-12-07",
@@ -163,7 +163,7 @@
         "place-orangerie"
       ],
       "taskIds": [
-        "task-orangerie"
+        "task-carte-blanche-duo"
       ],
       "sources": [
         {
@@ -279,7 +279,7 @@
         "place-sainte"
       ],
       "taskIds": [
-        "task-sainte"
+        "task-sainte-booking"
       ],
       "sources": [
         {
@@ -360,9 +360,7 @@
       "placeIds": [
         "place-orsay"
       ],
-      "taskIds": [
-        "task-orsay-lunch"
-      ],
+      "taskIds": [],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -389,7 +387,7 @@
         "place-orsay"
       ],
       "taskIds": [
-        "task-orsay"
+        "task-carte-blanche-duo"
       ],
       "sources": [
         {
@@ -517,7 +515,7 @@
         "place-opera"
       ],
       "taskIds": [
-        "task-opera"
+        "task-opera-tickets"
       ],
       "sources": [
         {
@@ -712,7 +710,7 @@
         "place-versailles"
       ],
       "taskIds": [
-        "task-versailles"
+        "task-versailles-passport"
       ],
       "sources": [
         {
@@ -756,7 +754,7 @@
         "place-trianon"
       ],
       "taskIds": [
-        "task-versailles"
+        "task-versailles-passport"
       ],
       "sources": [
         {
@@ -1018,7 +1016,7 @@
         "place-eiffel"
       ],
       "taskIds": [
-        "task-photoshoot"
+        "task-photoshoot-booking"
       ],
       "sources": [
         {
@@ -1108,7 +1106,7 @@
         "place-rotterdam-centraal"
       ],
       "taskIds": [
-        "task-eurostar"
+        "task-eurostar-tickets"
       ],
       "sources": [
         {
@@ -1130,9 +1128,7 @@
       "placeIds": [
         "place-erasmusbrug"
       ],
-      "taskIds": [
-        "task-watershuttle"
-      ],
+      "taskIds": [],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -1153,9 +1149,7 @@
       "placeIds": [
         "place-erasmusbrug"
       ],
-      "taskIds": [
-        "task-watershuttle"
-      ],
+      "taskIds": [],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -1176,9 +1170,7 @@
       "placeIds": [
         "place-kinderdijk"
       ],
-      "taskIds": [
-        "task-watershuttle"
-      ],
+      "taskIds": [],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -1199,7 +1191,9 @@
       "placeIds": [
         "place-kinderdijk"
       ],
-      "taskIds": [],
+      "taskIds": [
+        "task-rotterdam-attraction-tickets"
+      ],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -1220,9 +1214,7 @@
       "placeIds": [
         "place-kinderdijk"
       ],
-      "taskIds": [
-        "task-watershuttle"
-      ],
+      "taskIds": [],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -1243,9 +1235,7 @@
       "placeIds": [
         "place-erasmusbrug"
       ],
-      "taskIds": [
-        "task-watershuttle"
-      ],
+      "taskIds": [],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -1288,7 +1278,7 @@
         "place-fenix"
       ],
       "taskIds": [
-        "task-rotterdam-venues"
+        "task-rotterdam-attraction-tickets"
       ],
       "sources": [
         {
@@ -1331,9 +1321,7 @@
       "placeIds": [
         "place-markthal"
       ],
-      "taskIds": [
-        "task-rotterdam-venues"
-      ],
+      "taskIds": [],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -1397,7 +1385,7 @@
         "place-gare-nord"
       ],
       "taskIds": [
-        "task-eurostar"
+        "task-eurostar-tickets"
       ],
       "sources": [
         {
@@ -1525,9 +1513,7 @@
       "placeIds": [
         "place-cdg"
       ],
-      "taskIds": [
-        "task-flight"
-      ],
+      "taskIds": [],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -1548,9 +1534,7 @@
       "placeIds": [
         "place-cdg"
       ],
-      "taskIds": [
-        "task-flight"
-      ],
+      "taskIds": [],
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2910,7 +2894,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2928,7 +2912,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2946,7 +2930,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2964,7 +2948,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -2982,7 +2966,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3000,7 +2984,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3018,7 +3002,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3036,7 +3020,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3054,7 +3038,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3073,7 +3057,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3092,7 +3076,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3111,7 +3095,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3130,7 +3114,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3149,7 +3133,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3168,7 +3152,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3187,7 +3171,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3206,7 +3190,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3225,7 +3209,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3244,7 +3228,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3263,7 +3247,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3282,7 +3266,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3301,7 +3285,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3320,7 +3304,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3339,7 +3323,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3358,7 +3342,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3377,7 +3361,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
@@ -3396,7 +3380,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3414,7 +3398,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3432,7 +3416,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3450,7 +3434,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3468,7 +3452,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3486,7 +3470,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3504,7 +3488,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3522,7 +3506,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3540,7 +3524,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3558,7 +3542,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3576,7 +3560,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3594,7 +3578,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3612,7 +3596,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3630,7 +3614,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3648,7 +3632,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3666,7 +3650,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3684,7 +3668,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3702,7 +3686,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3720,7 +3704,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3738,7 +3722,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3756,7 +3740,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3774,7 +3758,7 @@
       "mode": "rail",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3792,7 +3776,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3810,7 +3794,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3828,7 +3812,7 @@
       "mode": "boat",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3846,7 +3830,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3864,7 +3848,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3882,7 +3866,7 @@
       "mode": "boat",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3900,7 +3884,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3918,7 +3902,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3936,7 +3920,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3954,7 +3938,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3972,7 +3956,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -3990,7 +3974,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4008,7 +3992,7 @@
       "mode": "rail",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4026,7 +4010,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4044,7 +4028,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4062,7 +4046,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4080,7 +4064,7 @@
       "mode": "walking",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4098,7 +4082,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4116,7 +4100,7 @@
       "mode": "driving",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4134,7 +4118,7 @@
       "mode": "unknown",
       "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.2",
+      "routeDataVersion": "4.12.3",
       "sources": [
         {
           "source": "Itinerary v4.12 (2026-11-04)",
@@ -4146,153 +4130,259 @@
   ],
   "tasks": [
     {
-      "id": "task-cruise",
-      "title": "确认游船产品、班次与登船码头",
-      "priority": "high",
-      "dueDate": null,
-      "status": "active",
-      "note": "DATA-01/05：周一首选、周四后备，全程只乘一次。Bateaux-Mouches 与 La Calife 来源冲突，需用户确认。",
-      "activityId": "act-cruise-preferred",
-      "dayId": "day-arrival"
-    },
-    {
       "id": "task-louvre-guide",
-      "title": "确认卢浮宫中文私人导览时段",
+      "title": "联系卢浮宫中文私人导游，确认 12/11 13:30、门票及目标展厅",
       "priority": "high",
       "dueDate": null,
       "status": "active",
-      "note": "DATA-02：13:30–16:30 与 16:30–20:00 来源冲突；核实集合点、实际馆室开放及导览后留馆规则。",
+      "note": "13:30 为需要向导游确认的目标时间；门票、目标展厅、集合点与实际场次以确认结果为准，尚未确认预约。",
       "activityId": "act-louvre-private-guide",
       "dayId": "day-louvre",
-      "url": "https://www.louvre.fr/en"
+      "url": "https://www.louvre.fr/en",
+      "groupId": "prep-now",
+      "order": 1
+    },
+    {
+      "id": "task-opera-tickets",
+      "title": "预订 12/9 10:00 巴黎歌剧院两张票",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "10:00 为目标场次；预订两张参观票，并核对实际开放范围与入场安排。尚未确认购票。",
+      "activityId": "act-opera-visit",
+      "dayId": "day-orsay",
+      "groupId": "prep-now",
+      "order": 2,
+      "url": "https://www.operadeparis.fr/en/visits/palais-garnier"
+    },
+    {
+      "id": "task-versailles-passport",
+      "title": "购买 12/10 凡尔赛 Passport 10:00时段门票",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "核对 Passport 票种范围和10:00入场时段后购票；票务与园区开放以官方信息为准，尚未确认购票。",
+      "activityId": "act-versailles-palace",
+      "dayId": "day-versailles",
+      "groupId": "prep-now",
+      "order": 3,
+      "url": "https://en.chateauversailles.fr/plan-your-visit"
+    },
+    {
+      "id": "task-sainte-booking",
+      "title": "预约 12/8 09:30 圣礼拜堂",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "09:30 为目标入场时段；完成预约前仍为待确认，安检与入场要求另核。",
+      "activityId": "act-sainte-visit",
+      "dayId": "day-opera",
+      "groupId": "prep-now",
+      "order": 4,
+      "url": "https://www.sainte-chapelle.fr/en/"
+    },
+    {
+      "id": "task-photoshoot-booking",
+      "title": "确认并预订 12/12 上午铁塔摄影师",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "联系并预订摄影师，确认上午拍摄时段、集合点及具体服务；尚未确认预约。",
+      "activityId": "act-eiffel-photos",
+      "dayId": "day-photos",
+      "groupId": "prep-now",
+      "order": 5
+    },
+    {
+      "id": "task-carte-blanche-duo",
+      "title": "购买奥赛＋橘园Carte Blanche Jeunes Duo年卡",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "同一个年卡购买事项关联奥赛与橘园。购买前核实 Jeunes Duo 资格、有效期、权益和参观预约要求；不代表任一场次已预约或确认。",
+      "activityId": "act-orsay-visit",
+      "dayId": "day-opera",
+      "groupId": "prep-now",
+      "order": 6,
+      "url": "https://www.musee-orsay.fr/en"
+    },
+    {
+      "id": "task-cruise",
+      "title": "确定周一游船",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "DATA-01/05：周一为首选，全程只乘一次；确认产品、运营商、班次与登船码头。周四仅保留原行程的条件后备，不代表已预订。",
+      "activityId": "act-cruise-preferred",
+      "dayId": "day-arrival",
+      "groupId": "prep-now",
+      "order": 7
+    },
+    {
+      "id": "task-notredame",
+      "title": "查看 12/8 圣母院免费预约和宗教活动安排",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "12月8日宗教活动可能影响游客入场；查看免费预约、礼拜安排和相关限制。准确入场安排待核，尚未确认预约。",
+      "activityId": "act-notredame-visit",
+      "dayId": "day-opera",
+      "url": "https://www.notredamedeparis.fr/en/",
+      "groupId": "prep-departure",
+      "order": 1
+    },
+    {
+      "id": "task-eurostar-tickets",
+      "title": "购买 12/13 巴黎⇄鹿特丹 Eurostar 往返票，核对施工时刻",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "购买往返票前核对12月13日官方运营、施工和实际时刻。原行程时间仅为目标，尚未确认购票。",
+      "activityId": "act-rotterdam-outbound",
+      "dayId": "day-sunday",
+      "groupId": "prep-departure",
+      "order": 2,
+      "url": "https://www.nsinternational.com/en"
+    },
+    {
+      "id": "task-rotterdam-attraction-tickets",
+      "title": "确定鹿特丹小孩堤防与 Fenix 的取舍，再订相应门票",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "先决定 Kinderdijk 小孩堤防与 Fenix 的取舍，再按选择核对开放、交通和相应门票；尚未确认任何购票或行程替代。",
+      "activityId": "act-fenix-visit",
+      "dayId": "day-sunday",
+      "groupId": "prep-departure",
+      "order": 3
     },
     {
       "id": "task-eurostar",
       "title": "核实 Eurostar 往返、施工与票务",
       "priority": "high",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "DATA-03：目标抵达 10:02、返程 18:58；去程发车、返巴黎时间及运营均未确认。",
       "activityId": "act-rotterdam-outbound",
       "dayId": "day-sunday",
-      "url": "https://www.nsinternational.com/en"
+      "url": "https://www.nsinternational.com/en",
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
     },
     {
       "id": "task-watershuttle",
       "title": "核实 WaterShuttle 冬季船班与码头",
       "priority": "high",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "DATA-03：来源时间线为目标，冬季船班需用最新官方时刻确认。",
       "activityId": "act-watershuttle-outbound",
-      "dayId": "day-sunday"
+      "dayId": "day-sunday",
+      "archiveReason": "已从本次精简后的官方准备清单归档；历史事项及完成记录保留，不代表已经完成。"
     },
     {
       "id": "task-photoshoot",
       "title": "确认周六约拍时间与集合点",
       "priority": "high",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "DATA-04：09:00–10:30／11:00 只是目标，尚无确认预约。",
       "activityId": "act-eiffel-photos",
-      "dayId": "day-photos"
+      "dayId": "day-photos",
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
     },
     {
       "id": "task-orangerie",
       "title": "核实橘园入场与 Carte Blanche",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
       "activityId": "act-orangerie-visit",
       "dayId": "day-arrival",
-      "url": "https://www.musee-orangerie.fr/en"
+      "url": "https://www.musee-orangerie.fr/en",
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
     },
     {
       "id": "task-opera",
       "title": "核实歌剧院场次与开放范围",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "12月9日10:00–11:30为目标；歌剧院内部参观场次与开放区域待核，不视为已确认。截止日期未提供。",
       "activityId": "act-opera-visit",
       "dayId": "day-orsay",
-      "url": "https://www.operadeparis.fr/en/visits/palais-garnier"
+      "url": "https://www.operadeparis.fr/en/visits/palais-garnier",
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
     },
     {
       "id": "task-sainte",
       "title": "核实圣礼拜堂定时入场",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "12月8日09:30–10:30为目标；定时入场、安检与实际预订待核，不视为已确认。截止日期未提供。",
       "activityId": "act-sainte-visit",
       "dayId": "day-opera",
-      "url": "https://www.sainte-chapelle.fr/en/"
-    },
-    {
-      "id": "task-notredame",
-      "title": "核实12月8日圣母院参观与礼拜安排",
-      "priority": "medium",
-      "dueDate": null,
-      "status": "active",
-      "note": "12月8日宗教活动可能影响游客入场；准确游客入场、礼拜安排与相关限制待核。尚未确认预约；截止日期未提供。",
-      "activityId": "act-notredame-visit",
-      "dayId": "day-opera",
-      "url": "https://www.notredamedeparis.fr/en/"
+      "url": "https://www.sainte-chapelle.fr/en/",
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
     },
     {
       "id": "task-orsay",
       "title": "核实奥赛门票与入场安排",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "12月8日14:15–17:15为目标；门票与实际入场安排待核，不视为已确认。截止日期未提供。",
       "activityId": "act-orsay-visit",
       "dayId": "day-opera",
-      "url": "https://www.musee-orsay.fr/en"
+      "url": "https://www.musee-orsay.fr/en",
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
     },
     {
       "id": "task-orsay-lunch",
       "title": "核实 Le Restaurant 午餐安排",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "DATA-04：12月8日13:15–14:15午餐为目标；Le Restaurant 座位、排队与入馆安排待核，未确认预订。截止日期未提供。",
       "activityId": "act-orsay-lunch",
       "dayId": "day-opera",
-      "url": "https://www.musee-orsay.fr/en"
+      "url": "https://www.musee-orsay.fr/en",
+      "archiveReason": "已从本次精简后的官方准备清单归档；历史事项及完成记录保留，不代表已经完成。"
     },
     {
       "id": "task-versailles",
       "title": "核实凡尔赛入场与园区开放",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "来自 v4.12 的待核主题；初始未勾选不代表用户实际尚未办理。截止日期未提供。",
       "activityId": "act-versailles-palace",
       "dayId": "day-versailles",
-      "url": "https://en.chateauversailles.fr/plan-your-visit"
+      "url": "https://en.chateauversailles.fr/plan-your-visit",
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
     },
     {
       "id": "task-rotterdam-venues",
       "title": "核实鹿特丹场馆开放与入场",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "Fenix／Tornado、Kinderdijk 及 Markthal 的目标停留非预约证明。",
       "activityId": "act-fenix-visit",
-      "dayId": "day-sunday"
+      "dayId": "day-sunday",
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
     },
     {
       "id": "task-flight",
       "title": "核对 CDG 航班与机场出发缓冲",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "22:20 起飞；航站楼、航班号及实际出城路况未录入。",
       "activityId": "act-cdg-flight",
-      "dayId": "day-departure"
+      "dayId": "day-departure",
+      "archiveReason": "已从本次精简后的官方准备清单归档；历史事项及完成记录保留，不代表已经完成。"
     }
   ],
   "hotels": [
@@ -4387,6 +4477,22 @@
         "act-cruise-backup"
       ],
       "note": "周一首选；仅周一未乘船时启用周四后备，产品与班次待核。"
+    }
+  ],
+  "taskGroups": [
+    {
+      "id": "prep-now",
+      "title": "现在｜11/12–11/25",
+      "order": 1,
+      "windowStart": "2026-11-12",
+      "windowEnd": "2026-11-25"
+    },
+    {
+      "id": "prep-departure",
+      "title": "临近出发｜12/6–12/8",
+      "order": 2,
+      "windowStart": "2026-12-06",
+      "windowEnd": "2026-12-08"
     }
   ]
 }

@@ -28,7 +28,9 @@ async function note(p,id,text){await p.locator(`[data-action=detail][data-id="${
 (async()=>{
  const oldBytes=await fs.readFile(path.join(root,'trip/releases',oldHash+'.json'));
  oldEnvelope={data:JSON.parse(oldBytes),manifest:Official.manifest({schemaVersion:1,tripId:'paris-2026',tripDataVersion:'4.12.1',releaseSequence:1,snapshotUrl:'./trip/releases/'+oldHash+'.json',sha256:oldHash,byteLength:oldBytes.length})};
- const manifest=JSON.parse(await fs.readFile(path.join(root,'trip/manifest.json'),'utf8'));
+ const reviewedHash='f7f8ce3d91fa777de40cc87829afa31a837455085bd8b59b256f90de55665e24';
+ const reviewedBytes=await fs.readFile(path.join(root,'trip/releases',reviewedHash+'.json'));
+ const manifest=Official.manifest({schemaVersion:1,tripId:'paris-2026',tripDataVersion:'4.12.2',releaseSequence:2,snapshotUrl:'./trip/releases/'+reviewedHash+'.json',sha256:reviewedHash,byteLength:reviewedBytes.length});
  assert.equal(manifest.tripDataVersion,'4.12.2');assert.equal(manifest.releaseSequence,2);
  newEnvelope={manifest,data:JSON.parse(await fs.readFile(path.join(root,manifest.snapshotUrl),'utf8'))};activeManifest=oldEnvelope.manifest;
  await fs.mkdir(output,{recursive:true});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));

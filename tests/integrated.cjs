@@ -34,7 +34,7 @@ async function expectText(page,selector,pattern){assert.match(await page.locator
   console.log('PASS migration raw key unchanged, legacy records isolated, tentative official details and note autosave/reload/escaping');
   await nav(page,'todo');
   await page.locator('#main-content [data-action=task-add]').click();await saveTask(page,{title:'合成低优先级逾期任务',priority:'low',dueDate:'2020-01-01',note:'仅测试本机任务',url:'https://example.com/'});
-  const task=page.locator('.task-row').filter({has:page.locator('h3',{hasText:'合成低优先级逾期任务'})});await task.waitFor();const taskId=await task.getAttribute('data-task-id');assert.ok(taskId.startsWith('local-'));assert.equal(await page.locator('.task-row').first().getAttribute('data-task-id'),taskId,'overdue tasks precede high-priority undated official tasks');
+  const task=page.locator('.task-row').filter({has:page.locator('h3',{hasText:'合成低优先级逾期任务'})});await task.waitFor();const taskId=await task.getAttribute('data-task-id');assert.ok(taskId.startsWith('local-'));assert.equal(await page.locator('[data-task-section=local] .task-row').first().getAttribute('data-task-id'),taskId,'overdue local tasks retain their own sorting within the separate local section');
   await task.locator('[data-action=task-edit]').click();await saveTask(page,{title:'合成已编辑本地任务',priority:'low',dueDate:'2020-01-01',note:'已编辑'});
   await expectText(page,`[data-task-id="${taskId}"] h3`,/合成已编辑本地任务/);await page.reload();await nav(page,'todo');await expectText(page,`[data-task-id="${taskId}"] h3`,/合成已编辑本地任务/);
   await page.locator(`[data-complete="${taskId}"]`).check();await page.locator('[data-task-filter=completed]').click();assert.equal(await page.locator(`[data-complete="${taskId}"]`).isChecked(),true);

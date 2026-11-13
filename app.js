@@ -1,7 +1,7 @@
 /* Paris Pocket: official itinerary + private, device-local records. No backend or login. */
 (async()=>{
 'use strict';
-const APP_VERSION='2.0.0-phase3-map';
+const APP_VERSION='2.0.1-todo';
 const V=window.ParisViews,O=window.ParisOfficial,main=document.getElementById('main-content');
 const {safe,date,link}=V;
 let store,state,storageError='',syncMessage='',tab='days',dayIndex=0,taskFilter='pending';
