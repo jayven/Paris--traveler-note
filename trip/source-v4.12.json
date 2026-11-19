@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "tripId": "paris-2026",
-  "tripDataVersion": "4.12.3",
-  "releaseSequence": 3,
+  "tripDataVersion": "4.12.4",
+  "releaseSequence": 4,
   "trip": {
     "title": "Paris, at our pace",
     "startDate": "2026-12-07",
@@ -18,17 +18,17 @@
       "time": "22:20",
       "airport": "CDG"
     },
-    "sourceVersion": "v4.12",
-    "sourceDate": "2026-11-04",
-    "sourceNote": "建议/目标时间不是预订确认。DATA-01…05 未决事实保留待核。12月8/9日按2026-11-12用户安排更新；其他日期与五家酒店住宿不变。"
+    "sourceVersion": "v5.1 Refined",
+    "sourceDate": "2026-11-18",
+    "sourceNote": "用户v5.1微调版为最新规划，取代v5.2；未确认时段均为目标。工作日18:00开工，周四例外，12/14需调整会议。"
   },
   "days": [
     {
       "id": "day-arrival",
       "date": "2026-12-07",
       "weekday": "周一",
-      "theme": "抵达 · 橘园 · 夜游",
-      "note": "抵达有不确定性，橘园优先。游船周一首选、周四后备，仅乘一次，产品与时刻待确认。",
+      "theme": "抵达 · 中心区 · 橘园",
+      "note": "抵达晚点优先保橘园，中心区可缩短；17:15–17:30争取回酒店，18:00工作。",
       "hotelIds": [
         "hotel-marquis"
       ]
@@ -37,8 +37,8 @@
       "id": "day-opera",
       "date": "2026-12-08",
       "weekday": "周二",
-      "theme": "圣礼拜堂 · 圣母院 · 卢森堡 · 奥赛 · 百货",
-      "note": "早上先从 Marquis 退房并到 GHPR 寄存行李，再观光。12月8日圣母院宗教活动期间的游客入场安排与限制待核。圣礼拜堂与 Le Restaurant 均未确认；晚间百货可按体力缩短。",
+      "theme": "奥赛 · Le Restaurant · 春天／老佛爷",
+      "note": "奥赛11:10–14:40含12:00–13:00午餐；等位可能挤压参观，百货15:15–17:00只逛重点，18:00工作。",
       "hotelIds": [
         "hotel-ghpr"
       ]
@@ -47,8 +47,8 @@
       "id": "day-orsay",
       "date": "2026-12-09",
       "weekday": "周三",
-      "theme": "皇家宫殿 · 歌剧院 · 蒙马特 → 凡尔赛",
-      "note": "08:45–09:30 为 GHPR 退房寄存与皇家宫殿花园共用窗口；薇薇安可选，蒙马特保留下午。16:30–17:30 回 GHPR 取包；约17:30–18:00是从巴黎出发目标，不是凡尔赛保证抵达时间，实际车程与抵达待估。",
+      "theme": "皇家宫殿 · 薇薇安 · 两教堂 → 凡尔赛",
+      "note": "两教堂避开12/8特殊瞻礼；14:30左右从GHPR取箱出发，约17:00争取到Waldorf，18:00工作。",
       "hotelIds": [
         "hotel-waldorf"
       ]
@@ -57,8 +57,8 @@
       "id": "day-versailles",
       "date": "2026-12-10",
       "weekday": "周四",
-      "theme": "凡尔赛宫 · 返回巴黎",
-      "note": "约 16:00 离园，先回 Waldorf 取包，再返回 Grand Powers。周一已乘船则周四不再乘。",
+      "theme": "凡尔赛主宫殿 · 特里亚农 → Grand Powers",
+      "note": "18:00开工例外风险日，18:30预计抵达不是保证；若必须准时工作，缩短特里亚农并提前离园。",
       "hotelIds": [
         "hotel-grand-powers"
       ]
@@ -67,8 +67,8 @@
       "id": "day-louvre",
       "date": "2026-12-11",
       "weekday": "周五",
-      "theme": "凯旋门 · 购物 · 卢浮宫",
-      "note": "Grand Powers 连住。凯旋门仅外观；卢浮宫中文私人导览实际时段与集合点待核。",
+      "theme": "铁塔约拍 · 卢浮宫中文导览",
+      "note": "摄影09:45–11:15与导览13:30均为未确认目标；确认天气政策、集合点、门票和留馆规则，18:00工作。",
       "hotelIds": [
         "hotel-grand-powers"
       ]
@@ -77,8 +77,8 @@
       "id": "day-photos",
       "date": "2026-12-12",
       "weekday": "周六",
-      "theme": "铁塔约拍 · 换店 · 玛黑",
-      "note": "摄影前先整理行李、轻装外出；摄影后回 Grand Powers 取箱，再换 Maison Astor。",
+      "theme": "凯旋门外观 · 换店 · 玛黑区",
+      "note": "玛黑区14:15–17:45完整3.5小时优先；换店延误时简餐，不压缩玛黑区；凯旋门仅外观。",
       "hotelIds": [
         "hotel-maison-astor"
       ]
@@ -87,8 +87,8 @@
       "id": "day-sunday",
       "date": "2026-12-13",
       "weekday": "周日",
-      "theme": "鹿特丹 · 全天一日游",
-      "note": "全天 BLOCK，Maison Astor 连住轻装。DATA-03：Eurostar／WaterShuttle 冬季时刻、施工、票务均待核；下列均为来源目标，非确认班次或实时 ETA。",
+      "theme": "歌剧院 · 蒙马特 · 塞纳河夜游",
+      "note": "取消鹿特丹与Eurostar；周日自由日，歌剧院11:00、夜游18:30为目标，游船仅此一次。",
       "hotelIds": [
         "hotel-maison-astor"
       ]
@@ -97,8 +97,8 @@
       "id": "day-departure",
       "date": "2026-12-14",
       "weekday": "周一",
-      "theme": "圣日耳曼 · 购物 · 返程",
-      "note": "行李寄存 Maison Astor，购物后回店取包，目标 17:00–17:30 离市赴 CDG；不补卢森堡公园。",
+      "theme": "卢森堡 · 圣日耳曼 · 购物 · CDG",
+      "note": "17:00–17:30离开市区，22:20航班；购物服从返程缓冲，提前请假或减少会议。",
       "hotelIds": [
         "hotel-maison-astor"
       ]
@@ -109,9 +109,9 @@
       "id": "act-arrival-hotel",
       "dayId": "day-arrival",
       "order": 1,
-      "title": "抵达 CDG · Marquis 寄存行李",
+      "title": "抵达 CDG · Marquis 寄存／争取入住",
       "timeLabel": "08:00–12:30",
-      "detail": "08:00 抵达；入境、取行李、入城与午餐。提前入住未保证。",
+      "detail": "入境、取行李、入城、寄存／争取入住及午餐；航站楼和实际耗时待核。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -121,9 +121,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -131,9 +131,9 @@
       "id": "act-faubourg-walk",
       "dayId": "day-arrival",
       "order": 2,
-      "title": "福宝街 · 马德莱娜 · 旺多姆",
+      "title": "福宝街 · 马德莱娜 · 旺多姆／圣奥诺雷",
       "timeLabel": "12:30–14:30",
-      "detail": "挑重点散步，不深逛全部；包括圣奥诺雷街。",
+      "detail": "只选重点，不强求全部逛完；抵达晚点时优先保橘园。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -144,9 +144,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -156,7 +156,7 @@
       "order": 3,
       "title": "橘园美术馆",
       "timeLabel": "14:45–16:00 目标",
-      "detail": "Carte Blanche 办理、预约与现场排队另行确认；目标时间不是已订票。",
+      "detail": "Carte Blanche Jeunes Duo 办理／入场方式待确认；未确认预约。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
@@ -167,9 +167,9 @@
       ],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -177,9 +177,9 @@
       "id": "act-tuileries-concorde",
       "dayId": "day-arrival",
       "order": 4,
-      "title": "杜乐丽花园 · 协和广场",
-      "timeLabel": "16:00–17:30",
-      "detail": "花园短走，之后衔接游船取决于最终船型与码头。花园中心不等于市集入口。",
+      "title": "杜乐丽花园 · 协和广场短走",
+      "timeLabel": "16:00–17:15",
+      "detail": "短走后回 Marquis 休息；抵达日以时差和延误为先。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -189,42 +189,19 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-cruise-preferred",
-      "dayId": "day-arrival",
-      "order": 5,
-      "title": "塞纳河夜游 · 周一首选",
-      "timeLabel": "时间待确认",
-      "detail": "DATA-01：来源同时写 Bateaux-Mouches 约 1 小时 18:00/18:30、La Calife 晚餐船 18:30/20:40，且与 19:15 回店冲突。产品、船班、登船点均待确认，不生成码头导航。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [],
-      "taskIds": [
-        "task-cruise"
-      ],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        }
-      ],
-      "conditionGroupId": "condition-one-cruise",
-      "conditionText": "周一首选；遇延误或疲劳未成行时才改周四，全程只乘一次。"
-    },
-    {
       "id": "act-arrival-rest",
       "dayId": "day-arrival",
-      "order": 6,
+      "order": 5,
       "title": "返回 Marquis · 休息",
-      "timeLabel": "晚间 · 衔接待核",
-      "detail": "源表 19:15 返回与晚餐船时间冲突；实际返回时间待船型确认。",
+      "timeLabel": "17:15 后",
+      "detail": "为18:00工作做准备；游船只安排12/13周日。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -233,9 +210,30 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-work-dec07",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "dayId": "day-arrival",
+      "order": 6,
+      "title": "Marquis · 工作",
+      "timeLabel": "18:00 起",
+      "detail": "暂按美西09:00–17:00＝巴黎18:00–02:00；抵达日优先考虑时差与延误。",
+      "placeIds": [
+        "place-marquis"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -243,9 +241,9 @@
       "id": "act-marquis-to-ghpr",
       "dayId": "day-opera",
       "order": 1,
-      "title": "Marquis 退房 → GHPR · 寄存行李",
-      "timeLabel": "08:00–09:15",
-      "detail": "先从 Marquis Faubourg Saint-Honoré 退房并带行李前往 Grand Hôtel du Palais Royal 寄存，再开始观光；不依赖提前入住。实际交通与寄存办理时间待核。",
+      "title": "Marquis 退房 → GHPR 寄存行李",
+      "timeLabel": "10:00–10:40",
+      "detail": "不要等待 GHPR 正式入住，先寄存行李。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -255,132 +253,40 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-sainte-visit",
-      "dayId": "day-opera",
-      "order": 2,
-      "title": "圣礼拜堂",
-      "timeLabel": "09:30–10:30 目标",
-      "detail": "彩窗与建筑；09:30–10:30 为目标参观窗口，入场场次与安检安排待核，尚未确认预订。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-sainte"
-      ],
-      "taskIds": [
-        "task-sainte-booking"
-      ],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ]
-    },
-    {
-      "id": "act-notredame-visit",
-      "dayId": "day-opera",
-      "order": 3,
-      "title": "巴黎圣母院",
-      "timeLabel": "10:45–11:45 目标",
-      "detail": "计划参观巴黎圣母院。12月8日有宗教活动，准确游客入场安排、礼拜时段与相关限制待核；此窗口不代表已经确认可入内或已完成预约。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-notredame"
-      ],
-      "taskIds": [
-        "task-notredame"
-      ],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ]
-    },
-    {
-      "id": "act-luxembourg-walk",
-      "dayId": "day-opera",
-      "order": 4,
-      "title": "卢森堡公园",
-      "timeLabel": "12:00–12:40",
-      "detail": "园内短逛；如上午排队或宗教活动影响节奏，注意后续午餐目标与体力，具体开放与通行另核。",
+      "id": "act-orsay-transfer",
       "status": "planned",
       "reservationStatus": "not-required",
-      "placeIds": [
-        "place-lux"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ]
-    },
-    {
-      "id": "act-orsay-lunch",
       "dayId": "day-opera",
-      "order": 5,
-      "title": "Le Restaurant 午餐",
-      "timeLabel": "13:15–14:15 目标",
-      "detail": "DATA-04：奥赛馆内 Le Restaurant 午餐目标为13:15–14:15；座位、排队与入馆安排均待核，未确认预订，不保证准时入座。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
+      "order": 2,
+      "title": "前往奥赛 · 安检",
+      "timeLabel": "10:40–11:10",
+      "detail": "已办年卡时使用会员指定入口，仍留安检缓冲；入口规则待核。",
       "placeIds": [
         "place-orsay"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
       "id": "act-orsay-visit",
       "dayId": "day-opera",
-      "order": 6,
-      "title": "奥赛博物馆",
-      "timeLabel": "14:15–17:15 目标",
-      "detail": "计划14:15–17:15观展；门票、实际入场与开放规则待核，此安排不代表已确认预订。",
+      "order": 3,
+      "title": "奥赛第一段参观",
+      "timeLabel": "11:10–12:00",
+      "detail": "优先主要展厅与印象派作品；入场目标11:10，尚未确认预约。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
@@ -391,14 +297,74 @@
       ],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        },
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-orsay-lunch",
+      "dayId": "day-opera",
+      "order": 4,
+      "title": "Le Restaurant 午餐",
+      "timeLabel": "12:00–13:00",
+      "detail": "散客可能需要等位；此时间不是餐厅预约。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-orsay"
+      ],
+      "taskIds": [],
+      "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-orsay-visit-afternoon",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "dayId": "day-opera",
+      "order": 5,
+      "title": "奥赛继续参观",
+      "timeLabel": "13:00–14:40",
+      "detail": "若午餐等位过久，优先保留重点展厅。",
+      "placeIds": [
+        "place-orsay"
+      ],
+      "taskIds": [
+        "task-carte-blanche-duo"
+      ],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-orsay-to-stores",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "dayId": "day-opera",
+      "order": 6,
+      "title": "打车前往 Haussmann 百货区",
+      "timeLabel": "14:40–15:15",
+      "detail": "按实际路况调整；此窗口不是保证到达时间。",
+      "placeIds": [
+        "place-printemps"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -406,26 +372,21 @@
       "id": "act-department-stores",
       "dayId": "day-opera",
       "order": 7,
-      "title": "老佛爷 · 巴黎春天",
-      "timeLabel": "17:45–19:15",
-      "detail": "晚间看穹顶、圣诞装饰与逛店；可按当天体力缩短。实际营业与特别活动安排另核。",
+      "title": "春天 · 老佛爷",
+      "timeLabel": "15:15–17:00",
+      "detail": "穹顶、圣诞装饰、重点品牌，约1小时45分；只逛重点。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
-        "place-lafayette",
-        "place-printemps"
+        "place-printemps",
+        "place-lafayette"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -433,9 +394,9 @@
       "id": "act-ghpr-return",
       "dayId": "day-opera",
       "order": 8,
-      "title": "返回 GHPR · 休息",
-      "timeLabel": "晚间",
-      "detail": "百货活动后返回 Grand Hôtel du Palais Royal；当晚住宿酒店与已确认住宿日期不变，实际返回时间不作保证。",
+      "title": "返回 GHPR · 入住／休息",
+      "timeLabel": "17:00–17:45",
+      "detail": "为18:00开始工作做准备；争取17:15–17:30回酒店，实际返回按交通调整。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -444,9 +405,30 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-work-dec08",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "dayId": "day-opera",
+      "order": 9,
+      "title": "GHPR · 工作",
+      "timeLabel": "18:00 起",
+      "detail": "暂按巴黎18:00开工。",
+      "placeIds": [
+        "place-ghpr"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -455,8 +437,8 @@
       "dayId": "day-orsay",
       "order": 1,
       "title": "GHPR 退房 · 寄存行李",
-      "timeLabel": "08:45–09:30 内 · 先寄存",
-      "detail": "08:45–09:30为退房寄存与皇家宫殿花园共用窗口；先在 Grand Hôtel du Palais Royal 寄存行李，再去花园。傍晚回同一酒店取包，保留两个独立访问。",
+      "timeLabel": "09:45–10:00",
+      "detail": "无需清晨出门；下午另回 GHPR 取行李。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -465,14 +447,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -480,9 +457,9 @@
       "id": "act-palais-royal",
       "dayId": "day-orsay",
       "order": 2,
-      "title": "皇家宫殿花园 · 黑白柱阵",
-      "timeLabel": "08:45–09:30 内 · 寄存后",
-      "detail": "先完成 GHPR 退房寄存，再在同一个08:45–09:30窗口内参观皇家宫殿花园与黑白柱阵；退房、寄存与游园共用该窗口，具体用时视现场。",
+      "title": "皇家宫殿庭院 · 黑白柱阵",
+      "timeLabel": "10:00–11:00 内",
+      "detail": "与薇薇安共用10:00–11:00短逛窗口；挑重点，不深逛。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -491,72 +468,20 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ]
-    },
-    {
-      "id": "act-opera-visit",
-      "dayId": "day-orsay",
-      "order": 3,
-      "title": "巴黎歌剧院",
-      "timeLabel": "10:00–11:30 目标",
-      "detail": "Palais Garnier 内部参观目标窗口为10:00–11:30；场次与开放区域待核，未确认预订。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-opera"
-      ],
-      "taskIds": [
-        "task-opera-tickets"
-      ],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ]
-    },
-    {
-      "id": "act-opera-lunch",
-      "dayId": "day-orsay",
-      "order": 4,
-      "title": "午餐",
-      "timeLabel": "11:30–12:45",
-      "detail": "午餐与可选薇薇安拱廊共用11:30–12:45窗口；午餐地点待定，可选薇薇安短逛视实际时间安排。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
       "id": "act-vivienne-optional",
       "dayId": "day-orsay",
-      "order": 5,
+      "order": 3,
       "title": "薇薇安拱廊",
-      "timeLabel": "11:30–12:45 内 · 可选",
-      "detail": "可选短逛，与午餐共用11:30–12:45窗口；是否前往视实际时间，不挤占下午蒙马特安排。",
-      "status": "optional",
+      "timeLabel": "10:00–11:00 内",
+      "detail": "与皇家宫殿共用一小时窗口，附近短逛。",
+      "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
         "place-vivienne"
@@ -564,42 +489,74 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-montmartre",
-      "dayId": "day-orsay",
-      "order": 6,
-      "title": "蒙马特 · 圣心堂 · 小丘广场",
-      "timeLabel": "13:15–16:30",
-      "detail": "保留下午蒙马特、Sacré-Cœur 与 Place du Tertre 行程；Abbesses 为已有的街区参考点，不是另行指定的集合点。交通方式、实际抵达时刻与通行安排仍待核。",
+      "id": "act-cite-transfer",
       "status": "planned",
       "reservationStatus": "not-required",
-      "placeIds": [
-        "place-abbesses",
-        "place-sacre",
-        "place-tertre"
-      ],
+      "dayId": "day-orsay",
+      "order": 4,
+      "title": "前往西岱岛 · 安检缓冲",
+      "timeLabel": "11:00–11:30",
+      "detail": "预留交通与圣礼拜堂安检时间；交通方式待核。",
+      "placeIds": [],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 2,
-          "note": ""
-        },
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-sainte-visit",
+      "dayId": "day-orsay",
+      "order": 5,
+      "title": "圣礼拜堂",
+      "timeLabel": "11:30–12:15 目标",
+      "detail": "新的指定入场目标，待购买两人时段票；并非已确认预约。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-sainte"
+      ],
+      "taskIds": [
+        "task-sainte-dec09"
+      ],
+      "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-notredame-visit",
+      "dayId": "day-orsay",
+      "order": 6,
+      "title": "巴黎圣母院内部／外观",
+      "timeLabel": "12:30–13:15",
+      "detail": "视免费预约和当天宗教活动调整；12/9准确入场安排待核。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-notredame"
+      ],
+      "taskIds": [
+        "task-notredame-dec09"
+      ],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -607,9 +564,9 @@
       "id": "act-ghpr-luggage",
       "dayId": "day-orsay",
       "order": 7,
-      "title": "返回 GHPR · 取行李",
-      "timeLabel": "16:30–17:30",
-      "detail": "返回 Grand Hôtel du Palais Royal 领取早上寄存的行李并准备赴凡尔赛；与上午寄存为两次到访，实际返程与取包耗时待核。",
+      "title": "午餐 · 返回 GHPR 取行李 · 叫车",
+      "timeLabel": "13:15–14:30",
+      "detail": "午餐与取行李共用窗口，必要时改简餐；优先保证14:30左右出发。与上午寄存为独立到访。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -618,14 +575,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        },
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -633,9 +585,9 @@
       "id": "act-waldorf-transfer",
       "dayId": "day-orsay",
       "order": 8,
-      "title": "从巴黎出发 → Waldorf 凡尔赛",
-      "timeLabel": "约17:30–18:00 出发",
-      "detail": "此窗口指从巴黎 GHPR 取包后出发的目标，不是保证抵达凡尔赛的时间。沿用赴酒店的驾车规划；实际车程与酒店抵达时间均待估。地图地点为目的地参考，不表示已在该时刻到达。",
+      "title": "前往 Waldorf 凡尔赛",
+      "timeLabel": "14:30–17:00 预计",
+      "detail": "取行李后叫车，争取约17:00抵达入住；交通耗时和抵达时间不是保证。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -644,9 +596,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -654,9 +606,9 @@
       "id": "act-waldorf-arrival",
       "dayId": "day-orsay",
       "order": 9,
-      "title": "Waldorf 入住 · 休息",
-      "timeLabel": "晚间 · 抵达待估",
-      "detail": "到达 Waldorf Astoria Versailles – Trianon Palace 后办理入住并休息。酒店及住宿日期已确认；实际抵达时间仍为估计，不把17:30–18:00出发窗口当作抵达承诺。",
+      "title": "Waldorf 入住 · 工作前准备",
+      "timeLabel": "约17:00 预计",
+      "detail": "酒店住宿日期已确认，抵达与提前入住仍视现场；争取18:00在酒店工作。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -665,14 +617,30 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        },
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-work-dec09",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "dayId": "day-orsay",
+      "order": 10,
+      "title": "Waldorf · 工作",
+      "timeLabel": "18:00 起",
+      "detail": "暂按巴黎18:00开工；两教堂与交通延误时优先保证取箱和赴酒店。",
+      "placeIds": [
+        "place-waldorf"
+      ],
+      "taskIds": [],
+      "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -680,9 +648,9 @@
       "id": "act-waldorf-breakfast",
       "dayId": "day-versailles",
       "order": 1,
-      "title": "Waldorf 早餐 · 寄存行李",
-      "timeLabel": "08:15–09:00",
-      "detail": "收好行李寄存在前台，步行至宫殿入口。",
+      "title": "Waldorf 早餐 · 整理寄存 · 步行赴宫殿",
+      "timeLabel": "09:00–09:45",
+      "detail": "整理并寄存行李，步行前往宫殿入口；具体入口规则待核。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -691,9 +659,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -702,8 +670,8 @@
       "dayId": "day-versailles",
       "order": 2,
       "title": "凡尔赛主宫殿 · 镜厅",
-      "timeLabel": "09:00–11:30 目标",
-      "detail": "提前预约入场时段，目标并非出票。",
+      "timeLabel": "10:00–12:15 目标",
+      "detail": "Passport 主宫殿10:00为购买目标，未确认购票。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
@@ -714,9 +682,9 @@
       ],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -724,9 +692,9 @@
       "id": "act-versailles-gardens",
       "dayId": "day-versailles",
       "order": 3,
-      "title": "午餐 · 凡尔赛花园",
-      "timeLabel": "12:00–13:30",
-      "detail": "天气不佳可缩短户外；如回 Waldorf 用餐则缩短花园时间。",
+      "title": "花园 · 简单午餐",
+      "timeLabel": "12:15–13:15",
+      "detail": "按天气和排队情况调整。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -735,9 +703,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -745,43 +713,41 @@
       "id": "act-trianon-visit",
       "dayId": "day-versailles",
       "order": 4,
-      "title": "特里亚农宫",
-      "timeLabel": "13:45–16:00",
-      "detail": "王后村庄另视天气、开放与时间择选。",
+      "title": "特里亚农区域",
+      "timeLabel": "13:15–15:00",
+      "detail": "文档提醒冬季12:00才开放，实际规则待核；王后村庄不作为必到项目。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
         "place-trianon"
       ],
-      "taskIds": [
-        "task-versailles-passport"
-      ],
+      "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-hamlet-optional",
+      "id": "act-waldorf-luggage",
+      "status": "planned",
+      "reservationStatus": "not-required",
       "dayId": "day-versailles",
       "order": 5,
-      "title": "王后村庄",
-      "timeLabel": "视天气与时间",
-      "detail": "可选；不保证开放，须留足取包和返巴黎时间。",
-      "status": "optional",
-      "reservationStatus": "unconfirmed",
+      "title": "返回 Waldorf · 取行李",
+      "timeLabel": "15:00–15:45",
+      "detail": "领取行李并办理出发；不是另一次入住。",
       "placeIds": [
-        "place-hamlet"
+        "place-waldorf"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -789,21 +755,20 @@
       "id": "act-waldorf-to-powers",
       "dayId": "day-versailles",
       "order": 6,
-      "title": "Waldorf 取包 · Grand Powers 入住",
-      "timeLabel": "16:00–19:30 预计",
-      "detail": "先返回 Waldorf 取行李，再打车回 Grand Powers；返巴黎时段为预计，不是实时路况承诺。",
+      "title": "打车返回巴黎 · Grand Powers 入住",
+      "timeLabel": "15:45–18:30+ 预计",
+      "detail": "52 Rue François 1er；可能比18:30更晚抵达，不作保证。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
-        "place-waldorf",
         "place-grand-powers"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -811,95 +776,9 @@
       "id": "act-versailles-evening",
       "dayId": "day-versailles",
       "order": 7,
-      "title": "晚餐 · 休息",
-      "timeLabel": "19:30 后",
-      "detail": "正常安排为晚餐与休息；周一已乘游船就不再安排夜游。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-cruise-backup",
-      "dayId": "day-versailles",
-      "order": 8,
-      "title": "塞纳河游船 · 周四后备",
-      "timeLabel": "仅周一未成行 · 时刻待确认",
-      "detail": "DATA-01：来源暂写 20:30／21:00 左右 Bateaux-Mouches；产品、船班、码头仍待确认，不能与周一重复乘船。",
-      "status": "backup",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [],
-      "taskIds": [
-        "task-cruise"
-      ],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 3,
-          "note": ""
-        }
-      ],
-      "conditionGroupId": "condition-one-cruise",
-      "conditionText": "仅周一未乘船时启用；全程只乘一次。"
-    },
-    {
-      "id": "act-arc-exterior",
-      "dayId": "day-louvre",
-      "order": 1,
-      "title": "凯旋门外观",
-      "timeLabel": "08:45–09:45",
-      "detail": "从 Grand Powers 打车前往，外观与拍照，不安排登顶。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-grand-powers",
-        "place-arc"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-champs-shopping",
-      "dayId": "day-louvre",
-      "order": 2,
-      "title": "香榭丽舍 · George V 购物",
-      "timeLabel": "09:45–11:50",
-      "detail": "沿香街向东步行，George V／François 1er 周边购物，返回酒店方向。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-champs",
-        "place-george-v"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-powers-shopping-bags",
-      "dayId": "day-louvre",
-      "order": 3,
-      "title": "Grand Powers 放购物袋 · 午餐",
-      "timeLabel": "11:50–12:30",
-      "detail": "连住，无需换房；放袋后简单午餐。",
+      "title": "Grand Powers · 晚餐／工作",
+      "timeLabel": "晚间",
+      "detail": "本日是18:00开工的例外风险日；若必须准时工作，需缩短特里亚农并提前离园。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -908,9 +787,76 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-photos-transfer",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "dayId": "day-louvre",
+      "order": 1,
+      "title": "Grand Powers → 特罗卡德罗",
+      "timeLabel": "09:30–09:45",
+      "detail": "摄影师具体会面地点待确认。",
+      "placeIds": [
+        "place-grand-powers",
+        "place-trocadero"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-eiffel-photos",
+      "dayId": "day-louvre",
+      "order": 2,
+      "title": "铁塔／特罗卡德罗约拍",
+      "timeLabel": "09:45–11:15 目标",
+      "detail": "周五新增预约目标，尚未预订；雨天、改期和集合地点按摄影师确认。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-trocadero",
+        "place-eiffel"
+      ],
+      "taskIds": [
+        "task-photoshoot-dec11"
+      ],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-powers-shopping-bags",
+      "dayId": "day-louvre",
+      "order": 3,
+      "title": "返回 Grand Powers · 整理／简餐",
+      "timeLabel": "11:15–12:30",
+      "detail": "摄影后稍作整理，避免与导览集合之间过紧。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-grand-powers"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -918,22 +864,20 @@
       "id": "act-louvre-transfer",
       "dayId": "day-louvre",
       "order": 4,
-      "title": "前往卢浮宫 · 安检与会合",
-      "timeLabel": "12:30–13:30 暂排",
-      "detail": "DATA-02/05：源文档此处暂排会合，但导览时段存在冲突，出发、午餐缓冲与集合点需随最终预约调整。",
+      "title": "前往卢浮宫 · 安检与导游集合",
+      "timeLabel": "12:30–13:30",
+      "detail": "预留交通、安检和中文导游集合缓冲；集合点待确认。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
         "place-louvre"
       ],
-      "taskIds": [
-        "task-louvre-guide"
-      ],
+      "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -942,8 +886,8 @@
       "dayId": "day-louvre",
       "order": 5,
       "title": "卢浮宫中文私人导览",
-      "timeLabel": "下午 · 时段待确认",
-      "detail": "DATA-02：来源要点为 13:30–16:30 目标，时间行为 16:30–20:00。不能选其一为结论；约三小时中文私人导览，优先夜场关闭的目标展厅，实际开放与导览后留馆规则待确认。",
+      "timeLabel": "13:30–16:30 目标",
+      "detail": "实际2–3小时、门票、带团规则和目标展厅由导游报价确认，尚未确认预约。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
@@ -954,30 +898,52 @@
       ],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-powers-friday-return",
-      "dayId": "day-louvre",
-      "order": 6,
-      "title": "返回 Grand Powers · 晚餐",
-      "timeLabel": "晚间",
-      "detail": "周一／周四已安排条件游船，不重复叠加。",
+      "id": "act-louvre-followup",
       "status": "planned",
       "reservationStatus": "not-required",
+      "dayId": "day-louvre",
+      "order": 6,
+      "title": "留馆少量补看／返回 Grand Powers",
+      "timeLabel": "16:30–17:30",
+      "detail": "只有导游确认可留馆时少量补看，否则返回酒店；为18:00工作做准备。",
+      "placeIds": [
+        "place-louvre",
+        "place-grand-powers"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-work-dec11",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "dayId": "day-louvre",
+      "order": 7,
+      "title": "Grand Powers · 工作",
+      "timeLabel": "18:00 起",
+      "detail": "暂按巴黎18:00开工。",
       "placeIds": [
         "place-grand-powers"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -985,9 +951,9 @@
       "id": "act-powers-pack",
       "dayId": "day-photos",
       "order": 1,
-      "title": "Grand Powers 整理行李",
-      "timeLabel": "08:00 起 · 约拍前",
-      "detail": "来源 08:00–11:00 为整理／寄存和约拍的整体时段，未给独立打包结束时间。先收好行李，轻装外出；寄存服务细则未核。",
+      "title": "Grand Powers 退房 · 寄存 · 前往凯旋门",
+      "timeLabel": "10:15–10:45",
+      "detail": "周五夜间工作后，周六不安排早起摄影。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -996,33 +962,31 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-eiffel-photos",
+      "id": "act-arc-exterior",
       "dayId": "day-photos",
       "order": 2,
-      "title": "特罗卡德罗 · 铁塔约拍",
-      "timeLabel": "09:00–10:30／11:00 目标",
-      "detail": "DATA-04：摄影时间与集合点待确认。特罗卡德罗／夏约宫、铁塔附近白天约拍，不安排登塔。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
+      "title": "凯旋门外观 · 香榭丽舍短走",
+      "timeLabel": "10:45–11:30",
+      "detail": "外观拍照，暂不登顶。",
+      "status": "planned",
+      "reservationStatus": "not-required",
       "placeIds": [
-        "place-trocadero",
-        "place-eiffel"
+        "place-arc",
+        "place-champs"
       ],
-      "taskIds": [
-        "task-photoshoot-booking"
-      ],
+      "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -1030,9 +994,9 @@
       "id": "act-powers-to-astor",
       "dayId": "day-photos",
       "order": 3,
-      "title": "Grand Powers 取包 · 换入 Maison Astor",
-      "timeLabel": "11:00–13:30",
-      "detail": "摄影后回 Grand Powers 取行李，前往 Maison Astor 寄存／入住加简餐，不依赖提前入住。",
+      "title": "Grand Powers 取箱 → Maison Astor",
+      "timeLabel": "11:30–13:00",
+      "detail": "先回 Grand Powers 取行李，再到11 Rue d’Astorg寄存／入住；不依赖提前入住。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -1042,366 +1006,237 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-marais-transfer",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "dayId": "day-photos",
+      "order": 4,
+      "title": "午餐 · 前往玛黑区",
+      "timeLabel": "13:00–14:15",
+      "detail": "保证14:15–17:45连续游览；若搬运行李延误，缩短午餐。",
+      "placeIds": [],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
       "id": "act-marais-afternoon",
       "dayId": "day-photos",
-      "order": 4,
-      "title": "玛黑区 · 孚日广场",
-      "timeLabel": "13:30 后",
-      "detail": "设计小店与咖啡馆；午间换店之后再去玛黑。",
+      "order": 5,
+      "title": "孚日广场 · 周边拱廊",
+      "timeLabel": "14:15–15:15",
+      "detail": "先看建筑，留白天拍照；玛黑区整体14:15–17:45保留完整3.5小时。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
-        "place-marais",
         "place-vosges"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-marais-optionals",
-      "dayId": "day-photos",
-      "order": 5,
-      "title": "市政厅 · 圣路易岛",
-      "timeLabel": "视时间",
-      "detail": "可选短逛，按体力和天色取舍。",
-      "status": "optional",
+      "id": "act-marais-streets",
+      "status": "planned",
       "reservationStatus": "not-required",
+      "dayId": "day-photos",
+      "order": 6,
+      "title": "Francs-Bourgeois · Rosiers 街巷",
+      "timeLabel": "15:15–16:30",
+      "detail": "街巷、设计小店；不增加其他预约项目。",
       "placeIds": [
-        "place-hotel-de-ville",
-        "place-saint-louis"
+        "place-francs-bourgeois",
+        "place-rosiers"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 4,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-rotterdam-outbound",
+      "id": "act-marais-temple",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "dayId": "day-photos",
+      "order": 7,
+      "title": "Vieille du Temple · 咖啡／购物",
+      "timeLabel": "16:30–17:45",
+      "detail": "之后可在玛黑区晚餐；不压缩14:15–17:45时段。",
+      "placeIds": [
+        "place-vieille-temple"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-opera-transfer",
+      "status": "planned",
+      "reservationStatus": "not-required",
       "dayId": "day-sunday",
       "order": 1,
-      "title": "巴黎北站 → 鹿特丹",
-      "timeLabel": "去程时刻待核",
-      "detail": "未给明确去程发车时刻，不补猜；目标到达 Rotterdam Centraal 10:02。往返运营、施工及订票状态待核。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
+      "title": "Maison Astor → Palais Garnier · 安检",
+      "timeLabel": "10:30–11:00",
+      "detail": "按12/13目标开放日安排，具体开放与入场仍需官网确认；不改到周二。",
       "placeIds": [
-        "place-gare-nord",
-        "place-rotterdam-centraal"
+        "place-maison-astor",
+        "place-opera"
       ],
-      "taskIds": [
-        "task-eurostar-tickets"
-      ],
+      "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-erasmus-transfer",
+      "id": "act-opera-visit",
       "dayId": "day-sunday",
       "order": 2,
-      "title": "前往 Erasmusbrug 码头区域",
-      "timeLabel": "10:02–10:45 目标",
-      "detail": "来源建议地铁或打车；具体上下船点另核，不把桥梁中心作已确认码头。",
+      "title": "巴黎歌剧院内部参观",
+      "timeLabel": "11:00–12:30 目标",
+      "detail": "礼堂是否开放取决于排练／演出；时段待订，未确认购票。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
-        "place-erasmusbrug"
+        "place-opera"
       ],
-      "taskIds": [],
+      "taskIds": [
+        "task-opera-dec13"
+      ],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-watershuttle-wait",
+      "id": "act-opera-lunch",
       "dayId": "day-sunday",
       "order": 3,
-      "title": "候船 · 准备登船",
-      "timeLabel": "10:45–11:10 目标",
-      "detail": "预留缓冲；冬季船班须以运营方最新时刻确认。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
+      "title": "午餐 · 前往蒙马特／Abbesses",
+      "timeLabel": "12:30–13:30",
+      "detail": "午餐地点未指定；交通方式和实际用时待核。",
+      "status": "planned",
+      "reservationStatus": "not-required",
       "placeIds": [
-        "place-erasmusbrug"
+        "place-abbesses"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-watershuttle-outbound",
+      "id": "act-montmartre",
       "dayId": "day-sunday",
       "order": 4,
-      "title": "WaterShuttle 前往 Kinderdijk",
-      "timeLabel": "11:20–11:50 目标",
-      "detail": "约 30 分钟为来源目标，冬季运营未确认，不承诺可乘。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
+      "title": "蒙马特 · 艺术家广场 · 圣心堂",
+      "timeLabel": "13:30–16:30",
+      "detail": "日落前安排外部景观；圣心堂教堂免费，穹顶另购票，实际开放待核。",
+      "status": "planned",
+      "reservationStatus": "not-required",
       "placeIds": [
-        "place-kinderdijk"
+        "place-abbesses",
+        "place-tertre",
+        "place-sacre"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-kinderdijk-visit",
+      "id": "act-cruise-transfer",
+      "status": "planned",
+      "reservationStatus": "not-required",
       "dayId": "day-sunday",
       "order": 5,
-      "title": "Kinderdijk 风车群 · 简餐",
-      "timeLabel": "11:50–13:55 目标",
-      "detail": "风车群参观，含简单午餐／自带食物；票务与实际开放待核。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
+      "title": "自由晚餐／咖啡 · 转场阿尔玛桥码头",
+      "timeLabel": "16:30–18:10",
+      "detail": "Bateaux-Mouches码头区域参考；具体登船口、船班和交通耗时待核。",
       "placeIds": [
-        "place-kinderdijk"
+        "place-bateaux-mouches"
       ],
-      "taskIds": [
-        "task-rotterdam-attraction-tickets"
-      ],
+      "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "act-kinderdijk-boarding",
+      "id": "act-cruise-sunday",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
       "dayId": "day-sunday",
       "order": 6,
-      "title": "返回码头 · 候船",
-      "timeLabel": "13:55–14:15 目标",
-      "detail": "具体码头及候船时刻待运营方确认。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
+      "title": "Bateaux-Mouches 塞纳河夜游",
+      "timeLabel": "18:30–19:30 目标",
+      "detail": "约一小时，开船时刻实际以官网为准，未确认船票；全程夜游只乘这一次。",
       "placeIds": [
-        "place-kinderdijk"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-watershuttle-return",
-      "dayId": "day-sunday",
-      "order": 7,
-      "title": "WaterShuttle 返回鹿特丹",
-      "timeLabel": "14:15–14:45 目标",
-      "detail": "目标回程，冬季时刻待核；不以驾车路径替代水路。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-erasmusbrug"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-fenix-transfer",
-      "dayId": "day-sunday",
-      "order": 8,
-      "title": "码头 → Fenix",
-      "timeLabel": "14:45–15:25 目标",
-      "detail": "建议出租车或 Water Taxi；交通选择和时间是规划缓冲，不是实时 ETA。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-fenix"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-fenix-visit",
-      "dayId": "day-sunday",
-      "order": 9,
-      "title": "Fenix 美术馆 + Tornado",
-      "timeLabel": "15:30–17:00 目标",
-      "detail": "目标参观时段，非已预约；当天开放、入场与 Tornado 规则待核。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-fenix"
+        "place-bateaux-mouches"
       ],
       "taskIds": [
-        "task-rotterdam-attraction-tickets"
+        "task-cruise-dec13"
       ],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ]
-    },
-    {
-      "id": "act-markthal-transfer",
-      "dayId": "day-sunday",
-      "order": 10,
-      "title": "前往 Markthal",
-      "timeLabel": "17:00–17:20 预估",
-      "detail": "来源建议打车，预留交通缓冲。",
-      "status": "tentative",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-markthal"
       ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-markthal-visit",
-      "dayId": "day-sunday",
-      "order": 11,
-      "title": "Markthal 简餐 · 参观",
-      "timeLabel": "17:20–17:45 目标",
-      "detail": "源文档目标停留；实际营业与餐饮情况待核。",
-      "status": "tentative",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-markthal"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-cube-houses-exterior",
-      "dayId": "day-sunday",
-      "order": 12,
-      "title": "Cube Houses 外观",
-      "timeLabel": "17:45–18:00 目标",
-      "detail": "外观短看；源文档写无需票，但运营与进入范围仍待核。",
-      "status": "tentative",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-cube-houses"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-rotterdam-station-return",
-      "dayId": "day-sunday",
-      "order": 13,
-      "title": "前往 Rotterdam Centraal · 候车",
-      "timeLabel": "18:00–18:30 目标",
-      "detail": "市内交通与候车缓冲，不承诺实时通行时间。",
-      "status": "tentative",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-rotterdam-centraal"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
-        }
-      ]
-    },
-    {
-      "id": "act-eurostar-return",
-      "dayId": "day-sunday",
-      "order": 14,
-      "title": "Eurostar 返回巴黎",
-      "timeLabel": "18:58 目标",
-      "detail": "目标回程班次与出票状态待核，未给巴黎到站时间，不补猜。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-gare-nord"
-      ],
-      "taskIds": [
-        "task-eurostar-tickets"
-      ],
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
-        }
-      ]
+      "conditionGroupId": "condition-one-cruise",
+      "conditionText": "仅12/13周日一次，实际船班待核。"
     },
     {
       "id": "act-astor-sunday-return",
       "dayId": "day-sunday",
-      "order": 15,
-      "title": "返回 Maison Astor · 连住",
-      "timeLabel": "返巴黎后 · 时间待核",
-      "detail": "连住第二晚，无需搬运行李；返店时间随实际列车确认。",
+      "order": 7,
+      "title": "返回 Maison Astor · 自由安排",
+      "timeLabel": "19:30 以后",
+      "detail": "Maison Astor连住；周日完整自由日，无18:00固定工作约束。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -1410,9 +1245,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -1421,8 +1256,8 @@
       "dayId": "day-departure",
       "order": 1,
       "title": "Maison Astor 早餐 · 退房寄存",
-      "timeLabel": "09:00–10:15",
-      "detail": "购物结束后回同一酒店取行李。",
+      "timeLabel": "09:30–10:30",
+      "detail": "行李保存在酒店，返程前另行取回。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -1431,19 +1266,40 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "act-luxembourg-walk",
+      "dayId": "day-departure",
+      "order": 2,
+      "title": "前往卢森堡公园 · 短走",
+      "timeLabel": "10:30–11:30",
+      "detail": "天气允许时短走，服从返程缓冲。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-lux"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
       "id": "act-saint-germain-walk",
       "dayId": "day-departure",
-      "order": 2,
-      "title": "圣日耳曼街区 · 咖啡",
-      "timeLabel": "10:30–12:00",
-      "detail": "漫步后前往 Le Bon Marché；不安排卢森堡公园补游。",
+      "order": 3,
+      "title": "圣日耳曼街区 · 咖啡／午餐",
+      "timeLabel": "11:30–12:30",
+      "detail": "左岸街区与午餐选择。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -1452,19 +1308,19 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
       "id": "act-bon-marche-shopping",
       "dayId": "day-departure",
-      "order": 3,
-      "title": "Le Bon Marché · 午餐购物",
-      "timeLabel": "12:00–15:45",
-      "detail": "Le Bon Marché／La Grande Épicerie，优先购买重点商品，严格保留机场缓冲。",
+      "order": 4,
+      "title": "Le Bon Marché · La Grande Épicerie",
+      "timeLabel": "12:30–15:30",
+      "detail": "重点商品购物，购物时长必须服从返程缓冲。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -1474,19 +1330,19 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
       "id": "act-astor-final-luggage",
       "dayId": "day-departure",
-      "order": 4,
+      "order": 5,
       "title": "返回 Maison Astor · 取行李",
-      "timeLabel": "16:00 左右",
-      "detail": "源表 16:00–17:30 包含取包和出城，目标 17:00–17:30 叫车赴机场。",
+      "timeLabel": "15:30–16:45",
+      "detail": "整理行李和购物袋，准备离开市区。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -1495,19 +1351,19 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
       "id": "act-cdg-departure-transfer",
       "dayId": "day-departure",
-      "order": 5,
-      "title": "前往 CDG",
+      "order": 6,
+      "title": "出发前往 CDG",
       "timeLabel": "17:00–17:30 出发目标",
-      "detail": "打车出发时间为目标；实际路况、航站楼与航空公司要求另核。",
+      "detail": "给堵车、值机和安检留足缓冲；航站楼待提供，交通时间不是保证。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -1516,30 +1372,32 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
       "id": "act-cdg-flight",
       "dayId": "day-departure",
-      "order": 6,
+      "order": 7,
       "title": "CDG 起飞",
       "timeLabel": "22:20",
-      "detail": "航班时刻来自用户行程；未录入航班号、私人订单或航站楼，以实际航空公司要求为准。",
+      "detail": "本日不安排晚间固定活动；机场交通与飞行不能视为可正常工作，提前请假或减少会议。",
       "status": "planned",
       "reservationStatus": "unconfirmed",
       "placeIds": [
         "place-cdg"
       ],
-      "taskIds": [],
+      "taskIds": [
+        "task-work-schedule"
+      ],
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": ""
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     }
@@ -2347,6 +2205,66 @@
           "note": "行程来源，仅为地点参考；实际入口/集合点另核。"
         }
       ]
+    },
+    {
+      "id": "place-francs-bourgeois",
+      "name": "Rue des Francs-Bourgeois",
+      "address": "Rue des Francs-Bourgeois, Paris",
+      "locationType": "street",
+      "verifiedStatus": "reference",
+      "locationSemantics": "文档指定区域参考；准确坐标、入口／登船点待核，不提供未经核实的定位。",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "place-rosiers",
+      "name": "Rue des Rosiers",
+      "address": "Rue des Rosiers, Paris",
+      "locationType": "street",
+      "verifiedStatus": "reference",
+      "locationSemantics": "文档指定区域参考；准确坐标、入口／登船点待核，不提供未经核实的定位。",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "place-vieille-temple",
+      "name": "Rue Vieille du Temple",
+      "address": "Rue Vieille du Temple, Paris",
+      "locationType": "street",
+      "verifiedStatus": "reference",
+      "locationSemantics": "文档指定区域参考；准确坐标、入口／登船点待核，不提供未经核实的定位。",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "place-bateaux-mouches",
+      "name": "Bateaux-Mouches · 阿尔玛桥码头区域",
+      "address": "Pont de l’Alma, Paris",
+      "locationType": "pier",
+      "verifiedStatus": "reference",
+      "locationSemantics": "文档指定区域参考；准确坐标、入口／登船点待核，不提供未经核实的定位。",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
     }
   ],
   "stops": [
@@ -2414,6 +2332,13 @@
       "order": 9
     },
     {
+      "id": "stop-work-dec07-marquis",
+      "activityId": "act-work-dec07",
+      "placeId": "place-marquis",
+      "dayId": "day-arrival",
+      "order": 10
+    },
+    {
       "id": "stop-marquis-to-ghpr-1",
       "activityId": "act-marquis-to-ghpr",
       "placeId": "place-marquis",
@@ -2428,51 +2353,51 @@
       "order": 2
     },
     {
-      "id": "stop-sainte-visit",
-      "activityId": "act-sainte-visit",
-      "placeId": "place-sainte",
-      "dayId": "day-opera",
-      "order": 3
-    },
-    {
-      "id": "stop-notredame-visit",
-      "activityId": "act-notredame-visit",
-      "placeId": "place-notredame",
-      "dayId": "day-opera",
-      "order": 4
-    },
-    {
-      "id": "stop-luxembourg-walk",
-      "activityId": "act-luxembourg-walk",
-      "placeId": "place-lux",
-      "dayId": "day-opera",
-      "order": 5
-    },
-    {
-      "id": "stop-orsay-lunch",
-      "activityId": "act-orsay-lunch",
+      "id": "stop-orsay-transfer-orsay",
+      "activityId": "act-orsay-transfer",
       "placeId": "place-orsay",
       "dayId": "day-opera",
-      "order": 6
+      "order": 3
     },
     {
       "id": "stop-orsay-visit",
       "activityId": "act-orsay-visit",
       "placeId": "place-orsay",
       "dayId": "day-opera",
-      "order": 7
+      "order": 4
     },
     {
-      "id": "stop-department-stores-1",
-      "activityId": "act-department-stores",
-      "placeId": "place-lafayette",
+      "id": "stop-orsay-lunch",
+      "activityId": "act-orsay-lunch",
+      "placeId": "place-orsay",
       "dayId": "day-opera",
-      "order": 8
+      "order": 5
+    },
+    {
+      "id": "stop-orsay-visit-afternoon-orsay",
+      "activityId": "act-orsay-visit-afternoon",
+      "placeId": "place-orsay",
+      "dayId": "day-opera",
+      "order": 6
+    },
+    {
+      "id": "stop-orsay-to-stores-printemps",
+      "activityId": "act-orsay-to-stores",
+      "placeId": "place-printemps",
+      "dayId": "day-opera",
+      "order": 7
     },
     {
       "id": "stop-department-stores-2",
       "activityId": "act-department-stores",
       "placeId": "place-printemps",
+      "dayId": "day-opera",
+      "order": 8
+    },
+    {
+      "id": "stop-department-stores-1",
+      "activityId": "act-department-stores",
+      "placeId": "place-lafayette",
       "dayId": "day-opera",
       "order": 9
     },
@@ -2482,6 +2407,13 @@
       "placeId": "place-ghpr",
       "dayId": "day-opera",
       "order": 10
+    },
+    {
+      "id": "stop-work-dec08-ghpr",
+      "activityId": "act-work-dec08",
+      "placeId": "place-ghpr",
+      "dayId": "day-opera",
+      "order": 11
     },
     {
       "id": "stop-ghpr-checkout",
@@ -2498,61 +2430,53 @@
       "order": 2
     },
     {
-      "id": "stop-opera-visit",
-      "activityId": "act-opera-visit",
-      "placeId": "place-opera",
-      "dayId": "day-orsay",
-      "order": 3
-    },
-    {
       "id": "stop-vivienne-optional",
       "activityId": "act-vivienne-optional",
       "placeId": "place-vivienne",
       "dayId": "day-orsay",
+      "order": 3
+    },
+    {
+      "id": "stop-sainte-visit",
+      "activityId": "act-sainte-visit",
+      "placeId": "place-sainte",
+      "dayId": "day-orsay",
       "order": 4
     },
     {
-      "id": "stop-montmartre-1",
-      "activityId": "act-montmartre",
-      "placeId": "place-abbesses",
+      "id": "stop-notredame-visit",
+      "activityId": "act-notredame-visit",
+      "placeId": "place-notredame",
       "dayId": "day-orsay",
       "order": 5
-    },
-    {
-      "id": "stop-montmartre-3",
-      "activityId": "act-montmartre",
-      "placeId": "place-sacre",
-      "dayId": "day-orsay",
-      "order": 6
-    },
-    {
-      "id": "stop-montmartre-2",
-      "activityId": "act-montmartre",
-      "placeId": "place-tertre",
-      "dayId": "day-orsay",
-      "order": 7
     },
     {
       "id": "stop-ghpr-luggage",
       "activityId": "act-ghpr-luggage",
       "placeId": "place-ghpr",
       "dayId": "day-orsay",
-      "order": 8
+      "order": 6
     },
     {
       "id": "stop-waldorf-transfer",
       "activityId": "act-waldorf-transfer",
       "placeId": "place-waldorf",
-      "label": "赴 Waldorf 目的地参考 · 17:30–18:00为出发窗口，非抵达时间",
       "dayId": "day-orsay",
-      "order": 9
+      "order": 7
     },
     {
       "id": "stop-waldorf-arrival",
       "activityId": "act-waldorf-arrival",
       "placeId": "place-waldorf",
       "dayId": "day-orsay",
-      "order": 10
+      "order": 8
+    },
+    {
+      "id": "stop-work-dec09-waldorf",
+      "activityId": "act-work-dec09",
+      "placeId": "place-waldorf",
+      "dayId": "day-orsay",
+      "order": 9
     },
     {
       "id": "stop-waldorf-breakfast",
@@ -2583,51 +2507,51 @@
       "order": 4
     },
     {
-      "id": "stop-hamlet-optional",
-      "activityId": "act-hamlet-optional",
-      "placeId": "place-hamlet",
-      "dayId": "day-versailles",
-      "order": 5
-    },
-    {
-      "id": "stop-waldorf-to-powers-1",
-      "activityId": "act-waldorf-to-powers",
+      "id": "stop-waldorf-luggage-waldorf",
+      "activityId": "act-waldorf-luggage",
       "placeId": "place-waldorf",
       "dayId": "day-versailles",
-      "order": 6
+      "order": 5
     },
     {
       "id": "stop-waldorf-to-powers-2",
       "activityId": "act-waldorf-to-powers",
       "placeId": "place-grand-powers",
       "dayId": "day-versailles",
+      "order": 6
+    },
+    {
+      "id": "stop-versailles-evening-grand-powers",
+      "activityId": "act-versailles-evening",
+      "placeId": "place-grand-powers",
+      "dayId": "day-versailles",
       "order": 7
     },
     {
-      "id": "stop-arc-exterior-1",
-      "activityId": "act-arc-exterior",
+      "id": "stop-photos-transfer-grand-powers",
+      "activityId": "act-photos-transfer",
       "placeId": "place-grand-powers",
       "dayId": "day-louvre",
       "order": 1
     },
     {
-      "id": "stop-arc-exterior-2",
-      "activityId": "act-arc-exterior",
-      "placeId": "place-arc",
+      "id": "stop-photos-transfer-trocadero",
+      "activityId": "act-photos-transfer",
+      "placeId": "place-trocadero",
       "dayId": "day-louvre",
       "order": 2
     },
     {
-      "id": "stop-champs-shopping-1",
-      "activityId": "act-champs-shopping",
-      "placeId": "place-champs",
+      "id": "stop-eiffel-photos-1",
+      "activityId": "act-eiffel-photos",
+      "placeId": "place-trocadero",
       "dayId": "day-louvre",
       "order": 3
     },
     {
-      "id": "stop-champs-shopping-2",
-      "activityId": "act-champs-shopping",
-      "placeId": "place-george-v",
+      "id": "stop-eiffel-photos-2",
+      "activityId": "act-eiffel-photos",
+      "placeId": "place-eiffel",
       "dayId": "day-louvre",
       "order": 4
     },
@@ -2653,11 +2577,25 @@
       "order": 7
     },
     {
-      "id": "stop-powers-friday-return",
-      "activityId": "act-powers-friday-return",
-      "placeId": "place-grand-powers",
+      "id": "stop-louvre-followup-louvre",
+      "activityId": "act-louvre-followup",
+      "placeId": "place-louvre",
       "dayId": "day-louvre",
       "order": 8
+    },
+    {
+      "id": "stop-louvre-followup-grand-powers",
+      "activityId": "act-louvre-followup",
+      "placeId": "place-grand-powers",
+      "dayId": "day-louvre",
+      "order": 9
+    },
+    {
+      "id": "stop-work-dec11-grand-powers",
+      "activityId": "act-work-dec11",
+      "placeId": "place-grand-powers",
+      "dayId": "day-louvre",
+      "order": 10
     },
     {
       "id": "stop-powers-pack",
@@ -2667,16 +2605,16 @@
       "order": 1
     },
     {
-      "id": "stop-eiffel-photos-1",
-      "activityId": "act-eiffel-photos",
-      "placeId": "place-trocadero",
+      "id": "stop-arc-exterior-2",
+      "activityId": "act-arc-exterior",
+      "placeId": "place-arc",
       "dayId": "day-photos",
       "order": 2
     },
     {
-      "id": "stop-eiffel-photos-2",
-      "activityId": "act-eiffel-photos",
-      "placeId": "place-eiffel",
+      "id": "stop-arc-exterior-champs",
+      "activityId": "act-arc-exterior",
+      "placeId": "place-champs",
       "dayId": "day-photos",
       "order": 3
     },
@@ -2695,144 +2633,102 @@
       "order": 5
     },
     {
-      "id": "stop-marais-afternoon-1",
-      "activityId": "act-marais-afternoon",
-      "placeId": "place-marais",
-      "dayId": "day-photos",
-      "order": 6
-    },
-    {
       "id": "stop-marais-afternoon-2",
       "activityId": "act-marais-afternoon",
       "placeId": "place-vosges",
       "dayId": "day-photos",
+      "order": 6
+    },
+    {
+      "id": "stop-marais-streets-francs-bourgeois",
+      "activityId": "act-marais-streets",
+      "placeId": "place-francs-bourgeois",
+      "dayId": "day-photos",
       "order": 7
     },
     {
-      "id": "stop-marais-optionals-1",
-      "activityId": "act-marais-optionals",
-      "placeId": "place-hotel-de-ville",
+      "id": "stop-marais-streets-rosiers",
+      "activityId": "act-marais-streets",
+      "placeId": "place-rosiers",
       "dayId": "day-photos",
       "order": 8
     },
     {
-      "id": "stop-marais-optionals-2",
-      "activityId": "act-marais-optionals",
-      "placeId": "place-saint-louis",
+      "id": "stop-marais-temple-vieille-temple",
+      "activityId": "act-marais-temple",
+      "placeId": "place-vieille-temple",
       "dayId": "day-photos",
       "order": 9
     },
     {
-      "id": "stop-rotterdam-outbound-1",
-      "activityId": "act-rotterdam-outbound",
-      "placeId": "place-gare-nord",
+      "id": "stop-opera-transfer-maison-astor",
+      "activityId": "act-opera-transfer",
+      "placeId": "place-maison-astor",
       "dayId": "day-sunday",
       "order": 1
     },
     {
-      "id": "stop-rotterdam-outbound-2",
-      "activityId": "act-rotterdam-outbound",
-      "placeId": "place-rotterdam-centraal",
+      "id": "stop-opera-transfer-opera",
+      "activityId": "act-opera-transfer",
+      "placeId": "place-opera",
       "dayId": "day-sunday",
       "order": 2
     },
     {
-      "id": "stop-erasmus-transfer",
-      "activityId": "act-erasmus-transfer",
-      "placeId": "place-erasmusbrug",
+      "id": "stop-opera-visit",
+      "activityId": "act-opera-visit",
+      "placeId": "place-opera",
       "dayId": "day-sunday",
       "order": 3
     },
     {
-      "id": "stop-watershuttle-wait",
-      "activityId": "act-watershuttle-wait",
-      "placeId": "place-erasmusbrug",
+      "id": "stop-opera-lunch-abbesses",
+      "activityId": "act-opera-lunch",
+      "placeId": "place-abbesses",
       "dayId": "day-sunday",
       "order": 4
     },
     {
-      "id": "stop-watershuttle-outbound",
-      "activityId": "act-watershuttle-outbound",
-      "placeId": "place-kinderdijk",
+      "id": "stop-montmartre-1",
+      "activityId": "act-montmartre",
+      "placeId": "place-abbesses",
       "dayId": "day-sunday",
       "order": 5
     },
     {
-      "id": "stop-kinderdijk-visit",
-      "activityId": "act-kinderdijk-visit",
-      "placeId": "place-kinderdijk",
+      "id": "stop-montmartre-2",
+      "activityId": "act-montmartre",
+      "placeId": "place-tertre",
       "dayId": "day-sunday",
       "order": 6
     },
     {
-      "id": "stop-kinderdijk-boarding",
-      "activityId": "act-kinderdijk-boarding",
-      "placeId": "place-kinderdijk",
+      "id": "stop-montmartre-3",
+      "activityId": "act-montmartre",
+      "placeId": "place-sacre",
       "dayId": "day-sunday",
       "order": 7
     },
     {
-      "id": "stop-watershuttle-return",
-      "activityId": "act-watershuttle-return",
-      "placeId": "place-erasmusbrug",
+      "id": "stop-cruise-transfer-bateaux-mouches",
+      "activityId": "act-cruise-transfer",
+      "placeId": "place-bateaux-mouches",
       "dayId": "day-sunday",
       "order": 8
     },
     {
-      "id": "stop-fenix-transfer",
-      "activityId": "act-fenix-transfer",
-      "placeId": "place-fenix",
+      "id": "stop-cruise-sunday-bateaux-mouches",
+      "activityId": "act-cruise-sunday",
+      "placeId": "place-bateaux-mouches",
       "dayId": "day-sunday",
       "order": 9
-    },
-    {
-      "id": "stop-fenix-visit",
-      "activityId": "act-fenix-visit",
-      "placeId": "place-fenix",
-      "dayId": "day-sunday",
-      "order": 10
-    },
-    {
-      "id": "stop-markthal-transfer",
-      "activityId": "act-markthal-transfer",
-      "placeId": "place-markthal",
-      "dayId": "day-sunday",
-      "order": 11
-    },
-    {
-      "id": "stop-markthal-visit",
-      "activityId": "act-markthal-visit",
-      "placeId": "place-markthal",
-      "dayId": "day-sunday",
-      "order": 12
-    },
-    {
-      "id": "stop-cube-houses-exterior",
-      "activityId": "act-cube-houses-exterior",
-      "placeId": "place-cube-houses",
-      "dayId": "day-sunday",
-      "order": 13
-    },
-    {
-      "id": "stop-rotterdam-station-return",
-      "activityId": "act-rotterdam-station-return",
-      "placeId": "place-rotterdam-centraal",
-      "dayId": "day-sunday",
-      "order": 14
-    },
-    {
-      "id": "stop-eurostar-return",
-      "activityId": "act-eurostar-return",
-      "placeId": "place-gare-nord",
-      "dayId": "day-sunday",
-      "order": 15
     },
     {
       "id": "stop-astor-sunday-return",
       "activityId": "act-astor-sunday-return",
       "placeId": "place-maison-astor",
       "dayId": "day-sunday",
-      "order": 16
+      "order": 10
     },
     {
       "id": "stop-astor-checkout",
@@ -2842,46 +2738,53 @@
       "order": 1
     },
     {
+      "id": "stop-luxembourg-walk",
+      "activityId": "act-luxembourg-walk",
+      "placeId": "place-lux",
+      "dayId": "day-departure",
+      "order": 2
+    },
+    {
       "id": "stop-saint-germain-walk",
       "activityId": "act-saint-germain-walk",
       "placeId": "place-saint-germain",
       "dayId": "day-departure",
-      "order": 2
+      "order": 3
     },
     {
       "id": "stop-bon-marche-shopping-1",
       "activityId": "act-bon-marche-shopping",
       "placeId": "place-bon-marche",
       "dayId": "day-departure",
-      "order": 3
+      "order": 4
     },
     {
       "id": "stop-bon-marche-shopping-2",
       "activityId": "act-bon-marche-shopping",
       "placeId": "place-grande-epicerie",
       "dayId": "day-departure",
-      "order": 4
+      "order": 5
     },
     {
       "id": "stop-astor-final-luggage",
       "activityId": "act-astor-final-luggage",
       "placeId": "place-maison-astor",
       "dayId": "day-departure",
-      "order": 5
+      "order": 6
     },
     {
       "id": "stop-cdg-departure-transfer",
       "activityId": "act-cdg-departure-transfer",
       "placeId": "place-cdg",
       "dayId": "day-departure",
-      "order": 6
+      "order": 7
     },
     {
       "id": "stop-cdg-flight",
       "activityId": "act-cdg-flight",
       "placeId": "place-cdg",
       "dayId": "day-departure",
-      "order": 7
+      "order": 8
     }
   ],
   "segments": [
@@ -2892,14 +2795,14 @@
       "dayId": "day-arrival",
       "order": 1,
       "mode": "driving",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -2910,14 +2813,14 @@
       "dayId": "day-arrival",
       "order": 2,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -2928,14 +2831,14 @@
       "dayId": "day-arrival",
       "order": 3,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -2946,14 +2849,14 @@
       "dayId": "day-arrival",
       "order": 4,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -2964,14 +2867,14 @@
       "dayId": "day-arrival",
       "order": 5,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -2982,14 +2885,14 @@
       "dayId": "day-arrival",
       "order": 6,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -3000,14 +2903,14 @@
       "dayId": "day-arrival",
       "order": 7,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -3018,14 +2921,32 @@
       "dayId": "day-arrival",
       "order": 8,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "segment-arrival-rest--work-dec07-marquis",
+      "fromStopId": "stop-arrival-rest",
+      "toStopId": "stop-work-dec07-marquis",
+      "dayId": "day-arrival",
+      "order": 9,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -3036,169 +2957,178 @@
       "dayId": "day-opera",
       "order": 1,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+      ]
     },
     {
-      "id": "segment-marquis-to-ghpr-2--sainte-visit",
+      "id": "segment-marquis-to-ghpr-2--orsay-transfer-orsay",
       "fromStopId": "stop-marquis-to-ghpr-2",
-      "toStopId": "stop-sainte-visit",
+      "toStopId": "stop-orsay-transfer-orsay",
       "dayId": "day-opera",
       "order": 2,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
+      ]
     },
     {
-      "id": "segment-sainte-visit--notredame-visit",
-      "fromStopId": "stop-sainte-visit",
-      "toStopId": "stop-notredame-visit",
-      "dayId": "day-opera",
-      "order": 3,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ],
-      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
-    },
-    {
-      "id": "segment-notredame-visit--luxembourg-walk",
-      "fromStopId": "stop-notredame-visit",
-      "toStopId": "stop-luxembourg-walk",
-      "dayId": "day-opera",
-      "order": 4,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ],
-      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
-    },
-    {
-      "id": "segment-luxembourg-walk--orsay-lunch",
-      "fromStopId": "stop-luxembourg-walk",
-      "toStopId": "stop-orsay-lunch",
-      "dayId": "day-opera",
-      "order": 5,
-      "mode": "driving",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ],
-      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
-    },
-    {
-      "id": "segment-orsay-lunch--orsay-visit",
-      "fromStopId": "stop-orsay-lunch",
+      "id": "segment-orsay-transfer-orsay--orsay-visit",
+      "fromStopId": "stop-orsay-transfer-orsay",
       "toStopId": "stop-orsay-visit",
       "dayId": "day-opera",
-      "order": 6,
+      "order": 3,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "同一场馆／酒店内的连续活动或到达后入住，不绘制道路路径。"
+      ]
     },
     {
-      "id": "segment-orsay-visit--department-stores-1",
+      "id": "segment-orsay-visit--orsay-lunch",
       "fromStopId": "stop-orsay-visit",
-      "toStopId": "stop-department-stores-1",
+      "toStopId": "stop-orsay-lunch",
+      "dayId": "day-opera",
+      "order": 4,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "segment-orsay-lunch--orsay-visit-afternoon-orsay",
+      "fromStopId": "stop-orsay-lunch",
+      "toStopId": "stop-orsay-visit-afternoon-orsay",
+      "dayId": "day-opera",
+      "order": 5,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "segment-orsay-visit-afternoon-orsay--orsay-to-stores-printemps",
+      "fromStopId": "stop-orsay-visit-afternoon-orsay",
+      "toStopId": "stop-orsay-to-stores-printemps",
+      "dayId": "day-opera",
+      "order": 6,
+      "mode": "driving",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "segment-orsay-to-stores-printemps--department-stores-2",
+      "fromStopId": "stop-orsay-to-stores-printemps",
+      "toStopId": "stop-department-stores-2",
       "dayId": "day-opera",
       "order": 7,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+      ]
     },
     {
-      "id": "segment-department-stores-1--department-stores-2",
-      "fromStopId": "stop-department-stores-1",
-      "toStopId": "stop-department-stores-2",
+      "id": "segment-department-stores-2--department-stores-1",
+      "fromStopId": "stop-department-stores-2",
+      "toStopId": "stop-department-stores-1",
       "dayId": "day-opera",
       "order": 8,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
+      ]
     },
     {
-      "id": "segment-department-stores-2--ghpr-return",
-      "fromStopId": "stop-department-stores-2",
+      "id": "segment-department-stores-1--ghpr-return",
+      "fromStopId": "stop-department-stores-1",
       "toStopId": "stop-ghpr-return",
       "dayId": "day-opera",
       "order": 9,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+      ]
+    },
+    {
+      "id": "segment-ghpr-return--work-dec08-ghpr",
+      "fromStopId": "stop-ghpr-return",
+      "toStopId": "stop-work-dec08-ghpr",
+      "dayId": "day-opera",
+      "order": 10,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
     },
     {
       "id": "segment-ghpr-checkout--palais-royal",
@@ -3207,169 +3137,142 @@
       "dayId": "day-orsay",
       "order": 1,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
+      ]
     },
     {
-      "id": "segment-palais-royal--opera-visit",
+      "id": "segment-palais-royal--vivienne-optional",
       "fromStopId": "stop-palais-royal",
-      "toStopId": "stop-opera-visit",
+      "toStopId": "stop-vivienne-optional",
       "dayId": "day-orsay",
       "order": 2,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
+      "mode": "walking",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+      ]
     },
     {
-      "id": "segment-opera-visit--vivienne-optional",
-      "fromStopId": "stop-opera-visit",
-      "toStopId": "stop-vivienne-optional",
+      "id": "segment-vivienne-optional--sainte-visit",
+      "fromStopId": "stop-vivienne-optional",
+      "toStopId": "stop-sainte-visit",
       "dayId": "day-orsay",
       "order": 3,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+      ]
     },
     {
-      "id": "segment-vivienne-optional--montmartre-1",
-      "fromStopId": "stop-vivienne-optional",
-      "toStopId": "stop-montmartre-1",
+      "id": "segment-sainte-visit--notredame-visit",
+      "fromStopId": "stop-sainte-visit",
+      "toStopId": "stop-notredame-visit",
       "dayId": "day-orsay",
       "order": 4,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
+      "mode": "walking",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+      ]
     },
     {
-      "id": "segment-montmartre-1--montmartre-3",
-      "fromStopId": "stop-montmartre-1",
-      "toStopId": "stop-montmartre-3",
+      "id": "segment-notredame-visit--ghpr-luggage",
+      "fromStopId": "stop-notredame-visit",
+      "toStopId": "stop-ghpr-luggage",
       "dayId": "day-orsay",
       "order": 5,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
-    },
-    {
-      "id": "segment-montmartre-3--montmartre-2",
-      "fromStopId": "stop-montmartre-3",
-      "toStopId": "stop-montmartre-2",
-      "dayId": "day-orsay",
-      "order": 6,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ],
-      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
-    },
-    {
-      "id": "segment-montmartre-2--ghpr-luggage",
-      "fromStopId": "stop-montmartre-2",
-      "toStopId": "stop-ghpr-luggage",
-      "dayId": "day-orsay",
-      "order": 7,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
-        }
-      ],
-      "verificationNote": "本次改序后的交通方式尚未确认；保留文字与地点，不绘制未经核验的路径，不提供虚构 ETA。"
+      ]
     },
     {
       "id": "segment-ghpr-luggage--waldorf-transfer",
       "fromStopId": "stop-ghpr-luggage",
       "toStopId": "stop-waldorf-transfer",
       "dayId": "day-orsay",
-      "order": 8,
+      "order": 6,
       "mode": "driving",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "沿用相同地点对的既有交通规划；几何仅在核验或端点与方式完全匹配后由 route-overrides 提供。"
+      ]
     },
     {
       "id": "segment-waldorf-transfer--waldorf-arrival",
       "fromStopId": "stop-waldorf-transfer",
       "toStopId": "stop-waldorf-arrival",
       "dayId": "day-orsay",
-      "order": 9,
+      "order": 7,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Paris Pocket itinerary update — user-approved December 8/9 schedule (2026-11-12)",
-          "checkedAt": "2026-11-12",
-          "note": "官方两日安排更新；目标时间、交通与游客入场限制不等于已确认预订或实时 ETA。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
-      ],
-      "verificationNote": "同一场馆／酒店内的连续活动或到达后入住，不绘制道路路径。"
+      ]
+    },
+    {
+      "id": "segment-waldorf-arrival--work-dec09-waldorf",
+      "fromStopId": "stop-waldorf-arrival",
+      "toStopId": "stop-work-dec09-waldorf",
+      "dayId": "day-orsay",
+      "order": 8,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
     },
     {
       "id": "segment-waldorf-breakfast--versailles-palace",
@@ -3378,14 +3281,14 @@
       "dayId": "day-versailles",
       "order": 1,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -3396,14 +3299,14 @@
       "dayId": "day-versailles",
       "order": 2,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -3414,140 +3317,140 @@
       "dayId": "day-versailles",
       "order": 3,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-trianon-visit--hamlet-optional",
+      "id": "segment-trianon-visit--waldorf-luggage-waldorf",
       "fromStopId": "stop-trianon-visit",
-      "toStopId": "stop-hamlet-optional",
+      "toStopId": "stop-waldorf-luggage-waldorf",
       "dayId": "day-versailles",
       "order": 4,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-hamlet-optional--waldorf-to-powers-1",
-      "fromStopId": "stop-hamlet-optional",
-      "toStopId": "stop-waldorf-to-powers-1",
-      "dayId": "day-versailles",
-      "order": 5,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "源文档仅明确取包后打车返巴黎；园区/王后村庄至 Waldorf 的交通方式未指定，不能自动推为驾车。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-waldorf-to-powers-1--waldorf-to-powers-2",
-      "fromStopId": "stop-waldorf-to-powers-1",
+      "id": "segment-waldorf-luggage-waldorf--waldorf-to-powers-2",
+      "fromStopId": "stop-waldorf-luggage-waldorf",
       "toStopId": "stop-waldorf-to-powers-2",
       "dayId": "day-versailles",
-      "order": 6,
+      "order": 5,
       "mode": "driving",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-arc-exterior-1--arc-exterior-2",
-      "fromStopId": "stop-arc-exterior-1",
-      "toStopId": "stop-arc-exterior-2",
+      "id": "segment-waldorf-to-powers-2--versailles-evening-grand-powers",
+      "fromStopId": "stop-waldorf-to-powers-2",
+      "toStopId": "stop-versailles-evening-grand-powers",
+      "dayId": "day-versailles",
+      "order": 6,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "segment-photos-transfer-grand-powers--photos-transfer-trocadero",
+      "fromStopId": "stop-photos-transfer-grand-powers",
+      "toStopId": "stop-photos-transfer-trocadero",
       "dayId": "day-louvre",
       "order": 1,
-      "mode": "driving",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-arc-exterior-2--champs-shopping-1",
-      "fromStopId": "stop-arc-exterior-2",
-      "toStopId": "stop-champs-shopping-1",
+      "id": "segment-photos-transfer-trocadero--eiffel-photos-1",
+      "fromStopId": "stop-photos-transfer-trocadero",
+      "toStopId": "stop-eiffel-photos-1",
       "dayId": "day-louvre",
       "order": 2,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-champs-shopping-1--champs-shopping-2",
-      "fromStopId": "stop-champs-shopping-1",
-      "toStopId": "stop-champs-shopping-2",
+      "id": "segment-eiffel-photos-1--eiffel-photos-2",
+      "fromStopId": "stop-eiffel-photos-1",
+      "toStopId": "stop-eiffel-photos-2",
       "dayId": "day-louvre",
       "order": 3,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-champs-shopping-2--powers-shopping-bags",
-      "fromStopId": "stop-champs-shopping-2",
+      "id": "segment-eiffel-photos-2--powers-shopping-bags",
+      "fromStopId": "stop-eiffel-photos-2",
       "toStopId": "stop-powers-shopping-bags",
       "dayId": "day-louvre",
       "order": 4,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -3558,14 +3461,14 @@
       "dayId": "day-louvre",
       "order": 5,
       "mode": "driving",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -3576,86 +3479,122 @@
       "dayId": "day-louvre",
       "order": 6,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-louvre-private-guide--powers-friday-return",
+      "id": "segment-louvre-private-guide--louvre-followup-louvre",
       "fromStopId": "stop-louvre-private-guide",
-      "toStopId": "stop-powers-friday-return",
+      "toStopId": "stop-louvre-followup-louvre",
       "dayId": "day-louvre",
       "order": 7,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-powers-pack--eiffel-photos-1",
+      "id": "segment-louvre-followup-louvre--louvre-followup-grand-powers",
+      "fromStopId": "stop-louvre-followup-louvre",
+      "toStopId": "stop-louvre-followup-grand-powers",
+      "dayId": "day-louvre",
+      "order": 8,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "segment-louvre-followup-grand-powers--work-dec11-grand-powers",
+      "fromStopId": "stop-louvre-followup-grand-powers",
+      "toStopId": "stop-work-dec11-grand-powers",
+      "dayId": "day-louvre",
+      "order": 9,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "segment-powers-pack--arc-exterior-2",
       "fromStopId": "stop-powers-pack",
-      "toStopId": "stop-eiffel-photos-1",
+      "toStopId": "stop-arc-exterior-2",
       "dayId": "day-photos",
       "order": 1,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
+      "mode": "driving",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-eiffel-photos-1--eiffel-photos-2",
-      "fromStopId": "stop-eiffel-photos-1",
-      "toStopId": "stop-eiffel-photos-2",
+      "id": "segment-arc-exterior-2--arc-exterior-champs",
+      "fromStopId": "stop-arc-exterior-2",
+      "toStopId": "stop-arc-exterior-champs",
       "dayId": "day-photos",
       "order": 2,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
+      "mode": "walking",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-eiffel-photos-2--powers-to-astor-1",
-      "fromStopId": "stop-eiffel-photos-2",
+      "id": "segment-arc-exterior-champs--powers-to-astor-1",
+      "fromStopId": "stop-arc-exterior-champs",
       "toStopId": "stop-powers-to-astor-1",
       "dayId": "day-photos",
       "order": 3,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -3666,374 +3605,284 @@
       "dayId": "day-photos",
       "order": 4,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-powers-to-astor-2--marais-afternoon-1",
+      "id": "segment-powers-to-astor-2--marais-afternoon-2",
       "fromStopId": "stop-powers-to-astor-2",
-      "toStopId": "stop-marais-afternoon-1",
+      "toStopId": "stop-marais-afternoon-2",
       "dayId": "day-photos",
       "order": 5,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-marais-afternoon-1--marais-afternoon-2",
-      "fromStopId": "stop-marais-afternoon-1",
-      "toStopId": "stop-marais-afternoon-2",
+      "id": "segment-marais-afternoon-2--marais-streets-francs-bourgeois",
+      "fromStopId": "stop-marais-afternoon-2",
+      "toStopId": "stop-marais-streets-francs-bourgeois",
       "dayId": "day-photos",
       "order": 6,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-marais-afternoon-2--marais-optionals-1",
-      "fromStopId": "stop-marais-afternoon-2",
-      "toStopId": "stop-marais-optionals-1",
+      "id": "segment-marais-streets-francs-bourgeois--marais-streets-rosiers",
+      "fromStopId": "stop-marais-streets-francs-bourgeois",
+      "toStopId": "stop-marais-streets-rosiers",
       "dayId": "day-photos",
       "order": 7,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-marais-optionals-1--marais-optionals-2",
-      "fromStopId": "stop-marais-optionals-1",
-      "toStopId": "stop-marais-optionals-2",
+      "id": "segment-marais-streets-rosiers--marais-temple-vieille-temple",
+      "fromStopId": "stop-marais-streets-rosiers",
+      "toStopId": "stop-marais-temple-vieille-temple",
       "dayId": "day-photos",
       "order": 8,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-rotterdam-outbound-1--rotterdam-outbound-2",
-      "fromStopId": "stop-rotterdam-outbound-1",
-      "toStopId": "stop-rotterdam-outbound-2",
+      "id": "segment-opera-transfer-maison-astor--opera-transfer-opera",
+      "fromStopId": "stop-opera-transfer-maison-astor",
+      "toStopId": "stop-opera-transfer-opera",
       "dayId": "day-sunday",
       "order": 1,
-      "mode": "rail",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-rotterdam-outbound-2--erasmus-transfer",
-      "fromStopId": "stop-rotterdam-outbound-2",
-      "toStopId": "stop-erasmus-transfer",
+      "id": "segment-opera-transfer-opera--opera-visit",
+      "fromStopId": "stop-opera-transfer-opera",
+      "toStopId": "stop-opera-visit",
       "dayId": "day-sunday",
       "order": 2,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-erasmus-transfer--watershuttle-wait",
-      "fromStopId": "stop-erasmus-transfer",
-      "toStopId": "stop-watershuttle-wait",
+      "id": "segment-opera-visit--opera-lunch-abbesses",
+      "fromStopId": "stop-opera-visit",
+      "toStopId": "stop-opera-lunch-abbesses",
       "dayId": "day-sunday",
       "order": 3,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-watershuttle-wait--watershuttle-outbound",
-      "fromStopId": "stop-watershuttle-wait",
-      "toStopId": "stop-watershuttle-outbound",
+      "id": "segment-opera-lunch-abbesses--montmartre-1",
+      "fromStopId": "stop-opera-lunch-abbesses",
+      "toStopId": "stop-montmartre-1",
       "dayId": "day-sunday",
       "order": 4,
-      "mode": "boat",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-watershuttle-outbound--kinderdijk-visit",
-      "fromStopId": "stop-watershuttle-outbound",
-      "toStopId": "stop-kinderdijk-visit",
+      "id": "segment-montmartre-1--montmartre-2",
+      "fromStopId": "stop-montmartre-1",
+      "toStopId": "stop-montmartre-2",
       "dayId": "day-sunday",
       "order": 5,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-kinderdijk-visit--kinderdijk-boarding",
-      "fromStopId": "stop-kinderdijk-visit",
-      "toStopId": "stop-kinderdijk-boarding",
+      "id": "segment-montmartre-2--montmartre-3",
+      "fromStopId": "stop-montmartre-2",
+      "toStopId": "stop-montmartre-3",
       "dayId": "day-sunday",
       "order": 6,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-kinderdijk-boarding--watershuttle-return",
-      "fromStopId": "stop-kinderdijk-boarding",
-      "toStopId": "stop-watershuttle-return",
+      "id": "segment-montmartre-3--cruise-transfer-bateaux-mouches",
+      "fromStopId": "stop-montmartre-3",
+      "toStopId": "stop-cruise-transfer-bateaux-mouches",
       "dayId": "day-sunday",
       "order": 7,
-      "mode": "boat",
-      "verifiedStatus": "unverified",
+      "mode": "unknown",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-watershuttle-return--fenix-transfer",
-      "fromStopId": "stop-watershuttle-return",
-      "toStopId": "stop-fenix-transfer",
+      "id": "segment-cruise-transfer-bateaux-mouches--cruise-sunday-bateaux-mouches",
+      "fromStopId": "stop-cruise-transfer-bateaux-mouches",
+      "toStopId": "stop-cruise-sunday-bateaux-mouches",
       "dayId": "day-sunday",
       "order": 8,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-fenix-transfer--fenix-visit",
-      "fromStopId": "stop-fenix-transfer",
-      "toStopId": "stop-fenix-visit",
+      "id": "segment-cruise-sunday-bateaux-mouches--astor-sunday-return",
+      "fromStopId": "stop-cruise-sunday-bateaux-mouches",
+      "toStopId": "stop-astor-sunday-return",
       "dayId": "day-sunday",
       "order": 9,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
     {
-      "id": "segment-fenix-visit--markthal-transfer",
-      "fromStopId": "stop-fenix-visit",
-      "toStopId": "stop-markthal-transfer",
-      "dayId": "day-sunday",
-      "order": 10,
-      "mode": "driving",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-markthal-transfer--markthal-visit",
-      "fromStopId": "stop-markthal-transfer",
-      "toStopId": "stop-markthal-visit",
-      "dayId": "day-sunday",
-      "order": 11,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-markthal-visit--cube-houses-exterior",
-      "fromStopId": "stop-markthal-visit",
-      "toStopId": "stop-cube-houses-exterior",
-      "dayId": "day-sunday",
-      "order": 12,
-      "mode": "walking",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-cube-houses-exterior--rotterdam-station-return",
-      "fromStopId": "stop-cube-houses-exterior",
-      "toStopId": "stop-rotterdam-station-return",
-      "dayId": "day-sunday",
-      "order": 13,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-rotterdam-station-return--eurostar-return",
-      "fromStopId": "stop-rotterdam-station-return",
-      "toStopId": "stop-eurostar-return",
-      "dayId": "day-sunday",
-      "order": 14,
-      "mode": "rail",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-eurostar-return--astor-sunday-return",
-      "fromStopId": "stop-eurostar-return",
-      "toStopId": "stop-astor-sunday-return",
-      "dayId": "day-sunday",
-      "order": 15,
-      "mode": "unknown",
-      "verifiedStatus": "unverified",
-      "geometry": null,
-      "routeDataVersion": "4.12.3",
-      "sources": [
-        {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 5,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
-        }
-      ]
-    },
-    {
-      "id": "segment-astor-checkout--saint-germain-walk",
+      "id": "segment-astor-checkout--luxembourg-walk",
       "fromStopId": "stop-astor-checkout",
-      "toStopId": "stop-saint-germain-walk",
+      "toStopId": "stop-luxembourg-walk",
       "dayId": "day-departure",
       "order": 1,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+        }
+      ]
+    },
+    {
+      "id": "segment-luxembourg-walk--saint-germain-walk",
+      "fromStopId": "stop-luxembourg-walk",
+      "toStopId": "stop-saint-germain-walk",
+      "dayId": "day-departure",
+      "order": 2,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -4042,16 +3891,16 @@
       "fromStopId": "stop-saint-germain-walk",
       "toStopId": "stop-bon-marche-shopping-1",
       "dayId": "day-departure",
-      "order": 2,
+      "order": 3,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -4060,16 +3909,16 @@
       "fromStopId": "stop-bon-marche-shopping-1",
       "toStopId": "stop-bon-marche-shopping-2",
       "dayId": "day-departure",
-      "order": 3,
+      "order": 4,
       "mode": "walking",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -4078,16 +3927,16 @@
       "fromStopId": "stop-bon-marche-shopping-2",
       "toStopId": "stop-astor-final-luggage",
       "dayId": "day-departure",
-      "order": 4,
+      "order": 5,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -4096,16 +3945,16 @@
       "fromStopId": "stop-astor-final-luggage",
       "toStopId": "stop-cdg-departure-transfer",
       "dayId": "day-departure",
-      "order": 5,
+      "order": 6,
       "mode": "driving",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     },
@@ -4114,16 +3963,16 @@
       "fromStopId": "stop-cdg-departure-transfer",
       "toStopId": "stop-cdg-flight",
       "dayId": "day-departure",
-      "order": 6,
+      "order": 7,
       "mode": "unknown",
-      "verifiedStatus": "unverified",
       "geometry": null,
-      "routeDataVersion": "4.12.3",
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.4",
       "sources": [
         {
-          "source": "Itinerary v4.12 (2026-11-04)",
-          "page": 6,
-          "note": "交通方式为规划，路径未核验；缺失时不绘制。"
+          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
+          "checkedAt": "2026-11-18",
+          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
         }
       ]
     }
@@ -4131,7 +3980,7 @@
   "tasks": [
     {
       "id": "task-louvre-guide",
-      "title": "联系卢浮宫中文私人导游，确认 12/11 13:30、门票及目标展厅",
+      "title": "联系 12/11 周五 13:30 卢浮宫中文私人导游，确认门票、路线与集合",
       "priority": "high",
       "dueDate": null,
       "status": "active",
@@ -4147,13 +3996,13 @@
       "title": "预订 12/9 10:00 巴黎歌剧院两张票",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
-      "note": "10:00 为目标场次；预订两张参观票，并核对实际开放范围与入场安排。尚未确认购票。",
+      "status": "archived",
+      "note": "10:00 为目标场次；预订两张参观票，并核对实际开放范围与入场安排。尚未确认购票。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。",
       "activityId": "act-opera-visit",
-      "dayId": "day-orsay",
-      "groupId": "prep-now",
-      "order": 2,
-      "url": "https://www.operadeparis.fr/en/visits/palais-garnier"
+      "dayId": "day-sunday",
+      "url": "https://www.operadeparis.fr/en/visits/palais-garnier",
+      "archiveReason": "v5.1最新日程已更改日期或取消此目标；保留原记录与勾选，需自行核对旧订单，不表示已退款／取消订单。",
+      "originalDayId": "day-orsay"
     },
     {
       "id": "task-versailles-passport",
@@ -4165,7 +4014,7 @@
       "activityId": "act-versailles-palace",
       "dayId": "day-versailles",
       "groupId": "prep-now",
-      "order": 3,
+      "order": 2,
       "url": "https://en.chateauversailles.fr/plan-your-visit"
     },
     {
@@ -4173,29 +4022,29 @@
       "title": "预约 12/8 09:30 圣礼拜堂",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
-      "note": "09:30 为目标入场时段；完成预约前仍为待确认，安检与入场要求另核。",
+      "status": "archived",
+      "note": "09:30 为目标入场时段；完成预约前仍为待确认，安检与入场要求另核。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。",
       "activityId": "act-sainte-visit",
-      "dayId": "day-opera",
-      "groupId": "prep-now",
-      "order": 4,
-      "url": "https://www.sainte-chapelle.fr/en/"
+      "dayId": "day-orsay",
+      "url": "https://www.sainte-chapelle.fr/en/",
+      "archiveReason": "v5.1最新日程已更改日期或取消此目标；保留原记录与勾选，需自行核对旧订单，不表示已退款／取消订单。",
+      "originalDayId": "day-opera"
     },
     {
       "id": "task-photoshoot-booking",
       "title": "确认并预订 12/12 上午铁塔摄影师",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
-      "note": "联系并预订摄影师，确认上午拍摄时段、集合点及具体服务；尚未确认预约。",
+      "status": "archived",
+      "note": "联系并预订摄影师，确认上午拍摄时段、集合点及具体服务；尚未确认预约。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。",
       "activityId": "act-eiffel-photos",
-      "dayId": "day-photos",
-      "groupId": "prep-now",
-      "order": 5
+      "dayId": "day-louvre",
+      "archiveReason": "v5.1最新日程已更改日期或取消此目标；保留原记录与勾选，需自行核对旧订单，不表示已退款／取消订单。",
+      "originalDayId": "day-photos"
     },
     {
       "id": "task-carte-blanche-duo",
-      "title": "购买奥赛＋橘园Carte Blanche Jeunes Duo年卡",
+      "title": "确认 Carte Blanche Jeunes Duo 办理方式；否则购买橘园／奥赛单票",
       "priority": "medium",
       "dueDate": null,
       "status": "active",
@@ -4211,50 +4060,47 @@
       "title": "确定周一游船",
       "priority": "high",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "DATA-01/05：周一为首选，全程只乘一次；确认产品、运营商、班次与登船码头。周四仅保留原行程的条件后备，不代表已预订。",
       "activityId": "act-cruise-preferred",
       "dayId": "day-arrival",
-      "groupId": "prep-now",
-      "order": 7
+      "archiveReason": "v5.1最新日程已更改日期或取消此目标；保留原记录与勾选，需自行核对旧订单，不表示已退款／取消订单。"
     },
     {
       "id": "task-notredame",
       "title": "查看 12/8 圣母院免费预约和宗教活动安排",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
-      "note": "12月8日宗教活动可能影响游客入场；查看免费预约、礼拜安排和相关限制。准确入场安排待核，尚未确认预约。",
+      "status": "archived",
+      "note": "12月8日宗教活动可能影响游客入场；查看免费预约、礼拜安排和相关限制。准确入场安排待核，尚未确认预约。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。",
       "activityId": "act-notredame-visit",
-      "dayId": "day-opera",
+      "dayId": "day-orsay",
       "url": "https://www.notredamedeparis.fr/en/",
-      "groupId": "prep-departure",
-      "order": 1
+      "archiveReason": "v5.1最新日程已更改日期或取消此目标；保留原记录与勾选，需自行核对旧订单，不表示已退款／取消订单。",
+      "originalDayId": "day-opera"
     },
     {
       "id": "task-eurostar-tickets",
       "title": "购买 12/13 巴黎⇄鹿特丹 Eurostar 往返票，核对施工时刻",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "购买往返票前核对12月13日官方运营、施工和实际时刻。原行程时间仅为目标，尚未确认购票。",
       "activityId": "act-rotterdam-outbound",
       "dayId": "day-sunday",
-      "groupId": "prep-departure",
-      "order": 2,
-      "url": "https://www.nsinternational.com/en"
+      "url": "https://www.nsinternational.com/en",
+      "archiveReason": "v5.1最新日程已更改日期或取消此目标；保留原记录与勾选，需自行核对旧订单，不表示已退款／取消订单。"
     },
     {
       "id": "task-rotterdam-attraction-tickets",
       "title": "确定鹿特丹小孩堤防与 Fenix 的取舍，再订相应门票",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
+      "status": "archived",
       "note": "先决定 Kinderdijk 小孩堤防与 Fenix 的取舍，再按选择核对开放、交通和相应门票；尚未确认任何购票或行程替代。",
       "activityId": "act-fenix-visit",
       "dayId": "day-sunday",
-      "groupId": "prep-departure",
-      "order": 3
+      "archiveReason": "v5.1最新日程已更改日期或取消此目标；保留原记录与勾选，需自行核对旧订单，不表示已退款／取消订单。"
     },
     {
       "id": "task-eurostar",
@@ -4285,10 +4131,11 @@
       "priority": "high",
       "dueDate": null,
       "status": "archived",
-      "note": "DATA-04：09:00–10:30／11:00 只是目标，尚无确认预约。",
+      "note": "DATA-04：09:00–10:30／11:00 只是目标，尚无确认预约。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。",
       "activityId": "act-eiffel-photos",
-      "dayId": "day-photos",
-      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
+      "dayId": "day-louvre",
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。",
+      "originalDayId": "day-photos"
     },
     {
       "id": "task-orangerie",
@@ -4308,11 +4155,12 @@
       "priority": "medium",
       "dueDate": null,
       "status": "archived",
-      "note": "12月9日10:00–11:30为目标；歌剧院内部参观场次与开放区域待核，不视为已确认。截止日期未提供。",
+      "note": "12月9日10:00–11:30为目标；歌剧院内部参观场次与开放区域待核，不视为已确认。截止日期未提供。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。",
       "activityId": "act-opera-visit",
-      "dayId": "day-orsay",
+      "dayId": "day-sunday",
       "url": "https://www.operadeparis.fr/en/visits/palais-garnier",
-      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。",
+      "originalDayId": "day-orsay"
     },
     {
       "id": "task-sainte",
@@ -4320,11 +4168,12 @@
       "priority": "medium",
       "dueDate": null,
       "status": "archived",
-      "note": "12月8日09:30–10:30为目标；定时入场、安检与实际预订待核，不视为已确认。截止日期未提供。",
+      "note": "12月8日09:30–10:30为目标；定时入场、安检与实际预订待核，不视为已确认。截止日期未提供。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。",
       "activityId": "act-sainte-visit",
-      "dayId": "day-opera",
+      "dayId": "day-orsay",
       "url": "https://www.sainte-chapelle.fr/en/",
-      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。"
+      "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。",
+      "originalDayId": "day-opera"
     },
     {
       "id": "task-orsay",
@@ -4383,6 +4232,78 @@
       "activityId": "act-cdg-flight",
       "dayId": "day-departure",
       "archiveReason": "已从本次精简后的官方准备清单归档；历史事项及完成记录保留，不代表已经完成。"
+    },
+    {
+      "id": "task-opera-dec13",
+      "title": "购买 12/13 歌剧院约 11:00 的开放日门票",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "文档目标，不代表已购票或预约确认；实际开放、时刻与具体要求待核。",
+      "activityId": "act-opera-visit",
+      "dayId": "day-sunday",
+      "groupId": "prep-now",
+      "order": 3
+    },
+    {
+      "id": "task-sainte-dec09",
+      "title": "预订 12/9 圣礼拜堂约 11:30 的指定时段票（两人）",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "文档目标，不代表已购票或预约确认；实际开放、时刻与具体要求待核。",
+      "activityId": "act-sainte-visit",
+      "dayId": "day-orsay",
+      "groupId": "prep-now",
+      "order": 4
+    },
+    {
+      "id": "task-photoshoot-dec11",
+      "title": "预订 12/11 铁塔摄影师，确认雨天政策与集合地点",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "文档目标，不代表已购票或预约确认；实际开放、时刻与具体要求待核。",
+      "activityId": "act-eiffel-photos",
+      "dayId": "day-louvre",
+      "groupId": "prep-now",
+      "order": 5
+    },
+    {
+      "id": "task-notredame-dec09",
+      "title": "临近核实 12/9 圣母院免费预约与宗教活动安排",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "文档目标，不代表已购票或预约确认；实际开放、时刻与具体要求待核。",
+      "activityId": "act-notredame-visit",
+      "dayId": "day-orsay",
+      "groupId": "prep-departure",
+      "order": 1
+    },
+    {
+      "id": "task-cruise-dec13",
+      "title": "临近确认 12/13 Bateaux-Mouches 18:30 船班及登船点",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "文档目标，不代表已购票或预约确认；实际开放、时刻与具体要求待核。",
+      "activityId": "act-cruise-sunday",
+      "dayId": "day-sunday",
+      "groupId": "prep-departure",
+      "order": 2
+    },
+    {
+      "id": "task-work-schedule",
+      "title": "确认巴黎工作会议、周四例外及 12/14 请假安排",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "工作日18:00开工，争取17:15–17:30回酒店；周四接受晚归风险，12/14机场交通与飞行需提前安排会议或请假。",
+      "activityId": "act-cdg-flight",
+      "dayId": "day-departure",
+      "groupId": "prep-departure",
+      "order": 3
     }
   ],
   "hotels": [
@@ -4465,18 +4386,35 @@
     }
   ],
   "retiredActivityIds": [
+    "act-champs-shopping",
+    "act-cruise-backup",
+    "act-cruise-preferred",
+    "act-cube-houses-exterior",
+    "act-erasmus-transfer",
+    "act-eurostar-return",
+    "act-fenix-transfer",
+    "act-fenix-visit",
+    "act-hamlet-optional",
+    "act-kinderdijk-boarding",
+    "act-kinderdijk-visit",
+    "act-marais-optionals",
+    "act-markthal-transfer",
+    "act-markthal-visit",
     "act-martyrs-optional",
-    "act-orsay-transfer"
+    "act-powers-friday-return",
+    "act-rotterdam-outbound",
+    "act-rotterdam-station-return",
+    "act-watershuttle-outbound",
+    "act-watershuttle-return",
+    "act-watershuttle-wait"
   ],
   "conditionGroups": [
     {
       "id": "condition-one-cruise",
-      "maxOccurrences": 1,
       "activityIds": [
-        "act-cruise-preferred",
-        "act-cruise-backup"
+        "act-cruise-sunday"
       ],
-      "note": "周一首选；仅周一未乘船时启用周四后备，产品与班次待核。"
+      "maxOccurrences": 1
     }
   ],
   "taskGroups": [
