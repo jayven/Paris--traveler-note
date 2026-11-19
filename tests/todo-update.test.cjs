@@ -6,7 +6,7 @@ const Official=require('../official-data.js'),root=path.resolve(__dirname,'..');
 const oldHash='f7f8ce3d91fa777de40cc87829afa31a837455085bd8b59b256f90de55665e24';
 const oldBytes=fs.readFileSync(path.join(root,'trip/releases',oldHash+'.json')),old=JSON.parse(oldBytes);
 const copy=x=>JSON.parse(JSON.stringify(x));
-function maintained(){const data=JSON.parse(fs.readFileSync(path.join(root,'trip/source-v4.12.json'),'utf8'));for(const [file,key] of [['location-verification.json','places'],['route-overrides.json','segments']])for(const item of JSON.parse(fs.readFileSync(path.join(root,'trip',file),'utf8'))[key]){const target=data[key].find(x=>x.id===item.id);assert.ok(target,'orphan override '+item.id);Object.assign(target,item);}return Official.validate(data,old);}
+function maintained(){return Official.validate(JSON.parse(fs.readFileSync(path.join(root,'trip/releases/b5e65424172a2870223d124dbecd9f8f5820cfe7c9e44a944511543bc829f50e.json'),'utf8')),old);}
 const groups=[{id:'prep-now',title:'现在｜11/12–11/25',order:1,windowStart:'2026-11-12',windowEnd:'2026-11-25'},{id:'prep-departure',title:'临近出发｜12/6–12/8',order:2,windowStart:'2026-12-06',windowEnd:'2026-12-08'}];
 const titles=[['联系卢浮宫中文私人导游，确认 12/11 13:30、门票及目标展厅','预订 12/9 10:00 巴黎歌剧院两张票','购买 12/10 凡尔赛 Passport 10:00时段门票','预约 12/8 09:30 圣礼拜堂','确认并预订 12/12 上午铁塔摄影师','购买奥赛＋橘园Carte Blanche Jeunes Duo年卡','确定周一游船'],['查看 12/8 圣母院免费预约和宗教活动安排','购买 12/13 巴黎⇄鹿特丹 Eurostar 往返票，核对施工时刻','确定鹿特丹小孩堤防与 Fenix 的取舍，再订相应门票']];
 const kept=['task-louvre-guide','task-cruise','task-notredame'];

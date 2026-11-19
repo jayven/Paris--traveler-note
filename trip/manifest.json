@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
   "tripId": "paris-2026",
-  "tripDataVersion": "4.12.3",
-  "releaseSequence": 3,
-  "snapshotUrl": "./trip/releases/b5e65424172a2870223d124dbecd9f8f5820cfe7c9e44a944511543bc829f50e.json",
-  "sha256": "b5e65424172a2870223d124dbecd9f8f5820cfe7c9e44a944511543bc829f50e",
-  "byteLength": 223650
+  "tripDataVersion": "4.12.4",
+  "releaseSequence": 4,
+  "snapshotUrl": "./trip/releases/d355a0609e1febe04e9b5da16ad0b08dbbebdcef390b221f8ebe9511ef4279a3.json",
+  "sha256": "d355a0609e1febe04e9b5da16ad0b08dbbebdcef390b221f8ebe9511ef4279a3",
+  "byteLength": 210469
 }
