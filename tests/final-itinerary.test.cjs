@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const O=require('../official-data.js'),root=path.resolve(__dirname,'..'),m=JSON.parse(fs.readFileSync(path.join(root,'trip/manifest.json'))),s=O.validate(JSON.parse(fs.readFileSync(path.join(root,m.snapshotUrl))));
+const O=require('../official-data.js'),root=path.resolve(__dirname,'..'),m=JSON.parse(fs.readFileSync(path.join(root,'trip/manifest.json'))),s=O.validate(JSON.parse(fs.readFileSync(path.join(root,'trip/releases/d355a0609e1febe04e9b5da16ad0b08dbbebdcef390b221f8ebe9511ef4279a3.json'))));
 const old=JSON.parse(fs.readFileSync(path.join(root,'trip/releases/b5e65424172a2870223d124dbecd9f8f5820cfe7c9e44a944511543bc829f50e.json')));
 const day=i=>s.activities.filter(a=>a.dayId===s.days[i].id).sort((a,b)=>a.order-b.order),a=id=>s.activities.find(x=>x.id===id);
 test('final v5.1 planning label produces next release and preserves all five hotel dates',()=>{assert.equal(s.tripDataVersion,'4.12.4');assert.equal(s.releaseSequence,4);assert.equal(s.trip.sourceVersion,'v5.1 Refined');assert.deepEqual(s.hotels,old.hotels);assert.deepEqual(s.days.map(d=>[d.id,d.date,d.hotelIds]),old.days.map(d=>[d.id,d.date,d.hotelIds]));O.validate(s,old);});
