@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "tripDataVersion": "4.12.5",
+  "tripDataVersion": "4.12.6",
   "attribution": "Road geometry: OSRM on FOSSGIS servers; © OpenStreetMap contributors.",
   "license": "https://opendatacommons.org/licenses/odbl/1-0/",
   "fixMapUrl": "https://www.openstreetmap.org/fixthemap",
@@ -11,7 +11,7 @@
       "id": "segment-arrival-hotel-1--arrival-hotel-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
@@ -66,7 +66,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -241,7 +241,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -448,7 +448,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -783,7 +783,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -910,7 +910,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -1017,7 +1017,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -1044,85 +1044,326 @@
       "id": "segment-tuileries-concorde-2--arrival-rest",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-arrival-rest--work-dec07-marquis",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "同场地活动／无道路移动。"
     },
     {
       "id": "segment-marquis-to-ghpr-1--marquis-to-ghpr-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
-      "id": "segment-marquis-to-ghpr-2--orsay-transfer-orsay",
+      "id": "segment-marquis-to-ghpr-2--sainte-entry-buffer-sainte",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
-      "id": "segment-orsay-transfer-orsay--orsay-visit",
+      "id": "segment-sainte-entry-buffer-sainte--sainte-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "同场地活动／无道路移动。"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "同一场地无道路移动。"
     },
     {
-      "id": "segment-orsay-visit--orsay-lunch",
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "同场地活动／无道路移动。"
+      "id": "segment-sainte-visit--notredame-visit",
+      "geometry": {
+        "coordinates": [
+          [
+            2.345549,
+            48.855143
+          ],
+          [
+            2.345631,
+            48.855222
+          ],
+          [
+            2.345703,
+            48.855317
+          ],
+          [
+            2.345745,
+            48.855302
+          ],
+          [
+            2.345774,
+            48.855292
+          ],
+          [
+            2.34585,
+            48.855265
+          ],
+          [
+            2.345931,
+            48.855236
+          ],
+          [
+            2.345953,
+            48.855263
+          ],
+          [
+            2.346052,
+            48.855223
+          ],
+          [
+            2.346236,
+            48.855158
+          ],
+          [
+            2.346218,
+            48.855136
+          ],
+          [
+            2.346221,
+            48.855135
+          ],
+          [
+            2.346236,
+            48.85513
+          ],
+          [
+            2.34635,
+            48.855092
+          ],
+          [
+            2.346473,
+            48.855047
+          ],
+          [
+            2.346598,
+            48.855003
+          ],
+          [
+            2.346601,
+            48.855007
+          ],
+          [
+            2.346762,
+            48.854952
+          ],
+          [
+            2.34676,
+            48.854949
+          ],
+          [
+            2.346866,
+            48.854915
+          ],
+          [
+            2.34712,
+            48.854825
+          ],
+          [
+            2.34742,
+            48.854721
+          ],
+          [
+            2.347423,
+            48.854723
+          ],
+          [
+            2.3476,
+            48.854663
+          ],
+          [
+            2.34762,
+            48.854657
+          ],
+          [
+            2.347648,
+            48.85465
+          ],
+          [
+            2.347413,
+            48.854244
+          ],
+          [
+            2.347479,
+            48.854227
+          ],
+          [
+            2.347545,
+            48.85421
+          ],
+          [
+            2.347564,
+            48.854205
+          ],
+          [
+            2.347548,
+            48.854174
+          ],
+          [
+            2.347595,
+            48.854162
+          ],
+          [
+            2.347757,
+            48.854111
+          ],
+          [
+            2.348019,
+            48.854029
+          ],
+          [
+            2.348015,
+            48.854022
+          ],
+          [
+            2.348149,
+            48.853981
+          ],
+          [
+            2.34819,
+            48.853967
+          ],
+          [
+            2.34834,
+            48.853919
+          ],
+          [
+            2.348493,
+            48.853872
+          ],
+          [
+            2.348516,
+            48.853864
+          ],
+          [
+            2.348602,
+            48.853838
+          ],
+          [
+            2.348649,
+            48.853823
+          ],
+          [
+            2.348668,
+            48.853817
+          ],
+          [
+            2.348671,
+            48.853822
+          ],
+          [
+            2.349094,
+            48.853688
+          ],
+          [
+            2.349112,
+            48.85366
+          ],
+          [
+            2.349165,
+            48.853642
+          ],
+          [
+            2.349207,
+            48.853633
+          ],
+          [
+            2.349255,
+            48.853623
+          ],
+          [
+            2.349261,
+            48.853604
+          ],
+          [
+            2.349274,
+            48.85359
+          ],
+          [
+            2.349298,
+            48.853576
+          ],
+          [
+            2.349334,
+            48.853564
+          ],
+          [
+            2.349703,
+            48.853447
+          ],
+          [
+            2.349752,
+            48.853431
+          ],
+          [
+            2.350287,
+            48.853262
+          ]
+        ],
+        "type": "LineString"
+      },
+      "verifiedStatus": "verified",
+      "routeDataVersion": "4.12.6",
+      "sources": [
+        {
+          "source": "OSRM on FOSSGIS servers / OpenStreetMap",
+          "provider": "FOSSGIS",
+          "profile": "foot",
+          "mode": "walking",
+          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3449941,48.8553933;2.3500501,48.8529371?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
+          "generatedAt": "2026-11-09T19:29:10.008Z",
+          "checkedAt": "2026-11-09",
+          "license": "ODbL-1.0",
+          "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+          "policyUrl": "https://routing.openstreetmap.de/about.html",
+          "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
+        }
+      ],
+      "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
+      "distanceMeters": 483,
+      "roadSnapMeters": [
+        49.2,
+        40.1
+      ]
     },
     {
-      "id": "segment-orsay-lunch--orsay-visit-afternoon-orsay",
+      "id": "segment-notredame-visit--orsay-transfer-orsay",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "同场地活动／无道路移动。"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
-      "id": "segment-orsay-visit-afternoon-orsay--orsay-to-stores-printemps",
+      "id": "segment-orsay-transfer-orsay--orsay-lunch",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "同一场地无道路移动。"
     },
     {
-      "id": "segment-orsay-to-stores-printemps--department-stores-2",
+      "id": "segment-orsay-lunch--orsay-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "同场地活动／无道路移动。"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "同一场地无道路移动。"
     },
     {
-      "id": "segment-department-stores-2--department-stores-1",
+      "id": "segment-orsay-visit--ghpr-return",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
-    },
-    {
-      "id": "segment-department-stores-1--ghpr-return",
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
       "id": "segment-ghpr-return--work-dec08-ghpr",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "verificationNote": "同场地活动／无道路移动。"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "同一场地无道路移动。"
     },
     {
       "id": "segment-ghpr-checkout--palais-royal",
@@ -1232,7 +1473,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -1407,7 +1648,7 @@
         "type": "LineString"
       },
       "verifiedStatus": "verified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -1435,21 +1676,21 @@
       "verifiedStatus": "unverified",
       "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
       "id": "segment-vivienne-optional--opera-transfer-opera",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6"
     },
     {
       "geometry": null,
       "verifiedStatus": "unverified",
       "verificationNote": "同场地，无核验馆内路线。",
       "id": "segment-opera-transfer-opera--opera-visit",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6"
     },
     {
       "geometry": null,
       "verifiedStatus": "unverified",
       "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
       "id": "segment-opera-visit--ghpr-luggage",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6"
     },
     {
       "id": "segment-ghpr-luggage--waldorf-transfer",
@@ -4503,7 +4744,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -4531,14 +4772,14 @@
       "verifiedStatus": "unverified",
       "verificationNote": "同场地，无核验馆内路线。",
       "id": "segment-waldorf-transfer--waldorf-arrival",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6"
     },
     {
       "geometry": null,
       "verifiedStatus": "unverified",
       "verificationNote": "同场地，无核验馆内路线。",
       "id": "segment-waldorf-arrival--work-dec09-waldorf",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6"
     },
     {
       "id": "segment-waldorf-breakfast--versailles-palace",
@@ -4740,7 +4981,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -4767,21 +5008,21 @@
       "id": "segment-versailles-palace--versailles-gardens",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "同场地活动／无道路移动。"
     },
     {
       "id": "segment-versailles-gardens--trianon-visit",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-trianon-visit--waldorf-luggage-waldorf",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
@@ -7300,7 +7541,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -7327,334 +7568,432 @@
       "id": "segment-waldorf-to-powers-2--versailles-evening-grand-powers",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "同场地活动／无道路移动。"
     },
     {
       "id": "segment-photos-transfer-grand-powers--photos-transfer-trocadero",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-photos-transfer-trocadero--eiffel-photos-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "同场地活动／无道路移动。"
     },
     {
       "id": "segment-eiffel-photos-1--eiffel-photos-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-eiffel-photos-2--powers-shopping-bags",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-powers-shopping-bags--louvre-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-louvre-transfer--louvre-private-guide",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "同场地活动／无道路移动。"
     },
     {
       "id": "segment-louvre-private-guide--louvre-followup-louvre",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "同场地活动／无道路移动。"
     },
     {
       "id": "segment-louvre-followup-louvre--louvre-followup-grand-powers",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-louvre-followup-grand-powers--work-dec11-grand-powers",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "同场地活动／无道路移动。"
     },
     {
+      "id": "segment-powers-pack--arc-exterior-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
-      "id": "segment-powers-to-astor-1--powers-to-astor-2",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
-      "id": "segment-powers-to-astor-2--sainte-entry-buffer-sainte",
-      "routeDataVersion": "4.12.5"
-    },
-    {
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "verificationNote": "同场地，无核验馆内路线。",
-      "id": "segment-sainte-entry-buffer-sainte--sainte-visit",
-      "routeDataVersion": "4.12.5"
-    },
-    {
-      "id": "segment-sainte-visit--notredame-transfer-notredame",
-      "verifiedStatus": "verified",
+      "id": "segment-arc-exterior-2--arc-exterior-champs",
       "geometry": {
         "coordinates": [
           [
-            2.345549,
-            48.855143
+            2.295146,
+            48.874024
           ],
           [
-            2.345631,
-            48.855222
+            2.295146,
+            48.874024
           ],
           [
-            2.345703,
-            48.855317
+            2.295058,
+            48.874052
           ],
           [
-            2.345745,
-            48.855302
+            2.295041,
+            48.874057
           ],
           [
-            2.345774,
-            48.855292
+            2.295061,
+            48.874085
           ],
           [
-            2.34585,
-            48.855265
+            2.295401,
+            48.873986
           ],
           [
-            2.345931,
-            48.855236
+            2.295446,
+            48.873974
           ],
           [
-            2.345953,
-            48.855263
+            2.295911,
+            48.873735
           ],
           [
-            2.346052,
-            48.855223
+            2.29615,
+            48.873636
           ],
           [
-            2.346236,
-            48.855158
+            2.29634,
+            48.873569
           ],
           [
-            2.346218,
-            48.855136
+            2.296431,
+            48.87354
           ],
           [
-            2.346221,
-            48.855135
+            2.296502,
+            48.873518
           ],
           [
-            2.346236,
-            48.85513
+            2.296626,
+            48.873478
           ],
           [
-            2.34635,
-            48.855092
+            2.297005,
+            48.873359
           ],
           [
-            2.346473,
-            48.855047
+            2.297118,
+            48.873323
           ],
           [
-            2.346598,
-            48.855003
+            2.297142,
+            48.873316
           ],
           [
-            2.346601,
-            48.855007
+            2.297161,
+            48.87331
           ],
           [
-            2.346762,
-            48.854952
+            2.297196,
+            48.873299
           ],
           [
-            2.34676,
-            48.854949
+            2.297228,
+            48.873289
           ],
           [
-            2.346866,
-            48.854915
+            2.297247,
+            48.873282
           ],
           [
-            2.34712,
-            48.854825
+            2.297367,
+            48.873245
           ],
           [
-            2.34742,
-            48.854721
+            2.297478,
+            48.873316
           ],
           [
-            2.347423,
-            48.854723
+            2.297494,
+            48.873311
           ],
           [
-            2.3476,
-            48.854663
+            2.297535,
+            48.873298
           ],
           [
-            2.34762,
-            48.854657
+            2.297561,
+            48.873289
           ],
           [
-            2.347648,
-            48.85465
+            2.297568,
+            48.873287
           ],
           [
-            2.347413,
-            48.854244
+            2.29761,
+            48.873274
           ],
           [
-            2.347479,
-            48.854227
+            2.298305,
+            48.873053
           ],
           [
-            2.347545,
-            48.85421
+            2.298356,
+            48.87302
           ],
           [
-            2.347564,
-            48.854205
+            2.29889,
+            48.872854
           ],
           [
-            2.347548,
-            48.854174
+            2.29943,
+            48.872686
           ],
           [
-            2.347595,
-            48.854162
+            2.29966,
+            48.872615
           ],
           [
-            2.347757,
-            48.854111
+            2.299674,
+            48.872611
           ],
           [
-            2.348019,
-            48.854029
+            2.299704,
+            48.872601
           ],
           [
-            2.348015,
-            48.854022
+            2.299735,
+            48.872592
           ],
           [
-            2.348149,
-            48.853981
+            2.299777,
+            48.872578
           ],
           [
-            2.34819,
-            48.853967
+            2.300021,
+            48.872503
           ],
           [
-            2.34834,
-            48.853919
+            2.300075,
+            48.872474
           ],
           [
-            2.348493,
-            48.853872
+            2.300324,
+            48.872393
           ],
           [
-            2.348516,
-            48.853864
+            2.300375,
+            48.872393
           ],
           [
-            2.348602,
-            48.853838
+            2.300575,
+            48.87233
           ],
           [
-            2.348649,
-            48.853823
+            2.301325,
+            48.872091
           ],
           [
-            2.348668,
-            48.853817
+            2.301352,
+            48.872083
           ],
           [
-            2.348671,
-            48.853822
+            2.301385,
+            48.872073
           ],
           [
-            2.349094,
-            48.853688
+            2.301419,
+            48.872062
           ],
           [
-            2.349112,
-            48.85366
+            2.301453,
+            48.872051
           ],
           [
-            2.349165,
-            48.853642
+            2.302312,
+            48.871778
           ],
           [
-            2.349207,
-            48.853633
+            2.302645,
+            48.871673
           ],
           [
-            2.349255,
-            48.853623
+            2.302657,
+            48.871669
           ],
           [
-            2.349261,
-            48.853604
+            2.302712,
+            48.871652
           ],
           [
-            2.349274,
-            48.85359
+            2.302772,
+            48.871633
           ],
           [
-            2.349298,
-            48.853576
+            2.302826,
+            48.871615
           ],
           [
-            2.349334,
-            48.853564
+            2.30293,
+            48.871582
           ],
           [
-            2.349703,
-            48.853447
+            2.30323,
+            48.871487
           ],
           [
-            2.349752,
-            48.853431
+            2.303455,
+            48.871416
           ],
           [
-            2.350287,
-            48.853262
+            2.303864,
+            48.871286
+          ],
+          [
+            2.304629,
+            48.871043
+          ],
+          [
+            2.305191,
+            48.870865
+          ],
+          [
+            2.305433,
+            48.870788
+          ],
+          [
+            2.305602,
+            48.870734
+          ],
+          [
+            2.305619,
+            48.870729
+          ],
+          [
+            2.305661,
+            48.870716
+          ],
+          [
+            2.305722,
+            48.870696
+          ],
+          [
+            2.305794,
+            48.870674
+          ],
+          [
+            2.30576,
+            48.870635
+          ],
+          [
+            2.306057,
+            48.870541
+          ],
+          [
+            2.306106,
+            48.87046
+          ],
+          [
+            2.306378,
+            48.870373
+          ],
+          [
+            2.306549,
+            48.870319
+          ],
+          [
+            2.306596,
+            48.870304
+          ],
+          [
+            2.306615,
+            48.870271
+          ],
+          [
+            2.306761,
+            48.870223
+          ],
+          [
+            2.306802,
+            48.870239
+          ],
+          [
+            2.306817,
+            48.870234
+          ],
+          [
+            2.306859,
+            48.870217
+          ],
+          [
+            2.306898,
+            48.870208
+          ],
+          [
+            2.30701,
+            48.870172
+          ],
+          [
+            2.306971,
+            48.870119
+          ],
+          [
+            2.306966,
+            48.870112
+          ],
+          [
+            2.306892,
+            48.870012
+          ],
+          [
+            2.30693,
+            48.87
+          ],
+          [
+            2.307001,
+            48.869977
+          ],
+          [
+            2.30767,
+            48.869765
+          ],
+          [
+            2.307917,
+            48.869686
           ]
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "verifiedStatus": "verified",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
           "provider": "FOSSGIS",
           "profile": "foot",
           "mode": "walking",
-          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.3449941,48.8553933;2.3500501,48.8529371?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
-          "generatedAt": "2026-11-09T19:29:10.008Z",
+          "url": "https://routing.openstreetmap.de/routed-foot/route/v1/foot/2.2950372,48.8737791;2.3079166,48.8696863?overview=full&geometries=geojson&steps=false&alternatives=false&generate_hints=false",
+          "generatedAt": "2026-11-09T19:29:23.437Z",
           "checkedAt": "2026-11-09",
           "license": "ODbL-1.0",
           "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
@@ -7662,116 +8001,137 @@
           "note": "Only the selected source mode backend; no straight-line, car-for-rail, or car-for-boat fallback."
         }
       ],
+      "distanceMeters": 1113.7,
       "verificationNote": "按来源交通方式预计算的 OSM 道路/步行参考几何；不保证旅行日开放、通行、无障碍、上客位置或实时交通。",
-      "distanceMeters": 483,
       "roadSnapMeters": [
-        49.2,
-        40.1
+        28.4,
+        0
       ]
     },
     {
+      "id": "segment-arc-exterior-champs--powers-to-astor-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "同场地，无核验馆内路线。",
-      "id": "segment-notredame-transfer-notredame--notredame-visit",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
+      "id": "segment-powers-to-astor-1--powers-to-astor-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
-      "id": "segment-notredame-visit--marais-afternoon-2",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
+      "id": "segment-powers-to-astor-2--marais-afternoon-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
+    },
+    {
       "id": "segment-marais-afternoon-2--marais-streets-francs-bourgeois",
-      "routeDataVersion": "4.12.5"
-    },
-    {
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
+    },
+    {
       "id": "segment-marais-streets-francs-bourgeois--marais-streets-rosiers",
-      "routeDataVersion": "4.12.5"
-    },
-    {
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
+    },
+    {
       "id": "segment-marais-streets-rosiers--marais-temple-vieille-temple",
-      "routeDataVersion": "4.12.5"
-    },
-    {
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
-      "id": "segment-arc-exterior-2--montmartre-transfer-abbesses",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
+      "id": "segment-astor-to-stores-maison-astor--astor-to-stores-lafayette",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "同场地，无核验馆内路线。",
-      "id": "segment-montmartre-transfer-abbesses--opera-lunch-abbesses",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
+      "id": "segment-astor-to-stores-lafayette--department-stores-1",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "同场地，无核验馆内路线。",
-      "id": "segment-opera-lunch-abbesses--montmartre-1",
-      "routeDataVersion": "4.12.5"
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "同一场地无道路移动。"
     },
     {
+      "id": "segment-department-stores-1--department-stores-2",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
+    },
+    {
+      "id": "segment-department-stores-2--montmartre-transfer-abbesses",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
+    },
+    {
+      "id": "segment-montmartre-transfer-abbesses--montmartre-1",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "同一场地无道路移动。"
+    },
+    {
       "id": "segment-montmartre-1--montmartre-2",
-      "routeDataVersion": "4.12.5"
-    },
-    {
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
+    },
+    {
       "id": "segment-montmartre-2--montmartre-3",
-      "routeDataVersion": "4.12.5"
-    },
-    {
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
+    },
+    {
       "id": "segment-montmartre-3--cruise-transfer-bateaux-mouches",
-      "routeDataVersion": "4.12.5"
-    },
-    {
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "同场地，无核验馆内路线。",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
+    },
+    {
       "id": "segment-cruise-transfer-bateaux-mouches--cruise-sunday-bateaux-mouches",
-      "routeDataVersion": "4.12.5"
-    },
-    {
       "geometry": null,
       "verifiedStatus": "unverified",
-      "verificationNote": "此连接尚无核验路径；交通方式或准确位置待核，不绘线。",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "同一场地无道路移动。"
+    },
+    {
       "id": "segment-cruise-sunday-bateaux-mouches--astor-sunday-return",
-      "routeDataVersion": "4.12.5"
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.6",
+      "verificationNote": "此连接没有端点及交通方式匹配的核验路径；不猜交通、不绘制伪路线。"
     },
     {
       "id": "segment-astor-checkout--luxembourg-walk",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-luxembourg-walk--saint-germain-walk",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
@@ -8170,7 +8530,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -8245,7 +8605,7 @@
         ],
         "type": "LineString"
       },
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "OSRM on FOSSGIS servers / OpenStreetMap",
@@ -8272,21 +8632,21 @@
       "id": "segment-bon-marche-shopping-2--astor-final-luggage",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-astor-final-luggage--cdg-departure-transfer",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "新日程连接尚无核验路径；交通方式或准确地点待核，不绘线。"
     },
     {
       "id": "segment-cdg-departure-transfer--cdg-flight",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "verificationNote": "同场地活动／无道路移动。"
     }
   ]
