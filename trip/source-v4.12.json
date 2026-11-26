@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "tripId": "paris-2026",
-  "tripDataVersion": "4.12.5",
-  "releaseSequence": 5,
+  "tripDataVersion": "4.12.6",
+  "releaseSequence": 6,
   "trip": {
     "title": "Paris, at our pace",
     "startDate": "2026-12-07",
@@ -18,9 +18,9 @@
       "time": "22:20",
       "airport": "CDG"
     },
-    "sourceVersion": "v5.1 Garnier Dec09",
-    "sourceDate": "2026-11-20",
-    "sourceNote": "最新歌剧院调整版取代此前v5.1/v5.2；12/9歌剧院11:30、12/12圣礼拜堂11:45均为未购目标，其余五天和酒店住宿不变。"
+    "sourceVersion": "v5.1 Nov25 Cite Orsay Garnier",
+    "sourceDate": "2026-11-25",
+    "sourceNote": "Nov25文档取代此前所有v5.1/v5.2：周二双教堂＋13:00奥赛午餐／14:00观展；周六凯旋门换店＋14:00–18:00玛黑；周日百货可选。所有未确认时段仍为目标。"
   },
   "days": [
     {
@@ -37,8 +37,8 @@
       "id": "day-opera",
       "date": "2026-12-08",
       "weekday": "周二",
-      "theme": "奥赛 · Le Restaurant · 春天／老佛爷",
-      "note": "奥赛11:10–14:40含12:00–13:00午餐；等位可能挤压参观，百货15:15–17:00只逛重点，18:00工作。",
+      "theme": "圣礼拜堂 · 圣母院 · 奥赛午餐与观展",
+      "note": "双教堂连续参观；圣礼拜堂10:45未购目标，圣母院12/8瞻礼及游客通行临近核实；奥赛13:00午餐非预约、14:00–16:30观展，无百货，18:00工作。",
       "hotelIds": [
         "hotel-ghpr"
       ]
@@ -77,8 +77,8 @@
       "id": "day-photos",
       "date": "2026-12-12",
       "weekday": "周六",
-      "theme": "换店 · 两教堂 · 玛黑区",
-      "note": "先从Grand Powers取箱换Maison Astor；圣礼拜堂11:45目标、圣母院13:00待核；完整保护玛黑区14:30–18:00连续3.5小时。",
+      "theme": "凯旋门 · 换店 · 玛黑区",
+      "note": "凯旋门仅外观，回Grand Powers取箱换Maison Astor；周六无教堂，优先保护14:00–18:00玛黑区完整4小时。",
       "hotelIds": [
         "hotel-maison-astor"
       ]
@@ -87,8 +87,8 @@
       "id": "day-sunday",
       "date": "2026-12-13",
       "weekday": "周日",
-      "theme": "凯旋门 · 蒙马特 · 塞纳河夜游",
-      "note": "凯旋门仅外观，蒙马特13:15–16:30保留日光，游船18:30–19:30为目标且全程一次；周日不再安排歌剧院。",
+      "theme": "百货可选 · 蒙马特 · 塞纳河游船",
+      "note": "百货11:00–12:30可选；优先保证13:30–16:30蒙马特日光与18:30游船，游船实际班次待核。",
       "hotelIds": [
         "hotel-maison-astor"
       ]
@@ -242,8 +242,8 @@
       "dayId": "day-opera",
       "order": 1,
       "title": "Marquis 退房 → GHPR 寄存行李",
-      "timeLabel": "10:00–10:40",
-      "detail": "不要等待 GHPR 正式入住，先寄存行李。",
+      "timeLabel": "09:45–10:25",
+      "detail": "先寄存行李，不等待 GHPR 正式入住。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -253,9 +253,76 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
+        }
+      ]
+    },
+    {
+      "id": "act-sainte-entry-buffer",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "dayId": "day-opera",
+      "order": 2,
+      "timeLabel": "10:25–10:45",
+      "title": "前往圣礼拜堂 · 安检／排队",
+      "placeIds": [
+        "place-sainte"
+      ],
+      "detail": "预留入口安检及排队；入馆时间需按实际购票调整。",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
+        }
+      ],
+      "taskIds": []
+    },
+    {
+      "id": "act-sainte-visit",
+      "dayId": "day-opera",
+      "order": 3,
+      "title": "圣礼拜堂内部参观",
+      "timeLabel": "10:45–11:30 目标",
+      "detail": "两人指定时段票的10:45目标，尚未购买；实际场次以官方余票和购票结果为准。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-sainte"
+      ],
+      "taskIds": [
+        "task-sainte-dec08-1045"
+      ],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
+        }
+      ]
+    },
+    {
+      "id": "act-notredame-visit",
+      "dayId": "day-opera",
+      "order": 4,
+      "title": "步行至巴黎圣母院 · 争取内部参观",
+      "timeLabel": "11:30–12:20",
+      "detail": "从圣礼拜堂步行约7–10分钟。12/8圣母无原罪瞻礼、中午礼仪、游客动线与免费预约需临近核实；遇礼仪限制或排队按当天实际情况，普通参观未确认。",
+      "status": "tentative",
+      "reservationStatus": "unconfirmed",
+      "placeIds": [
+        "place-notredame"
+      ],
+      "taskIds": [
+        "task-notredame-dec08-observances"
+      ],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -264,52 +331,29 @@
       "status": "planned",
       "reservationStatus": "not-required",
       "dayId": "day-opera",
-      "order": 2,
-      "title": "前往奥赛 · 安检",
-      "timeLabel": "10:40–11:10",
-      "detail": "已办年卡时使用会员指定入口，仍留安检缓冲；入口规则待核。",
+      "order": 5,
+      "title": "西岱岛 → 奥赛 · 车程／入馆缓冲",
+      "timeLabel": "12:20–13:00",
+      "detail": "交通方式待定；年卡会员可按当天规则使用适用优先通道，仍预留入馆缓冲。",
       "placeIds": [
         "place-orsay"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
-        }
-      ]
-    },
-    {
-      "id": "act-orsay-visit",
-      "dayId": "day-opera",
-      "order": 3,
-      "title": "奥赛第一段参观",
-      "timeLabel": "11:10–12:00",
-      "detail": "优先主要展厅与印象派作品；入场目标11:10，尚未确认预约。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-orsay"
-      ],
-      "taskIds": [
-        "task-carte-blanche-duo"
-      ],
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
       "id": "act-orsay-lunch",
       "dayId": "day-opera",
-      "order": 4,
-      "title": "Le Restaurant 午餐",
-      "timeLabel": "12:00–13:00",
-      "detail": "散客可能需要等位；此时间不是餐厅预约。",
+      "order": 6,
+      "title": "奥赛 Le Restaurant 午餐",
+      "timeLabel": "13:00–14:00",
+      "detail": "普通散客可能等位；此时段不是餐厅预约，等位过久则压缩观展。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
       "placeIds": [
@@ -318,21 +362,21 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "act-orsay-visit-afternoon",
+      "id": "act-orsay-visit",
+      "dayId": "day-opera",
+      "order": 7,
+      "title": "奥赛观展 · 印象派及重点常设展厅",
+      "timeLabel": "14:00–16:30 目标",
+      "detail": "目标观展约2.5小时；年卡／普通票与入场方式待确认，午餐等位过久则压缩观展。",
       "status": "tentative",
       "reservationStatus": "unconfirmed",
-      "dayId": "day-opera",
-      "order": 5,
-      "title": "奥赛继续参观",
-      "timeLabel": "13:00–14:40",
-      "detail": "若午餐等位过久，优先保留重点展厅。",
       "placeIds": [
         "place-orsay"
       ],
@@ -341,52 +385,9 @@
       ],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
-        }
-      ]
-    },
-    {
-      "id": "act-orsay-to-stores",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "dayId": "day-opera",
-      "order": 6,
-      "title": "打车前往 Haussmann 百货区",
-      "timeLabel": "14:40–15:15",
-      "detail": "按实际路况调整；此窗口不是保证到达时间。",
-      "placeIds": [
-        "place-printemps"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
-        }
-      ]
-    },
-    {
-      "id": "act-department-stores",
-      "dayId": "day-opera",
-      "order": 7,
-      "title": "春天 · 老佛爷",
-      "timeLabel": "15:15–17:00",
-      "detail": "穹顶、圣诞装饰、重点品牌，约1小时45分；只逛重点。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-printemps",
-        "place-lafayette"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -395,8 +396,8 @@
       "dayId": "day-opera",
       "order": 8,
       "title": "返回 GHPR · 入住／休息",
-      "timeLabel": "17:00–17:45",
-      "detail": "为18:00开始工作做准备；争取17:15–17:30回酒店，实际返回按交通调整。",
+      "timeLabel": "16:30–17:30",
+      "detail": "争取17:15–17:30回酒店，并在18:00开始工作。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -405,9 +406,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -927,12 +928,55 @@
       ]
     },
     {
-      "id": "act-powers-to-astor",
+      "id": "act-powers-pack",
       "dayId": "day-photos",
       "order": 1,
-      "title": "Grand Powers 退房取箱 → Maison Astor → 西岱岛",
-      "timeLabel": "10:15–11:30",
-      "detail": "Maison Astor寄存／入住后前往西岱岛；不依赖提前入住，交通与办理按现场调整。",
+      "title": "Grand Powers 整理 · 退房／寄存行李",
+      "timeLabel": "10:15–10:45",
+      "detail": "轻装前往凯旋门；行李稍后回 Grand Powers 取。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-grand-powers"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
+        }
+      ]
+    },
+    {
+      "id": "act-arc-exterior",
+      "dayId": "day-photos",
+      "order": 2,
+      "title": "凯旋门外观 · 拍照／香榭丽舍短走",
+      "timeLabel": "10:45–11:30",
+      "detail": "仅看外观，暂不登顶；及时回 Grand Powers 取行李换店。",
+      "status": "planned",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-arc",
+        "place-champs"
+      ],
+      "taskIds": [],
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
+        }
+      ]
+    },
+    {
+      "id": "act-powers-to-astor",
+      "dayId": "day-photos",
+      "order": 3,
+      "title": "返回 Grand Powers 取行李 → Maison Astor",
+      "timeLabel": "11:30–13:00",
+      "detail": "Maison Astor寄存／争取入住，不依赖提前入住；注意市内车程。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -942,97 +986,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
-        }
-      ]
-    },
-    {
-      "id": "act-sainte-entry-buffer",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "dayId": "day-photos",
-      "order": 2,
-      "timeLabel": "11:30–11:45",
-      "title": "圣礼拜堂入场 · 安检缓冲",
-      "placeIds": [
-        "place-sainte"
-      ],
-      "detail": "保留指定时段前的入场／安检缓冲。",
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
-        }
-      ],
-      "taskIds": []
-    },
-    {
-      "id": "act-sainte-visit",
-      "dayId": "day-photos",
-      "order": 3,
-      "title": "圣礼拜堂参观",
-      "timeLabel": "11:45–12:30 目标",
-      "detail": "两张指定时段票的目标为11:45，待购买，尚未确认支付或预约。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-sainte"
-      ],
-      "taskIds": [
-        "task-sainte-dec12-1145"
-      ],
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
-        }
-      ]
-    },
-    {
-      "id": "act-notredame-transfer",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "dayId": "day-photos",
-      "order": 4,
-      "timeLabel": "12:30–13:00",
-      "title": "前往巴黎圣母院",
-      "placeIds": [
-        "place-notredame"
-      ],
-      "detail": "视免费预约、宗教活动与人流安排入场。",
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
-        }
-      ],
-      "taskIds": []
-    },
-    {
-      "id": "act-notredame-visit",
-      "dayId": "day-photos",
-      "order": 5,
-      "title": "巴黎圣母院内部／外观",
-      "timeLabel": "13:00–13:40",
-      "detail": "12/12宗教活动可能影响游客动线；免费预约和准确入场安排待核。",
-      "status": "tentative",
-      "reservationStatus": "unconfirmed",
-      "placeIds": [
-        "place-notredame"
-      ],
-      "taskIds": [
-        "task-notredame-dec12"
-      ],
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -1041,27 +997,27 @@
       "status": "planned",
       "reservationStatus": "not-required",
       "dayId": "day-photos",
-      "order": 6,
-      "title": "简餐 · 进入玛黑区",
-      "timeLabel": "13:40–14:30",
-      "detail": "先前往孚日广场；换店或教堂延误时适当简餐，不压缩后续3.5小时。",
+      "order": 4,
+      "title": "午餐 · 前往玛黑区",
+      "timeLabel": "13:00–14:00",
+      "detail": "优先直接到孚日广场；换店延误时可缩短午餐，尽量保护14:00–18:00完整4小时。",
       "placeIds": [],
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
       "id": "act-marais-afternoon",
       "dayId": "day-photos",
-      "order": 7,
+      "order": 5,
       "title": "玛黑区 · 孚日广场与拱廊",
-      "timeLabel": "14:30–18:00 内 · 先逛",
-      "detail": "孚日广场→Francs-Bourgeois→Rosiers→Vieille du Temple共用连续14:30–18:00，合计3.5小时；分段不另指定用时。",
+      "timeLabel": "14:00–15:00",
+      "detail": "第1段：孚日广场、拱廊与周边建筑，优先利用白天；后两段衔接至18:00。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -1070,9 +1026,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -1081,10 +1037,10 @@
       "status": "planned",
       "reservationStatus": "not-required",
       "dayId": "day-photos",
-      "order": 8,
+      "order": 6,
       "title": "Francs-Bourgeois · Rosiers 街巷",
-      "timeLabel": "14:30–18:00 内 · 接续",
-      "detail": "与前后两段共用同一3.5小时窗口；街巷与设计小店按顺序短逛。",
+      "timeLabel": "15:00–16:30",
+      "detail": "第2段：Rue des Francs-Bourgeois、Rue des Rosiers及小店；连续玛黑区下午的一部分。",
       "placeIds": [
         "place-francs-bourgeois",
         "place-rosiers"
@@ -1092,9 +1048,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -1103,40 +1059,63 @@
       "status": "planned",
       "reservationStatus": "not-required",
       "dayId": "day-photos",
-      "order": 9,
+      "order": 7,
       "title": "Vieille du Temple · 咖啡／购物",
-      "timeLabel": "14:30–18:00 内 · 后段",
-      "detail": "与前两段共用14:30–18:00完整3.5小时；晚餐可延续。",
+      "timeLabel": "16:30–18:00",
+      "detail": "第3段：Rue Vieille du Temple、咖啡／自由购物；之后可在附近晚餐，保护14:00–18:00连续游览。",
       "placeIds": [
         "place-vieille-temple"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "act-arc-exterior",
-      "dayId": "day-sunday",
-      "order": 1,
-      "title": "凯旋门外观 · 拍照",
-      "timeLabel": "10:45–11:30",
-      "detail": "从 Maison Astor 出发，离店时间未指定；只看外观，不登顶。",
-      "status": "planned",
+      "id": "act-astor-to-stores",
+      "status": "optional",
       "reservationStatus": "not-required",
       "placeIds": [
-        "place-arc"
+        "place-maison-astor",
+        "place-lafayette"
+      ],
+      "taskIds": [],
+      "timeLabel": "10:30–11:00 可选",
+      "title": "Maison Astor → Haussmann 百货区 · 可选",
+      "detail": "仅决定购物时出发；可取消或缩短百货，不挤占蒙马特与游船。",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
+        }
+      ],
+      "dayId": "day-sunday",
+      "order": 1
+    },
+    {
+      "id": "act-department-stores",
+      "dayId": "day-sunday",
+      "order": 2,
+      "title": "老佛爷 · 春天百货 · 可选",
+      "timeLabel": "11:00–12:30 可选",
+      "detail": "穹顶、圣诞装饰与重点品牌；慢起床可直接取消。无需门票或预约，周日可能有圣诞购物人潮。",
+      "status": "optional",
+      "reservationStatus": "not-required",
+      "placeIds": [
+        "place-lafayette",
+        "place-printemps"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -1145,50 +1124,29 @@
       "status": "planned",
       "reservationStatus": "not-required",
       "dayId": "day-sunday",
-      "order": 2,
-      "timeLabel": "11:30–12:15",
-      "title": "打车前往蒙马特／Abbesses",
+      "order": 3,
+      "timeLabel": "12:30–13:30",
+      "title": "午餐 · 前往蒙马特／Abbesses",
       "placeIds": [
         "place-abbesses"
       ],
-      "detail": "预留交通时间；实际用时按路况调整。",
+      "detail": "交通方式未指定；若不逛百货，可在蒙马特悠闲午餐。餐厅尚未指定。",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ],
       "taskIds": []
-    },
-    {
-      "id": "act-opera-lunch",
-      "dayId": "day-sunday",
-      "order": 3,
-      "title": "蒙马特附近午餐 · 咖啡",
-      "timeLabel": "12:15–13:15",
-      "detail": "餐厅尚未指定，午餐后衔接蒙马特外部景观。",
-      "status": "planned",
-      "reservationStatus": "not-required",
-      "placeIds": [
-        "place-abbesses"
-      ],
-      "taskIds": [],
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
-        }
-      ]
     },
     {
       "id": "act-montmartre",
       "dayId": "day-sunday",
       "order": 4,
       "title": "蒙马特 · 艺术家广场 · 圣心堂",
-      "timeLabel": "13:15–16:30",
-      "detail": "在约16:53日落前使用自然光；实际天气、开放与人流待核。",
+      "timeLabel": "13:30–16:30",
+      "detail": "户外观景尽量赶在日落前；百货不可挤占13:30–16:30蒙马特窗口。",
       "status": "planned",
       "reservationStatus": "not-required",
       "placeIds": [
@@ -1199,9 +1157,9 @@
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -1211,18 +1169,18 @@
       "reservationStatus": "not-required",
       "dayId": "day-sunday",
       "order": 5,
-      "title": "晚餐／自由活动 · 前往游船码头",
+      "title": "晚餐／咖啡 · 前往游船码头",
       "timeLabel": "16:30–18:15",
-      "detail": "转场阿尔玛桥 Bateaux-Mouches 码头；准确登船点和交通时间待核。",
+      "detail": "前往阿尔玛桥 Bateaux-Mouches 码头；预留交通和登船缓冲，准确登船点待核。",
       "placeIds": [
         "place-bateaux-mouches"
       ],
       "taskIds": [],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -1234,7 +1192,7 @@
       "order": 6,
       "title": "Bateaux-Mouches 塞纳河夜游",
       "timeLabel": "18:30–19:30 目标",
-      "detail": "实际船次临近核实，未确认船票；全程只乘一次。",
+      "detail": "约一小时，以实际船班与天气为准，未确认船票；全程只乘一次。",
       "placeIds": [
         "place-bateaux-mouches"
       ],
@@ -1243,9 +1201,9 @@
       ],
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ],
       "conditionGroupId": "condition-one-cruise",
@@ -2374,67 +2332,60 @@
       "order": 2
     },
     {
-      "id": "stop-orsay-transfer-orsay",
-      "activityId": "act-orsay-transfer",
-      "placeId": "place-orsay",
+      "id": "stop-sainte-entry-buffer-sainte",
+      "activityId": "act-sainte-entry-buffer",
+      "placeId": "place-sainte",
       "dayId": "day-opera",
       "order": 3
     },
     {
-      "id": "stop-orsay-visit",
-      "activityId": "act-orsay-visit",
-      "placeId": "place-orsay",
+      "id": "stop-sainte-visit",
+      "activityId": "act-sainte-visit",
+      "placeId": "place-sainte",
       "dayId": "day-opera",
       "order": 4
+    },
+    {
+      "id": "stop-notredame-visit",
+      "activityId": "act-notredame-visit",
+      "placeId": "place-notredame",
+      "dayId": "day-opera",
+      "order": 5
+    },
+    {
+      "id": "stop-orsay-transfer-orsay",
+      "activityId": "act-orsay-transfer",
+      "placeId": "place-orsay",
+      "dayId": "day-opera",
+      "order": 6
     },
     {
       "id": "stop-orsay-lunch",
       "activityId": "act-orsay-lunch",
       "placeId": "place-orsay",
       "dayId": "day-opera",
-      "order": 5
-    },
-    {
-      "id": "stop-orsay-visit-afternoon-orsay",
-      "activityId": "act-orsay-visit-afternoon",
-      "placeId": "place-orsay",
-      "dayId": "day-opera",
-      "order": 6
-    },
-    {
-      "id": "stop-orsay-to-stores-printemps",
-      "activityId": "act-orsay-to-stores",
-      "placeId": "place-printemps",
-      "dayId": "day-opera",
       "order": 7
     },
     {
-      "id": "stop-department-stores-2",
-      "activityId": "act-department-stores",
-      "placeId": "place-printemps",
+      "id": "stop-orsay-visit",
+      "activityId": "act-orsay-visit",
+      "placeId": "place-orsay",
       "dayId": "day-opera",
       "order": 8
-    },
-    {
-      "id": "stop-department-stores-1",
-      "activityId": "act-department-stores",
-      "placeId": "place-lafayette",
-      "dayId": "day-opera",
-      "order": 9
     },
     {
       "id": "stop-ghpr-return",
       "activityId": "act-ghpr-return",
       "placeId": "place-ghpr",
       "dayId": "day-opera",
-      "order": 10
+      "order": 9
     },
     {
       "id": "stop-work-dec08-ghpr",
       "activityId": "act-work-dec08",
       "placeId": "place-ghpr",
       "dayId": "day-opera",
-      "order": 11
+      "order": 10
     },
     {
       "id": "stop-ghpr-checkout",
@@ -2619,137 +2570,144 @@
       "order": 10
     },
     {
+      "id": "stop-powers-pack",
+      "activityId": "act-powers-pack",
+      "placeId": "place-grand-powers",
+      "dayId": "day-photos",
+      "order": 1
+    },
+    {
+      "id": "stop-arc-exterior-2",
+      "activityId": "act-arc-exterior",
+      "placeId": "place-arc",
+      "dayId": "day-photos",
+      "order": 2
+    },
+    {
+      "id": "stop-arc-exterior-champs",
+      "activityId": "act-arc-exterior",
+      "placeId": "place-champs",
+      "dayId": "day-photos",
+      "order": 3
+    },
+    {
       "id": "stop-powers-to-astor-1",
       "activityId": "act-powers-to-astor",
       "placeId": "place-grand-powers",
       "dayId": "day-photos",
-      "order": 1
+      "order": 4
     },
     {
       "id": "stop-powers-to-astor-2",
       "activityId": "act-powers-to-astor",
       "placeId": "place-maison-astor",
       "dayId": "day-photos",
-      "order": 2
-    },
-    {
-      "id": "stop-sainte-entry-buffer-sainte",
-      "activityId": "act-sainte-entry-buffer",
-      "placeId": "place-sainte",
-      "dayId": "day-photos",
-      "order": 3
-    },
-    {
-      "id": "stop-sainte-visit",
-      "activityId": "act-sainte-visit",
-      "placeId": "place-sainte",
-      "dayId": "day-photos",
-      "order": 4
-    },
-    {
-      "id": "stop-notredame-transfer-notredame",
-      "activityId": "act-notredame-transfer",
-      "placeId": "place-notredame",
-      "dayId": "day-photos",
       "order": 5
-    },
-    {
-      "id": "stop-notredame-visit",
-      "activityId": "act-notredame-visit",
-      "placeId": "place-notredame",
-      "dayId": "day-photos",
-      "order": 6
     },
     {
       "id": "stop-marais-afternoon-2",
       "activityId": "act-marais-afternoon",
       "placeId": "place-vosges",
       "dayId": "day-photos",
-      "order": 7
+      "order": 6
     },
     {
       "id": "stop-marais-streets-francs-bourgeois",
       "activityId": "act-marais-streets",
       "placeId": "place-francs-bourgeois",
       "dayId": "day-photos",
-      "order": 8
+      "order": 7
     },
     {
       "id": "stop-marais-streets-rosiers",
       "activityId": "act-marais-streets",
       "placeId": "place-rosiers",
       "dayId": "day-photos",
-      "order": 9
+      "order": 8
     },
     {
       "id": "stop-marais-temple-vieille-temple",
       "activityId": "act-marais-temple",
       "placeId": "place-vieille-temple",
       "dayId": "day-photos",
-      "order": 10
+      "order": 9
     },
     {
-      "id": "stop-arc-exterior-2",
-      "activityId": "act-arc-exterior",
-      "placeId": "place-arc",
+      "id": "stop-astor-to-stores-maison-astor",
+      "activityId": "act-astor-to-stores",
+      "placeId": "place-maison-astor",
       "dayId": "day-sunday",
       "order": 1
+    },
+    {
+      "id": "stop-astor-to-stores-lafayette",
+      "activityId": "act-astor-to-stores",
+      "placeId": "place-lafayette",
+      "dayId": "day-sunday",
+      "order": 2
+    },
+    {
+      "id": "stop-department-stores-1",
+      "activityId": "act-department-stores",
+      "placeId": "place-lafayette",
+      "dayId": "day-sunday",
+      "order": 3
+    },
+    {
+      "id": "stop-department-stores-2",
+      "activityId": "act-department-stores",
+      "placeId": "place-printemps",
+      "dayId": "day-sunday",
+      "order": 4
     },
     {
       "id": "stop-montmartre-transfer-abbesses",
       "activityId": "act-montmartre-transfer",
       "placeId": "place-abbesses",
       "dayId": "day-sunday",
-      "order": 2
-    },
-    {
-      "id": "stop-opera-lunch-abbesses",
-      "activityId": "act-opera-lunch",
-      "placeId": "place-abbesses",
-      "dayId": "day-sunday",
-      "order": 3
+      "order": 5
     },
     {
       "id": "stop-montmartre-1",
       "activityId": "act-montmartre",
       "placeId": "place-abbesses",
       "dayId": "day-sunday",
-      "order": 4
+      "order": 6
     },
     {
       "id": "stop-montmartre-2",
       "activityId": "act-montmartre",
       "placeId": "place-tertre",
       "dayId": "day-sunday",
-      "order": 5
+      "order": 7
     },
     {
       "id": "stop-montmartre-3",
       "activityId": "act-montmartre",
       "placeId": "place-sacre",
       "dayId": "day-sunday",
-      "order": 6
+      "order": 8
     },
     {
       "id": "stop-cruise-transfer-bateaux-mouches",
       "activityId": "act-cruise-transfer",
       "placeId": "place-bateaux-mouches",
       "dayId": "day-sunday",
-      "order": 7
+      "order": 9
     },
     {
       "id": "stop-cruise-sunday-bateaux-mouches",
       "activityId": "act-cruise-sunday",
       "placeId": "place-bateaux-mouches",
       "dayId": "day-sunday",
-      "order": 8
+      "order": 10
     },
     {
       "id": "stop-astor-sunday-return",
       "activityId": "act-astor-sunday-return",
       "placeId": "place-maison-astor",
       "dayId": "day-sunday",
-      "order": 9
+      "order": 11
     },
     {
       "id": "stop-astor-checkout",
@@ -2818,7 +2776,7 @@
       "mode": "driving",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -2836,7 +2794,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -2854,7 +2812,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -2872,7 +2830,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -2890,7 +2848,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -2908,7 +2866,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -2926,7 +2884,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -2944,7 +2902,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -2962,7 +2920,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -2980,156 +2938,138 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-marquis-to-ghpr-2--orsay-transfer-orsay",
+      "id": "segment-marquis-to-ghpr-2--sainte-entry-buffer-sainte",
       "fromStopId": "stop-marquis-to-ghpr-2",
-      "toStopId": "stop-orsay-transfer-orsay",
+      "toStopId": "stop-sainte-entry-buffer-sainte",
       "dayId": "day-opera",
       "order": 2,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-orsay-transfer-orsay--orsay-visit",
-      "fromStopId": "stop-orsay-transfer-orsay",
-      "toStopId": "stop-orsay-visit",
+      "id": "segment-sainte-entry-buffer-sainte--sainte-visit",
+      "fromStopId": "stop-sainte-entry-buffer-sainte",
+      "toStopId": "stop-sainte-visit",
       "dayId": "day-opera",
       "order": 3,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-orsay-visit--orsay-lunch",
-      "fromStopId": "stop-orsay-visit",
-      "toStopId": "stop-orsay-lunch",
+      "id": "segment-sainte-visit--notredame-visit",
+      "fromStopId": "stop-sainte-visit",
+      "toStopId": "stop-notredame-visit",
       "dayId": "day-opera",
       "order": 4,
-      "mode": "unknown",
+      "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-orsay-lunch--orsay-visit-afternoon-orsay",
-      "fromStopId": "stop-orsay-lunch",
-      "toStopId": "stop-orsay-visit-afternoon-orsay",
+      "id": "segment-notredame-visit--orsay-transfer-orsay",
+      "fromStopId": "stop-notredame-visit",
+      "toStopId": "stop-orsay-transfer-orsay",
       "dayId": "day-opera",
       "order": 5,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-orsay-visit-afternoon-orsay--orsay-to-stores-printemps",
-      "fromStopId": "stop-orsay-visit-afternoon-orsay",
-      "toStopId": "stop-orsay-to-stores-printemps",
+      "id": "segment-orsay-transfer-orsay--orsay-lunch",
+      "fromStopId": "stop-orsay-transfer-orsay",
+      "toStopId": "stop-orsay-lunch",
       "dayId": "day-opera",
       "order": 6,
-      "mode": "driving",
+      "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-orsay-to-stores-printemps--department-stores-2",
-      "fromStopId": "stop-orsay-to-stores-printemps",
-      "toStopId": "stop-department-stores-2",
+      "id": "segment-orsay-lunch--orsay-visit",
+      "fromStopId": "stop-orsay-lunch",
+      "toStopId": "stop-orsay-visit",
       "dayId": "day-opera",
       "order": 7,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-department-stores-2--department-stores-1",
-      "fromStopId": "stop-department-stores-2",
-      "toStopId": "stop-department-stores-1",
+      "id": "segment-orsay-visit--ghpr-return",
+      "fromStopId": "stop-orsay-visit",
+      "toStopId": "stop-ghpr-return",
       "dayId": "day-opera",
       "order": 8,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
-        }
-      ]
-    },
-    {
-      "id": "segment-department-stores-1--ghpr-return",
-      "fromStopId": "stop-department-stores-1",
-      "toStopId": "stop-ghpr-return",
-      "dayId": "day-opera",
-      "order": 9,
-      "mode": "unknown",
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3138,16 +3078,16 @@
       "fromStopId": "stop-ghpr-return",
       "toStopId": "stop-work-dec08-ghpr",
       "dayId": "day-opera",
-      "order": 10,
+      "order": 9,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
-          "checkedAt": "2026-11-18",
-          "note": "v5.1 is a planning label; all unconfirmed times are targets. Weekday work starts18:00 with Thursday/flight exceptions."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3160,7 +3100,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
@@ -3178,7 +3118,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
@@ -3196,7 +3136,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
@@ -3214,7 +3154,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
@@ -3232,7 +3172,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
@@ -3250,7 +3190,7 @@
       "mode": "driving",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
@@ -3268,7 +3208,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
@@ -3286,7 +3226,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
@@ -3304,7 +3244,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3322,7 +3262,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3340,7 +3280,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3358,7 +3298,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3376,7 +3316,7 @@
       "mode": "driving",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3394,7 +3334,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3412,7 +3352,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3430,7 +3370,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3448,7 +3388,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3466,7 +3406,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3484,7 +3424,7 @@
       "mode": "driving",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3502,7 +3442,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3520,7 +3460,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3538,7 +3478,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3556,7 +3496,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3566,110 +3506,92 @@
       ]
     },
     {
-      "id": "segment-powers-to-astor-1--powers-to-astor-2",
-      "fromStopId": "stop-powers-to-astor-1",
-      "toStopId": "stop-powers-to-astor-2",
+      "id": "segment-powers-pack--arc-exterior-2",
+      "fromStopId": "stop-powers-pack",
+      "toStopId": "stop-arc-exterior-2",
       "dayId": "day-photos",
       "order": 1,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-powers-to-astor-2--sainte-entry-buffer-sainte",
-      "fromStopId": "stop-powers-to-astor-2",
-      "toStopId": "stop-sainte-entry-buffer-sainte",
+      "id": "segment-arc-exterior-2--arc-exterior-champs",
+      "fromStopId": "stop-arc-exterior-2",
+      "toStopId": "stop-arc-exterior-champs",
       "dayId": "day-photos",
       "order": 2,
-      "mode": "unknown",
+      "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-sainte-entry-buffer-sainte--sainte-visit",
-      "fromStopId": "stop-sainte-entry-buffer-sainte",
-      "toStopId": "stop-sainte-visit",
+      "id": "segment-arc-exterior-champs--powers-to-astor-1",
+      "fromStopId": "stop-arc-exterior-champs",
+      "toStopId": "stop-powers-to-astor-1",
       "dayId": "day-photos",
       "order": 3,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-sainte-visit--notredame-transfer-notredame",
-      "fromStopId": "stop-sainte-visit",
-      "toStopId": "stop-notredame-transfer-notredame",
+      "id": "segment-powers-to-astor-1--powers-to-astor-2",
+      "fromStopId": "stop-powers-to-astor-1",
+      "toStopId": "stop-powers-to-astor-2",
       "dayId": "day-photos",
       "order": 4,
-      "mode": "walking",
+      "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-notredame-transfer-notredame--notredame-visit",
-      "fromStopId": "stop-notredame-transfer-notredame",
-      "toStopId": "stop-notredame-visit",
+      "id": "segment-powers-to-astor-2--marais-afternoon-2",
+      "fromStopId": "stop-powers-to-astor-2",
+      "toStopId": "stop-marais-afternoon-2",
       "dayId": "day-photos",
       "order": 5,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
-        }
-      ]
-    },
-    {
-      "id": "segment-notredame-visit--marais-afternoon-2",
-      "fromStopId": "stop-notredame-visit",
-      "toStopId": "stop-marais-afternoon-2",
-      "dayId": "day-photos",
-      "order": 6,
-      "mode": "unknown",
-      "geometry": null,
-      "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
-      "sources": [
-        {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3678,16 +3600,16 @@
       "fromStopId": "stop-marais-afternoon-2",
       "toStopId": "stop-marais-streets-francs-bourgeois",
       "dayId": "day-photos",
-      "order": 7,
+      "order": 6,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3696,16 +3618,16 @@
       "fromStopId": "stop-marais-streets-francs-bourgeois",
       "toStopId": "stop-marais-streets-rosiers",
       "dayId": "day-photos",
-      "order": 8,
+      "order": 7,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3714,70 +3636,106 @@
       "fromStopId": "stop-marais-streets-rosiers",
       "toStopId": "stop-marais-temple-vieille-temple",
       "dayId": "day-photos",
-      "order": 9,
+      "order": 8,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-arc-exterior-2--montmartre-transfer-abbesses",
-      "fromStopId": "stop-arc-exterior-2",
-      "toStopId": "stop-montmartre-transfer-abbesses",
+      "id": "segment-astor-to-stores-maison-astor--astor-to-stores-lafayette",
+      "fromStopId": "stop-astor-to-stores-maison-astor",
+      "toStopId": "stop-astor-to-stores-lafayette",
       "dayId": "day-sunday",
       "order": 1,
-      "mode": "driving",
+      "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-montmartre-transfer-abbesses--opera-lunch-abbesses",
-      "fromStopId": "stop-montmartre-transfer-abbesses",
-      "toStopId": "stop-opera-lunch-abbesses",
+      "id": "segment-astor-to-stores-lafayette--department-stores-1",
+      "fromStopId": "stop-astor-to-stores-lafayette",
+      "toStopId": "stop-department-stores-1",
       "dayId": "day-sunday",
       "order": 2,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
     {
-      "id": "segment-opera-lunch-abbesses--montmartre-1",
-      "fromStopId": "stop-opera-lunch-abbesses",
-      "toStopId": "stop-montmartre-1",
+      "id": "segment-department-stores-1--department-stores-2",
+      "fromStopId": "stop-department-stores-1",
+      "toStopId": "stop-department-stores-2",
       "dayId": "day-sunday",
       "order": 3,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
+        }
+      ]
+    },
+    {
+      "id": "segment-department-stores-2--montmartre-transfer-abbesses",
+      "fromStopId": "stop-department-stores-2",
+      "toStopId": "stop-montmartre-transfer-abbesses",
+      "dayId": "day-sunday",
+      "order": 4,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.6",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
+        }
+      ]
+    },
+    {
+      "id": "segment-montmartre-transfer-abbesses--montmartre-1",
+      "fromStopId": "stop-montmartre-transfer-abbesses",
+      "toStopId": "stop-montmartre-1",
+      "dayId": "day-sunday",
+      "order": 5,
+      "mode": "unknown",
+      "geometry": null,
+      "verifiedStatus": "unverified",
+      "routeDataVersion": "4.12.6",
+      "sources": [
+        {
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3786,16 +3744,16 @@
       "fromStopId": "stop-montmartre-1",
       "toStopId": "stop-montmartre-2",
       "dayId": "day-sunday",
-      "order": 4,
+      "order": 6,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3804,16 +3762,16 @@
       "fromStopId": "stop-montmartre-2",
       "toStopId": "stop-montmartre-3",
       "dayId": "day-sunday",
-      "order": 5,
+      "order": 7,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3822,16 +3780,16 @@
       "fromStopId": "stop-montmartre-3",
       "toStopId": "stop-cruise-transfer-bateaux-mouches",
       "dayId": "day-sunday",
-      "order": 6,
+      "order": 8,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3840,16 +3798,16 @@
       "fromStopId": "stop-cruise-transfer-bateaux-mouches",
       "toStopId": "stop-cruise-sunday-bateaux-mouches",
       "dayId": "day-sunday",
-      "order": 7,
+      "order": 9,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3858,16 +3816,16 @@
       "fromStopId": "stop-cruise-sunday-bateaux-mouches",
       "toStopId": "stop-astor-sunday-return",
       "dayId": "day-sunday",
-      "order": 8,
+      "order": 10,
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
-          "source": "Paris_Itinerary_v5_1_Garnier_Dec09_Work_From_Paris.docx — latest user-authoritative schedule",
-          "checkedAt": "2026-11-20",
-          "note": "Garnier11:30 and Sainte-Chapelle11:45 are target tickets, not confirmed purchases."
+          "source": "Paris_Itinerary_v5_1_Nov25_Cite_Orsay_Garnier_Work_From_Paris.docx — latest user-authoritative schedule",
+          "checkedAt": "2026-11-26",
+          "note": "Nov25 schedule; unconfirmed ticket times remain targets. Notre-Dame access on Dec8 depends on religious observances and actual visitor arrangements."
         }
       ]
     },
@@ -3880,7 +3838,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3898,7 +3856,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3916,7 +3874,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3934,7 +3892,7 @@
       "mode": "walking",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3952,7 +3910,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3970,7 +3928,7 @@
       "mode": "driving",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -3988,7 +3946,7 @@
       "mode": "unknown",
       "geometry": null,
       "verifiedStatus": "unverified",
-      "routeDataVersion": "4.12.5",
+      "routeDataVersion": "4.12.6",
       "sources": [
         {
           "source": "Paris_Itinerary_v5_1_Refined_Work_From_Paris.docx — user-authoritative schedule",
@@ -4046,7 +4004,7 @@
       "status": "archived",
       "note": "09:30 为目标入场时段；完成预约前仍为待确认，安检与入场要求另核。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。 原目标日期已调整，归档不代表当前目标已完成。",
       "activityId": "act-sainte-visit",
-      "dayId": "day-photos",
+      "dayId": "day-opera",
       "url": "https://www.sainte-chapelle.fr/en/",
       "archiveReason": "v5.1最新日程已更改日期或取消此目标；保留原记录与勾选，需自行核对旧订单，不表示已退款／取消订单。",
       "originalDayId": "day-opera"
@@ -4069,7 +4027,7 @@
       "priority": "medium",
       "dueDate": null,
       "status": "active",
-      "note": "同一个年卡购买事项关联奥赛与橘园。购买前核实 Jeunes Duo 资格、有效期、权益和参观预约要求；不代表任一场次已预约或确认。",
+      "note": "同一个年卡购买事项关联橘园与12/8奥赛14:00观展。核实Jeunes Duo资格、有效期、权益与入口规则；13:00 Le Restaurant午餐不是餐厅预约，不代表任一场次已确认。",
       "activityId": "act-orsay-visit",
       "dayId": "day-opera",
       "groupId": "prep-now",
@@ -4095,7 +4053,7 @@
       "status": "archived",
       "note": "12月8日宗教活动可能影响游客入场；查看免费预约、礼拜安排和相关限制。准确入场安排待核，尚未确认预约。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。 原目标日期已调整，归档不代表当前目标已完成。",
       "activityId": "act-notredame-visit",
-      "dayId": "day-photos",
+      "dayId": "day-opera",
       "url": "https://www.notredamedeparis.fr/en/",
       "archiveReason": "v5.1最新日程已更改日期或取消此目标；保留原记录与勾选，需自行核对旧订单，不表示已退款／取消订单。",
       "originalDayId": "day-opera"
@@ -4191,7 +4149,7 @@
       "status": "archived",
       "note": "12月8日09:30–10:30为目标；定时入场、安检与实际预订待核，不视为已确认。截止日期未提供。 原关联日期已调整；此归档保留原目标，旧票或预约需自行核对。 原目标日期已调整，归档不代表当前目标已完成。",
       "activityId": "act-sainte-visit",
-      "dayId": "day-photos",
+      "dayId": "day-opera",
       "url": "https://www.sainte-chapelle.fr/en/",
       "archiveReason": "准备清单已改为新的购票或预订事项；原核实事项及其历史完成记录保留。",
       "originalDayId": "day-opera"
@@ -4274,7 +4232,7 @@
       "status": "archived",
       "note": "文档目标，不代表已购票或预约确认；实际开放、时刻与具体要求待核。 原目标日期已调整，归档不代表当前目标已完成。",
       "activityId": "act-sainte-visit",
-      "dayId": "day-photos",
+      "dayId": "day-opera",
       "archiveReason": "最新歌剧院调整版已更改目标日期／时段；保留原勾选及记录，旧票或预约需另核，不表示自动改签或退款。",
       "originalDayId": "day-orsay"
     },
@@ -4298,7 +4256,7 @@
       "status": "archived",
       "note": "文档目标，不代表已购票或预约确认；实际开放、时刻与具体要求待核。 原目标日期已调整，归档不代表当前目标已完成。",
       "activityId": "act-notredame-visit",
-      "dayId": "day-photos",
+      "dayId": "day-opera",
       "archiveReason": "最新歌剧院调整版已更改目标日期／时段；保留原勾选及记录，旧票或预约需另核，不表示自动改签或退款。",
       "originalDayId": "day-orsay"
     },
@@ -4343,24 +4301,54 @@
       "title": "预订 12/12 圣礼拜堂约 11:45 的指定时段票（两人）",
       "priority": "high",
       "dueDate": null,
-      "status": "active",
-      "note": "选定目标，不代表已支付、购票或预约确认；具体开放与入场安排待核。",
+      "status": "archived",
+      "note": "选定目标，不代表已支付、购票或预约确认；具体开放与入场安排待核。 原12/12目标归档；不自动改签或转移完成状态。",
       "activityId": "act-sainte-visit",
-      "dayId": "day-photos",
+      "dayId": "day-opera",
       "groupId": "prep-now",
-      "order": 4
+      "order": 4,
+      "archiveReason": "Nov25最新日程将此目标移至12/8；保留旧记录和勾选，旧票／预约需自行核对，不代表新日期已完成或旧订单已取消。",
+      "originalDayId": "day-photos"
     },
     {
       "id": "task-notredame-dec12",
       "title": "临近核实 12/12 圣母院宗教活动／免费预约",
       "priority": "medium",
       "dueDate": null,
-      "status": "active",
-      "note": "选定目标，不代表已支付、购票或预约确认；具体开放与入场安排待核。",
+      "status": "archived",
+      "note": "选定目标，不代表已支付、购票或预约确认；具体开放与入场安排待核。 原12/12目标归档；不自动改签或转移完成状态。",
       "activityId": "act-notredame-visit",
-      "dayId": "day-photos",
+      "dayId": "day-opera",
       "groupId": "prep-departure",
-      "order": 1
+      "order": 1,
+      "archiveReason": "Nov25最新日程将此目标移至12/8；保留旧记录和勾选，旧票／预约需自行核对，不代表新日期已完成或旧订单已取消。",
+      "originalDayId": "day-photos"
+    },
+    {
+      "id": "task-sainte-dec08-1045",
+      "title": "购买 12/8 圣礼拜堂约 10:45 指定时段票（两人，目标未购）",
+      "priority": "high",
+      "dueDate": null,
+      "status": "active",
+      "note": "10:45仅是目标；实际场次以官方余票及购票结果为准，预留安检，不视为已订。",
+      "activityId": "act-sainte-visit",
+      "dayId": "day-opera",
+      "groupId": "prep-now",
+      "order": 4,
+      "url": "https://www.sainte-chapelle.fr/en/"
+    },
+    {
+      "id": "task-notredame-dec08-observances",
+      "title": "核实 12/8 圣母院免费预约、瞻礼与游客动线",
+      "priority": "medium",
+      "dueDate": null,
+      "status": "active",
+      "note": "12/8圣母无原罪瞻礼、中午礼仪与游客通行需临近核实；普通入堂免费，11:30–12:20窗口未确认，遇限制或排队按当天实际情况。",
+      "activityId": "act-notredame-visit",
+      "dayId": "day-opera",
+      "groupId": "prep-departure",
+      "order": 1,
+      "url": "https://www.notredamedeparis.fr/en/"
     }
   ],
   "hotels": [
@@ -4459,8 +4447,11 @@
     "act-markthal-transfer",
     "act-markthal-visit",
     "act-martyrs-optional",
+    "act-notredame-transfer",
+    "act-opera-lunch",
+    "act-orsay-to-stores",
+    "act-orsay-visit-afternoon",
     "act-powers-friday-return",
-    "act-powers-pack",
     "act-rotterdam-outbound",
     "act-rotterdam-station-return",
     "act-watershuttle-outbound",
