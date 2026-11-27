@@ -1,6 +1,6 @@
 'use strict';
 const test=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),path=require('node:path');
-const O=require('../official-data.js'),root=path.resolve(__dirname,'..'),read=f=>JSON.parse(fs.readFileSync(path.join(root,f))),m=read('trip/manifest.json'),s=O.validate(read(m.snapshotUrl)),old=read('trip/releases/979bb47ae1cd39c4ebaa3b9f59c681583bfb1e1048b4bf4d5e22dee9073fa011.json');
+const O=require('../official-data.js'),root=path.resolve(__dirname,'..'),read=f=>JSON.parse(fs.readFileSync(path.join(root,f))),s=O.validate(read('trip/releases/b4ebb98b42154f45b116e9e7d2d32b9eb13d290269ee815853a9e992bcdb5ca3.json')),old=read('trip/releases/979bb47ae1cd39c4ebaa3b9f59c681583bfb1e1048b4bf4d5e22dee9073fa011.json');
 const changed=new Set(['day-opera','day-photos','day-sunday']),rows=id=>s.activities.filter(a=>a.dayId===id).sort((a,b)=>a.order-b.order),activity=id=>s.activities.find(a=>a.id===id),task=id=>s.tasks.find(t=>t.id===id),clean=({routeDataVersion,...x})=>x;
 test('Nov25 creates the next release while preserving five unchanged days, hotels and navigation locations',()=>{
  assert.equal(s.tripDataVersion,'4.12.6');assert.equal(s.releaseSequence,6);assert.equal(s.trip.sourceDate,'2026-11-25');O.validate(s,old);
